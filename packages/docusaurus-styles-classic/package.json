@@ -1,0 +1,25 @@
+{
+    "name": "@docupotamus/docusaurus-styles-classic",
+    "version": "0.2.0",
+    "description": "Docusaurus classic styles.",
+    "main": "lib/index.css",
+    "engines": {
+        "node": ">=16.14"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/docupotamus/docupotamus.git",
+        "directory": "packages/docusaurus-styles-classic"
+    },
+    "keywords": [
+        "react",
+        "docusaurus",
+        "themes",
+        "styling",
+        "css",
+        "dark mode",
+        "responsive"
+    ],
+    "author": "Duy Nguyen <dnguyen0304@gmail.com>",
+    "license": "MIT"
+}

@@ -1,0 +1,7 @@
+/* Warning: This is deprecated. */
+:root {
+    --docupotamus-color-accent: var(--ifm-color-primary-lightest);
+    --docupotamus-color-accent-alternative: hsl(166, 100%, 70%);  /* currently unused */
+    --docupotamus-color-gray: var(--ifm-color-gray-700);
+    --docupotamus-color-gray-contrast: hsl(234, 32%, 25%); /* originally hsl(219, 40%, 22%) non-palette */
+}

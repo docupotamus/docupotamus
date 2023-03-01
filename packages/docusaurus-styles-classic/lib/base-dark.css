@@ -1,0 +1,74 @@
+/* Base */
+html[data-theme='dark'] {
+    --ifm-color-content-secondary: var(--ifm-color-emphasis-800);
+
+    /* Use --ifm-color-content-secondary for:
+        - --navigation-page-color
+        - --toc-color
+    */
+    --navigation-top-color: var(--ifm-color-emphasis-900);
+    --navigation-side-color: var(--ifm-color-content-secondary);
+    --navigation-side-category-color: var(--ifm-color-emphasis-1000);
+    --breadcrumbs-color: var(--ifm-color-emphasis-900);
+    --heading-color: var(--ifm-color-emphasis-900);
+    --markdown-color: var(--ifm-color-emphasis-800);
+
+    --ifm-background-color-hsl: var(--ifm-color-gray-700-hsl);
+
+    --ifm-color-primary: var(--ifm-color-primary-lightest);
+    --ifm-background-color: var(--ifm-color-emphasis-300);
+    --ifm-heading-color: var(--heading-color);
+
+    --doc8-color-content-inverse-hover: hsla(var(--ifm-color-white-hsl), 0.05);
+}
+
+/* Navigation, Side */
+html[data-theme='dark'] .theme-doc-sidebar-menu {
+    font-weight: var(--ifm-font-weight-normal);
+}
+
+html[data-theme='dark'] .theme-doc-sidebar-menu .theme-doc-sidebar-item-category .menu__link--sublist {
+    --ifm-menu-color: var(--navigation-side-category-color);
+}
+
+html[data-theme='dark'] .theme-doc-sidebar-menu .theme-doc-sidebar-item-link .menu__link {
+    --ifm-menu-color: var(--navigation-side-color);
+}
+
+/* Navigation, Page */
+html[data-theme='dark'] .pagination-nav__link {
+    --docupotamus-border-color-gray-light: var(--ifm-color-emphasis-400);
+    --ifm-color-emphasis-300: var(--docupotamus-border-color-gray-light);
+}
+
+/* Markdown Text */
+html[data-theme='dark'] .theme-doc-markdown :not(
+    a,
+    code *,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    kbd,
+    pre,
+    strong
+) {
+    color: var(--markdown-color);
+}
+
+/* Code Highlight */
+/* Warning: This class name has no cohesion with the docusaurus-theme-classic
+   configuration setting. */
+html[data-theme='dark'] .theme-code-block-highlighted-line {
+    /* TODO(dnguyen0304): Use a color from the --ifm-color-gray palette. */
+    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+html[data-theme='dark'] .footer--dark {
+    /* TODO(dnguyen0304): Investigate setting a convention between color and
+       color-emphasis. */
+    --ifm-footer-background-color: var(--ifm-color-emphasis-200);
+}

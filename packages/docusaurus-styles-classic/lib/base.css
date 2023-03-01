@@ -1,0 +1,90 @@
+/* Breadcrumbs */
+.theme-doc-breadcrumbs .breadcrumbs__link {
+    --ifm-font-color-base: var(--breadcrumbs-color);
+}
+
+/* Main */
+main[class*='docMainContainer'] {
+    margin-bottom: var(--doc8-space-l-xl);
+}
+
+main[class*='docMainContainer'] div[class*='docItemContainer'] {
+    --padding-total: calc(100% - var(--doc8-content-width));
+    --padding-percentage-left: .4;
+    --padding-percentage-right: calc(1 - var(--padding-percentage-left));
+
+    padding-left: calc(var(--padding-total) * var(--padding-percentage-left));
+    padding-right: calc(var(--padding-total) * var(--padding-percentage-right));
+}
+
+/* Main, Markdown */
+main[class*='docMainContainer'] div[class*='docItemContainer'] .theme-doc-markdown {
+    margin-top: var(--doc8-space-m);
+}
+
+/* Navigation, Top */
+.navbar {
+    --ifm-navbar-link-color: var(--navigation-top-color);
+
+    /* This is for the toggle button. */
+    color: var(--ifm-navbar-link-color);
+}
+
+/* Navigation, Side */
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-category .menu__link--sublist,
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link .menu__link,
+.table-of-contents__link {
+    --link-padding-vertical: var(--doc8-space-2xs);
+    --link-padding-horizontal: calc(2 * var(--link-padding-vertical));
+
+    border-radius: var(--ifm-global-radius);
+    padding: var(--link-padding-vertical) var(--link-padding-horizontal);
+}
+
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-category .menu__link--sublist:hover,
+.theme-doc-sidebar-menu .theme-doc-sidebar-item-link .menu__link:hover {
+    color: var(--ifm-color-primary);
+}
+
+/* Table of Contents */
+.table-of-contents li {
+    /* In this scope, this is used for margin. */
+    --ifm-toc-padding-vertical: 0;
+}
+
+.table-of-contents li:not(:first-child) {
+    /* Use the same value as the sidebar menu links. */
+    margin-top: var(--doc8-list-item-gap-2xs);
+}
+
+.table-of-contents__link {
+    --link-padding-vertical: var(--doc8-space-3xs);
+
+    transition: var(--ifm-hover-overlay-transition);
+}
+
+.table-of-contents__link:hover {
+    background-color: var(--ifm-hover-overlay);
+}
+
+html[data-theme='light'],
+html[data-theme='dark'] {
+    --ifm-color-content-inverse-hsl: var(--ifm-background-color-hsl);
+
+    --ifm-color-content: var(--ifm-heading-color);
+    --ifm-color-content-inverse: var(--ifm-background-color);
+
+    /* This is used primarily for the top navigation. */
+    --ifm-background-surface-color: var(--ifm-background-color);
+
+    /* Setting an alpha value between 0.15 and 0.2 is usually good. */
+    --ifm-hover-overlay: hsla(var(--ifm-color-primary-darkest-hsl), 0.18);
+    --ifm-toc-border-color: transparent;
+
+    font:
+        var(--doc8-font-size-0) / var(--ifm-line-height-base)
+        var(--ifm-font-family-base);
+}
+
+/* TODO(dnguyen0304): Fix colors for blockquotes. */
+/* TODO(dnguyen0304): Fix colors for tables. */

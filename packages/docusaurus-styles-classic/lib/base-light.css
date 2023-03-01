@@ -1,0 +1,65 @@
+/* Base */
+html[data-theme='light'] {
+    --ifm-color-content-secondary: var(--ifm-color-emphasis-500);
+
+    /* Use --ifm-color-content-secondary for:
+        - --navigation-page-color
+        - --toc-color
+    */
+    --navigation-top-color: var(--ifm-color-emphasis-700);
+    --navigation-side-color: var(--ifm-color-content-secondary);
+    --breadcrumbs-color: var(--ifm-color-emphasis-700);
+    --heading-color: var(--ifm-color-emphasis-700);
+    --markdown-color: var(--ifm-color-emphasis-600);
+
+    --ifm-background-color-hsl: var(--ifm-color-white-hsl);
+
+    --ifm-background-color: var(--ifm-color-white);
+    --ifm-heading-color: var(--heading-color);
+
+    --doc8-color-content-inverse-hover: hsla(var(--ifm-color-black-hsl), 0.05);
+}
+
+/* Navigation, Side */
+html[data-theme='light'] .theme-doc-sidebar-menu .theme-doc-sidebar-item-link .menu__link {
+    --ifm-menu-color: var(--navigation-side-color);
+}
+
+/* Navigation, Page */
+html[data-theme='light'] .pagination-nav__link {
+    --docupotamus-border-color-gray-light: var(--ifm-color-emphasis-100);
+    --ifm-color-emphasis-300: var(--docupotamus-border-color-gray-light);
+}
+
+/* Markdown */
+html[data-theme='light'] .theme-doc-markdown :not(
+    a,
+    code *,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    kbd,
+    pre,
+    strong
+) {
+    color: var(--markdown-color);
+    font-weight: var(--ifm-font-weight-semibold);
+}
+
+/* Code */
+/* Undo styles that were "leaked" via inheritance even though the direct
+   elements were excluded above. */
+html[data-theme='light'] .theme-doc-markdown code {
+    font-weight: revert;
+}
+
+/* Code Highlight */
+/* Warning: This class name has no cohesion with the docusaurus-theme-classic
+   configuration setting. */
+html[data-theme='light'] .theme-code-block-highlighted-line {
+    /* TODO(dnguyen0304): Use a color from the --ifm-color-gray palette. */
+    --docusaurus-highlighted-code-line-bg: rgba(170, 170, 170, 0.1);
+}
