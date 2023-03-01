@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # 📦 theme-common
 
-<!-- Provides the [Docs](../../guides/docs/docs-introduction.mdx) functionality and is the default docs plugin for Docusaurus. -->
+<!-- Provides the Docs functionality and is the default docs plugin for Docusaurus. -->
 <!-- <APITable> -->
 
 ## Installation
@@ -13,6 +13,6 @@ sidebar_position: 1
 You usually do not need to install this theme directly because it is included in the preset.
 :::
 
-```shell
+```bash npm2yarn
 $ npm install --save @docupotamus/docusaurus-theme-common
 ```

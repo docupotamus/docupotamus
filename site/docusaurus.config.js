@@ -1,7 +1,8 @@
 // @ts-check
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
+const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
 
 /** @type {string} */
 const REPOSITORY_URL = 'https://github.com/dnguyen0304/docupotamus-site';
@@ -29,6 +30,14 @@ const config = {
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
                     editUrl: REPOSITORY_URL,
+                    remarkPlugins: [
+                        [
+                            npm2yarn,
+                            {
+                                sync: true,
+                            },
+                        ],
+                    ],
                 },
             }),
         ],
