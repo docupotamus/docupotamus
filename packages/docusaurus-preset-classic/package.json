@@ -39,7 +39,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/dnguyen0304/docusaurus-preset-classic.git"
+        "url": "git+https://github.com/docupotamus/docupotamus.git",
+        "directory": "packages/docusaurus-preset-classic"
     },
     "keywords": [
         "react",
@@ -56,9 +57,5 @@
         "docusaurus-preset"
     ],
     "author": "Duy Nguyen <dnguyen0304@gmail.com>",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/dnguyen0304/docusaurus-preset-classic/issues"
-    },
-    "homepage": "https://github.com/dnguyen0304/docusaurus-preset-classic#readme"
+    "license": "MIT"
 }
