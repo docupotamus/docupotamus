@@ -5,6 +5,8 @@
         "rootDir": "src",
         "outDir": "lib",
     },
+    /* JavaScript Support */
+    "allowJs": true,
     "include": [
         "src/**/*"
     ],
