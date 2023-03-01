@@ -10,7 +10,8 @@ sidebar_position: 1
 ## Installation
 
 :::info
-You usually do not need to install this theme directly because it is included in the preset.
+You usually do not need to install this theme directly because it is included in
+the preset.
 :::
 
 ```bash npm2yarn
