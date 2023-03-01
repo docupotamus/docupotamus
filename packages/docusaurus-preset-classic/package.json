@@ -1,6 +1,6 @@
 {
     "name": "@docupotamus/docusaurus-preset-classic",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "description": "Docusaurus classic preset.",
     "main": "lib/index.js",
     "types": "src/docusaurus-preset-classic.d.ts",
