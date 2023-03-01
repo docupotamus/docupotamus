@@ -1,0 +1,47 @@
+{
+    "compilerOptions": {
+        /* Emit */
+        "target": "es2022",
+        "module": "Commonjs",
+        "lib": [
+            "ESNext",
+            "DOM"
+        ],
+        "jsx": "react-native",
+        "rootDir": "src",
+        "outDir": "lib",
+        "declaration": true,
+        "removeComments": true,
+        "sourceMap": true,
+        /* Type Checking */
+        "allowUnreachableCode": false,
+        "noImplicitReturns": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        // Set the same strict mode options that are required for packages
+        // published in the @types namespace.
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        /* Modules */
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "moduleResolution": "node16",
+        "types": [
+            "node",
+            "@docusaurus/theme-classic",
+        ],
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/lib/**/*",
+        "**/__tests__/**",
+    ]
+}
