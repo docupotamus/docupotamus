@@ -1,8 +1,8 @@
 // @ts-check
 
 const npm2yarn = require('@docusaurus/remark-plugin-npm2yarn');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const lightCodeTheme = require('prism-react-renderer/themes/github');
+const syntaxThemeDark = require('prism-react-renderer/themes/dracula');
+const syntaxThemeLight = require('prism-react-renderer/themes/github');
 
 /** @type {string} */
 const REPOSITORY_URL = 'https://github.com/dnguyen0304/docupotamus-site';
@@ -71,8 +71,8 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} Docupotamus, Inc.`,
             },
             prism: {
-                theme: lightCodeTheme,
-                darkTheme: darkCodeTheme,
+                theme: syntaxThemeLight,
+                darkTheme: syntaxThemeDark,
             },
         }),
 };
