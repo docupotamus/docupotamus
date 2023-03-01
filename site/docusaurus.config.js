@@ -5,7 +5,7 @@ const syntaxThemeDark = require('prism-react-renderer/themes/dracula');
 const syntaxThemeLight = require('prism-react-renderer/themes/github');
 
 /** @type {string} */
-const REPOSITORY_URL = 'https://github.com/dnguyen0304/docupotamus-site';
+const REPOSITORY_URL = 'https://github.com/docupotamus/docupotamus';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -29,7 +29,7 @@ const config = {
             ({
                 docs: {
                     sidebarPath: require.resolve('./sidebars.js'),
-                    editUrl: REPOSITORY_URL,
+                    editUrl: `${REPOSITORY_URL}/edit/main/site/`,
                     remarkPlugins: [
                         [
                             npm2yarn,
