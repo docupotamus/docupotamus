@@ -3,7 +3,9 @@ declare module '@docupotamus/docusaurus-theme-common' {
         readonly swizzleIsEnabled: boolean;
     }
 
-    interface CommonThemeConfig { }
+    interface CommonThemeConfig {
+        readonly tabs: readonly TabConfig[];
+    }
 
     interface TabConfig {
         readonly tabId: string;
