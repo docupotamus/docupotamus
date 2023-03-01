@@ -11,7 +11,12 @@ Remember to execute this command from the directory containing `package.json`.
 :::
 
 ```shell
-$ npm version {{ VERSION }} \
+$ PACKAGE={{ PACKAGE }} \
+    && VERSION={{ VERSION }} \
+    && npm version ${VERSION} \
+    && git add ../.. \
+    && git commit -m "Update version for ${PACKAGE}." \
+    && git tag --annotate ${PACKAGE}-v${VERSION} -m "${PACKAGE}-v${VERSION}" \
     && git push \
     && git push --tags \
     && npm publish --access=public
