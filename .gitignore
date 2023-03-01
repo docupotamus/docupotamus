@@ -1,11 +1,11 @@
 # Dependencies
 node_modules
-/preview
+preview
 
 # Production
-/build
-/dist
-/lib
+build
+dist
+lib
 
 # Generated files
 .docusaurus
