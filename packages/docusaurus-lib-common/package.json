@@ -1,6 +1,6 @@
 {
     "name": "@docupotamus/docusaurus-lib-common",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Docusaurus common library.",
     "exports": {
         "./annotate": "./lib/annotate/index.js",
