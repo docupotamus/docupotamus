@@ -1,5 +1,19 @@
 /* TODO(dnguyen0304): Fix missing responsive design. */
 
+.Loading_container__pulse {
+    --animation-duration: 5s;
+    --animation-fill-mode: forwards;
+    --animation-iteration-count: 1;
+
+    width: 100%;
+    height: 100%;
+
+    animation-name: pulse;
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: var(--animation-fill-mode);
+    animation-iteration-count: var(--animation-iteration-count);
+}
+
 .Loading_container {
     width: 65%;
 
@@ -40,39 +54,56 @@
 
     border-radius: 4px; /* TODO */
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
-    animation-name: load;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
+    animation-name: pulse, load;
+    animation-duration: var(--animation-duration);
+    animation-fill-mode: var(--animation-fill-mode);
+    animation-iteration-count: var(--animation-iteration-count);
+}
+
+@keyframes pulse {
+    0% {
+        background-color: var(--background-color-gray);
+    }
+    20% {
+        background-color: var(--background-color-gray);
+    }
+    40% {
+        background-color: hsl(200, 65%, 77%);
+    }
+    60% {
+        background-color: hsl(350, 100%, 83%);
+    }
+    80% {
+        background-color: hsl(261, 71%, 85%);
+    }
+    90% {
+        background-color: var(--background-color-gray);
+    }
+    100% {
+        background-color: var(--background-color-gray);
+    }
 }
 
 @keyframes load {
     0% {
         width: 0%;
-        background-color: var(--background-color-gray);
     }
     20% {
         width: 20%;
-        background-color: var(--background-color-gray);
     }
     40% {
         width: 40%;
-        background-color: hsl(200, 65%, 77%);
     }
     60% {
         width: 60%;
-        background-color: hsl(350, 100%, 83%);
     }
     80% {
         width: 80%;
-        background-color: hsl(261, 71%, 85%);
     }
     90% {
         width: 95%;
-        background-color: var(--background-color-gray);
     }
     100% {
         width: 95%;
-        background-color: var(--background-color-gray);
     }
 }

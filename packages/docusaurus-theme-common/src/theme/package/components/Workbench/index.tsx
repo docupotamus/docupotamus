@@ -78,7 +78,6 @@ export default function Workbench(): JSX.Element {
     return (
         // TODO(dnguyen0304): Change boxShadowWidth to custom property.
         <StyledBox
-            // className={isLoading ? styles.workbench_container__load : ''}
             workbenchIsOpen={!!activeTabId}
             boxShadowWidth='var(--doc8-space-xs)'
         >
