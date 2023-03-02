@@ -40,8 +40,8 @@ const StyledBox = styled(Box, {
         background: `linear-gradient(
             to right,
             transparent,
-            rgba(60, 64, 67, 0.15) 70%,
-            rgba(60, 64, 67, 0.4) 100%)`,
+            rgba(60, 64, 67, 0.04) 70%,
+            rgba(60, 64, 67, 0.07) 100%)`,
     },
     '& > *': {
         borderTopLeftRadius: 'inherit',
