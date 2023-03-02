@@ -22,6 +22,7 @@ interface Props {
 export default function LayoutDecorator({ children }: Props): JSX.Element {
     return (
         <Layout>
+            {/* This is only for backward-compatibility. */}
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
