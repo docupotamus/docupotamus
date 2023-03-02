@@ -72,6 +72,12 @@ $ PACKAGE={{ PACKAGE }} \
   the changes are specific to layout. Instead use a non-`Layout` component
   higher up in the tree. This applies even when only adding a new provider.
 
+### JavaScript / TypeScript
+
+- **log-message-no-wrap**: Do not wrap source code with messages where the intended
+  reader is a developer instead of a user. The most common examples are errors
+  and logs. The justification is to facilitate searching.
+
 ### CSS
 
 #### Custom Properties
