@@ -5,7 +5,6 @@ import * as React from 'react';
 import { useToolbar } from '../../contexts/toolbar';
 import useCommonThemeConfig from '../../hooks/useCommonThemeConfig';
 import Loading from './Loading';
-// import styles from './styles.module.css';
 
 interface StyledBoxProps {
     readonly workbenchIsOpen: boolean;
