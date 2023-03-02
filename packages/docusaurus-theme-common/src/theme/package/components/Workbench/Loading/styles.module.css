@@ -1,6 +1,6 @@
 /* TODO(dnguyen0304): Fix missing responsive design. */
 
-.Loading_container__pulse {
+.Loading_container {
     --animation-duration: 5s;
     --animation-fill-mode: forwards;
     --animation-iteration-count: 1;

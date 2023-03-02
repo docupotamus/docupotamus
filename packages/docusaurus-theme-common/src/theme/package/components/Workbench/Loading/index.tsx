@@ -31,9 +31,10 @@ export default function Loading(
     }, []);
 
     return (
-        <Box className={styles.Loading_container__pulse}>
+        <Box className={styles.Loading_container}>
             <Box className={styles.Loading_layout}>
-                {/* TODO(dnguyen0304): Move styles to class or styled component. */}
+                {/* TODO(dnguyen0304): Move styles to class or styled
+                    component. */}
                 <Logo
                     fill='#fff'
                     viewBox='100 700 1600 600'
