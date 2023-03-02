@@ -50,7 +50,7 @@ export default function Loading(
                     viewBox='100 700 1600 600'
                     width='80%'
                 />
-                <Box className={styles.Loading_container}>
+                <Box className={styles.Loading_barContainer}>
                     <Box className={styles.Loading_bar} />
                 </Box>
             </Layout>

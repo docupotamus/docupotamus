@@ -14,7 +14,7 @@
     animation-iteration-count: var(--animation-iteration-count);
 }
 
-.Loading_container {
+.Loading_barContainer {
     width: 65%;
 
     /* TODO(dnguyen0304): Document the context. */
@@ -45,13 +45,13 @@
     /* TODO(dnguyen0304): Investigate changing to hsl(213, 37%, 24%). */
     --background-color-gray: hsl(213, 36%, 28%);
 
-    content: '';
     width: 0;
     height: 100%;
 
     position: absolute;
     left: 0;
 
+    content: '';
     border-radius: 4px; /* TODO */
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
     animation-name: pulse, load;
