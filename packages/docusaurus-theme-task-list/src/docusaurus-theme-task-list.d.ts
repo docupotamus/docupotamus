@@ -34,3 +34,9 @@ declare module '@docupotamus/docusaurus-theme-task-list' {
 declare module '@docusaurus/theme-task-list' {
     export * from '@docupotamus/docusaurus-theme-task-list';
 }
+
+declare module '@theme/docupotamus-task-list' {
+    import type RootType from '@theme/Root';
+
+    export const RootDecorator: typeof RootType;
+}
