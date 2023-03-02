@@ -43,6 +43,7 @@ export default function LinearProgress(props: Props): JSX.Element {
             display: 'flex',
             alignItems: 'center',
             gap: '0.5rem',
+            paddingLeft: 'var(--doc8-space-xs)',
         }}>
             <StyledBox barColor={barColor}>
                 <MuiLinearProgress
