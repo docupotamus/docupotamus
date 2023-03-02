@@ -28,7 +28,9 @@ $ PACKAGE={{ PACKAGE }} \
 
 #### Swizzling
 
-<!-- - **swizzle-no-eject**: Avoid  -->
+- **swizzle-no-eject**: Strongly prefer wrapping instead of ejecting. Ejecting
+  breaks backward-compatibility, increases maintenance, and is significantly
+  more complicated.
 
 - **swizzle-layout**: Avoid swizzling `*/Layout` or `*/Layout/Provider` unless
   the changes are specific to layout. Instead use a non-`Layout` component
