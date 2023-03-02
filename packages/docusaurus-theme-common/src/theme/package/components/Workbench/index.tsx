@@ -9,12 +9,11 @@ import Loading from './Loading';
 
 interface StyledBoxProps {
     readonly workbenchIsOpen: boolean;
-    readonly boxShadowWidth: React.CSSProperties['width'];
 };
 
 const StyledBox = styled(Box, {
-    shouldForwardProp: (prop) => prop !== 'workbenchIsOpen' && prop !== 'boxShadowWidth',
-})<StyledBoxProps>(({ workbenchIsOpen, boxShadowWidth }) => ({
+    shouldForwardProp: (prop) => prop !== 'workbenchIsOpen',
+})<StyledBoxProps>(({ workbenchIsOpen }) => ({
     height: '100vh',
 
     position: 'sticky',
@@ -29,12 +28,14 @@ const StyledBox = styled(Box, {
     // TODO(dnguyen0304): Investigate refactoring to box-shadow style to reduce
     // complexity.
     '&::before': {
-        width: boxShadowWidth,
+        '--box-shadow-width': 'var(--doc8-space-xs)',
+
+        width: 'var(--box-shadow-width)',
         height: '100vh',
 
         position: 'absolute',
         top: 0,
-        left: `calc(-1 * ${boxShadowWidth})`,
+        left: 'calc(-1 * var(--box-shadow-width))',
 
         content: '""',
         background: `linear-gradient(
@@ -73,11 +74,7 @@ export default function Workbench(): JSX.Element {
     }, [location]);
 
     return (
-        // TODO(dnguyen0304): Change boxShadowWidth to custom property.
-        <StyledBox
-            workbenchIsOpen={!!activeTabId}
-            boxShadowWidth='var(--doc8-space-xs)'
-        >
+        <StyledBox workbenchIsOpen={!!activeTabId}>
             {/* TODO(dnguyen0304): Replace temporary placeholder stub. */}
             <React.Suspense fallback={<p>Loading...</p>}>
                 {
