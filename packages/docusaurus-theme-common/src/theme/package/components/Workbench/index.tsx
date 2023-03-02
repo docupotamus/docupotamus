@@ -46,6 +46,9 @@ const StyledBox = styled(Box, {
             rgba(60, 64, 67, 0.15) 70%,
             rgba(60, 64, 67, 0.4) 100%)`,
     },
+    '& > *': {
+        borderTopLeftRadius: 'inherit',
+    },
 }));
 
 export default function Workbench(): JSX.Element {
