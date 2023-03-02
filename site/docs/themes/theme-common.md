@@ -9,9 +9,9 @@ sidebar_position: 1
 
 ## Installation
 
-:::info
-You usually do not need to install this theme directly because it is included in
-the preset.
+:::tip
+If you use the preset `@docupotamus/docusaurus-preset-classic`, you don't need
+to install this as a dependency because it is already included.
 :::
 
 ```bash npm2yarn
