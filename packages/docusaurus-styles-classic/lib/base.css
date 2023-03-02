@@ -67,6 +67,9 @@ main[class*='docMainContainer'] div[class*='docItemContainer'] .theme-doc-markdo
     background-color: var(--ifm-hover-overlay);
 }
 
+/* TODO(dnguyen0304): Consider adding
+     --ifm-background-color-inverse: var(--ifm-heading-color);
+     Use heading color instead of markdown color because there is lower tone. */
 html[data-theme='light'],
 html[data-theme='dark'] {
     --ifm-color-content-inverse-hsl: var(--ifm-background-color-hsl);
