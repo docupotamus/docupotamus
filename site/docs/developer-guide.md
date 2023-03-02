@@ -24,6 +24,18 @@ $ PACKAGE={{ PACKAGE }} \
 
 ## Conventions
 
+### Docusaurus
+
+#### Swizzling
+
+<!-- - **swizzle-no-eject**: Avoid  -->
+
+- **swizzle-layout**: Avoid swizzling `*/Layout` or `*/Layout/Provider` unless
+  the changes are specific to layout. Instead use a non-`Layout` component
+  higher up in the tree. This applies even when only adding a new provider.
+
+<!-- DocPage/Layout/Provider == LayoutProvider == DocPage so .... just wrap Root unless you have a more specific feature -->
+
 ### CSS
 
 #### Custom Properties
