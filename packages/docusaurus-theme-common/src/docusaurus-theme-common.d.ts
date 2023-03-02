@@ -5,6 +5,12 @@ declare module '@docupotamus/docusaurus-theme-common' {
 
     interface CommonThemeConfig {
         readonly tabs: readonly TabConfig[];
+        readonly debug: {
+            readonly loading: {
+                readonly isEnabled: boolean;
+                readonly durationMilli: number;
+            };
+        };
     }
 
     interface TabConfig {

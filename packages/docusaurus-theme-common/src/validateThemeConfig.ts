@@ -13,6 +13,13 @@ declare module '@docusaurus/types' {
 
 const DEFAULT_THEME_CONFIG: CommonThemeConfig = {
     tabs: [],
+    debug: {
+        loading: {
+            isEnabled: true,
+            // TODO(dnguyen0304): Fix missing cohesion with animation-duration.
+            durationMilli: 5 * 1000,
+        },
+    },
 };
 
 const TabSchema = Joi.object({
@@ -34,6 +41,26 @@ export const ThemeConfigSchema = Joi.object<ThemeConfig>({
             .array()
             .items(TabSchema)
             .default(DEFAULT_THEME_CONFIG.tabs),
+        debug: Joi.object({
+            loading: Joi.object({
+                isEnabled: Joi
+                    .boolean()
+                    .default(DEFAULT_THEME_CONFIG.debug.loading.isEnabled),
+                durationMilli: Joi
+                    .number()
+                    .default(DEFAULT_THEME_CONFIG.debug.loading.durationMilli)
+                    .when(
+                        'isEnabled',
+                        {
+                            is: Joi.boolean().valid(false),
+                            // TODO(dnguyen0304): Improve error messaging.
+                            then: Joi.forbidden(),
+                        },
+                    ),
+            })
+                .default(DEFAULT_THEME_CONFIG.debug.loading),
+        })
+            .default(DEFAULT_THEME_CONFIG.debug),
     })
         .label('themeConfig.docupotamusCommon')
         .default(DEFAULT_THEME_CONFIG),
