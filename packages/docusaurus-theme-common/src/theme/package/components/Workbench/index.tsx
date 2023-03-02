@@ -24,10 +24,7 @@ const StyledBox = styled(Box, {
     flexDirection: 'column',
     justifyContent: 'flex-start',
 
-    background: `linear-gradient(
-        to right,
-        rgb(46, 69, 97) 0%,
-        rgb(39, 60, 85) 80%)`,
+    backgroundColor: 'var(--ifm-background-color)',
     borderTopLeftRadius: 'var(--doc8-space-l-xl)',
     // TODO(dnguyen0304): Investigate refactoring to box-shadow style to reduce
     // complexity.
