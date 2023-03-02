@@ -32,7 +32,7 @@ $ PACKAGE={{ PACKAGE }} \
   breaks backward-compatibility, increases maintenance, and is significantly
   more complicated.
 
-- **swizzle-provider-global**: Prefer swizzling Root instead of DocPage when
+- **swizzle-provider-global**: Prefer swizzling `Root` instead of `DocPage` when
   adding a new global provider.
 
 - **swizzle-layout**: Avoid swizzling `*/Layout` or `*/Layout/Provider` unless
