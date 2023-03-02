@@ -4,18 +4,22 @@ import * as React from 'react';
 import { useToolbar } from '../../contexts/toolbar';
 import Button from './Button';
 
-// TODO(dnguyen0304): Add paddingRight for the scrollbar.
 const StyledBox = styled(Box)({
-    position: 'sticky',
-    top: 'var(--ifm-navbar-height)',
     // TODO(dnguyen0304): Fix missing responsive layout.
     width: '110px',
     height: 'calc(100vh - var(--ifm-navbar-height))',
+
+    position: 'sticky',
+    top: 'var(--ifm-navbar-height)',
+
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
     alignItems: 'center',
+
     borderLeft: '1px solid var(--ifm-toc-border-color)',
-    paddingTop: 'var(--space-s)',
+    // TODO(dnguyen0304): Add paddingRight for the scrollbar.
+    paddingTop: 'var(--doc8-space-s)',
 });
 
 export default function Toolbar(): JSX.Element {
