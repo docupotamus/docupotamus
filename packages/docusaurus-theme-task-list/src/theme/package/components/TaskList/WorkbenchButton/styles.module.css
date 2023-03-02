@@ -1,0 +1,24 @@
+.WorkbenchButton_layout {
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: 100% 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.WorkbenchButton_layout:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.WorkbenchButton_layout .MuiIconButton-root .MuiSvgIcon-root {
+    font-size: inherit;
+}

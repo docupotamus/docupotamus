@@ -1,0 +1,5 @@
+html[data-theme='light'],
+html[data-theme='dark'] {
+    /* Components */
+    --tl-workbench-color-base: var(--ifm-color-emphasis-0);
+}
