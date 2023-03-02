@@ -13,6 +13,7 @@
         "react-hotkeys": "^2.0.0"
     },
     "devDependencies": {
+        "@docupotamus/docusaurus-lib-common": "0.1.0",
         "@docusaurus/module-type-aliases": "^2.2.x",
         "@docusaurus/types": "^2.2.x",
         "@joshcena/docusaurus-plugin-utils": "^0.1.3",

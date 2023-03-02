@@ -1,7 +1,8 @@
 import type {
     KeyHandlers as KeyHandlersType,
     KeyMap as KeyMapType
-} from '@docusaurus/theme-task-list';
+} from '@docupotamus/docusaurus-lib-common/types';
+import type { KeyBindings } from '@docusaurus/theme-task-list';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import { HotKeys } from 'react-hotkeys';
@@ -10,7 +11,7 @@ import { useTasks } from '../../contexts/tasks';
 import ButtonGroup from './ButtonGroup';
 import Tabs from './Tabs';
 
-const keyMap: KeyMapType = {
+const keyMap: KeyMapType<KeyBindings> = {
     TAB_PREVIOUS: 'left',
     TAB_NEXT: 'right',
 };
@@ -64,7 +65,7 @@ export default function WorkbenchTab(): JSX.Element {
             });
     };
 
-    const handlers: KeyHandlersType = {
+    const handlers: KeyHandlersType<KeyBindings> = {
         TAB_PREVIOUS: handlePreviousClick,
         TAB_NEXT: handleNextClick,
     };
