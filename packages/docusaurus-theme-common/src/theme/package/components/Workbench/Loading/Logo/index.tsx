@@ -9,7 +9,7 @@ const SvgLogo = (props: SVGProps<SVGSVGElement>) => (
         viewBox='0 0 2000 2000'
         style={{
             enableBackground: 'new 0 0 2000 2000',
-        }}
+        } as React.CSSProperties}
         xmlSpace='preserve'
         {...props}
     >
