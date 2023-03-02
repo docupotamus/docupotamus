@@ -47,6 +47,13 @@ export default function preset(
     if (algolia) {
         themes.push(require.resolve('@docusaurus/theme-search-algolia'));
     }
+    themes.push(
+        makePluginConfig(
+            '@docupotamus/docusaurus-theme-common',
+            { swizzleIsEnabled: false },
+        ),
+        makePluginConfig('./plugin'),
+    );
 
     if ('gtag' in themeConfig) {
         throw new Error(
@@ -91,6 +98,14 @@ export default function preset(
         );
     }
 
+    const lastTheme = themes.at(-1)?.toString() ?? '';
+    const isInternalTheme = (
+        lastTheme.includes('docusaurus-preset-classic') // repository name
+        && lastTheme.endsWith('plugin/index.js') // sub-directory name
+    );
+    if (lastTheme && !isInternalTheme) {
+        throw new Error(`Expected the last theme to be the preset's internal theme but instead found "${lastTheme}". Try checking the themes item order.`);
+    }
     return { plugins, themes };
 };
 
