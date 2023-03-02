@@ -29,7 +29,6 @@ const StyledBox = styled(Box, {
         rgb(46, 69, 97) 0%,
         rgb(39, 60, 85) 80%)`,
     borderTopLeftRadius: 'var(--doc8-space-l-xl)',
-    paddingBottom: 'var(--doc8-space-xs)',
     // TODO(dnguyen0304): Investigate refactoring to box-shadow style to reduce
     // complexity.
     '&::before': {
