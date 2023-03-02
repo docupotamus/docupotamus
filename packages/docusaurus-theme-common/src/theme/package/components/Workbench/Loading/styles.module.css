@@ -1,0 +1,78 @@
+/* TODO(dnguyen0304): Fix missing responsive design. */
+
+.Loading_container {
+    width: 65%;
+
+    /* TODO(dnguyen0304): Document the context. */
+    position: relative;
+
+    background-color: #fff; /* TODO */
+    border-radius: 4px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    padding: var(--doc8-space-s) var(--doc8-space-l);
+}
+
+.Loading_bar {
+    /* TODO(dnguyen0304): Investigate why this is needed. */
+    display: inline-block;
+    width: 100%;
+    height: 10px;
+
+    /* TODO(dnguyen0304): Document the context. */
+    position: relative;
+
+    background-color: #f1f1f1; /* TODO */
+    border-radius: 4px; /* TODO */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.Loading_bar:after {
+    /* TODO(dnguyen0304): Investigate changing to hsl(213, 37%, 24%). */
+    --background-color-gray: hsl(213, 36%, 28%);
+
+    content: '';
+    width: 0;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+
+    border-radius: 4px; /* TODO */
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    animation-name: load;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+        background-color: var(--background-color-gray);
+    }
+    20% {
+        width: 20%;
+        background-color: var(--background-color-gray);
+    }
+    40% {
+        width: 40%;
+        background-color: hsl(200, 65%, 77%);
+    }
+    60% {
+        width: 60%;
+        background-color: hsl(350, 100%, 83%);
+    }
+    80% {
+        width: 80%;
+        background-color: hsl(261, 71%, 85%);
+    }
+    90% {
+        width: 95%;
+        background-color: var(--background-color-gray);
+    }
+    100% {
+        width: 95%;
+        background-color: var(--background-color-gray);
+    }
+}
