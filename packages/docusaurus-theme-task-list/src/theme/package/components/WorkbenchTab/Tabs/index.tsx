@@ -29,8 +29,7 @@ const Layout = styled(Box, {
     transition: `
         translate
         var(--ifm-transition-fast)
-        var(--ifm-transition-timing-default)
-    `,
+        var(--ifm-transition-timing-default)`,
 }));
 
 interface Props {

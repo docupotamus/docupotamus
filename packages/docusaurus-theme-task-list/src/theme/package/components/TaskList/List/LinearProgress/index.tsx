@@ -23,7 +23,7 @@ const StyledBox = styled(Box, {
 const StyledText = styled('p')({
     minWidth: '5ch',
 
-    fontSize: 'var(--d9s-font-size--1)',
+    fontSize: 'var(--doc8-font-size--1)',
     margin: 0,
 });
 

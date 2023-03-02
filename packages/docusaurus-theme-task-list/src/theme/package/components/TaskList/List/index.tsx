@@ -15,15 +15,15 @@ const StyledBox = styled(Box)({
     '&.MuiBox-root': {
         display: 'flex',
         flexDirection: 'column',
-        gap: 'var(--d9s-space-3xs-2xs)',
+        gap: 'var(--doc8-space-3xs-2xs)',
         marginTop: 'var(--ifm-leading)',
         marginBottom: 'var(--ifm-leading)',
     },
     '&.MuiBox-root .MuiFormGroup-root': {
-        paddingLeft: 'var(--d9s-space-xs)',
+        paddingLeft: 'var(--doc8-space-xs)',
     },
     '& .MuiFormControlLabel-root + .MuiFormControlLabel-root': {
-        marginTop: 'var(--d9s-list-item-gap-2xs)',
+        marginTop: 'var(--doc8-list-item-gap-2xs)',
     },
 });
 

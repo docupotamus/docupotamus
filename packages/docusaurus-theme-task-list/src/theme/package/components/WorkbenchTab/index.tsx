@@ -24,8 +24,8 @@ const Layout = styled(HotKeys)({
     justifyContent: 'center',
 
     color: 'var(--tl-workbench-color-base)',
-    padding: 'var(--d9s-space-m)',
-    paddingBottom: 'var(--d9s-space-xs)',
+    padding: 'var(--doc8-space-m)',
+    paddingBottom: 'var(--doc8-space-xs)',
 });
 
 const useTaskListIds = (): string[] => {
