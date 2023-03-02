@@ -74,9 +74,9 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### JavaScript / TypeScript
 
-- **log-message-no-wrap**: Do not wrap source code with messages where the intended
-  reader is a developer instead of a user. The most common examples are errors
-  and logs. The justification is to facilitate searching.
+- **log-message-no-wrap**: Do not wrap source code with messages where the
+  intended reader is a developer instead of a user. The most common examples are
+  errors and logs. The justification is to facilitate searching.
 
 ### CSS
 
