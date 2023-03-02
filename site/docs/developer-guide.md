@@ -74,6 +74,10 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### JavaScript / TypeScript
 
+- **log-message-suggestion**: Prefer including a suggestion for what developers
+  can try to fix their problem. For example, "Failed to open file.txt. Try
+  checking that this file exists and has the correct permissions."
+
 - **log-message-no-wrap**: Do not wrap source code with messages where the
   intended reader is a developer instead of a user. The most common examples are
   errors and logs. The justification is to facilitate searching.
