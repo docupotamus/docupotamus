@@ -33,5 +33,14 @@
             "node",
             "@docusaurus/theme-classic",
         ],
+        /* Plugins */
+        "plugins": [
+            {
+                // TODO(dnguyen0304): Consider setting the classnameTransform
+                // option so we can use standard CSS naming conventions instead
+                // of camelCase.
+                "name": "typescript-plugin-css-modules",
+            },
+        ],
     }
 }
