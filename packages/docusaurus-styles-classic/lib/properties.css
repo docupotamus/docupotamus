@@ -146,16 +146,6 @@
     --space-2xl: clamp(4.50rem, calc(4.33rem + 0.87vw), 5.00rem);
     --space-3xl: clamp(6.75rem, calc(6.49rem + 1.30vw), 7.50rem);
 
-    --doc8-space-3xs: var(--space-3xs);
-    --doc8-space-2xs: var(--space-2xs);
-    --doc8-space-xs: var(--space-xs); /* This is closest to 1rem. */
-    --doc8-space-s: var(--space-s);
-    --doc8-space-m: var(--space-m);
-    --doc8-space-l: var(--space-l);
-    --doc8-space-xl: var(--space-xl);
-    --doc8-space-2xl: var(--space-2xl);
-    --doc8-space-3xl: var(--space-3xl);
-
     /* One-up pairs */
     --space-3xs-2xs: clamp(0.31rem, calc(0.20rem + 0.54vw), 0.63rem);
     --space-2xs-xs: clamp(0.56rem, calc(0.43rem + 0.65vw), 0.94rem);
@@ -165,6 +155,16 @@
     --space-l-xl: clamp(2.25rem, calc(1.73rem + 2.61vw), 3.75rem);
     --space-xl-2xl: clamp(3.38rem, calc(2.81rem + 2.83vw), 5.00rem);
     --space-2xl-3xl: clamp(4.50rem, calc(3.46rem + 5.22vw), 7.50rem);
+
+    --doc8-space-3xs: var(--space-3xs);
+    --doc8-space-2xs: var(--space-2xs);
+    --doc8-space-xs: var(--space-xs); /* This is closest to 1rem. */
+    --doc8-space-s: var(--space-s);
+    --doc8-space-m: var(--space-m);
+    --doc8-space-l: var(--space-l);
+    --doc8-space-xl: var(--space-xl);
+    --doc8-space-2xl: var(--space-2xl);
+    --doc8-space-3xl: var(--space-3xl);
 
     --doc8-space-3xs-2xs: var(--space-3xs-2xs); /* This is closest to 0.5rem. */
     --doc8-space-2xs-xs: var(--space-2xs-xs);
