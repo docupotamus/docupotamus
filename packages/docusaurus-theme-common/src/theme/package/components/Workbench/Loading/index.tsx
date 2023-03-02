@@ -1,19 +1,8 @@
 import Box from '@mui/material/Box';
-import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import useCommonThemeConfig from '../../../hooks/useCommonThemeConfig';
 import Logo from './Logo';
 import styles from './styles.module.css';
-
-const Layout = styled(Box)({
-    height: '55%',
-
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    rowGap: 'var(--doc8-space-xl)',
-});
 
 interface Props {
     readonly setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
@@ -43,7 +32,7 @@ export default function Loading(
 
     return (
         <Box className={styles.Loading_container__pulse}>
-            <Layout>
+            <Box className={styles.Loading_layout}>
                 {/* TODO(dnguyen0304): Move styles to class or styled component. */}
                 <Logo
                     fill='#fff'
@@ -53,7 +42,7 @@ export default function Loading(
                 <Box className={styles.Loading_barContainer}>
                     <Box className={styles.Loading_bar} />
                 </Box>
-            </Layout>
+            </Box>
         </Box>
     );
 };

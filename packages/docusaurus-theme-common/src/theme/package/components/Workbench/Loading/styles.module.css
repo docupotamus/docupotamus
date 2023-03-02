@@ -14,6 +14,16 @@
     animation-iteration-count: var(--animation-iteration-count);
 }
 
+.Loading_layout {
+    height: 55%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: var(--doc8-space-xl);
+}
+
 .Loading_barContainer {
     width: 65%;
 
