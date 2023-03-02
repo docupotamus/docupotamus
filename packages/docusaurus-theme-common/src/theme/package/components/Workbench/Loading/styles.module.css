@@ -46,7 +46,7 @@
     position: relative;
 
     background-color: #f1f1f1; /* TODO */
-    border-radius: 4px; /* TODO */
+    border-radius: inherit;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
     overflow: hidden;
 }
@@ -62,7 +62,7 @@
     left: 0;
 
     content: '';
-    border-radius: 4px; /* TODO */
+    border-radius: inherit;
     box-shadow: 0 0 5px rgba(0, 0, 0, .2);
     animation-name: pulse, load;
     animation-duration: var(--animation-duration);
