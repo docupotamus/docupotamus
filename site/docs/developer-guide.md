@@ -44,6 +44,19 @@ $ PACKAGE={{ PACKAGE }} \
     directory trees between `decorators` and `swizzle` are always equal to one
     another.
 
+### git and GitHub
+
+- **git-commit-message**: Use the template below. Note the verb is formatted as
+  uppercase and the message always ends with punctuation.
+
+  ```text
+  // Template
+  [${scope}] ${Verb} ${change} for ${target} ${targetType}.
+
+  // Example
+  [theme-foo] Add handleClick for Button component.
+  ```
+
 ### Docusaurus
 
 #### Swizzling
