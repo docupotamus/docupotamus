@@ -36,6 +36,20 @@ $ PACKAGE={{ PACKAGE }} \
 
   - Update `ThemeConfigSchema`, which is for validation.
 
+- Part 2
+
+  - In code that depends on the setting, import the `useFooThemeConfig` hook.
+
+    ```typescript
+    import useFooThemeConfig from '../../hooks/useFooThemeConfig';
+    const { mySetting } = useFooThemeConfig();
+    ```
+
+- Part 3
+
+  - In the client `docusaurus.config.js`, update `themeConfig`, which is for
+    customizing default values.
+
 ## Conventions
 
 ### Project Structure
