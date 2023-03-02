@@ -24,6 +24,17 @@ $ PACKAGE={{ PACKAGE }} \
 
 ## Conventions
 
+### Project Structure
+
+- `src/theme/`
+
+  <!-- - `decorators`: -->
+
+  - `swizzle`: This is the theme path analogous to where docusaurus sites put
+    swizzled theme components. When the plugin option `swizzleIsEnabled` is set
+    to `true` (if applicable), then these components are automatically added to
+    the [theme aliases stack](https://docusaurus.io/docs/advanced/client).
+
 ### Docusaurus
 
 #### Swizzling
