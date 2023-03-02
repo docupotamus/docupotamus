@@ -29,3 +29,24 @@ import { TaskList } from '@theme/docupotamus-task-list';
 - [ ] Look out at nature.
 </TaskList>
 ```
+
+## Customizing and Configuring
+
+### Example Configuration
+
+:::tip
+Most users configure this through the `@docupotamus/docusaurus-preset-classic`
+preset options.
+:::
+
+```js
+themeConfig: {
+    docupotamusTaskList: {
+        checkbox: {
+            color: 'red',
+            shape: 'circle',
+            size: 'small',
+        },
+    },
+},
+```
