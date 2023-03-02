@@ -24,6 +24,12 @@
     row-gap: var(--doc8-space-xl);
 }
 
+.Loading_logo {
+    width: 80%;
+
+    fill: #fff;
+}
+
 .Loading_barContainer {
     width: 65%;
 

@@ -33,12 +33,9 @@ export default function Loading(
     return (
         <Box className={styles.Loading_container}>
             <Box className={styles.Loading_layout}>
-                {/* TODO(dnguyen0304): Move styles to class or styled
-                    component. */}
                 <Logo
-                    fill='#fff'
+                    className={styles.Loading_logo}
                     viewBox='100 700 1600 600'
-                    width='80%'
                 />
                 <Box className={styles.Loading_barContainer}>
                     <Box className={styles.Loading_bar} />
