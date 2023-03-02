@@ -16,19 +16,30 @@ interface TabIdToConfig extends ReadonlyMap<string, TabConfig> { };
 //   See: https://github.com/facebook/react/issues/14603
 const keyByTabId = (tabConfigs: readonly BaseTabConfig[]): TabIdToConfig => {
     return new Map(
-        tabConfigs.map(tabConfig => [
-            tabConfig.tabId,
+        [[
+            'task-list',
             {
-                Component: React.lazy(() =>
-                    import(tabConfig.modulePath)
-                        .then(module => ({ default: module.WorkbenchTab }))
-                ),
-                IconComponent: React.lazy(() =>
-                    import(tabConfig.iconModulePath)
-                        .then(module => ({ default: module.WorkbenchIcon }))
-                ),
+                Component: React.lazy(() => import(
+                    '@theme/docupotamus-task-list'
+                ).then(module => ({ default: module.WorkbenchTab }))),
+                IconComponent: React.lazy(() => import(
+                    '@theme/docupotamus-task-list'
+                ).then(module => ({ default: module.WorkbenchIcon }))),
             },
-        ])
+        ]],
+        // tabConfigs.map(tabConfig => [
+        //     tabConfig.tabId,
+        //     {
+        //         Component: React.lazy(() =>
+        //             import(tabConfig.modulePath)
+        //                 .then(module => ({ default: module.WorkbenchTab }))
+        //         ),
+        //         IconComponent: React.lazy(() =>
+        //             import(tabConfig.iconModulePath)
+        //                 .then(module => ({ default: module.WorkbenchIcon }))
+        //         ),
+        //     },
+        // ])
     );
 };
 
