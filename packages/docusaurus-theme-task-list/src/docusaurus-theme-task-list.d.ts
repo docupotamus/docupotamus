@@ -1,4 +1,4 @@
-declare module '@docusaurus/theme-task-list' {
+declare module '@docupotamus/docusaurus-theme-task-list' {
     import { CheckboxProps } from '@mui/material/Checkbox';
     import type { KeySequence } from 'react-hotkeys';
 
@@ -29,4 +29,8 @@ declare module '@docusaurus/theme-task-list' {
             keyboardEvent?: KeyboardEvent | undefined,
         ) => void;
     };
+}
+
+declare module '@docusaurus/theme-task-list' {
+    export * from '@docupotamus/docusaurus-theme-task-list';
 }
