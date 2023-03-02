@@ -22,6 +22,20 @@ $ PACKAGE={{ PACKAGE }} \
     && npm publish --access=public
 ```
 
+### Add a ThemeConfig Setting
+
+<!-- TODO(dnguyen0304): Add task list. -->
+
+- Part 1
+
+  - In `docusaurus-theme-foo.d.ts`, update `FooThemeConfig`, which is the source
+    of truth.
+
+  - In `validateThemeConfig.ts`, update `DEFAULT_THEME_CONFIG`, which is for
+    default values.
+
+  - Update `ThemeConfigSchema`, which is for validation.
+
 ## Conventions
 
 ### Project Structure
