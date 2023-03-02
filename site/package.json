@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "private": true,
     "dependencies": {
-        "@docupotamus/docusaurus-preset-classic": "^0.1.2",
+        "@docupotamus/docusaurus-preset-classic": "^0.2.0",
         "@docusaurus/remark-plugin-npm2yarn": "^2.3.1",
         "@mdx-js/react": "^1.6.22",
         "clsx": "^1.2.1",
