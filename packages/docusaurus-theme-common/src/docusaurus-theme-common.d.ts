@@ -17,3 +17,11 @@ declare module '@docupotamus/docusaurus-theme-common' {
 declare module '@docupotamus/theme-common' {
     export * from '@docupotamus/docusaurus-theme-common';
 }
+
+declare module '@theme/docupotamus-common' {
+    import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
+    import type RootType from '@theme/Root';
+
+    export const DocPageLayoutMainDecorator: typeof DocPageLayoutMainType;
+    export const RootDecorator: typeof RootType;
+}
