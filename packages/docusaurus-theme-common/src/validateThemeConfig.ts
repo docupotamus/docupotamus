@@ -12,7 +12,6 @@ declare module '@docusaurus/types' {
 };
 
 const DEFAULT_THEME_CONFIG: CommonThemeConfig = {
-    tabs: [],
     debug: {
         loading: {
             isEnabled: true,
@@ -22,25 +21,9 @@ const DEFAULT_THEME_CONFIG: CommonThemeConfig = {
     },
 };
 
-const TabSchema = Joi.object({
-    tabId: Joi
-        .string()
-        .required(),
-    modulePath: Joi
-        .string()
-        .required(),
-    iconModulePath: Joi
-        .string()
-        .required(),
-});
-
 // TODO(dnguyen0304): Investigate missing labels.
 export const ThemeConfigSchema = Joi.object<ThemeConfig>({
     docupotamusCommon: Joi.object({
-        tabs: Joi
-            .array()
-            .items(TabSchema)
-            .default(DEFAULT_THEME_CONFIG.tabs),
         debug: Joi.object({
             loading: Joi.object({
                 isEnabled: Joi
