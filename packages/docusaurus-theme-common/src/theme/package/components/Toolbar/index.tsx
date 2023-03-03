@@ -31,7 +31,10 @@ export default function Toolbar(): JSX.Element {
             <React.Suspense fallback='Loading...'>
                 {[...tabIdToConfig.entries()].map(([tabId, config]) => {
                     return (
-                        <Button tabId={tabId}>
+                        <Button
+                            key={tabId}
+                            tabId={tabId}
+                        >
                             <config.IconComponent />
                         </Button>
                     );
