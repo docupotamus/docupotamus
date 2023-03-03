@@ -1,7 +1,11 @@
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
-import { TabConfig as BaseTabConfig } from '@docupotamus/theme-common';
 import * as React from 'react';
-import useCommonThemeConfig from '../hooks/useCommonThemeConfig';
+
+interface BaseTabConfig {
+    readonly tabId: string;
+    readonly modulePath: string;
+    readonly iconModulePath: string;
+}
 
 interface TabConfig {
     readonly Component: React.LazyExoticComponent<() => JSX.Element>;
@@ -9,6 +13,8 @@ interface TabConfig {
 };
 
 interface TabIdToConfig extends ReadonlyMap<string, TabConfig> { };
+
+const tabConfigs: readonly BaseTabConfig[] = [];
 
 // TODO(dnguyen0304): Add real implementation.
 //   See: https://stackoverflow.com/a/47956054
@@ -31,11 +37,11 @@ const keyByTabId = (tabConfigs: readonly BaseTabConfig[]): TabIdToConfig => {
         //     tabConfig.tabId,
         //     {
         //         Component: React.lazy(() =>
-        //             import(tabConfig.modulePath)
+        //             import(`${tabConfig.modulePath}`)
         //                 .then(module => ({ default: module.WorkbenchTab }))
         //         ),
         //         IconComponent: React.lazy(() =>
-        //             import(tabConfig.iconModulePath)
+        //             import(`${tabConfig.iconModulePath}`)
         //                 .then(module => ({ default: module.WorkbenchIcon }))
         //         ),
         //     },
@@ -52,8 +58,6 @@ interface ContextValue {
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
 const useContextValue = (): ContextValue => {
-    const { tabs: tabConfigs } = useCommonThemeConfig();
-
     const [activeTabId, setActiveTabId] = React.useState<string>('');
 
     const tabIdToConfig = keyByTabId(tabConfigs);

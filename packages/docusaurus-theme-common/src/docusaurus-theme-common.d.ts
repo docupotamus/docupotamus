@@ -11,12 +11,6 @@ declare module '@docupotamus/docusaurus-theme-common' {
             };
         };
     }
-
-    interface TabConfig {
-        readonly tabId: string;
-        readonly modulePath: string;
-        readonly iconModulePath: string;
-    }
 }
 
 declare module '@docupotamus/theme-common' {
