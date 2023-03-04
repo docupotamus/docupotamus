@@ -18,6 +18,13 @@ type Action =
 
 const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
     const newMapping = new Map(prev);
+    if (action.type === 'setTab') {
+        newMapping.set(action.tabId, {
+            tabId: action.tabId,
+            Component: action.newValue.Component,
+            IconComponent: action.newValue.IconComponent,
+        });
+    }
     return newMapping;
 };
 
