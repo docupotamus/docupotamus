@@ -52,3 +52,11 @@ declare module '@theme/docupotamus-common' {
     export const RootDecorator: typeof RootType;
     export const useToolbar: () => ContextValue;
 }
+
+declare module '@theme/docupotamus-common/Toolbar/Entry' {
+    interface Props {
+        readonly children: React.ReactNode;
+    }
+
+    export default function Entry(props: Props): JSX.Element;
+}
