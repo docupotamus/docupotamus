@@ -1,3 +1,4 @@
+import ToolbarEntry from '@theme/docupotamus-common/Toolbar/Entry';
 import * as React from 'react';
 import { ToolbarProvider } from '../../package/contexts/toolbar';
 
@@ -8,7 +9,9 @@ interface Props {
 export default function RootDecorator({ children }: Props): JSX.Element {
     return (
         <ToolbarProvider>
-            {children}
+            <ToolbarEntry>
+                {children}
+            </ToolbarEntry>
         </ToolbarProvider>
     );
 };
