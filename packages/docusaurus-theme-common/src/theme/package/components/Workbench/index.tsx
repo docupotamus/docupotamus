@@ -80,7 +80,7 @@ export default function Workbench(): JSX.Element {
                     // TODO(dnguyen0304): Fix loading not triggering on open.
                     isLoading
                         ? <Loading setIsLoading={setIsLoading} />
-                        : Tab && <Tab />
+                        : Tab
                 }
             </React.Suspense>
         </StyledBox >

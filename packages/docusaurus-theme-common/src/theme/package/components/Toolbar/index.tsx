@@ -35,7 +35,7 @@ export default function Toolbar(): JSX.Element {
                             key={tabId}
                             tabId={tabId}
                         >
-                            <config.IconComponent />
+                            {config.IconComponent}
                         </Button>
                     );
                 })}
