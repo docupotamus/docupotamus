@@ -25,7 +25,10 @@ declare module '@docusaurus/theme-task-list' {
 }
 
 declare module '@theme/docupotamus-task-list' {
+    import { SvgIconComponent } from '@mui/icons-material';
     import type RootType from '@theme/Root';
 
     export const RootDecorator: typeof RootType;
+    export const WorkbenchIcon: SvgIconComponent;
+    export const WorkbenchTab: () => JSX.Element;
 }
