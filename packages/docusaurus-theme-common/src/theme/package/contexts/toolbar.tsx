@@ -2,47 +2,52 @@ import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
 
 interface TabConfig {
-    readonly Component: React.LazyExoticComponent<() => JSX.Element>;
-    readonly IconComponent: React.LazyExoticComponent<() => JSX.Element>;
+    readonly tabId: string;
+    readonly Component: JSX.Element;
+    readonly IconComponent: JSX.Element;
 };
 
 interface TabIdToConfig extends ReadonlyMap<string, TabConfig> { };
 
-// TODO(dnguyen0304): Investigate dynamic instead of hard-coded configuration.
-const tabIdToConfig: TabIdToConfig = new Map(
-    [[
-        'task-list',
-        {
-            Component: React.lazy(() => import(
-                '@theme/docupotamus-task-list'
-            ).then(module => ({ default: module.WorkbenchTab }))),
-            IconComponent: React.lazy(() => import(
-                '@theme/docupotamus-task-list'
-            ).then(module => ({ default: module.WorkbenchIcon }))),
-        },
-    ]],
-);
+type Action =
+    | {
+        type: 'setTab';
+        tabId: string;
+        newValue: TabConfig;
+    };
+
+const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
+    const newMapping = new Map(prev);
+    return newMapping;
+};
 
 interface ContextValue {
     readonly tabIdToConfig: TabIdToConfig;
     readonly activeTabId: string;
+    readonly dispatchTabIdToConfig: React.Dispatch<Action>;
     readonly setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
 const useContextValue = (): ContextValue => {
+    const [tabIdToConfig, dispatchTabIdToConfig] = React.useReducer(
+        reducer,
+        new Map(),
+    );
     const [activeTabId, setActiveTabId] = React.useState<string>('');
 
     return React.useMemo(
         () => ({
             tabIdToConfig,
             activeTabId,
+            dispatchTabIdToConfig,
             setActiveTabId,
         }),
         [
             tabIdToConfig,
             activeTabId,
+            dispatchTabIdToConfig,
             setActiveTabId,
         ],
     );
