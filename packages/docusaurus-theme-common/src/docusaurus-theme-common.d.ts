@@ -11,6 +11,30 @@ declare module '@docupotamus/docusaurus-theme-common' {
             };
         };
     }
+
+    // TODO(dnguyen0304): Investigate moving these to toolbar context.
+
+    interface TabConfig {
+        readonly tabId: string;
+        readonly Component: JSX.Element;
+        readonly IconComponent: JSX.Element;
+    }
+
+    interface TabIdToConfig extends ReadonlyMap<string, TabConfig> { }
+
+    type Action =
+        | {
+            type: 'setTab';
+            tabId: string;
+            newValue: TabConfig;
+        }
+
+    interface ContextValue {
+        readonly tabIdToConfig: TabIdToConfig;
+        readonly activeTabId: string;
+        readonly dispatchTabIdToConfig: React.Dispatch<Action>;
+        readonly setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
+    }
 }
 
 declare module '@docupotamus/theme-common' {
@@ -18,6 +42,7 @@ declare module '@docupotamus/theme-common' {
 }
 
 declare module '@theme/docupotamus-common' {
+    import type { ContextValue } from '@docupotamus/docusaurus-theme-common';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
     import type RootType from '@theme/Root';
@@ -25,4 +50,5 @@ declare module '@theme/docupotamus-common' {
     export const DocPageLayoutDecorator: typeof DocPageLayoutType;
     export const DocPageLayoutMainDecorator: typeof DocPageLayoutMainType;
     export const RootDecorator: typeof RootType;
+    export const useToolbar: () => ContextValue;
 }

@@ -1,20 +1,10 @@
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
+import {
+    Action,
+    ContextValue,
+    TabIdToConfig
+} from '@docupotamus/docusaurus-theme-common';
 import * as React from 'react';
-
-interface TabConfig {
-    readonly tabId: string;
-    readonly Component: JSX.Element;
-    readonly IconComponent: JSX.Element;
-};
-
-interface TabIdToConfig extends ReadonlyMap<string, TabConfig> { };
-
-type Action =
-    | {
-        type: 'setTab';
-        tabId: string;
-        newValue: TabConfig;
-    };
 
 const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
     const newMapping = new Map(prev);
@@ -26,13 +16,6 @@ const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
         });
     }
     return newMapping;
-};
-
-interface ContextValue {
-    readonly tabIdToConfig: TabIdToConfig;
-    readonly activeTabId: string;
-    readonly dispatchTabIdToConfig: React.Dispatch<Action>;
-    readonly setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
