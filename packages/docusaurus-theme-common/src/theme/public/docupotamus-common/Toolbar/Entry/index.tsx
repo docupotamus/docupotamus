@@ -1,1 +1,1 @@
-export { default } from '../../../package/components/Toolbar/Entry';
+export { default } from '../../../../package/components/Toolbar/Entry';
