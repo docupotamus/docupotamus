@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useTasks } from '../../contexts/tasks';
 import useLabelsParsed from '../../hooks/useLabelsParsed';
 import List from './List';
-import WorkbenchButton from './WorkbenchButton';
+// import WorkbenchButton from './WorkbenchButton';
 import styles from './WorkbenchButton/styles.module.css';
 
 const Layout = styled(Box)({
@@ -52,7 +52,7 @@ export default function TaskList(
                 path={location.pathname}
                 taskListId={taskListId}
             />
-            <WorkbenchButton />
+            {/* <WorkbenchButton /> */}
         </Layout>
     );
 };
