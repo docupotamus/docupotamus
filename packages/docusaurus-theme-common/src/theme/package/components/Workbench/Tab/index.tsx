@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
+import CloseButton from './CloseButton';
 
 const Layout = styled(Box)({
     height: '100%',
@@ -14,6 +15,7 @@ const Header = styled(Box)({
 
     display: 'flex',
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
 
     boxShadow: 'var(--ifm-navbar-shadow)',
@@ -33,11 +35,12 @@ export default function Tab({ children }: Props): JSX.Element {
     return (
         <Layout>
             <Header>
-                Task List
+                <span>Task List</span>
+                <CloseButton />
             </Header>
             <Box sx={{ flexGrow: 1 }}>
                 {children}
             </Box>
-        </Layout>
+        </Layout >
     );
 };
