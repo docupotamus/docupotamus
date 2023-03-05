@@ -4,16 +4,16 @@ import * as React from 'react';
 import { useToolbar } from '../../../contexts/toolbar';
 
 interface Props {
+    readonly children: React.ReactNode;
     readonly tabId: string;
     readonly displayName: string;
-    readonly children: React.ReactNode;
 };
 
 export default function Button(
     {
+        children,
         tabId,
         displayName,
-        children,
     }: Props
 ): JSX.Element {
     const { activeTabId, setActiveTabId } = useToolbar();

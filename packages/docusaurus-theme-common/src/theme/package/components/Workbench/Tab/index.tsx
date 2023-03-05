@@ -26,14 +26,14 @@ const Header = styled(Box)({
 });
 
 interface Props {
-    readonly displayName: string;
     readonly children: React.ReactNode;
+    readonly displayName: string;
 };
 
 export default function Tab(
     {
-        displayName,
         children,
+        displayName,
     }: Props,
 ): JSX.Element {
     return (
