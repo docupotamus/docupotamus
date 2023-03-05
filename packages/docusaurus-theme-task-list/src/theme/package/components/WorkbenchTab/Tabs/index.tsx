@@ -51,6 +51,7 @@ export default function Tabs(
                 {taskListIds.map(taskListId => {
                     return (
                         <List
+                            key={taskListId}
                             path={location.pathname}
                             taskListId={taskListId}
                         />
