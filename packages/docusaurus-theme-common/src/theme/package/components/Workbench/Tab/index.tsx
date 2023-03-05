@@ -26,14 +26,20 @@ const Header = styled(Box)({
 });
 
 interface Props {
+    readonly displayName: string;
     readonly children: React.ReactNode;
 };
 
-export default function Tab({ children }: Props): JSX.Element {
+export default function Tab(
+    {
+        displayName,
+        children,
+    }: Props,
+): JSX.Element {
     return (
         <Layout>
             <Header>
-                <span>Task List</span>
+                <span>{displayName}</span>
                 <CloseButton />
             </Header>
             <Box sx={{ flexGrow: 1 }}>
