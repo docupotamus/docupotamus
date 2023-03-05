@@ -11,7 +11,8 @@ import styles from './WorkbenchButton/styles.module.css';
 const Layout = styled(Box)({
     position: 'relative',
 
-    [`&.MuiBox-root:hover .${styles.WorkbenchButton_layout}`]: {
+    [`&.MuiBox-root:hover .${styles.WorkbenchButton_layout},
+      &.MuiBox-root:focus .${styles.WorkbenchButton_layout}`]: {
         opacity: 1,
         visibility: 'visible',
     },

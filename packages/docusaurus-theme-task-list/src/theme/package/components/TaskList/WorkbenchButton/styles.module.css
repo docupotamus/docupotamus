@@ -14,7 +14,8 @@
     visibility: hidden;
 }
 
-.WorkbenchButton_layout:hover {
+.WorkbenchButton_layout:hover,
+.WorkbenchButton_layout:focus {
     opacity: 1;
     visibility: visible;
 }

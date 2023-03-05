@@ -12,13 +12,14 @@ const StyledFormControlLabel = styled(FormControlLabel)({
     borderRadius: 'var(--doc8-space-3xs-2xs)',
     padding: '0.2rem 0.7rem 0.2rem 0.5rem',
     transition: 'var(--ifm-hover-overlay-transition)',
-    '&:hover': {
+    '&:hover, &:focus': {
         backgroundColor: 'var(--ifm-hover-overlay)',
     },
     '& .MuiFormControlLabel-label': {
         fontFamily: 'inherit',
     },
-    '&:hover :not(.Mui-checked) + .MuiFormControlLabel-label': {
+    [`&:hover :not(.Mui-checked) + .MuiFormControlLabel-label,
+      &:focus :not(.Mui-checked) + .MuiFormControlLabel-label`]: {
         color: 'var(--ifm-color-primary)',
     },
     '& .Mui-checked + .MuiFormControlLabel-label': {
