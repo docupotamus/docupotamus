@@ -1,6 +1,10 @@
 declare module '@docupotamus/docusaurus-theme-task-list' {
     import { CheckboxProps } from '@mui/material/Checkbox';
 
+    interface PluginOptions {
+        readonly swizzleIsEnabled: boolean;
+    }
+
     interface TaskListThemeConfig {
         readonly checkbox: {
             readonly color: React.CSSProperties['color'];
@@ -20,7 +24,7 @@ declare module '@docupotamus/docusaurus-theme-task-list' {
         | 'TAB_NEXT';
 }
 
-declare module '@docusaurus/theme-task-list' {
+declare module '@docupotamus/theme-task-list' {
     export * from '@docupotamus/docusaurus-theme-task-list';
 }
 
