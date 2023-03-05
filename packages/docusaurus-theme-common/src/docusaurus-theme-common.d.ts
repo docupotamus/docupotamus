@@ -30,7 +30,7 @@ declare module '@docupotamus/docusaurus-theme-common' {
         | {
             type: 'setTab';
             tabId: string;
-            newValue: TabConfig;
+            newValue: Omit<TabConfig, 'tabId'>;
         }
 
     interface ContextValue {
