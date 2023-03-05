@@ -47,7 +47,7 @@ export default function TaskList(
     }, [labels]);
 
     return (
-        <Layout>
+        <Layout className='DocupotamusTaskList'>
             <List
                 path={location.pathname}
                 taskListId={taskListId}
