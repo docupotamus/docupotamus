@@ -18,13 +18,11 @@ const Header = styled(Box)({
     justifyContent: 'space-between',
     alignItems: 'center',
 
+    borderTopLeftRadius: 'inherit',
     boxShadow: 'var(--ifm-navbar-shadow)',
     padding: `
         var(--ifm-navbar-padding-vertical)
         var(--ifm-navbar-padding-horizontal)`,
-    '& > *': {
-        borderTopLeftRadius: 'inherit',
-    },
 });
 
 interface Props {
