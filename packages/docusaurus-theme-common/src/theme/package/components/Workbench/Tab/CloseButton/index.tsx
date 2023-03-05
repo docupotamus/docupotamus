@@ -9,7 +9,7 @@ export default function CloseButton(): JSX.Element {
 
     return (
         <Tooltip
-            placement='bottom'
+            placement='bottom-end'
             title='Close Workbench'
         >
             <IconButton
