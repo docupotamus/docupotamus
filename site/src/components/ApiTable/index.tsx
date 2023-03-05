@@ -22,13 +22,18 @@ const getText = (node: ReactElement): string => {
     return curNode as string;
 };
 
+interface ApiTableRowProps {
+    readonly children: ReactElement<ComponentProps<'tr'>>;
+    readonly name: string | undefined;
+};
+
 const ApiTableRow = (
     {
-        name,
         children,
-    }: { name: string | undefined; children: ReactElement<ComponentProps<'tr'>> },
+        name,
+    }: ApiTableRowProps,
     ref: React.ForwardedRef<HTMLTableRowElement>,
-) => {
+): JSX.Element => {
     const entryName = getText(children);
     const id = name ? `${name}-${entryName}` : entryName;
     const anchor = `#${id}`;
@@ -37,15 +42,13 @@ const ApiTableRow = (
         <tr
             ref={history.location.hash === anchor ? ref : undefined}
             id={id}
-            tabIndex={0}
-            onClick={() => {
-                history.push(anchor);
-            }}
+            onClick={() => history.push(anchor)}
             onKeyDown={(e: React.KeyboardEvent) => {
                 if (e.key === 'Enter') {
                     history.push(anchor);
                 }
             }}
+            tabIndex={0}
         >
             {children.props.children}
         </tr>
