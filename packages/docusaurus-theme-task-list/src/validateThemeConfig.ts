@@ -1,4 +1,4 @@
-import type { TaskListThemeConfig } from '@docusaurus/theme-task-list';
+import type { TaskListThemeConfig } from '@docupotamus/theme-task-list';
 import type {
     ThemeConfig,
     ThemeConfigValidationContext

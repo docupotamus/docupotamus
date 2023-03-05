@@ -2,7 +2,7 @@ import type {
     KeyHandlers as KeyHandlersType,
     KeyMap as KeyMapType
 } from '@docupotamus/docusaurus-lib-common/types';
-import type { KeyBindings } from '@docusaurus/theme-task-list';
+import type { KeyBindings } from '@docupotamus/theme-task-list';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import { HotKeys } from 'react-hotkeys';
