@@ -7,7 +7,7 @@
 
 import { useHistory } from '@docusaurus/router';
 import React, {
-    isValidElement, useEffect, useRef, type ComponentProps,
+    type ComponentProps,
     type ReactElement,
     type ReactNode
 } from 'react';
@@ -16,7 +16,7 @@ import styles from './styles.module.css';
 // ReactNode equivalent of HTMLElement#innerText
 function getText(node: ReactElement): string {
     let curNode: ReactNode = node;
-    while (isValidElement(curNode)) {
+    while (React.isValidElement(curNode)) {
         [curNode] = React.Children.toArray(curNode.props.children);
     }
     return curNode as string;
@@ -69,7 +69,7 @@ export default function APITable({ children, name }: Props): JSX.Element {
         ReactElement<{ children: ReactElement[] }>,
         ReactElement<{ children: ReactElement[] }>,
     ];
-    const highlightedRow = useRef<HTMLTableRowElement>(null);
+    const highlightedRow = React.useRef<HTMLTableRowElement>(null);
 
     const rows = React.Children.map(
         tbody.props.children,
@@ -80,7 +80,7 @@ export default function APITable({ children, name }: Props): JSX.Element {
         ),
     );
 
-    useEffect(() => {
+    React.useEffect(() => {
         highlightedRow.current?.focus();
     }, [highlightedRow]);
 
