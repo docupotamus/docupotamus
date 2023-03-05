@@ -5,6 +5,7 @@ import * as React from 'react';
 import { useToolbar } from '../../contexts/toolbar';
 import useCommonThemeConfig from '../../hooks/useCommonThemeConfig';
 import Loading from './Loading';
+import Tab from './Tab';
 
 interface StyledBoxProps {
     readonly workbenchIsOpen: boolean;
@@ -43,9 +44,6 @@ const StyledBox = styled(Box, {
             rgba(60, 64, 67, 0.04) 70%,
             rgba(60, 64, 67, 0.07) 100%)`,
     },
-    '& > *': {
-        borderTopLeftRadius: 'inherit',
-    },
 }));
 
 export default function Workbench(): JSX.Element {
@@ -63,7 +61,7 @@ export default function Workbench(): JSX.Element {
     const [isLoading, setIsLoading] = React.useState<boolean>(loadingIsEnabled);
 
     // TODO(dnguyen0304): Add error handling.
-    const Tab = activeTabId && tabIdToConfig.get(activeTabId)?.Component;
+    const ActiveTab = activeTabId && tabIdToConfig.get(activeTabId)?.Component;
 
     React.useEffect(() => {
         if (!loadingIsEnabled) {
@@ -80,7 +78,7 @@ export default function Workbench(): JSX.Element {
                     // TODO(dnguyen0304): Fix loading not triggering on open.
                     isLoading
                         ? <Loading setIsLoading={setIsLoading} />
-                        : Tab
+                        : <Tab>{ActiveTab}</Tab>
                 }
             </React.Suspense>
         </StyledBox >
