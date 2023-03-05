@@ -1,7 +1,3 @@
-:root {
-    --ifm-navbar-shadow: -2px 1px 2px 0 rgba(0, 0, 0, 0.1);
-}
-
 html[data-theme='light'],
 html[data-theme='dark'] {
     /* Color */
@@ -11,4 +7,8 @@ html[data-theme='dark'] {
     /* Spacing */
 
     /* Components */
+}
+
+.navbar {
+    --ifm-navbar-shadow: -2px 1px 2px 0 rgba(0, 0, 0, 0.1);
 }
