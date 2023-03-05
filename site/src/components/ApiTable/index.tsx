@@ -14,21 +14,21 @@ import React, {
 import styles from './styles.module.css';
 
 // ReactNode equivalent of HTMLElement#innerText
-function getText(node: ReactElement): string {
+const getText = (node: ReactElement): string => {
     let curNode: ReactNode = node;
     while (React.isValidElement(curNode)) {
         [curNode] = React.Children.toArray(curNode.props.children);
     }
     return curNode as string;
-}
+};
 
-function APITableRow(
+const ApiTableRow = (
     {
         name,
         children,
     }: { name: string | undefined; children: ReactElement<ComponentProps<'tr'>> },
     ref: React.ForwardedRef<HTMLTableRowElement>,
-) {
+) => {
     const entryName = getText(children);
     const id = name ? `${name}-${entryName}` : entryName;
     const anchor = `#${id}`;
@@ -50,9 +50,9 @@ function APITableRow(
             {children.props.children}
         </tr>
     );
-}
+};
 
-const APITableRowComp = React.forwardRef(APITableRow);
+const ApiTableRowComp = React.forwardRef(ApiTableRow);
 
 interface Props {
     readonly children: ReactElement<ComponentProps<'table'>>;
@@ -74,9 +74,9 @@ export default function APITable({ children, name }: Props): JSX.Element {
     const rows = React.Children.map(
         tbody.props.children,
         (row: ReactElement<ComponentProps<'tr'>>) => (
-            <APITableRowComp name={name} ref={highlightedRow}>
+            <ApiTableRowComp name={name} ref={highlightedRow}>
                 {row}
-            </APITableRowComp>
+            </ApiTableRowComp>
         ),
     );
 
