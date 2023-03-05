@@ -68,12 +68,12 @@ interface Props {
  * should be generally correct in the MDX context.
  */
 export default function APITable({ children, name }: Props): JSX.Element {
+    const highlightedRow = React.useRef<HTMLTableRowElement>(null);
+
     const [thead, tbody] = React.Children.toArray(children.props.children) as [
         ReactElement<{ children: ReactElement[] }>,
         ReactElement<{ children: ReactElement[] }>,
     ];
-    const highlightedRow = React.useRef<HTMLTableRowElement>(null);
-
     const rows = React.Children.map(
         tbody.props.children,
         (row: ReactElement<ComponentProps<'tr'>>) => (
