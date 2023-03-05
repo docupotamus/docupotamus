@@ -16,6 +16,7 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
             tabId: 'task-list',
             newValue: {
                 tabId: 'task-list',
+                displayName: 'Task List',
                 Component: <WorkbenchTab />,
                 IconComponent: <WorkbenchIcon />,
             },
