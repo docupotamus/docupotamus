@@ -20,7 +20,10 @@ export default function Button(
     };
 
     return (
-        <IconButton onClick={handleClick}>
+        <IconButton
+            color='inherit'
+            onClick={handleClick}
+        >
             {children}
         </IconButton>
     );
