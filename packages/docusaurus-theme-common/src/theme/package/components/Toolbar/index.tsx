@@ -27,19 +27,16 @@ export default function Toolbar(): JSX.Element {
 
     return (
         <StyledBox>
-            {/* TODO(dnguyen0304): Replace temporary placeholder stub. */}
-            <React.Suspense fallback='Loading...'>
-                {[...tabIdToConfig.entries()].map(([tabId, config]) => {
-                    return (
-                        <Button
-                            key={tabId}
-                            tabId={tabId}
-                        >
-                            {config.IconComponent}
-                        </Button>
-                    );
-                })}
-            </React.Suspense>
+            {[...tabIdToConfig.entries()].map(([tabId, config]) => {
+                return (
+                    <Button
+                        key={tabId}
+                        tabId={tabId}
+                    >
+                        {config.IconComponent}
+                    </Button>
+                );
+            })}
         </StyledBox>
     );
 };
