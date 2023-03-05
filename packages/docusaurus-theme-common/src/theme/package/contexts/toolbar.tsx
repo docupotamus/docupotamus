@@ -11,6 +11,7 @@ const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
     if (action.type === 'setTab') {
         newMapping.set(action.tabId, {
             tabId: action.tabId,
+            displayName: action.newValue.displayName,
             Component: action.newValue.Component,
             IconComponent: action.newValue.IconComponent,
         });

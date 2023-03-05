@@ -16,6 +16,10 @@ declare module '@docupotamus/docusaurus-theme-common' {
 
     interface TabConfig {
         readonly tabId: string;
+
+        // Display header text that is human-readable.
+        readonly displayName: string;
+
         readonly Component: JSX.Element;
         readonly IconComponent: JSX.Element;
     }
