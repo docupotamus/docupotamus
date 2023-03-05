@@ -1,16 +1,19 @@
 import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 import * as React from 'react';
 import { useToolbar } from '../../../contexts/toolbar';
 
 interface Props {
-    readonly children: React.ReactNode;
     readonly tabId: string;
+    readonly displayName: string;
+    readonly children: React.ReactNode;
 };
 
 export default function Button(
     {
-        children,
         tabId,
+        displayName,
+        children,
     }: Props
 ): JSX.Element {
     const { setActiveTabId } = useToolbar();
@@ -20,11 +23,16 @@ export default function Button(
     };
 
     return (
-        <IconButton
-            color='inherit'
-            onClick={handleClick}
+        <Tooltip
+            placement='left'
+            title={`Toggle ${displayName}`}
         >
-            {children}
-        </IconButton>
+            <IconButton
+                color='inherit'
+                onClick={handleClick}
+            >
+                {children}
+            </IconButton>
+        </Tooltip>
     );
 };

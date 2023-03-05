@@ -32,6 +32,7 @@ export default function Toolbar(): JSX.Element {
                     <Button
                         key={tabId}
                         tabId={tabId}
+                        displayName={config.displayName}
                     >
                         {config.IconComponent}
                     </Button>
