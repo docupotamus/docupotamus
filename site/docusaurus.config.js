@@ -47,7 +47,7 @@ const config = {
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
             navbar: {
-                title: 'Home',
+                title: 'Docupotamus',
                 logo: {
                     alt: 'Logo',
                     src: 'img/logo.svg',
@@ -65,6 +65,7 @@ const config = {
                         position: 'right',
                     },
                 ],
+                hideOnScroll: true,
             },
             footer: {
                 style: 'dark',
