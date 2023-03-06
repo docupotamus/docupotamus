@@ -13,7 +13,7 @@ lists.
 ## Try It Out
 
 <TaskList>
-- [ ] Drink 8 glasses of water.
+- [ ] Drink a glass of water.
 - [ ] Stretch your wrists for 30 seconds.
 - [ ] Look out at nature.
 </TaskList>
