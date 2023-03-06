@@ -95,11 +95,6 @@ Accepted fields:
 
 ### Example Configuration
 
-:::tip
-Most users configure this through the `@docupotamus/docusaurus-preset-classic`
-preset options.
-:::
-
 ```js title="docusaurus.config.js"
 module.exports = {
   themeConfig: {
