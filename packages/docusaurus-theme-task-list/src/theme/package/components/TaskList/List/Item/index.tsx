@@ -8,25 +8,32 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import useTaskListThemeConfig from '../../../../hooks/useTaskListThemeConfig';
 
-const StyledFormControlLabel = styled(FormControlLabel)({
+interface StyledFormControlLabelProps {
+    readonly hoverColor: React.CSSProperties['color'];
+    readonly hoverColorBackground: React.CSSProperties['color'];
+};
+
+const StyledFormControlLabel = styled(FormControlLabel, {
+    shouldForwardProp: (prop) => prop !== 'hoverColor' && prop !== 'hoverColorBackground'
+})<StyledFormControlLabelProps>(({ hoverColor, hoverColorBackground }) => ({
     borderRadius: 'var(--doc8-space-3xs-2xs)',
     padding: '0.2rem 0.7rem 0.2rem 0.5rem',
     transition: 'var(--ifm-hover-overlay-transition)',
     '&:hover, &:focus': {
-        backgroundColor: 'var(--ifm-hover-overlay)',
+        backgroundColor: hoverColorBackground,
     },
     '& .MuiFormControlLabel-label': {
         fontFamily: 'inherit',
     },
     [`&:hover :not(.Mui-checked) + .MuiFormControlLabel-label,
       &:focus :not(.Mui-checked) + .MuiFormControlLabel-label`]: {
-        color: 'var(--ifm-color-primary)',
+        color: hoverColor,
     },
     '& .Mui-checked + .MuiFormControlLabel-label': {
         opacity: 0.5,
         textDecorationLine: 'line-through',
     },
-});
+}));
 
 interface Props extends Pick<FormControlLabelProps, 'label'> {
     readonly isChecked: boolean;
@@ -45,6 +52,10 @@ export default function Item(
             color,
             shape,
             size,
+        },
+        content: {
+            hoverColor,
+            hoverColorBackground,
         },
     } = useTaskListThemeConfig();
 
@@ -80,6 +91,8 @@ export default function Item(
                     }}
                 />
             }
+            hoverColor={hoverColor}
+            hoverColorBackground={hoverColorBackground}
             label={label}
             onChange={() => setIsChecked(!isChecked)}
         />
