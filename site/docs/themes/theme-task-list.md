@@ -109,13 +109,31 @@ themeConfig: {
 
 ### Styling
 
-#### Theme Class Names
-
 We provide some stable CSS class names for robust and maintainable global layout
 styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
 - `.DocupotamusTaskList`
 - `.DocupotamusTaskList_layout`
+
+### Example Styling
+
+Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
+out!
+
+```javascript title="JavaScript"
+// Scroll up to the "Try It Out" section to see the targeted task
+// list.
+document.querySelector('.DocupotamusTaskList');
+```
+
+```css title="CSS"
+.DocupotamusTaskList .MuiFormControlLabel-root .MuiTypography-root {
+  /* The important flag is used here only for demonstration
+     purposes. For production code, we recommended using a different
+     approach to increase specificity. */
+  color: red !important;
+}
+```
 
 ## What's Next?
 
