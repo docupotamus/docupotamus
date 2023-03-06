@@ -71,13 +71,13 @@ import { TaskList } from '@theme/docupotamus-task-list';
 <ApiTable>
 ```
 
-| Name                    | Type                           | Default | Description |
-| ----------------------- | ------------------------------ | ------- | ----------- |
-| `checkbox.color`        | `React.CSSProperties['color']` | true    | TODO        |
-| `checkbox.shape`        | `'circle'` &#124; `'square'`   | true    | TODO        |
-| `checkbox.size`         | `'small'` &#124; `'medium'`    | true    | TODO        |
-| `progressBar.isEnabled` | `boolean`                      | true    | TODO        |
-| `progressBar.color`     | `React.CSSProperties['color']` | true    | TODO        |
+| Name                    | Type                           | Default                      | Description |
+| ----------------------- | ------------------------------ | ---------------------------- | ----------- |
+| `checkbox.color`        | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | TODO        |
+| `checkbox.shape`        | `'circle'` &#124; `'square'`   | `'square'`                   | TODO        |
+| `checkbox.size`         | `'small'` &#124; `'medium'`    | `'medium'`                   | TODO        |
+| `progressBar.isEnabled` | `boolean`                      | `true`                       | TODO        |
+| `progressBar.color`     | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | TODO        |
 
 ```mdx-code-block
 </ApiTable>
