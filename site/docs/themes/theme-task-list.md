@@ -99,18 +99,20 @@ preset options.
 :::
 
 ```js title="docusaurus.config.js"
-themeConfig: {
+module.exports = {
+  themeConfig: {
     docupotamusTaskList: {
-        checkbox: {
-            color: 'red',
-            shape: 'circle',
-            size: 'small',
-        },
-        content: {
-            hoverColorBackground: 'coral',
-        },
+      checkbox: {
+        color: 'red',
+        shape: 'circle',
+        size: 'small',
+      },
+      content: {
+        hoverColorBackground: 'coral',
+      },
     },
-},
+  },
+};
 ```
 
 ### Styling
