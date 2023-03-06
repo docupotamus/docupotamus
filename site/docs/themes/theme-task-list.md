@@ -109,6 +109,13 @@ themeConfig: {
 
 ### Styling
 
+:::note
+Styling through theme class names is an **advanced** approach.
+
+It's appropriate when you need complete control over fine-grained details such
+as spacing. Otherwise, we recommended styling through configuration.
+:::
+
 We provide some stable CSS class names for robust and maintainable global layout
 styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
@@ -138,7 +145,7 @@ document.querySelector('.DocupotamusTaskList');
 ## What's Next?
 
 The roadmap includes some important feature requests such as fixing the
-bothersome [`rendering non-text nodes in a task list is not yet supported` error](https://github.com/docupotamus/docupotamus/issues/9).
+bothersome [`"rendering non-text nodes in a task list is not yet supported"` error](https://github.com/docupotamus/docupotamus/issues/9).
 
 If you have comments, questions, or are looking to contribute, please start a
 conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Task+List%22)!
