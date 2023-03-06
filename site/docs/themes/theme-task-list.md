@@ -7,7 +7,8 @@ import { TaskList } from '@theme/docupotamus-task-list';
 
 # 📦 theme-task-list
 
-<!-- Provides the Docs functionality and is the default docs plugin for Docusaurus. -->
+A Docusaurus theme that converts plain lists into beautiful, interactive task
+lists.
 
 ## Try It Out
 
