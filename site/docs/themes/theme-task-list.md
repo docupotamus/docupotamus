@@ -73,6 +73,8 @@ import { TaskList } from '@theme/docupotamus-task-list';
 
 ### Configuration
 
+Accepted fields:
+
 ```mdx-code-block
 <ApiTable>
 ```
