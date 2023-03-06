@@ -28,7 +28,9 @@
         "node": ">=16.14"
     },
     "scripts": {
-        "build": "docusaurus-plugin build",
+        "clean": "rm -rf ./lib",
+        "build": "npm run clean && docusaurus-plugin build",
+        "prepack": "npm run build",
         "watch": "docusaurus-plugin watch"
     },
     "files": [

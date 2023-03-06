@@ -27,7 +27,9 @@
         "node": ">=16.14"
     },
     "scripts": {
-        "build": "tsc",
+        "clean": "rm -rf ./lib",
+        "build": "npm run clean && tsc",
+        "prepack": "npm run build",
         "watch": "tsc --watch"
     },
     "files": [
