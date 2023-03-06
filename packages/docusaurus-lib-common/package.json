@@ -31,7 +31,8 @@
         "watch": "tsc --watch"
     },
     "files": [
-        "lib/**/*"
+        "lib/**/*",
+        "src/**/*"
     ],
     "repository": {
         "type": "git",

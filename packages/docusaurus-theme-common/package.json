@@ -31,6 +31,10 @@
         "build": "docusaurus-plugin build",
         "watch": "docusaurus-plugin watch"
     },
+    "files": [
+        "lib/**/*",
+        "src/**/*"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/docupotamus/docupotamus.git",
