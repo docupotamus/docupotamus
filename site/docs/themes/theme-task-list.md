@@ -53,7 +53,7 @@ hand, the standalone dependency:
 
 ## Example Usage
 
-```md title="foo.mdx"
+```md title="healthy-and-productive.md"
 import { TaskList } from '@theme/docupotamus-task-list';
 
 <TaskList>
