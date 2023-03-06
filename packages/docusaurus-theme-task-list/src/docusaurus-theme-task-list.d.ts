@@ -5,6 +5,7 @@ declare module '@docupotamus/docusaurus-theme-task-list' {
         readonly swizzleIsEnabled: boolean;
     }
 
+    // See: https://www.docupotamus.io/docs/themes/theme-task-list#configuration
     interface TaskListThemeConfig {
         readonly checkbox: {
             readonly color: React.CSSProperties['color'];

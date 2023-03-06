@@ -13,6 +13,8 @@ declare module '@docusaurus/types' {
 
 const COLOR_PRIMARY: React.CSSProperties['color'] = 'var(--ifm-color-primary)';
 
+// If change, then change:
+//   https://www.docupotamus.io/docs/themes/theme-task-list#configuration
 const DEFAULT_THEME_CONFIG: TaskListThemeConfig = {
     checkbox: {
         color: COLOR_PRIMARY,
