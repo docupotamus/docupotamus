@@ -116,3 +116,11 @@ styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
 - `.DocupotamusTaskList`
 - `.DocupotamusTaskList_layout`
+
+## What's Next?
+
+The roadmap includes some important feature requests such as fixing the
+bothersome [`rendering non-text nodes in a task list is not yet supported` error](https://github.com/docupotamus/docupotamus/issues/9).
+
+If you have comments, questions, or are looking to contribute, please start a
+conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Task+List%22)!
