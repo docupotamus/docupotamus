@@ -71,13 +71,13 @@ import { TaskList } from '@theme/docupotamus-task-list';
 <ApiTable>
 ```
 
-| Name                    | Type                           | Default                      | Description |
-| ----------------------- | ------------------------------ | ---------------------------- | ----------- |
-| `checkbox.color`        | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | TODO        |
-| `checkbox.shape`        | `'circle'` &#124; `'square'`   | `'square'`                   | TODO        |
-| `checkbox.size`         | `'small'` &#124; `'medium'`    | `'medium'`                   | TODO        |
-| `progressBar.isEnabled` | `boolean`                      | `true`                       | TODO        |
-| `progressBar.color`     | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | TODO        |
+| Name                    | Type                           | Default                      | Description                                            |
+| ----------------------- | ------------------------------ | ---------------------------- | ------------------------------------------------------ |
+| `checkbox.color`        | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Checkbox color.                                        |
+| `checkbox.shape`        | `'circle'` &#124; `'square'`   | `'square'`                   | Checkbox shape.                                        |
+| `checkbox.size`         | `'small'` &#124; `'medium'`    | `'medium'`                   | Checkbox size.                                         |
+| `progressBar.isEnabled` | `boolean`                      | `true`                       | Whether to include a progress bar above the task list. |
+| `progressBar.color`     | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Progress bar color.                                    |
 
 ```mdx-code-block
 </ApiTable>
