@@ -2,6 +2,8 @@
 sidebar_position: 3
 ---
 
+import { TaskList } from '@theme/docupotamus-task-list';
+
 # Developer Guide
 
 ### Publish to NPM
@@ -24,31 +26,29 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### Add a ThemeConfig Setting
 
-<!-- TODO(dnguyen0304): Add task list. -->
+#### Server-Side
 
-- Part 1
+<TaskList>
+- [ ] In `docusaurus-theme-foo.d.ts`, update `FooThemeConfig`, which is the
+      source of truth.
+- [ ] In `validateThemeConfig.ts`, update `DEFAULT_THEME_CONFIG`, which is for
+      default values.
+- [ ] Update `ThemeConfigSchema`, which is for validation.
+- [ ] In `docupotamus.io`, update the `Configuration` section.
+- [ ] If applicable, update the `Example Configuration` section.
+</TaskList>
 
-  - In `docusaurus-theme-foo.d.ts`, update `FooThemeConfig`, which is the source
-    of truth.
+#### Client-Side
 
-  - In `validateThemeConfig.ts`, update `DEFAULT_THEME_CONFIG`, which is for
-    default values.
+- In code that depends on the setting, import the `useFooThemeConfig` hook.
 
-  - Update `ThemeConfigSchema`, which is for validation.
+  ```typescript
+  import useFooThemeConfig from '../../hooks/useFooThemeConfig';
+  const { mySetting } = useFooThemeConfig();
+  ```
 
-- Part 2
-
-  - In code that depends on the setting, import the `useFooThemeConfig` hook.
-
-    ```typescript
-    import useFooThemeConfig from '../../hooks/useFooThemeConfig';
-    const { mySetting } = useFooThemeConfig();
-    ```
-
-- Part 3
-
-  - In the client `docusaurus.config.js`, update `themeConfig`, which is for
-    customizing default values.
+- In the client `docusaurus.config.js`, update `themeConfig`, which is for
+  customizing default values.
 
 ## Conventions
 
