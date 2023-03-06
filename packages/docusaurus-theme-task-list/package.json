@@ -1,6 +1,6 @@
 {
     "name": "@docupotamus/docusaurus-theme-task-list",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Docusaurus task list UI component.",
     "main": "lib/index.js",
     "types": "src/docusaurus-theme-task-list.d.ts",
