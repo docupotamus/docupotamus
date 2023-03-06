@@ -7,7 +7,7 @@
     "dependencies": {
         "@docupotamus/docusaurus-styles-classic": "^0.5.0",
         "@docupotamus/docusaurus-theme-common": "0.0.0",
-        "@docupotamus/docusaurus-theme-task-list": "0.0.0",
+        "@docupotamus/docusaurus-theme-task-list": "0.1.2",
         "@docusaurus/core": "2.2.x",
         "@docusaurus/plugin-content-blog": "2.2.x",
         "@docusaurus/plugin-content-pages": "2.2.x",
