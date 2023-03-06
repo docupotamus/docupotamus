@@ -30,6 +30,9 @@
         "build": "tsc",
         "watch": "tsc --watch"
     },
+    "files": [
+        "lib/**/*"
+    ],
     "repository": {
         "type": "git",
         "url": "git+https://github.com/docupotamus/docupotamus.git",
