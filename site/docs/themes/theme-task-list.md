@@ -42,6 +42,12 @@ The preset is recommended over installing the standalone dependency.
 $ npm install --save @docupotamus/docusaurus-theme-task-list
 ```
 
+```js title="docusaurus.config.js"
+module.exports = {
+  themes: ['@docupotamus/docusaurus-theme-task-list'],
+};
+```
+
 ### Preset and Standalone Differences
 
 We recommended the preset because it is a drop-in replacement. On the other
