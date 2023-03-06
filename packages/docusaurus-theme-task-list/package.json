@@ -1,11 +1,10 @@
 {
     "name": "@docupotamus/docusaurus-theme-task-list",
-    "version": "0.1.1",
+    "version": "0.1.0",
     "description": "Docusaurus task list UI component.",
     "main": "lib/index.js",
     "types": "src/docusaurus-theme-task-list.d.ts",
     "dependencies": {
-        "@docupotamus/docusaurus-lib-common": "0.1.0",
         "@docusaurus/utils-validation": "^2.2.x",
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
@@ -14,6 +13,7 @@
         "react-hotkeys": "^2.0.0"
     },
     "devDependencies": {
+        "@docupotamus/docusaurus-lib-common": "0.1.0",
         "@docusaurus/module-type-aliases": "^2.2.x",
         "@docusaurus/types": "^2.2.x",
         "@joshcena/docusaurus-plugin-utils": "^0.1.3",

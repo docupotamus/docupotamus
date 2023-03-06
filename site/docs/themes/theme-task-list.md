@@ -93,20 +93,18 @@ preset options.
 :::
 
 ```js title="docusaurus.config.js"
-module.exports = {
-  themeConfig: {
+themeConfig: {
     docupotamusTaskList: {
-      checkbox: {
-        color: 'red',
-        shape: 'circle',
-        size: 'small',
-      },
-      content: {
-        hoverColorBackground: 'coral',
-      },
+        checkbox: {
+            color: 'red',
+            shape: 'circle',
+            size: 'small',
+        },
+        content: {
+            hoverColorBackground: 'coral',
+        },
     },
-  },
-};
+},
 ```
 
 ### Styling
@@ -154,14 +152,6 @@ document.querySelector('.DocupotamusTaskList');
 
 - **Quick Navigation:** If a page contains multiple task lists, the buttons
   allow you to quickly navigate between the task lists.
-
-## Standalone
-
-```js title="docusaurus.config.js"
-module.exports = {
-  themes: ['@docupotamus/docusaurus-theme-task-list'],
-};
-```
 
 ## What's Next?
 
