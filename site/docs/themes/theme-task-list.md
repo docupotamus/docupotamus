@@ -18,6 +18,15 @@ lists.
 - [ ] Look out at nature.
 </TaskList>
 
+<details>
+    <summary>See Plain List</summary>
+
+- Drink a glass of water.
+- Stretch your wrists for 30 seconds.
+- Look out at nature.
+
+</details>
+
 ### Common Use Cases
 
 Use this when you need developers to follow a **series of steps**, such as how
