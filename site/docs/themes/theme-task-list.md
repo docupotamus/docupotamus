@@ -71,13 +71,15 @@ import { TaskList } from '@theme/docupotamus-task-list';
 <ApiTable>
 ```
 
-| Name                    | Type                           | Default                      | Description                                            |
-| ----------------------- | ------------------------------ | ---------------------------- | ------------------------------------------------------ |
-| `checkbox.color`        | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Checkbox color.                                        |
-| `checkbox.shape`        | `'circle'` &#124; `'square'`   | `'square'`                   | Checkbox shape.                                        |
-| `checkbox.size`         | `'small'` &#124; `'medium'`    | `'medium'`                   | Checkbox size.                                         |
-| `progressBar.isEnabled` | `boolean`                      | `true`                       | Whether to include a progress bar above the task list. |
-| `progressBar.color`     | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Progress bar color.                                    |
+| Name                           | Type                           | Default                      | Description                                            |
+| ------------------------------ | ------------------------------ | ---------------------------- | ------------------------------------------------------ |
+| `checkbox.color`               | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Checkbox color.                                        |
+| `checkbox.shape`               | `'circle'` &#124; `'square'`   | `'square'`                   | Checkbox shape.                                        |
+| `checkbox.size`                | `'small'` &#124; `'medium'`    | `'medium'`                   | Checkbox size.                                         |
+| `content.hoverColor`           | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Content color on hover.                                |
+| `content.hoverColorBackground` | `React.CSSProperties['color']` | `'var(--ifm-hover-overlay)'` | Content background color on hover.                     |
+| `progressBar.isEnabled`        | `boolean`                      | `true`                       | Whether to include a progress bar above the task list. |
+| `progressBar.color`            | `React.CSSProperties['color']` | `'var(--ifm-color-primary)'` | Progress bar color.                                    |
 
 ```mdx-code-block
 </ApiTable>
@@ -97,6 +99,9 @@ themeConfig: {
             color: 'red',
             shape: 'circle',
             size: 'small',
+        },
+        content: {
+            hoverColorBackground: 'coral',
         },
     },
 },

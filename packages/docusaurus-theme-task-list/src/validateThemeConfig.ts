@@ -21,6 +21,10 @@ const DEFAULT_THEME_CONFIG: TaskListThemeConfig = {
         shape: 'square',
         size: 'medium',
     },
+    content: {
+        hoverColor: COLOR_PRIMARY,
+        hoverColorBackground: 'var(--ifm-hover-overlay)',
+    },
     progressBar: {
         isEnabled: true,
         color: COLOR_PRIMARY,
@@ -44,6 +48,15 @@ export const ThemeConfigSchema = Joi.object<ThemeConfig>({
                 .default(DEFAULT_THEME_CONFIG.checkbox.size),
         })
             .default(DEFAULT_THEME_CONFIG.checkbox),
+        content: Joi.object({
+            hoverColor: Joi
+                .string()
+                .default(DEFAULT_THEME_CONFIG.content.hoverColor),
+            hoverColorBackground: Joi
+                .string()
+                .default(DEFAULT_THEME_CONFIG.content.hoverColorBackground),
+        })
+            .default(DEFAULT_THEME_CONFIG.content),
         progressBar: Joi.object({
             isEnabled: Joi
                 .boolean()

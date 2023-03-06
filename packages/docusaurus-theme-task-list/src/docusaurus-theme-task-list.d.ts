@@ -12,6 +12,10 @@ declare module '@docupotamus/docusaurus-theme-task-list' {
             readonly shape: CheckboxShape;
             readonly size: CheckboxProps['size'];
         };
+        readonly content: {
+            readonly hoverColor: React.CSSProperties['color'];
+            readonly hoverColorBackground: React.CSSProperties['color'];
+        };
         readonly progressBar: {
             readonly isEnabled: boolean;
             readonly color: React.CSSProperties['color'];
