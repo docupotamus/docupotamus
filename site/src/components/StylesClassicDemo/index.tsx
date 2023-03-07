@@ -5,7 +5,7 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
 const backgroundColorDefault: string = 'color-primary';
-const fontSizeDefault: string = 'font-size-2';
+const fontSizeDefault: string = 'font-size-3';
 const marginVerticalDefault: string = 'space-xl';
 
 const Layout = styled(Box)({
@@ -137,7 +137,7 @@ export default function StylesClassicDemo(): JSX.Element {
                     {...sliderProps}
                 />
                 <Slider
-                    defaultValue={4}
+                    defaultValue={5}
                     step={1}
                     max={fontSizeMarks.length - 1}
                     marks={fontSizeMarks}
