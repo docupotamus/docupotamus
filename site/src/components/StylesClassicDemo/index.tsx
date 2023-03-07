@@ -4,7 +4,7 @@ import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
-const backgroundColorDefault: string = '--ifm-color-primary';
+const backgroundColorDefault: string = 'color-primary';
 const marginVerticalDefault: string = 'space-l';
 
 interface LayoutProps {
@@ -20,7 +20,7 @@ const Layout = styled(Box, {
         display: 'grid',
         placeItems: 'center',
         // TODO(dnguyen0304): Remove important flag.
-        backgroundColor: `var(${backgroundColor}) !important`,
+        backgroundColor: `var(--ifm-${backgroundColor}) !important`,
     },
     '& > .MuiBox-root > h2': {
         color: 'var(--ifm-color-content-inverse)',
@@ -39,11 +39,11 @@ const backgroundColorMarks: Mark[] = [
     },
     {
         value: 50,
-        label: '--ifm-color-warning',
+        label: 'color-warning',
     },
     {
         value: 100,
-        label: '--ifm-color-danger',
+        label: 'color-danger',
     },
 ];
 const marginVerticalMarks: Mark[] = [
