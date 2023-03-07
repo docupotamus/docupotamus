@@ -17,6 +17,9 @@ interface LayoutProps {
 const Layout = styled(Box, {
     shouldForwardProp: (prop) => prop !== 'backgroundColor' && prop !== 'fontSize' && prop !== 'marginVertical'
 })<LayoutProps>(({ backgroundColor, fontSize, marginVertical }) => ({
+    '& > * + *': {
+        marginTop: 'var(--doc8-space-s)',
+    },
     '& > .MuiBox-root': {
         width: '100%',
         display: 'grid',
