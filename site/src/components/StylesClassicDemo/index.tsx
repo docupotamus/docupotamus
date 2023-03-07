@@ -23,6 +23,7 @@ const StyledBox = styled(Box, {
         placeItems: 'center',
         // TODO(dnguyen0304): Remove important flag.
         backgroundColor: `var(--ifm-${backgroundColor}) !important`,
+        marginTop: 'var(--doc8-space-l)',
     },
     '&.MuiBox-root > h2': {
         color: 'var(--ifm-color-content-inverse)',
@@ -114,7 +115,7 @@ export default function StylesClassicDemo(): JSX.Element {
         <Box>
             <Box sx={{
                 '& > * + *': {
-                    marginTop: 'var(--doc8-space-s)',
+                    marginTop: 'var(--doc8-space-xs)',
                 },
             }}>
                 <Slider
