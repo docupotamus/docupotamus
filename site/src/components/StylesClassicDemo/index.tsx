@@ -8,23 +8,23 @@ const backgroundColorDefault: string = 'color-primary';
 const fontSizeDefault: string = 'font-size-0';
 const marginVerticalDefault: string = 'space-l';
 
-interface LayoutProps {
+interface StyledBoxProps {
     readonly backgroundColor: string;
     readonly fontSize: string;
     readonly marginVertical: string;
 };
 
-const Layout = styled(Box, {
+const StyledBox = styled(Box, {
     shouldForwardProp: (prop) => prop !== 'backgroundColor' && prop !== 'fontSize' && prop !== 'marginVertical'
-})<LayoutProps>(({ backgroundColor, fontSize, marginVertical }) => ({
-    '& > .MuiBox-root:last-of-type': {
+})<StyledBoxProps>(({ backgroundColor, fontSize, marginVertical }) => ({
+    '&.MuiBox-root': {
         width: '100%',
         display: 'grid',
         placeItems: 'center',
         // TODO(dnguyen0304): Remove important flag.
         backgroundColor: `var(--ifm-${backgroundColor}) !important`,
     },
-    '& > .MuiBox-root:last-of-type > h2': {
+    '&.MuiBox-root > h2': {
         color: 'var(--ifm-color-content-inverse)',
         fontSize: `var(--doc8-${fontSize})`,
         margin: `var(--doc8-${marginVertical}) 0`,
@@ -111,11 +111,7 @@ export default function StylesClassicDemo(): JSX.Element {
     };
 
     return (
-        <Layout
-            backgroundColor={backgroundColor}
-            fontSize={fontSize}
-            marginVertical={marginVertical}
-        >
+        <Box>
             <Box sx={{
                 '& > * + *': {
                     marginTop: 'var(--doc8-space-s)',
@@ -146,9 +142,13 @@ export default function StylesClassicDemo(): JSX.Element {
                     {...sliderProps}
                 />
             </Box>
-            <Box>
+            <StyledBox
+                backgroundColor={backgroundColor}
+                fontSize={fontSize}
+                marginVertical={marginVertical}
+            >
                 <h2>docupotamus</h2>
-            </Box>
-        </Layout>
+            </StyledBox>
+        </Box>
     );
 };
