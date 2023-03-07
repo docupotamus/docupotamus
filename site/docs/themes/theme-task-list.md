@@ -13,9 +13,9 @@ lists.
 ## Try It Out
 
 <TaskList>
-- [ ] Drink a glass of water.
-- [ ] Stretch your wrists for 30 seconds.
-- [ ] Look out at nature.
+- Drink a glass of water.
+- Stretch your wrists for 30 seconds.
+- Look out at nature.
 </TaskList>
 
 <details>
@@ -72,9 +72,9 @@ hand, the standalone dependency:
 import { TaskList } from '@theme/docupotamus-task-list';
 
 <TaskList>
-- [ ] Drink 8 glasses of water.
-- [ ] Stretch your wrists for 10 seconds.
-- [ ] Look out at nature.
+- Drink 8 glasses of water.
+- Stretch your wrists for 10 seconds.
+- Look out at nature.
 </TaskList>
 ```
 

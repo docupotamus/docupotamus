@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const DELIMITER: string = '- [ ] ';
+const DELIMITER: string = '- ';
 
 // Copied from: https://github.com/facebook/docusaurus/blob/a308fb7c81832cca354192fe2984f52749441249/packages/docusaurus-theme-classic/src/theme/CodeBlock/index.tsx#L20
 const stringifyChildren = (children: React.ReactNode): string => {
