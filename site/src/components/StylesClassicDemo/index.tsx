@@ -5,13 +5,13 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
 const backgroundColorDefault: string = 'color-primary';
-const fontSizeDefault: React.CSSProperties['fontSize'] = 'font-size-0';
+const fontSizeDefault: string = 'font-size-0';
 const marginVerticalDefault: string = 'space-l';
 
 interface LayoutProps {
-    readonly backgroundColor: React.CSSProperties['backgroundColor'];
-    readonly fontSize: React.CSSProperties['fontSize'];
-    readonly marginVertical: React.CSSProperties['margin'];
+    readonly backgroundColor: string;
+    readonly fontSize: string;
+    readonly marginVertical: string;
 };
 
 const Layout = styled(Box, {
@@ -111,9 +111,9 @@ export default function StylesClassicDemo(): JSX.Element {
     const [backgroundColor, setBackgroundColor] =
         React.useState<string>(backgroundColorDefault);
     const [fontSize, setFontSize] =
-        React.useState<React.CSSProperties['fontSize']>(fontSizeDefault);
+        React.useState<string>(fontSizeDefault);
     const [marginVertical, setMarginVertical] =
-        React.useState<React.CSSProperties['margin']>(marginVerticalDefault);
+        React.useState<string>(marginVerticalDefault);
 
     const handleBackgroundColorChange = (
         _: Event,
