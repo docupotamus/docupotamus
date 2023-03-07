@@ -2,6 +2,7 @@ import { useLocation } from '@docusaurus/router';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useTasks } from '../../contexts/tasks';
 import useLabelsParsed from '../../hooks/useLabelsParsed';
 import List from './List';
@@ -37,7 +38,7 @@ export default function TaskList(
         if (!labels.length) {
             return;
         }
-        const newTaskListId = crypto.randomUUID();
+        const newTaskListId = uuidv4();
         setTaskListId(newTaskListId);
         dispatchTasks({
             type: 'setTaskList',
