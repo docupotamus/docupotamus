@@ -8,7 +8,7 @@ const backgroundColorDefault: string = 'color-primary';
 const marginVerticalDefault: string = 'space-l';
 
 interface LayoutProps {
-    readonly backgroundColor: string;
+    readonly backgroundColor: React.CSSProperties['backgroundColor'];
     readonly marginVertical: React.CSSProperties['margin'];
 };
 
