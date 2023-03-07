@@ -57,15 +57,6 @@ module.exports = {
 };
 ```
 
-### Preset and Standalone Differences
-
-We recommended the preset because it is a drop-in replacement. On the other
-hand, the standalone dependency:
-
-- is more low-level
-- involves more setup
-- does not include the [Workbench integration](#workbench-integration)
-
 ## Example Usage
 
 ```md title="healthy-and-productive.md"
