@@ -24,9 +24,24 @@ with these fluid custom properties.
 
 Use this when you want a neutral, minimalist stylesheet for your site.
 
-TODO: infima backward-compatibility
+### Infima Differences
 
-TODO: fluid typography and spacing; softer; color spacing typography
+:::tip tl;dr
+`styles-classic` extends from and is fully backward-compatible with Infima. It
+also provides fluid typography and spacing.
+:::
+
+Docusaurus uses [Infima](https://infima.dev/) as its styling framework. Most
+relevant to us are its CSS custom properties with the `--ifm` prefix.
+
+Docupotamus extends from and is fully backward-compatible with those CSS custom
+properties. For a trivial example, we overwrite `--ifm-color-gray-0` and add
+the new `--ifm-color-gray-0-hsl`.
+
+Most importantly, we provide fluid typography and spacing with the `--doc8`
+prefix. This modern design approach enables elements to scale proportionally
+with screen size without having to rely on brittle breakpoints. See
+[here](#popular-properties) for popular properties.
 
 ## Installation
 
