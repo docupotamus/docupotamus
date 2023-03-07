@@ -6,6 +6,9 @@ sidebar_position: 1
 
 import Demo from '@site/src/components/StylesClassicDemo';
 
+A minimalist Docusaurus design that embraces soft, subtle details while
+remaining superbly functional and readable.
+
 ## Try It Out
 
 :::tip
