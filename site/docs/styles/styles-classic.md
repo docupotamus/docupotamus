@@ -55,6 +55,32 @@ module.exports = {
 };
 ```
 
+## Example Usage
+
+:::note
+Inline styles are used here only for demonstration purposes. For production
+code, we recommended using a different approach that is more maintainable.
+:::
+
+```jsx title="Using --doc8 Fluid Custom Properties"
+import * as React from 'react';
+
+export default function MyHeading() {
+  return (
+    <h2
+      style={{
+        // highlight-next-line
+        fontSize: 'var(--doc8-font-size-2)',
+        // highlight-next-line
+        padding: 'var(--doc8-space-xl) 0',
+      }}
+    >
+      docupotamus
+    </h2>
+  );
+}
+```
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a
