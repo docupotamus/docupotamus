@@ -4,6 +4,18 @@ sidebar_position: 1
 
 # 📦 styles-classic
 
+import Demo from '@site/src/components/StylesClassicDemo';
+
+## Try It Out
+
+:::tip
+You can also open the DevTools Console panel in
+[device mode](https://developer.chrome.com/docs/devtools/device-mode/) to play
+with these fluid custom properties.
+:::
+
+<Demo/>
+
 ## Installation
 
 :::tip
