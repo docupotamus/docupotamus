@@ -64,7 +64,7 @@ hand, the standalone dependency:
 
 - is more low-level
 - involves more setup
-- does not include the Workbench integration
+- does not include the [Workbench integration](#workbench-integration)
 
 ## Example Usage
 
