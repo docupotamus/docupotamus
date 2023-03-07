@@ -48,23 +48,23 @@ const backgroundColorMarks: Mark[] = [
 ];
 const marginVerticalMarks: Mark[] = [
     {
-        value: 0 * 10,
+        value: 0,
         label: 'space-xs',
     },
     {
-        value: 1 * 10,
+        value: 1,
         label: 'space-s',
     },
     {
-        value: 2 * 10,
+        value: 2,
         label: 'space-m',
     },
     {
-        value: 3 * 10,
+        value: 3,
         label: marginVerticalDefault,
     },
     {
-        value: 4 * 10,
+        value: 4,
         label: 'space-xl',
     },
 ];
@@ -116,9 +116,9 @@ export default function StylesClassicDemo(): JSX.Element {
                 valueLabelDisplay='off'
             />
             <Slider
-                defaultValue={30}
-                step={10}
-                max={(marginVerticalMarks.length - 1) * 10}
+                defaultValue={3}
+                step={1}
+                max={marginVerticalMarks.length - 1}
                 marks={marginVerticalMarks}
                 onChange={handleMarginVerticalChange}
                 size='small'
