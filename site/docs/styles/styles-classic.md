@@ -35,3 +35,8 @@ module.exports = {
   ],
 };
 ```
+
+## What's Next? {#future}
+
+If you have comments, questions, or are looking to contribute, please start a
+conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Task+List%22)!
