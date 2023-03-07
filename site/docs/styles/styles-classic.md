@@ -138,16 +138,11 @@ import CodeBlock from '@theme/CodeBlock';
 
 ### Example
 
-```css title="CSS"
-.DocupotamusTaskList .MuiFormControlLabel-root .MuiTypography-root {
-  /* The important flag is used here only for demonstration
-     purposes. For production code, we recommended using a different
-     approach to increase specificity. */
-  color: red !important;
+```css title="new-primary-color.css"
+:root {
+  --ifm-color-primary: coral;
 }
 ```
-
-TODO: change primary color
 
 ## What's Next? {#future}
 
