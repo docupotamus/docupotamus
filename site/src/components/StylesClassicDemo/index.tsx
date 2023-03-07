@@ -5,16 +5,18 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
 const backgroundColorDefault: string = 'color-primary';
+const fontSizeDefault: React.CSSProperties['fontSize'] = 'font-size-0';
 const marginVerticalDefault: string = 'space-l';
 
 interface LayoutProps {
     readonly backgroundColor: React.CSSProperties['backgroundColor'];
+    readonly fontSize: React.CSSProperties['fontSize'];
     readonly marginVertical: React.CSSProperties['margin'];
 };
 
 const Layout = styled(Box, {
-    shouldForwardProp: (prop) => prop !== 'backgroundColor' && prop !== 'marginVertical'
-})<LayoutProps>(({ backgroundColor, marginVertical }) => ({
+    shouldForwardProp: (prop) => prop !== 'backgroundColor' && prop !== 'fontSize' && prop !== 'marginVertical'
+})<LayoutProps>(({ backgroundColor, fontSize, marginVertical }) => ({
     '& > .MuiBox-root': {
         width: '100%',
         display: 'grid',
@@ -24,6 +26,7 @@ const Layout = styled(Box, {
     },
     '& > .MuiBox-root > h2': {
         color: 'var(--ifm-color-content-inverse)',
+        fontSize: `var(--doc8-${fontSize})`,
         margin: `var(--doc8-${marginVertical}) 0`,
     },
 }));
@@ -44,6 +47,32 @@ const backgroundColorMarks: Mark[] = [
     {
         value: 2,
         label: 'color-danger',
+    },
+];
+const fontSizeMarks: Mark[] = [
+    {
+        value: 0,
+        label: 'font-size--2',
+    },
+    {
+        value: 1,
+        label: 'font-size--1',
+    },
+    {
+        value: 2,
+        label: fontSizeDefault,
+    },
+    {
+        value: 3,
+        label: 'font-size-1',
+    },
+    {
+        value: 4,
+        label: 'font-size-2',
+    },
+    {
+        value: 5,
+        label: 'font-size-3',
     },
 ];
 const marginVerticalMarks: Mark[] = [
@@ -70,6 +99,7 @@ const marginVerticalMarks: Mark[] = [
 ];
 
 const backgroundColorMapping = toMapping(backgroundColorMarks);
+const fontSizeMapping = toMapping(fontSizeMarks);
 const marginVerticalMapping = toMapping(marginVerticalMarks);
 
 const sliderProps: Pick<SliderProps, 'size' | 'valueLabelDisplay'> = {
@@ -80,6 +110,8 @@ const sliderProps: Pick<SliderProps, 'size' | 'valueLabelDisplay'> = {
 export default function StylesClassicDemo(): JSX.Element {
     const [backgroundColor, setBackgroundColor] =
         React.useState<string>(backgroundColorDefault);
+    const [fontSize, setFontSize] =
+        React.useState<React.CSSProperties['fontSize']>(fontSizeDefault);
     const [marginVertical, setMarginVertical] =
         React.useState<React.CSSProperties['margin']>(marginVerticalDefault);
 
@@ -90,6 +122,16 @@ export default function StylesClassicDemo(): JSX.Element {
         const newValue = backgroundColorMapping.get(value as number);
         if (newValue) {
             setBackgroundColor(newValue);
+        }
+    };
+
+    const handleFontSizeChange = (
+        _: Event,
+        value: number | number[],
+    ) => {
+        const newValue = fontSizeMapping.get(value as number);
+        if (newValue) {
+            setFontSize(newValue);
         }
     };
 
@@ -106,6 +148,7 @@ export default function StylesClassicDemo(): JSX.Element {
     return (
         <Layout
             backgroundColor={backgroundColor}
+            fontSize={fontSize}
             marginVertical={marginVertical}
         >
             <Box>
@@ -117,6 +160,14 @@ export default function StylesClassicDemo(): JSX.Element {
                 max={backgroundColorMarks.length - 1}
                 marks={backgroundColorMarks}
                 onChange={handleBackgroundColorChange}
+                {...sliderProps}
+            />
+            <Slider
+                defaultValue={0}
+                step={1}
+                max={fontSizeMarks.length - 1}
+                marks={fontSizeMarks}
+                onChange={handleFontSizeChange}
                 {...sliderProps}
             />
             <Slider
