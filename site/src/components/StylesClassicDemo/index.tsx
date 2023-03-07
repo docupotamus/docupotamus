@@ -38,11 +38,11 @@ const backgroundColorMarks: Mark[] = [
         label: backgroundColorDefault,
     },
     {
-        value: 50,
+        value: 1,
         label: 'color-warning',
     },
     {
-        value: 100,
+        value: 2,
         label: 'color-danger',
     },
 ];
@@ -108,7 +108,8 @@ export default function StylesClassicDemo(): JSX.Element {
             </Box>
             <Slider
                 defaultValue={0}
-                step={50}
+                step={1}
+                max={backgroundColorMarks.length - 1}
                 marks={backgroundColorMarks}
                 onChange={handleBackgroundColorChange}
                 size='small'
