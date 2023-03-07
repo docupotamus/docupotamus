@@ -72,7 +72,7 @@ export default function StylesClassicDemo(): JSX.Element {
                 max={100}
                 onChange={handleBackgroundColorChange}
                 step={50}
-                valueLabelDisplay='auto'
+                valueLabelDisplay='off'
             />
         </Layout>
     );
