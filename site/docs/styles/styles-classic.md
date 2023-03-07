@@ -4,6 +4,7 @@ sidebar_position: 1
 
 # 📦 styles-classic
 
+import ApiTable from '@site/src/components/ApiTable';
 import Demo from '@site/src/components/StylesClassicDemo';
 
 A minimalist Docusaurus design that embraces soft, subtle details while
@@ -22,6 +23,10 @@ with these fluid custom properties.
 ### Common Use Cases
 
 Use this when you want a neutral, minimalist stylesheet for your site.
+
+TODO: infima backward-compatibility
+
+TODO: fluid typography and spacing; softer; color spacing typography
 
 ## Installation
 
@@ -80,6 +85,23 @@ export default function MyHeading() {
   );
 }
 ```
+
+## Customizing
+
+### Popular Properties
+
+### Example
+
+```css title="CSS"
+.DocupotamusTaskList .MuiFormControlLabel-root .MuiTypography-root {
+  /* The important flag is used here only for demonstration
+     purposes. For production code, we recommended using a different
+     approach to increase specificity. */
+  color: red !important;
+}
+```
+
+TODO: change primary color
 
 ## What's Next? {#future}
 
