@@ -12,10 +12,11 @@ phases:
   build:
     commands:
       - echo Started building.
+      - npm run build --workspace packages
       - npm run build --workspace site
       - echo Completed building SUCCESSFULLY.
 artifacts:
   files:
-    - "**/*"
+    - '**/*'
   discard-paths: no
   base-directory: site/build/
