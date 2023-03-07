@@ -2,10 +2,10 @@
 sidebar_position: 2
 ---
 
+# 📦 theme-task-list
+
 import ApiTable from '@site/src/components/ApiTable';
 import { TaskList } from '@theme/docupotamus-task-list';
-
-# 📦 theme-task-list
 
 A Docusaurus theme that converts plain lists into beautiful, interactive task
 lists.
