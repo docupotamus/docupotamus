@@ -19,6 +19,10 @@ with these fluid custom properties.
 
 <Demo/>
 
+### Common Use Cases
+
+Use this when you want a neutral, minimalist stylesheet for your site.
+
 ## Installation
 
 :::tip
