@@ -55,12 +55,12 @@ const backgroundColorLabels: string[] = [
     'color-danger',
 ];
 const fontSizeLabels: string[] = [
-    'font-size--2',
-    'font-size--1',
     'font-size-0',
     'font-size-1',
+    'font-size-2',
     fontSizeDefault,
-    'font-size-3',
+    'font-size-4',
+    'font-size-5',
 ];
 const marginVerticalLabels: string[] = [
     'space-xs',
@@ -137,7 +137,7 @@ export default function StylesClassicDemo(): JSX.Element {
                     {...sliderProps}
                 />
                 <Slider
-                    defaultValue={5}
+                    defaultValue={3}
                     step={1}
                     max={fontSizeMarks.length - 1}
                     marks={fontSizeMarks}
