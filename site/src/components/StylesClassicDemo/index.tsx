@@ -116,9 +116,6 @@ export default function StylesClassicDemo(): JSX.Element {
             fontSize={fontSize}
             marginVertical={marginVertical}
         >
-            <Box>
-                <h2>docupotamus</h2>
-            </Box>
             <Slider
                 defaultValue={0}
                 step={1}
@@ -143,6 +140,9 @@ export default function StylesClassicDemo(): JSX.Element {
                 onChange={handleMarginVerticalChange}
                 {...sliderProps}
             />
+            <Box>
+                <h2>docupotamus</h2>
+            </Box>
         </Layout>
     );
 };
