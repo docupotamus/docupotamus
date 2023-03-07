@@ -104,7 +104,7 @@ export default function StylesClassicDemo(): JSX.Element {
             marginVertical={marginVertical}
         >
             <Box>
-                <h2>doc8</h2>
+                <h2>docupotamus</h2>
             </Box>
             <Slider
                 defaultValue={0}
