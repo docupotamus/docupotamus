@@ -5,8 +5,8 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
 const backgroundColorDefault: string = 'color-primary';
-const fontSizeDefault: string = 'font-size-0';
-const marginVerticalDefault: string = 'space-l';
+const fontSizeDefault: string = 'font-size-2';
+const marginVerticalDefault: string = 'space-xl';
 
 const Layout = styled(Box)({
     display: 'flex',
@@ -54,17 +54,17 @@ const backgroundColorLabels: string[] = [
 const fontSizeLabels: string[] = [
     'font-size--2',
     'font-size--1',
-    fontSizeDefault,
+    'font-size-0',
     'font-size-1',
-    'font-size-2',
+    fontSizeDefault,
     'font-size-3',
 ];
 const marginVerticalLabels: string[] = [
     'space-xs',
     'space-s',
     'space-m',
+    'space-l',
     marginVerticalDefault,
-    'space-xl',
 ];
 
 const backgroundColorMarks = toMarks(backgroundColorLabels);
@@ -134,7 +134,7 @@ export default function StylesClassicDemo(): JSX.Element {
                     {...sliderProps}
                 />
                 <Slider
-                    defaultValue={0}
+                    defaultValue={4}
                     step={1}
                     max={fontSizeMarks.length - 1}
                     marks={fontSizeMarks}
@@ -142,7 +142,7 @@ export default function StylesClassicDemo(): JSX.Element {
                     {...sliderProps}
                 />
                 <Slider
-                    defaultValue={3}
+                    defaultValue={4}
                     step={1}
                     max={marginVerticalMarks.length - 1}
                     marks={marginVerticalMarks}
