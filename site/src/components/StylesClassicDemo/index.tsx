@@ -31,75 +31,40 @@ const Layout = styled(Box, {
     },
 }));
 
+const toMarks = (labels: string[]): Mark[] => {
+    return labels.map((label, i) => ({ value: i, label }));
+};
+
 const toMapping = (marks: Mark[]): Map<number, string> => {
     return new Map(marks.map(mark => [mark.value, mark.label as string]));
 };
 
-const backgroundColorMarks: Mark[] = [
-    {
-        value: 0,
-        label: backgroundColorDefault,
-    },
-    {
-        value: 1,
-        label: 'color-warning',
-    },
-    {
-        value: 2,
-        label: 'color-danger',
-    },
+const backgroundColorLabels: string[] = [
+    backgroundColorDefault,
+    'color-warning',
+    'color-danger',
 ];
-const fontSizeMarks: Mark[] = [
-    {
-        value: 0,
-        label: 'font-size--2',
-    },
-    {
-        value: 1,
-        label: 'font-size--1',
-    },
-    {
-        value: 2,
-        label: fontSizeDefault,
-    },
-    {
-        value: 3,
-        label: 'font-size-1',
-    },
-    {
-        value: 4,
-        label: 'font-size-2',
-    },
-    {
-        value: 5,
-        label: 'font-size-3',
-    },
+const fontSizeLabels: string[] = [
+    'font-size--2',
+    'font-size--1',
+    fontSizeDefault,
+    'font-size-1',
+    'font-size-2',
+    'font-size-3',
 ];
-const marginVerticalMarks: Mark[] = [
-    {
-        value: 0,
-        label: 'space-xs',
-    },
-    {
-        value: 1,
-        label: 'space-s',
-    },
-    {
-        value: 2,
-        label: 'space-m',
-    },
-    {
-        value: 3,
-        label: marginVerticalDefault,
-    },
-    {
-        value: 4,
-        label: 'space-xl',
-    },
+const marginVerticalLabels: string[] = [
+    'space-xs',
+    'space-s',
+    'space-m',
+    marginVerticalDefault,
+    'space-xl',
 ];
 
+const backgroundColorMarks = toMarks(backgroundColorLabels);
 const backgroundColorMapping = toMapping(backgroundColorMarks);
+const fontSizeMarks = toMarks(fontSizeLabels);
 const fontSizeMapping = toMapping(fontSizeMarks);
+const marginVerticalMarks = toMarks(marginVerticalLabels);
 const marginVerticalMapping = toMapping(marginVerticalMarks);
 
 const sliderProps: Pick<SliderProps, 'size' | 'valueLabelDisplay'> = {
