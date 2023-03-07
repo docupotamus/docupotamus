@@ -78,6 +78,12 @@ import { TaskList } from '@theme/docupotamus-task-list';
 </TaskList>
 ```
 
+:::caution
+Task lists must be formatted without **empty newlines**. If you are using VS
+Code, try using "File: Save without Formatting." This is a
+[known limitation](#future).
+:::
+
 ## Customizing
 
 ### Configuration
@@ -167,7 +173,7 @@ document.querySelector('.DocupotamusTaskList');
 - **Quick Navigation:** If a page contains multiple task lists, the buttons
   allow you to quickly navigate between the task lists.
 
-## What's Next?
+## What's Next? {#future}
 
 The roadmap includes some important feature requests such as fixing the
 bothersome [`"rendering non-text nodes in a task list is not yet supported"` error](https://github.com/docupotamus/docupotamus/issues/9).
