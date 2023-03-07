@@ -8,6 +8,12 @@ const backgroundColorDefault: string = 'color-primary';
 const fontSizeDefault: string = 'font-size-0';
 const marginVerticalDefault: string = 'space-l';
 
+const Layout = styled(Box)({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+});
+
 interface StyledBoxProps {
     readonly backgroundColor: string;
     readonly fontSize: string;
@@ -112,8 +118,9 @@ export default function StylesClassicDemo(): JSX.Element {
     };
 
     return (
-        <Box>
+        <Layout>
             <Box sx={{
+                width: '85%',
                 '& > * + *': {
                     marginTop: 'var(--doc8-space-xs)',
                 },
@@ -150,6 +157,6 @@ export default function StylesClassicDemo(): JSX.Element {
             >
                 <h2>docupotamus</h2>
             </StyledBox>
-        </Box>
+        </Layout>
     );
 };
