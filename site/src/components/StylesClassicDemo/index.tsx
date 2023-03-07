@@ -68,10 +68,10 @@ export default function StylesClassicDemo(): JSX.Element {
             </Box>
             <Slider
                 defaultValue={0}
-                marks={backgroundColorMarks}
-                max={100}
-                onChange={handleBackgroundColorChange}
                 step={50}
+                marks={backgroundColorMarks}
+                onChange={handleBackgroundColorChange}
+                size='small'
                 valueLabelDisplay='off'
             />
         </Layout>
