@@ -1,6 +1,6 @@
 import { Mark } from '@mui/base/useSlider';
 import Box from '@mui/material/Box';
-import Slider from '@mui/material/Slider';
+import Slider, { type SliderProps } from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
@@ -72,6 +72,11 @@ const marginVerticalMarks: Mark[] = [
 const backgroundColorMapping = toMapping(backgroundColorMarks);
 const marginVerticalMapping = toMapping(marginVerticalMarks);
 
+const sliderProps: Pick<SliderProps, 'size' | 'valueLabelDisplay'> = {
+    size: 'small',
+    valueLabelDisplay: 'off',
+};
+
 export default function StylesClassicDemo(): JSX.Element {
     const [backgroundColor, setBackgroundColor] =
         React.useState<string>(backgroundColorDefault);
@@ -112,8 +117,7 @@ export default function StylesClassicDemo(): JSX.Element {
                 max={backgroundColorMarks.length - 1}
                 marks={backgroundColorMarks}
                 onChange={handleBackgroundColorChange}
-                size='small'
-                valueLabelDisplay='off'
+                {...sliderProps}
             />
             <Slider
                 defaultValue={3}
@@ -121,8 +125,7 @@ export default function StylesClassicDemo(): JSX.Element {
                 max={marginVerticalMarks.length - 1}
                 marks={marginVerticalMarks}
                 onChange={handleMarginVerticalChange}
-                size='small'
-                valueLabelDisplay='off'
+                {...sliderProps}
             />
         </Layout>
     );
