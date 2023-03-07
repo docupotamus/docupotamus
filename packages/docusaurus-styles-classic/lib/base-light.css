@@ -55,11 +55,3 @@ html[data-theme='light'] .theme-doc-markdown :not(
 html[data-theme='light'] .theme-doc-markdown code {
     font-weight: revert;
 }
-
-/* Code Highlight */
-/* Warning: This class name has no cohesion with the docusaurus-theme-classic
-   configuration setting. */
-html[data-theme='light'] .theme-code-block-highlighted-line {
-    /* TODO(dnguyen0304): Use a color from the --ifm-color-gray palette. */
-    --docusaurus-highlighted-code-line-bg: rgba(170, 170, 170, 0.1);
-}

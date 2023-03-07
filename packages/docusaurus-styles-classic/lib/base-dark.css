@@ -58,14 +58,6 @@ html[data-theme='dark'] .theme-doc-markdown :not(
     color: var(--markdown-color);
 }
 
-/* Code Highlight */
-/* Warning: This class name has no cohesion with the docusaurus-theme-classic
-   configuration setting. */
-html[data-theme='dark'] .theme-code-block-highlighted-line {
-    /* TODO(dnguyen0304): Use a color from the --ifm-color-gray palette. */
-    --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.2);
-}
-
 /* Footer */
 html[data-theme='dark'] .footer--dark {
     /* TODO(dnguyen0304): Investigate setting a convention between color and

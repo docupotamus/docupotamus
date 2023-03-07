@@ -89,5 +89,13 @@ html[data-theme='dark'] {
         var(--ifm-font-family-base);
 }
 
+/* Code Highlight */
+/* Warning: This class name has no cohesion with the docusaurus-theme-classic
+   configuration setting. */
+html[data-theme='light'],
+html[data-theme='dark'] .theme-code-block-highlighted-line {
+    --docusaurus-highlighted-code-line-bg: var(--ifm-color-emphasis-100);
+}
+
 /* TODO(dnguyen0304): Fix colors for blockquotes. */
 /* TODO(dnguyen0304): Fix colors for tables. */
