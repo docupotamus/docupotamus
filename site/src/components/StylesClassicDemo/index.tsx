@@ -34,7 +34,10 @@ const StyledBox = styled(Box, {
     '&.MuiBox-root > h2': {
         color: 'var(--ifm-color-content-inverse)',
         fontSize: `var(--doc8-${fontSize})`,
-        margin: `var(--doc8-${marginVertical}) 0`,
+        marginTop: `var(--doc8-${marginVertical})`,
+    },
+    '&.MuiBox-root > h2:last-of-type': {
+        marginBottom: `var(--doc8-${marginVertical})`,
     },
 }));
 
@@ -155,7 +158,9 @@ export default function StylesClassicDemo(): JSX.Element {
                 fontSize={fontSize}
                 marginVertical={marginVertical}
             >
-                <h2>docupotamus</h2>
+                <h2>minimalist</h2>
+                <h2>functional</h2>
+                <h2>readable</h2>
             </StyledBox>
         </Layout>
     );
