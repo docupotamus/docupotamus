@@ -17,17 +17,14 @@ interface LayoutProps {
 const Layout = styled(Box, {
     shouldForwardProp: (prop) => prop !== 'backgroundColor' && prop !== 'fontSize' && prop !== 'marginVertical'
 })<LayoutProps>(({ backgroundColor, fontSize, marginVertical }) => ({
-    '& > * + *': {
-        marginTop: 'var(--doc8-space-s)',
-    },
-    '& > .MuiBox-root': {
+    '& > .MuiBox-root:last-of-type': {
         width: '100%',
         display: 'grid',
         placeItems: 'center',
         // TODO(dnguyen0304): Remove important flag.
         backgroundColor: `var(--ifm-${backgroundColor}) !important`,
     },
-    '& > .MuiBox-root > h2': {
+    '& > .MuiBox-root:last-of-type > h2': {
         color: 'var(--ifm-color-content-inverse)',
         fontSize: `var(--doc8-${fontSize})`,
         margin: `var(--doc8-${marginVertical}) 0`,
@@ -119,30 +116,36 @@ export default function StylesClassicDemo(): JSX.Element {
             fontSize={fontSize}
             marginVertical={marginVertical}
         >
-            <Slider
-                defaultValue={0}
-                step={1}
-                max={backgroundColorMarks.length - 1}
-                marks={backgroundColorMarks}
-                onChange={handleBackgroundColorChange}
-                {...sliderProps}
-            />
-            <Slider
-                defaultValue={0}
-                step={1}
-                max={fontSizeMarks.length - 1}
-                marks={fontSizeMarks}
-                onChange={handleFontSizeChange}
-                {...sliderProps}
-            />
-            <Slider
-                defaultValue={3}
-                step={1}
-                max={marginVerticalMarks.length - 1}
-                marks={marginVerticalMarks}
-                onChange={handleMarginVerticalChange}
-                {...sliderProps}
-            />
+            <Box sx={{
+                '& > * + *': {
+                    marginTop: 'var(--doc8-space-s)',
+                },
+            }}>
+                <Slider
+                    defaultValue={0}
+                    step={1}
+                    max={backgroundColorMarks.length - 1}
+                    marks={backgroundColorMarks}
+                    onChange={handleBackgroundColorChange}
+                    {...sliderProps}
+                />
+                <Slider
+                    defaultValue={0}
+                    step={1}
+                    max={fontSizeMarks.length - 1}
+                    marks={fontSizeMarks}
+                    onChange={handleFontSizeChange}
+                    {...sliderProps}
+                />
+                <Slider
+                    defaultValue={3}
+                    step={1}
+                    max={marginVerticalMarks.length - 1}
+                    marks={marginVerticalMarks}
+                    onChange={handleMarginVerticalChange}
+                    {...sliderProps}
+                />
+            </Box>
             <Box>
                 <h2>docupotamus</h2>
             </Box>
