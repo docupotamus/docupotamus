@@ -136,6 +136,11 @@ import CodeBlock from '@theme/CodeBlock';
 - Register your `TabConfig`.
 </TaskList>
 
+:::caution
+Integrate a new add-on as a standalone dependency is supported but not yet
+documented.
+:::
+
 #### Prepare a `TabConfig`
 
 :::info Glossary
