@@ -102,6 +102,20 @@ document.querySelector('.DocupotamusToolbar');
 
 ### Integrate a New Add-On
 
+<details>
+    <summary>See Canonical Reference</summary>
+
+```mdx-code-block
+import Source from '!!raw-loader!@site/../packages/docusaurus-preset-classic/src/plugin/theme/docupotamus-common/Toolbar/Entry/index.tsx';
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock className='language-tsx'>
+    {Source.trim()}
+</CodeBlock>
+```
+
+</details>
+
 <TaskList>
 - [Prerequisite] Think about how you'll define your `TabConfig`.
 - Create the folder structure for swizzling `Toolbar/Entry`.
