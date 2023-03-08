@@ -17,7 +17,7 @@ const Header = styled(Box)({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: 'red',
+
     boxShadow: 'var(--ifm-navbar-shadow)',
     padding: `
         var(--ifm-navbar-padding-vertical)
