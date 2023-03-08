@@ -119,7 +119,10 @@ document.querySelector('.DocupotamusToolbar');
 import Source from '!!raw-loader!@site/../packages/docusaurus-preset-classic/src/plugin/theme/docupotamus-common/Toolbar/Entry/index.tsx';
 import CodeBlock from '@theme/CodeBlock';
 
-<CodeBlock className='language-tsx'>
+<CodeBlock
+    className='language-tsx'
+    title='@docupotamus/docusaurus-preset-classic/src/plugin/theme/docupotamus-common/Toolbar/Entry/index.tsx'
+>
     {Source.trim()}
 </CodeBlock>
 ```
