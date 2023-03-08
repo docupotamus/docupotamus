@@ -48,7 +48,7 @@ module.exports = {
 
 ### Interface
 
-:::info
+:::info Glossary
 We refer to the controller as the _Toolbar_, the content for each integrated add-on as a _Tab_, and the tabs container as the _Workbench_.
 :::
 
