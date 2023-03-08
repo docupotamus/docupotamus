@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # 📦 theme-common
 
+import { TaskList } from '@theme/docupotamus-task-list';
+
 A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
 ### Common Use Cases
@@ -100,7 +102,11 @@ document.querySelector('.DocupotamusToolbar');
 
 ### Integrate a New Add-On
 
-#### Interface
+<TaskList>
+- Prepare how you'll define your `TabConfig`.
+</TaskList>
+
+#### Prepare a `TabConfig`
 
 :::info Glossary
 We refer to the controller as the _Toolbar_, the content for each integrated add-on as a _Tab_, and the tabs container as the _Workbench_.
@@ -121,8 +127,6 @@ interface TabConfig {
   readonly IconComponent: JSX.Element;
 }
 ```
-
-<!-- <TaskList> -->
 
 ## What's Next? {#future}
 
