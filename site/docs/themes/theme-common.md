@@ -4,8 +4,6 @@ sidebar_position: 1
 
 # 📦 theme-common
 
-<!-- <APITable> -->
-
 A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
 ### Common Use Cases
@@ -46,8 +44,32 @@ module.exports = {
 };
 ```
 
-<!-- Try It Out -->
-<!-- Example Usage -->
+## Customizing
+
+### Interface
+
+:::info
+We refer to the controller as the _Toolbar_, the content for each integrated add-on as a _Tab_, and the tabs container as the _Workbench_.
+:::
+
+```tsx
+interface TabConfig {
+  // Tab unique identifier.
+  readonly tabId: string;
+
+  // Display header text that is human-readable.
+  readonly displayName: string;
+
+  // Tab component.
+  readonly Component: React.LazyExoticComponent<() => JSX.Element>;
+
+  // Toolbar icon component.
+  readonly IconComponent: JSX.Element;
+}
+```
+
+<!-- <ApiTable> -->
+<!-- <TaskList> -->
 
 ### Styling
 
