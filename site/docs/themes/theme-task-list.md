@@ -138,10 +138,20 @@ styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
 out!
 
+```mdx-code-block
+<Tabs>
+<TabItem value="JavaScript">
+```
+
 ```javascript title="JavaScript"
 // Scroll up to the "Try It Out" section to see the targeted task
 // list.
 document.querySelector('.DocupotamusTaskList');
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="CSS">
 ```
 
 ```css title="CSS"
@@ -151,6 +161,11 @@ document.querySelector('.DocupotamusTaskList');
      approach to increase specificity. */
   color: red !important;
 }
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
 ```
 
 ## Workbench Integration
