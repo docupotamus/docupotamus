@@ -46,31 +46,6 @@ module.exports = {
 
 ## Customizing
 
-### Interface
-
-:::info Glossary
-We refer to the controller as the _Toolbar_, the content for each integrated add-on as a _Tab_, and the tabs container as the _Workbench_.
-:::
-
-```tsx
-interface TabConfig {
-  // Tab unique identifier.
-  readonly tabId: string;
-
-  // Display header text that is human-readable.
-  readonly displayName: string;
-
-  // Tab component.
-  readonly Component: React.LazyExoticComponent<() => JSX.Element>;
-
-  // Toolbar icon component.
-  readonly IconComponent: JSX.Element;
-}
-```
-
-<!-- <ApiTable> -->
-<!-- <TaskList> -->
-
 ### Styling
 
 :::note
@@ -118,6 +93,37 @@ document.querySelector('.DocupotamusToolbar');
 </TabItem>
 </Tabs>
 ```
+
+## How-To's
+
+<!-- _keywords:_ user guides -->
+
+### Integrate a New Add-On
+
+#### Interface
+
+:::info Glossary
+We refer to the controller as the _Toolbar_, the content for each integrated add-on as a _Tab_, and the tabs container as the _Workbench_.
+:::
+
+```tsx
+interface TabConfig {
+  // Tab unique identifier.
+  readonly tabId: string;
+
+  // Display header text that is human-readable.
+  readonly displayName: string;
+
+  // Tab component.
+  readonly Component: React.LazyExoticComponent<() => JSX.Element>;
+
+  // Toolbar icon component.
+  readonly IconComponent: JSX.Element;
+}
+```
+
+<!-- <ApiTable> -->
+<!-- <TaskList> -->
 
 ## What's Next? {#future}
 
