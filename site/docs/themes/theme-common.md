@@ -122,7 +122,6 @@ interface TabConfig {
 }
 ```
 
-<!-- <ApiTable> -->
 <!-- <TaskList> -->
 
 ## What's Next? {#future}
