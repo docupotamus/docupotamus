@@ -26,7 +26,6 @@ const StyledBox = styled(Box, {
 
     backgroundColor: 'var(--ifm-background-color)',
     borderTopLeftRadius: 'var(--doc8-space-l-xl)',
-    overflow: 'hidden',
     // TODO(dnguyen0304): Investigate refactoring to box-shadow style to reduce
     // complexity.
     '&::before': {

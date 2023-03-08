@@ -8,6 +8,9 @@ const Layout = styled(Box)({
 
     display: 'flex',
     flexDirection: 'column',
+
+    borderTopLeftRadius: 'inherit',
+    overflow: 'hidden',
 });
 
 const Header = styled(Box)({
