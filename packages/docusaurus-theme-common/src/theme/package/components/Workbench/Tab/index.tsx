@@ -22,6 +22,8 @@ const Header = styled(Box)({
     padding: `
         var(--ifm-navbar-padding-vertical)
         var(--ifm-navbar-padding-horizontal)`,
+    // Increase padding-left for the parent's border-radius.
+    paddingLeft: 'var(--doc8-space-m)',
 });
 
 interface Props {
