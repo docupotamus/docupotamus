@@ -164,6 +164,11 @@ interface TabConfig {
 
 #### Create the Folder Structure
 
+```shell
+mkdir -p src/theme/docupotamus-common/Toolbar/Entry/ \
+    && touch src/theme/docupotamus-common/Toolbar/Entry/index.tsx
+```
+
 This is for swizzling the `@theme/docupotamus-common/Toolbar/Entry` component.
 Here is a common folder structure:
 
