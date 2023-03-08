@@ -15,12 +15,16 @@ declare module '@docupotamus/docusaurus-theme-common' {
     // TODO(dnguyen0304): Investigate moving these to toolbar context.
 
     interface TabConfig {
+        // Tab unique identifier.
         readonly tabId: string;
 
         // Display header text that is human-readable.
         readonly displayName: string;
 
+        // Tab component.
         readonly Component: JSX.Element;
+
+        // Toolbar icon component.
         readonly IconComponent: JSX.Element;
     }
 
