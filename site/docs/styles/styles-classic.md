@@ -139,8 +139,14 @@ import CodeBlock from '@theme/CodeBlock';
 ### Example
 
 ```css title="new-primary-color.css"
+/* Overwrite the custom property everywhere. */
 :root {
-  --ifm-color-primary: coral;
+  --ifm-color-primary: red;
+}
+
+/* Overwrite the custom property only in this scope. */
+.theme-doc-markdown {
+  --ifm-color-primary: blue;
 }
 ```
 
