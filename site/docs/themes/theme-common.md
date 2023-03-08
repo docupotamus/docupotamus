@@ -27,12 +27,23 @@ Plugins and themes that provide UI components often [swizzle](https://docusaurus
 ## Installation
 
 :::tip
-If you use the preset `@docupotamus/docusaurus-preset-classic`, you don't need
-to install this as a dependency because it is already included.
+If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
+this step. You don't need to install as a standalone dependency because the
+theme is already included in the preset.
+:::
+
+:::tip
+The preset is recommended over installing the standalone dependency.
 :::
 
 ```bash npm2yarn
 $ npm install --save @docupotamus/docusaurus-theme-common
+```
+
+```js title="docusaurus.config.js"
+module.exports = {
+  themes: ['@docupotamus/docusaurus-theme-common'],
+};
 ```
 
 <!-- Try It Out -->
