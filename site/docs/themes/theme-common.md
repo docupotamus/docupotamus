@@ -103,14 +103,18 @@ document.querySelector('.DocupotamusToolbar');
 ### Integrate a New Add-On
 
 <TaskList>
-- Prepare how you'll define your `TabConfig`.
+- [Prerequisite] Think about how you'll define your `TabConfig`.
 </TaskList>
 
 #### Prepare a `TabConfig`
 
 :::info Glossary
-We refer to the controller as the _Toolbar_, the content for each integrated add-on as a _Tab_, and the tabs container as the _Workbench_.
+We refer to the controller as the _Toolbar_, the content for each integrated
+add-on as a _Tab_, and the tabs container as the _Workbench_.
 :::
+
+Think about how you'll define your `TabConfig`. This makes sure all the required
+pieces are available for the following steps.
 
 ```tsx
 interface TabConfig {
