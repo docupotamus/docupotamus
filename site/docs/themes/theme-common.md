@@ -25,7 +25,13 @@ For example, integrating with the workbench is how
 Add-ons are at a conceptually smaller scope and can be more standalone.
 :::
 
-Plugins and themes that provide UI components often [swizzle](https://docusaurus.io/docs/swizzling) through ejecting or wrapping. On the other hand, add-ons are at a conceptually smaller scope and can be (but of course are not limited to being) more standalone. For a trivial example, imagine integrating a glossary, `git blame` history, or even calculator add-on.
+Docusaurus plugins and themes that provide UI components often
+[swizzle](https://docusaurus.io/docs/swizzling) through ejecting or wrapping. On
+the other hand, Docupotamus add-ons are at a conceptually smaller scope and can
+be (but of course are not limited to being) more standalone.
+
+For a trivial example, imagine integrating a glossary, `git blame` history, or
+even calculator add-on.
 
 ## Installation
 
