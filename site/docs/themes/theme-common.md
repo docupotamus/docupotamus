@@ -63,7 +63,8 @@ module.exports = {
 Styling through theme class names is an **advanced** approach.
 
 It's appropriate when you need complete control over fine-grained details such
-as spacing. Otherwise, we recommended preferring to style through custom properties and configuration.
+as spacing. Otherwise, we recommended preferring to style through custom
+properties and configuration.
 :::
 
 We provide some stable CSS class names for robust and maintainable global layout
