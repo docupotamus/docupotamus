@@ -120,6 +120,7 @@ import CodeBlock from '@theme/CodeBlock';
 - [Prerequisite] Think about how you'll define your `TabConfig`.
 - Create the folder structure for swizzling `Toolbar/Entry`.
 - Add the boilerplate for swizzling `Toolbar/Entry`.
+- Register your `TabConfig`.
 </TaskList>
 
 #### Prepare a `TabConfig`
@@ -129,8 +130,8 @@ We refer to the controller as the _Toolbar_, the content for each integrated
 add-on as a _Tab_, and the tabs container as the _Workbench_.
 :::
 
-Think about how you'll define your `TabConfig`. This makes sure all the required
-pieces are available for the following steps.
+Think about how you'll define your `TabConfig`. This is to prepare for the
+following steps.
 
 ```tsx
 interface TabConfig {
@@ -174,6 +175,43 @@ import * as React from 'react';
 type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
 
 export default function ToolbarEntryWrapper(props: Props): JSX.Element {
+  return <ToolbarEntryInit {...props} />;
+}
+```
+
+#### Register your `TabConfig`
+
+```tsx title="index.tsx"
+import type { WrapperProps } from '@docusaurus/types';
+import ToolbarEntryInit from '@theme-init/docupotamus-common/Toolbar/Entry';
+import { useToolbar } from '@theme/docupotamus-common';
+import type ToolbarEntryType from '@theme/docupotamus-common/Toolbar/Entry';
+import { WorkbenchIcon } from '@theme/docupotamus-task-list';
+import * as React from 'react';
+
+type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
+
+export default function ToolbarEntryWrapper(props: Props): JSX.Element {
+  const { dispatchTabIdToConfig } = useToolbar();
+
+  // highlight-start
+  React.useEffect(() => {
+    dispatchTabIdToConfig({
+      type: 'setTab',
+      tabId: 'task-list',
+      newValue: {
+        displayName: 'Task List',
+        Component: React.lazy(() =>
+          import('@theme/docupotamus-task-list').then((module) => ({
+            default: module.WorkbenchTab,
+          })),
+        ),
+        IconComponent: <WorkbenchIcon />,
+      },
+    });
+  }, []);
+  // highlight-end
+
   return <ToolbarEntryInit {...props} />;
 }
 ```
