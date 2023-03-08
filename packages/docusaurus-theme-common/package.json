@@ -1,6 +1,6 @@
 {
     "name": "@docupotamus/docusaurus-theme-common",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Docusaurus common UI component.",
     "main": "lib/index.js",
     "types": "src/docusaurus-theme-common.d.ts",
