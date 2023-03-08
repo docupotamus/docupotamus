@@ -69,8 +69,18 @@ styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
 out!
 
+```mdx-code-block
+<Tabs>
+<TabItem value="JavaScript">
+```
+
 ```javascript title="JavaScript"
 document.querySelector('.DocupotamusToolbar');
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="CSS">
 ```
 
 ```css title="CSS"
@@ -80,6 +90,11 @@ document.querySelector('.DocupotamusToolbar');
      approach to increase specificity. */
   background-color: red !important;
 }
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
 ```
 
 ## What's Next? {#future}
