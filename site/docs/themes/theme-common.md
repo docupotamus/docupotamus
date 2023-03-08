@@ -4,8 +4,9 @@ sidebar_position: 1
 
 # 📦 theme-common
 
-<!-- Provides the Docs functionality and is the default docs plugin for Docusaurus. -->
 <!-- <APITable> -->
+
+A Docusaurus theme with a unified workbench interface for developing add-ons.
 
 ## Installation
 
