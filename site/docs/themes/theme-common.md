@@ -49,6 +49,20 @@ module.exports = {
 <!-- Try It Out -->
 <!-- Example Usage -->
 
+### Styling
+
+:::note
+Styling through theme class names is an **advanced** approach.
+
+It's appropriate when you need complete control over fine-grained details such
+as spacing. Otherwise, we recommended preferring to style through custom properties and configuration.
+:::
+
+We provide some stable CSS class names for robust and maintainable global layout
+styling. These names are theme-agnostic and meant to be targeted by custom CSS.
+
+- `.`
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a
