@@ -163,6 +163,21 @@ Here is a common folder structure:
             index.tsx
 ```
 
+#### Add the Boilerplate
+
+```tsx title="index.tsx"
+import type { WrapperProps } from '@docusaurus/types';
+import ToolbarEntryInit from '@theme-init/docupotamus-common/Toolbar/Entry';
+import type ToolbarEntryType from '@theme/docupotamus-common/Toolbar/Entry';
+import * as React from 'react';
+
+type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
+
+export default function ToolbarEntryWrapper(props: Props): JSX.Element {
+  return <ToolbarEntryInit {...props} />;
+}
+```
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a
