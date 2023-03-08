@@ -82,7 +82,7 @@ Inline styles are used here only for demonstration purposes. For production
 code, we recommended using a different approach that is more maintainable.
 :::
 
-```jsx title="Using --doc8 Fluid Custom Properties"
+```jsx title="MyHeading.jsx"
 import * as React from 'react';
 
 export default function MyHeading() {
