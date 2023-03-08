@@ -12,9 +12,12 @@ A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
 Use this when you want to enhance your site with powerful **add-ons**.
 
-You can integrate custom React components through a lightweight, unified interface. They are then always readily accessible to developers through the workbench.
+You can integrate custom React components through a lightweight, unified
+interface. They are then always readily accessible to developers through our
+workbench.
 
-For example, integrating with the workbench is how [theme-task-list](./theme-task-list.md) works.
+For example, integrating with the workbench is how
+[theme-task-list](./theme-task-list.md) works.
 
 ### Plugin and Add-On Differences
 
