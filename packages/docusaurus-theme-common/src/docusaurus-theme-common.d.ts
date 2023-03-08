@@ -14,6 +14,11 @@ declare module '@docupotamus/docusaurus-theme-common' {
 
     // TODO(dnguyen0304): Investigate moving these to toolbar context.
 
+    // If change, then change:
+    //   https://www.docupotamus.io/docs/themes/theme-common#interface
+    // We refer to the controller as the "Toolbar", the content for each
+    // integrated add-on as a "Tab", and the tabs container as the
+    // "Workbench".
     interface TabConfig {
         // Tab unique identifier.
         readonly tabId: string;
