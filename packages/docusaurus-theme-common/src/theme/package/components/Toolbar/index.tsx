@@ -26,7 +26,7 @@ export default function Toolbar(): JSX.Element {
     const { tabIdToConfig } = useToolbar();
 
     return (
-        <StyledBox>
+        <StyledBox className='DocupotamusToolbar'>
             {[...tabIdToConfig.entries()].map(([tabId, config]) => {
                 return (
                     <Button

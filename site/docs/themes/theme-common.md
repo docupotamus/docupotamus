@@ -61,7 +61,26 @@ as spacing. Otherwise, we recommended preferring to style through custom propert
 We provide some stable CSS class names for robust and maintainable global layout
 styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
-- `.`
+- `.DocupotamusToolbar`
+- `.DocupotamusWorkbench`
+
+### Example Styling
+
+Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
+out!
+
+```javascript title="JavaScript"
+document.querySelector('.DocupotamusToolbar');
+```
+
+```css title="CSS"
+.DocupotamusWorkbench {
+  /* The important flag is used here only for demonstration
+     purposes. For production code, we recommended using a different
+     approach to increase specificity. */
+  background-color: red !important;
+}
+```
 
 ## What's Next? {#future}
 

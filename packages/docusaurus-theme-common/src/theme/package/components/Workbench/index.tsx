@@ -49,7 +49,10 @@ export default function Workbench(): JSX.Element {
     const tabConfig = tabIdToConfig.get(activeTabId);
 
     return (
-        <StyledBox workbenchIsOpen={!!tabConfig}>
+        <StyledBox
+            className='DocupotamusWorkbench'
+            workbenchIsOpen={!!tabConfig}
+        >
             {tabConfig &&
                 // TODO(dnguyen0304): Replace temporary placeholder stub.
                 <React.Suspense fallback={<p>Loading...</p>}>
