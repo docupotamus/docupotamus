@@ -104,6 +104,8 @@ document.querySelector('.DocupotamusToolbar');
 
 <TaskList>
 - [Prerequisite] Think about how you'll define your `TabConfig`.
+- Create the folder structure for swizzling `Toolbar/Entry`.
+- Add the boilerplate for swizzling `Toolbar/Entry`.
 </TaskList>
 
 #### Prepare a `TabConfig`
@@ -130,6 +132,21 @@ interface TabConfig {
   // Toolbar icon component.
   readonly IconComponent: JSX.Element;
 }
+```
+
+#### Create the Folder Structure
+
+This is for swizzling the `@theme/docupotamus-common/Toolbar/Entry` component.
+Here is a common folder structure:
+
+```text
+@site/                     : root directory
+  src/
+    theme/                 : theme components
+      docupotamus-common/
+        Toolbar/
+          Entry/
+            index.tsx
 ```
 
 ## What's Next? {#future}
