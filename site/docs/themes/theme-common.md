@@ -8,8 +8,6 @@ sidebar_position: 1
 
 A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
-## Try It Out
-
 ### Common Use Cases
 
 Use this when you want to enhance your site with powerful **add-ons**.
@@ -36,3 +34,6 @@ to install this as a dependency because it is already included.
 ```bash npm2yarn
 $ npm install --save @docupotamus/docusaurus-theme-common
 ```
+
+<!-- Try It Out -->
+<!-- Example Usage -->
