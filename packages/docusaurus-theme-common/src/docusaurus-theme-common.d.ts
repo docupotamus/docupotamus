@@ -50,7 +50,7 @@ declare module '@docupotamus/theme-common' {
 }
 
 declare module '@theme/docupotamus-common' {
-    import type { ContextValue } from '@docupotamus/docusaurus-theme-common';
+    import type { ContextValue } from '@docupotamus/theme-common';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
     import type RootType from '@theme/Root';

@@ -3,7 +3,7 @@ import {
     Action,
     ContextValue,
     TabIdToConfig
-} from '@docupotamus/docusaurus-theme-common';
+} from '@docupotamus/theme-common';
 import * as React from 'react';
 
 const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
