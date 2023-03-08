@@ -4,6 +4,7 @@ sidebar_position: 1
 
 # 📦 theme-common
 
+import ApiTable from '@site/src/components/ApiTable';
 import { TaskList } from '@theme/docupotamus-task-list';
 
 A Docusaurus theme with a lightweight, unified interface for developing add-ons.
@@ -56,6 +57,32 @@ module.exports = {
 ```
 
 ## Customizing
+
+### Configuration
+
+Accepted fields:
+
+```mdx-code-block
+<ApiTable>
+```
+
+| Name               | Type      | Default | Description                                                                                                                                                                      |
+| ------------------ | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `swizzleIsEnabled` | `boolean` | `true`  | Whether to swizzle through overwriting. Otherwise, symbols are made public for importing. If you use the preset `@docupotamus/docusaurus-preset-classic`, this field is ignored. |
+
+```mdx-code-block
+</ApiTable>
+```
+
+### Example Configuration
+
+```js title="docusaurus.config.js"
+module.exports = {
+  themes: [
+    ['@docupotamus/docusaurus-theme-common', { swizzleIsEnabled: false }],
+  ],
+};
+```
 
 ### Styling
 
