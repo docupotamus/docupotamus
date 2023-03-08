@@ -109,14 +109,14 @@ export default function MyHeading() {
 <ApiTable>
 ```
 
-| Name                  | Example                      | Description                   |
-| --------------------- | ---------------------------- | ----------------------------- |
-| `--doc8-font-size-*`  | `--doc8-font-size-0`         | Steps of fluid font size.     |
-| `--doc8-space-*`      | `--doc8-space-xs`            | Steps of fluid spacing steps. |
-| `--ifm-color-primary` | `--ifm-color-primary-darker` | Primary color.                |
-| `--ifm-color-white`   | `--ifm-color-white`          | White color.                  |
-| `--ifm-color-black`   | `--ifm-color-black`          | Black color.                  |
-| `--ifm-color-gray-*`  | `--ifm-color-gray-200`       | Tones of gray color.          |
+| Name                  | Example                      | Description               |
+| --------------------- | ---------------------------- | ------------------------- |
+| `--doc8-font-size-*`  | `--doc8-font-size-0`         | Steps of fluid font size. |
+| `--doc8-space-*`      | `--doc8-space-xs`            | Steps of fluid spacing.   |
+| `--ifm-color-primary` | `--ifm-color-primary-darker` | Primary color.            |
+| `--ifm-color-white`   | `--ifm-color-white`          | White color.              |
+| `--ifm-color-black`   | `--ifm-color-black`          | Black color.              |
+| `--ifm-color-gray-*`  | `--ifm-color-gray-200`       | Tones of gray color.      |
 
 ```mdx-code-block
 </ApiTable>
