@@ -22,7 +22,7 @@ declare module '@docupotamus/docusaurus-theme-common' {
         readonly displayName: string;
 
         // Tab component.
-        readonly Component: JSX.Element;
+        readonly Component: React.LazyExoticComponent<() => JSX.Element>;
 
         // Toolbar icon component.
         readonly IconComponent: JSX.Element;

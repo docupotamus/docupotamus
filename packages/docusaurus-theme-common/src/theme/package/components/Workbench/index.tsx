@@ -1,11 +1,7 @@
-import type { TabConfig } from '@docupotamus/theme-common';
-import { useLocation } from '@docusaurus/router';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import { useToolbar } from '../../contexts/toolbar';
-import useCommonThemeConfig from '../../hooks/useCommonThemeConfig';
-import Loading from './Loading';
 import Tab from './Tab';
 
 interface StyledBoxProps {
@@ -47,62 +43,19 @@ const StyledBox = styled(Box, {
     },
 }));
 
-interface Props {
-    readonly isLoading: boolean;
-    readonly setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
-    readonly tabConfig: TabConfig;
-};
-
-const LoadableTab = (
-    {
-        isLoading,
-        setIsLoading,
-        tabConfig,
-    }: Props,
-): JSX.Element => {
-    // TODO(dnguyen0304): Fix loading not triggering on open.
-    if (isLoading) {
-        return <Loading setIsLoading={setIsLoading} />;
-    }
-    return (
-        <Tab displayName={tabConfig.displayName}>
-            {tabConfig.Component}
-        </Tab>
-    );
-};
-
 export default function Workbench(): JSX.Element {
-    const {
-        debug: {
-            loading: {
-                isEnabled: loadingIsEnabled,
-            },
-        },
-    } = useCommonThemeConfig();
-    const location = useLocation();
     const { tabIdToConfig, activeTabId } = useToolbar();
 
-    const [isLoading, setIsLoading] = React.useState<boolean>(loadingIsEnabled);
-
     const tabConfig = tabIdToConfig.get(activeTabId);
-
-    React.useEffect(() => {
-        if (!loadingIsEnabled) {
-            return;
-        }
-        setIsLoading(true);
-    }, [location]);
 
     return (
         <StyledBox workbenchIsOpen={!!tabConfig}>
             {tabConfig &&
                 // TODO(dnguyen0304): Replace temporary placeholder stub.
                 <React.Suspense fallback={<p>Loading...</p>}>
-                    <LoadableTab
-                        isLoading={isLoading}
-                        setIsLoading={setIsLoading}
-                        tabConfig={tabConfig}
-                    />
+                    <Tab displayName={tabConfig.displayName}>
+                        {tabConfig.Component}
+                    </Tab>
                 </React.Suspense>
             }
         </StyledBox >
