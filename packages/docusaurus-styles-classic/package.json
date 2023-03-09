@@ -7,7 +7,7 @@
         "node": ">=16.14"
     },
     "scripts": {
-        "build": "echo \"temporary placeholder\""
+        "build": "echo \"temporary placeholder nop\""
     },
     "files": [
         "lib/**/*",
