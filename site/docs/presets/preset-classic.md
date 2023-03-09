@@ -7,8 +7,15 @@ sidebar_position: 1
 <!-- import ApiTable from '@site/src/components/ApiTable'; -->
 <!-- import { TaskList } from '@theme/docupotamus-task-list'; -->
 
-<!-- A Docusaurus theme that converts plain lists into beautiful, interactive task
-lists. -->
+A Docusaurus preset that conveniently bundles our minimalist design, unified
+interface, and powerful add-ons.
+
+It provides lightweight, centralized configuration for the following plugins and
+themes:
+
+- [`@docupotamus/docusaurus-styles-classic`](../styles/styles-classic.md)
+- [`@docupotamus/docusaurus-theme-common`](../themes/theme-common.md)
+- [`@docupotamus/docusaurus-theme-task-list`](../themes/theme-task-list.md)
 
 ## Installation
 
@@ -42,3 +49,9 @@ hand, the standalone dependencies:
 - are more low-level
 - require more setup
 - do not include Workbench integrations
+
+<!-- - The preset wires together the theme such as that it never conflicts with other
+  swizzled components.
+- Just like with the `@docusaurus/docusaurus-preset-classic`, the preset
+  provides a single interface for configuring plugins and themes.
+- The preset provides a Workbench integration -->
