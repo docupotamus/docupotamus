@@ -27,7 +27,7 @@ the code for integrating them with your existing Docusaurus site. See
 The preset is recommended over installing standalone dependencies.
 :::
 
-```bash npm2yarn
+```shell npm2yarn
 $ npm install --save @docupotamus/docusaurus-preset-classic
 ```
 

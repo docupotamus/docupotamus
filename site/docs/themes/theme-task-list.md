@@ -47,7 +47,7 @@ theme is already included in the preset.
 The preset is recommended over installing the standalone dependency.
 :::
 
-```bash npm2yarn
+```shell npm2yarn
 $ npm install --save @docupotamus/docusaurus-theme-task-list
 ```
 
