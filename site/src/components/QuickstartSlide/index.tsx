@@ -3,6 +3,7 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 
 const StyledBox = styled(Box)({
+    marginBottom: 'var(--ifm-leading)',
     '& h2': {
         backgroundColor: 'var(--ifm-color-primary)',
         fontSize: 'var(--doc8-font-size-4)',
