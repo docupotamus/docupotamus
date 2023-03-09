@@ -18,6 +18,11 @@ themes:
 - [`@docupotamus/docusaurus-theme-task-list`](../themes/theme-task-list.md)
 - [`@docusaurus/preset-classic`](#docusaurus-differences)
 
+### Common Use Cases
+
+Use this when you want to use Docupotamus features, but don't want to maintain
+the code for integrating them with your existing Docusaurus site.
+
 ## Installation
 
 :::tip
