@@ -129,4 +129,4 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### Markdown / MDX
 
-- **markdown-admonition-tldr**: Prefer using the `note` admonition for TL:DR's.
+- **markdown-admonition-tldr**: Prefer using the `info` admonition for TL:DR's.
