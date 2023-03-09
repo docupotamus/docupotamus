@@ -82,7 +82,7 @@ We got you. Use "doc8" as an abbreviation for Docupotamus.
 
 For example, try navigating to [doc8.io](https://www.doc8.io).
 
-```text title="Why 8?"
+```text title="Why the number 8?"
 d o c u p o t a m u s
       ^             ^
       1 2 3 4 5 6 7 8
