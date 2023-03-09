@@ -5,9 +5,12 @@ sidebar_position: 0
 # Quickstart
 
 import { TaskList } from '@theme/docupotamus-task-list';
+import Slide from '@site/src/components/QuickstartSlide';
 
 Docupotamus is a productivity suite of Docusaurus plugins, dedicated to making
 all developers even _faster_.
+
+<Slide/>
 
 It bundles a minimalist design, unified add-on interface, and powerful
 built-ins - all fully interoperable with your existing site.
