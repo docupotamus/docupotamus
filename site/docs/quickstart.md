@@ -17,8 +17,7 @@ built-ins - all fully interoperable with your existing site.
 <TaskList>
 - Install Node.js.
 - Create a new site.
-- Install the Docupotamus preset.
-- Register the Docupotamus preset.
+- Install and register the Docupotamus preset.
 - Start your site.
 </TaskList>
 
@@ -45,13 +44,13 @@ If you are having trouble setting up Docusaurus, see the
 npx create-docusaurus@latest my-site classic && cd my-site
 ```
 
-#### Install the Docupotamus preset
+#### Install and register the Docupotamus preset
 
 ```shell npm2yarn
 npm install --save @docupotamus/docusaurus-preset-classic
 ```
 
-#### Register the Docupotamus preset
+Then register it in your site's `docusaurus.config.js`:
 
 ```js title="docusaurus.config.js"
 module.exports = {
