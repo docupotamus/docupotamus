@@ -7,8 +7,8 @@ sidebar_position: 1
 <!-- import ApiTable from '@site/src/components/ApiTable'; -->
 <!-- import { TaskList } from '@theme/docupotamus-task-list'; -->
 
-A Docusaurus preset that conveniently bundles our minimalist design, unified
-interface, and powerful add-ons.
+A Docusaurus preset that bundles a minimalist design, unified add-on interface,
+and powerful built-ins.
 
 It provides lightweight, centralized configuration for the following plugins and
 themes:
