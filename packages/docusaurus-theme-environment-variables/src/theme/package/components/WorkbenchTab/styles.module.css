@@ -1,0 +1,19 @@
+.entries-container {
+    list-style-type: none;
+    margin: 0;
+    padding: var(--space-2xs) var(--space-s);
+    padding-bottom: 0;
+}
+
+.entries-container > li + li {
+    margin-top: var(--space-s);
+}
+
+/* TODO(dnguyen0304): Extract to a centralized location to facilitate
+maintenance. */
+.target--highlight {
+    background-color: rgb(252, 201, 53);
+    border-radius: 6px;
+    /* TODO(dnguyen0304): Investigate if this legacy code is still needed. */
+    padding: 1% 0;
+}

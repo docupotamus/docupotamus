@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* DO NOT EDIT: Font size custom variables are auto-generated. */
+    /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,2560,32,1.5,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+    --step--3: clamp(0.59rem, calc(0.66rem + -0.04vw), 0.65rem);
+    --step--2: clamp(0.78rem, calc(0.77rem + 0.08vw), 0.89rem);
+    --step--1: clamp(0.94rem, calc(0.88rem + 0.28vw), 1.33rem);
+    --step-0: clamp(1.13rem, calc(1.00rem + 0.63vw), 2.00rem);
+    --step-1: clamp(1.35rem, calc(1.11rem + 1.18vw), 3.00rem);
+    --step-2: clamp(1.62rem, calc(1.21rem + 2.06vw), 4.50rem);
+    --step-3: clamp(1.94rem, calc(1.26rem + 3.43vw), 6.75rem);
+    --step-4: clamp(2.33rem, calc(1.22rem + 5.57vw), 10.13rem);
+    --step-5: clamp(2.80rem, calc(1.03rem + 8.85vw), 15.19rem);
+
+    --font-size--3: var(--step--3);
+    --font-size--2: var(--step--2);
+    /* This is closest to 1rem. */
+    --font-size--1: var(--step--1);
+    --font-size-0: var(--step-0);
+    --font-size-1: var(--step-1);
+    --font-size-2: var(--step-2);
+    --font-size-3: var(--step-3);
+    --font-size-4: var(--step-4);
+    --font-size-5: var(--step-5);
+
+    /* DO NOT EDIT: Spacing custom variables are auto-generated. */
+    /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,&g=s,l,xl,12 */
+    --space-3xs: clamp(0.31rem, calc(0.31rem + 0.00vw), 0.31rem);
+    --space-2xs: clamp(0.56rem, calc(0.54rem + 0.11vw), 0.63rem);
+    /* This is closest to 1rem. */
+    --space-xs: clamp(0.88rem, calc(0.85rem + 0.11vw), 0.94rem);
+    --space-s: clamp(1.13rem, calc(1.08rem + 0.22vw), 1.25rem);
+    --space-m: clamp(1.69rem, calc(1.62rem + 0.33vw), 1.88rem);
+    --space-l: clamp(2.25rem, calc(2.16rem + 0.43vw), 2.50rem);
+    --space-xl: clamp(3.38rem, calc(3.24rem + 0.65vw), 3.75rem);
+    --space-2xl: clamp(4.50rem, calc(4.33rem + 0.87vw), 5.00rem);
+    --space-3xl: clamp(6.75rem, calc(6.49rem + 1.30vw), 7.50rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.31rem, calc(0.20rem + 0.54vw), 0.63rem);
+    --space-2xs-xs: clamp(0.56rem, calc(0.43rem + 0.65vw), 0.94rem);
+    --space-xs-s: clamp(0.88rem, calc(0.74rem + 0.65vw), 1.25rem);
+    --space-s-m: clamp(1.13rem, calc(0.86rem + 1.30vw), 1.88rem);
+    --space-m-l: clamp(1.69rem, calc(1.40rem + 1.41vw), 2.50rem);
+    --space-l-xl: clamp(2.25rem, calc(1.73rem + 2.61vw), 3.75rem);
+    --space-xl-2xl: clamp(3.38rem, calc(2.81rem + 2.83vw), 5.00rem);
+    --space-2xl-3xl: clamp(4.50rem, calc(3.46rem + 5.22vw), 7.50rem);
+
+    /* Docupotamus Theme */
+    --docupotamus-border-radius-s: var(--space-2xs);
+    --docupotamus-border-radius-m: var(--space-m);
+
+    --docupotamus-color-grey-100-rgb: 17, 25, 40;
+    --docupotamus-color-grey-100: rgb(var(--docupotamus-color-grey-100-rgb));
+    --docupotamus-color-grey-300-rgb: 41, 48, 62;
+    --docupotamus-color-grey-300: rgb(var(--docupotamus-color-grey-300-rgb));
+    --docupotamus-color-grey-700-rgb: 220, 220, 220;
+    --docupotamus-color-grey-700: rgb(var(--docupotamus-color-grey-700-rgb));
+    --docupotamus-color-grey-800-rgb: 255, 255, 255;
+    --docupotamus-color-grey-800: rgb(var(--docupotamus-color-grey-800-rgb));
+
+    --docupotamus-font-family: 'Karla', sans-serif;
+    --docupotamus-font-size: var(--font-size--1);
+
+    --docupotamus-heading-font-weight: 600;
+    --docupotamus-body-font-weight: 200;
+}
+
+/* Warning: This is deprecated. */
+h1.ifm_text__reset,
+h2.ifm_text__reset,
+h3.ifm_text__reset,
+h4.ifm_text__reset,
+h5.ifm_text__reset,
+h6.ifm_text__reset,
+p.ifm_text__reset {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
