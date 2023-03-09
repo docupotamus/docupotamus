@@ -23,6 +23,8 @@ the code for integrating them with your existing Docusaurus site. See
 
 ## Installation
 
+<!-- If change, then change: ../quickstart.md -->
+
 :::tip
 The preset is recommended over installing standalone dependencies.
 :::
