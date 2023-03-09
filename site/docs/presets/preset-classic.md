@@ -67,3 +67,9 @@ replacement. On the other hand, the standalone dependencies:
 
 The preset registers plugins and themes such that they never conflict with one
 another due to swizzle clobbering.
+
+## What's Next? {#future}
+
+If you have comments, questions, or are looking to contribute, please start a
+conversation over a
+[GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3ACommon)!
