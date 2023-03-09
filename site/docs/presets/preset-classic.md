@@ -27,6 +27,8 @@ The preset is recommended over installing standalone dependencies.
 $ npm install --save @docupotamus/docusaurus-preset-classic
 ```
 
+Then register it in your site's `docusaurus.config.js`:
+
 ```js title="docusaurus.config.js"
 module.exports = {
     presets: [

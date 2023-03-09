@@ -60,6 +60,8 @@ The preset is recommended over installing the standalone dependency.
 $ npm install --save @docupotamus/docusaurus-styles-classic
 ```
 
+Then register it in your site's `docusaurus.config.js`:
+
 ```js title="docusaurus.config.js"
 module.exports = {
   presets: [
