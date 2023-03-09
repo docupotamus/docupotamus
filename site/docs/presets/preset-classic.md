@@ -16,6 +16,7 @@ themes:
 - [`@docupotamus/docusaurus-styles-classic`](../styles/styles-classic.md)
 - [`@docupotamus/docusaurus-theme-common`](../themes/theme-common.md)
 - [`@docupotamus/docusaurus-theme-task-list`](../themes/theme-task-list.md)
+- [`@docusaurus/preset-classic`](#docusaurus-differences)
 
 ## Installation
 
@@ -44,6 +45,16 @@ module.exports = {
 ```
 
 ## Concepts
+
+### Docusaurus Differences
+
+:::tip tl;dr
+This preset is a backward-compatible, drop-in replacement.
+:::
+
+The presets are fully backward-compatible because Docupotamus `preset-classic` is implemented as just a thin convenience wrapper. It strictly only extends Docusaurus `preset-classic`.
+
+Therefore, the Docupotamus preset includes all bundled plugins and themes you're used to. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic) for the full list.
 
 ### Preset and Standalone Differences
 
