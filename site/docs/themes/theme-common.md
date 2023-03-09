@@ -164,7 +164,7 @@ import CodeBlock from '@theme/CodeBlock';
 </TaskList>
 
 :::caution
-Integrate a new add-on as a standalone dependency is supported but not yet
+Integrating a new add-on as a standalone dependency is supported but not yet
 documented.
 :::
 
