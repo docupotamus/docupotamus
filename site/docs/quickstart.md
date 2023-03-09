@@ -4,44 +4,62 @@ sidebar_position: 0
 
 # Quickstart
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Docupotamus is a productivity suite of Docusaurus plugins, dedicated to making
+all developers even _faster_.
 
-## Getting Started
+It bundles a minimalist design, unified add-on interface, and powerful
+built-ins - all fully interoperable with your existing site.
 
-Get started by **creating a new site**.
+## From Zero to Fast Hippo
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+#### Install Node.js
 
-### What you'll need
+:::tip
+If you have an existing Docusaurus site, you can skip this step.
+:::
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+Install [Node.js](https://nodejs.org/en/download/) version 16.14 or higher.
 
-## Generate a new site
+#### Create a new site
 
-Generate a new Docusaurus site using the **classic template**.
+:::tip
+If you have an existing Docusaurus site, you can skip this step.
+:::
 
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
+```shell
+npx create-docusaurus@latest my-site classic && cd my-site
 ```
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+#### Install the Docupotamus preset
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+```shell npm2yarn
+npm install --save @docupotamus/docusaurus-preset-classic
+```
 
-## Start your site
+#### Register the Docupotamus preset
 
-Run the development server:
+```js title="docusaurus.config.js"
+module.exports = {
+    presets: [
+        [
+            // Change this line to match the following.
+            // highlight-next-line
+            '@docupotamus/docusaurus-preset-classic',
+            ({
+                docs: ...
+            }),
+        ],
+    ],
+};
+```
 
-```bash
-cd my-website
+#### Start your site
+
+```shell
 npm run start
 ```
 
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
+## What's Next?
 
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+A good first place to start is [creating a task list](./themes/theme-task-list#example-usage)
+just like the one on this page. Try it out!
