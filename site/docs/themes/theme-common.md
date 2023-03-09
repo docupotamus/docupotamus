@@ -11,7 +11,7 @@ A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
 ### Common Use Cases
 
-Use this when you want to enhance your site with powerful **add-ons**.
+Use this when you want to enhance your site with powerful add-ons.
 
 You can integrate custom React components through a lightweight, unified
 interface. They are then always readily accessible to developers through our
@@ -68,9 +68,9 @@ Accepted fields:
 <ApiTable>
 ```
 
-| Name               | Type      | Default | Description                                                                                                                                                                      |
-| ------------------ | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `swizzleIsEnabled` | `boolean` | `true`  | Whether to swizzle through overwriting. Otherwise, symbols are made public for importing. If you use the preset `@docupotamus/docusaurus-preset-classic`, this field is ignored. |
+| Name               | Type      | Default | Description                                                                                                                                                                                                                                                      |
+| ------------------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `swizzleIsEnabled` | `boolean` | `true`  | Whether to swizzle through overwriting. Otherwise, symbols are made public for importing. If you use the preset `@docupotamus/docusaurus-preset-classic`, this field is ignored. See also [Swizzle Clobbering](../presets/preset-classic.md#swizzle-clobbering). |
 
 ```mdx-code-block
 </ApiTable>
@@ -203,8 +203,8 @@ mkdir -p src/theme/docupotamus-common/Toolbar/Entry/ \
     && touch src/theme/docupotamus-common/Toolbar/Entry/index.tsx
 ```
 
-This is for swizzling the `@theme/docupotamus-common/Toolbar/Entry` component.
-Here is a common folder structure:
+This is for swizzling the `@theme/docupotamus-common/Toolbar/Entry/index.tsx`
+component. Here is a common folder structure:
 
 ```text
 @site/                     : root directory
