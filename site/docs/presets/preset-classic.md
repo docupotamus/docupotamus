@@ -79,6 +79,18 @@ another due to swizzle clobbering.
 
 ### Swizzling Clobbering
 
+:::note Background
+Swizzle is _replacing_ the implementation of a theme component.
+
+For example, if we wanted to change the table of contents, we define a new
+`@theme/TOC` component through our site, plugin, or theme. Docusaurus then
+changes the table of contents import alias from the original component to our
+new one.
+
+In ["Why is it called swizzling?"](https://docusaurus.io/docs/swizzling),
+Docusaurus provides helpful comparisons to existing mental models.
+:::
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a
