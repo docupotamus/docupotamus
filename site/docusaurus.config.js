@@ -57,7 +57,7 @@ const config = {
                         type: 'doc',
                         label: 'Docs',
                         position: 'left',
-                        docId: 'intro',
+                        docId: 'quickstart',
                     },
                     {
                         label: 'GitHub',
