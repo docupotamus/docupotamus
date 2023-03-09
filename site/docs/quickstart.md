@@ -59,6 +59,18 @@ module.exports = {
 npm run start
 ```
 
+## I am bad at spelling
+
+We got you. Use "doc8" as an abbreviation for Docupotamus.
+
+For example, try navigating to [doc8.io](https://www.doc8.io).
+
+```text
+d o c u p o t a m u s
+      ^             ^
+      1 2 3 4 5 6 7 8
+```
+
 ## What's Next?
 
 A good first place to start is [creating a task list](./themes/theme-task-list#example-usage)
