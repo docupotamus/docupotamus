@@ -6,6 +6,9 @@
     "engines": {
         "node": ">=16.14"
     },
+    "scripts": {
+        "build": "echo \"temporary placeholder\""
+    },
     "files": [
         "lib/**/*",
         "static/**/*"
