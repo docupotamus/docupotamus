@@ -3,6 +3,9 @@ declare module '@docupotamus/docusaurus-theme-environment-variables' {
     interface EnvironmentVariablesThemeConfig { }
 }
 
-declare module '@docusaurus/theme-environment-variables' {
+declare module '@docupotamus/theme-environment-variables' {
     export * from '@docupotamus/docusaurus-theme-environment-variables';
+}
+
+declare module '@theme/docupotamus-environment-variables' {
 }
