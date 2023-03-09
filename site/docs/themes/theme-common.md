@@ -22,7 +22,7 @@ For example, integrating with the workbench is how
 
 ### Plugin and Add-On Differences
 
-:::tip tl;dr
+:::info tl;dr
 Add-ons are at a conceptually smaller scope and can be more standalone.
 :::
 
