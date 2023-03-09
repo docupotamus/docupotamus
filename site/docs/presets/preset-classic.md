@@ -21,7 +21,8 @@ themes:
 ### Common Use Cases
 
 Use this when you want to use Docupotamus features, but don't want to maintain
-the code for integrating them with your existing Docusaurus site.
+the code for integrating them with your existing Docusaurus site. See
+[here](#swizzle-clobbering) for more details on the challenges.
 
 ## Installation
 
@@ -75,21 +76,69 @@ replacement. On the other hand, the standalone dependencies:
 - do not include Workbench integrations
 
 The preset registers plugins and themes such that they never conflict with one
-another due to swizzle clobbering.
+another due to [swizzle clobbering](#swizzle-clobbering).
 
-### Swizzling Clobbering
+### Swizzle Clobbering
+
+:::caution tl;dr
+Swizzling is **last-write-wins** so the order matters when registering plugins,
+themes, and presets.
+:::
 
 :::note Background
-Swizzle is _replacing_ the implementation of a theme component.
+Swizzling is _replacing_ the implementation of a theme component.
 
 For example, if we wanted to change the table of contents, we define a new
-`@theme/TOC` component through our site, plugin, or theme. Docusaurus then
-changes the table of contents import alias from the original component to our
-new one.
+`@theme/TOC/index.tsx` component through our site, plugin, or theme. Docusaurus then
+replaces the original table of contents import alias with our new one.
 
-In ["Why is it called swizzling?"](https://docusaurus.io/docs/swizzling),
-Docusaurus provides helpful comparisons to existing mental models.
+See ["Why is it called swizzling?"](https://docusaurus.io/docs/swizzling) for
+helpful comparisons to existing mental models.
 :::
+
+Note the use of the word "replacing" above. You might be tempted to compare
+swizzling to an existing mental model such as OOP inheritance. This
+unfortunately misses some nuance. Imagine this class inheritance structure or
+its analogous `docusaurus.config.js`:
+
+```mdx-code-block
+<Tabs>
+<TabItem value="Inheritance">
+```
+
+```text
+Chair -> FourLeggedChair -> WoodChair
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="docusaurus.config.js">
+```
+
+```js title="docusaurus.config.js"
+module.exports = {
+  themes: [
+    '@docupotamus/docusaurus-theme-chair',
+    '@docupotamus/docusaurus-theme-chair-four-legged',
+    '@docupotamus/docusaurus-theme-chair-wood',
+  ],
+};
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
+
+You might expect an instance to have characteristics from all its parents. In
+other words, our chair would have 4 legs and be made of wood. However, swizzling
+is _replacing_ the implementation of a theme component. Our chair would only be
+made of wood.
+
+Docupotamus plugins, themes, and presets use a special _composition_
+architecture pattern. If the same theme component (e.g. `@theme/TOC/index.tsx`)
+is swizzled by more than 1 plugins, themes, and/or presets, we maintain the
+features from all implementations.
 
 ## What's Next? {#future}
 
