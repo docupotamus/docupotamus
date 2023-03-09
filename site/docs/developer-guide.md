@@ -61,14 +61,14 @@ $ PACKAGE={{ PACKAGE }} \
     components are considered public and safe to be referenced. The most common
     use case is accounting for the same component (e.g. `DocItem`) being
     swizzled by more than 1 plugins, themes, and/or presets, resulting in
-    [theme alias stack](https://docusaurus.io/docs/advanced/client) overwriting
-    through "last-import-wins". The directory trees between `decorators` and
-    `swizzle` are always equal to one another.
+    [swizzle clobbering](./presets/preset-classic.md#swizzle-clobbering). The
+    directory trees between `decorators` and `swizzle` are always equal to one
+    another.
 
-  - `swizzle`: This is the theme path analogous to where docusaurus sites put
+  - `swizzle`: This is the theme path analogous to where Docusaurus sites put
     swizzled theme components. When the plugin option `swizzleIsEnabled` is set
     to `true` (if applicable), then these components are automatically added to
-    the [theme aliases stack](https://docusaurus.io/docs/advanced/client). The
+    the [theme import aliases](https://docusaurus.io/docs/advanced/client). The
     directory trees between `decorators` and `swizzle` are always equal to one
     another.
 
