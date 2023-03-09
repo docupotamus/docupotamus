@@ -26,6 +26,11 @@ Install [Node.js](https://nodejs.org/en/download/) version 16.14 or higher.
 If you have an existing Docusaurus site, you can skip this step.
 :::
 
+:::note
+If you are having trouble setting up Docusaurus, see the
+[source documentation](https://docusaurus.io/docs#fast-track).
+:::
+
 ```shell
 npx create-docusaurus@latest my-site classic && cd my-site
 ```
