@@ -43,7 +43,9 @@ module.exports = {
 };
 ```
 
-## Preset and Standalone Differences
+## Concepts
+
+### Preset and Standalone Differences
 
 We recommended the preset because it is a drop-in replacement. On the other
 hand, the standalone dependencies:
