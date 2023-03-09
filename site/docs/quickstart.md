@@ -4,6 +4,8 @@ sidebar_position: 0
 
 # Quickstart
 
+import { TaskList } from '@theme/docupotamus-task-list';
+
 Docupotamus is a productivity suite of Docusaurus plugins, dedicated to making
 all developers even _faster_.
 
@@ -11,6 +13,14 @@ It bundles a minimalist design, unified add-on interface, and powerful
 built-ins - all fully interoperable with your existing site.
 
 ## From Zero to Fast Hippo
+
+<TaskList>
+- Install Node.js.
+- Create a new site.
+- Install the Docupotamus preset.
+- Register the Docupotamus preset.
+- Start your site.
+</TaskList>
 
 #### Install Node.js
 
