@@ -139,7 +139,7 @@ document.querySelector('.DocupotamusToolbar');
 
 <!-- _keywords:_ user guides -->
 
-### Integrate a New Add-On
+### Integrate a new add-on
 
 <details>
     <summary>See Canonical Reference</summary>
@@ -196,7 +196,7 @@ interface TabConfig {
 }
 ```
 
-#### Create the Folder Structure
+#### Create the folder structure
 
 ```shell
 mkdir -p src/theme/docupotamus-common/Toolbar/Entry/ \
@@ -216,7 +216,7 @@ component. Here is a common folder structure:
             index.tsx
 ```
 
-#### Add the Boilerplate
+#### Add the boilerplate
 
 ```tsx title="index.tsx"
 import type { WrapperProps } from '@docusaurus/types';
