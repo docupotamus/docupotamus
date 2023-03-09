@@ -16,7 +16,7 @@ export default function Button(
         displayName,
     }: Props
 ): JSX.Element {
-    const { activeTabId, setActiveTabId } = useToolbar();
+    const { setActiveTabId } = useToolbar();
 
     const handleClick = () => {
         setActiveTabId(prev => (prev === tabId) ? '' : tabId);
@@ -25,7 +25,7 @@ export default function Button(
     return (
         <Tooltip
             placement='left'
-            title={`${activeTabId === tabId ? 'Close' : 'Open'} ${displayName}`}
+            title={displayName}
         >
             <IconButton
                 color='inherit'
