@@ -54,7 +54,7 @@ module.exports = {
 
 ### Docusaurus Differences
 
-:::tip tl;dr
+:::info tl;dr
 This preset is a backward-compatible, drop-in replacement.
 :::
 
@@ -80,7 +80,7 @@ another due to [swizzle clobbering](#swizzle-clobbering).
 
 ### Swizzle Clobbering
 
-:::caution tl;dr
+:::info tl;dr
 Swizzling is **last-write-wins** so the order matters when registering plugins,
 themes, and presets.
 :::
