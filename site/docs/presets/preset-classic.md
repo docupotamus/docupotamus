@@ -57,9 +57,13 @@ module.exports = {
 This preset is a backward-compatible, drop-in replacement.
 :::
 
-The presets are fully backward-compatible because Docupotamus `preset-classic` is implemented as just a thin convenience wrapper. It strictly only extends Docusaurus `preset-classic`.
+The presets are fully backward-compatible because Docupotamus `preset-classic`
+is implemented as just a thin convenience wrapper. It strictly only extends
+Docusaurus `preset-classic`.
 
-Therefore, the Docupotamus preset includes all bundled plugins and themes you're used to. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic) for the full list.
+Therefore, the Docupotamus preset includes all bundled plugins and themes you're
+used to. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic)
+for the full list.
 
 ### Preset and Standalone Differences
 
@@ -72,6 +76,8 @@ replacement. On the other hand, the standalone dependencies:
 
 The preset registers plugins and themes such that they never conflict with one
 another due to swizzle clobbering.
+
+### Swizzling Clobbering
 
 ## What's Next? {#future}
 
