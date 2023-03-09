@@ -159,6 +159,7 @@ export default function StylesClassicDemo(): JSX.Element {
                 marginVertical={marginVertical}
             >
                 <h2>minimalist</h2>
+                <h2>responsive</h2>
                 <h2>functional</h2>
                 <h2>readable</h2>
             </StyledBox>
