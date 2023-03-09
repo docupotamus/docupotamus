@@ -130,3 +130,7 @@ $ PACKAGE={{ PACKAGE }} \
 ### Markdown / MDX
 
 - **markdown-admonition-tldr**: Prefer using the `info` admonition for TL:DR's.
+
+- **markdown-heading-imperative**: Headings that are imperative sentences use
+  sentence casing. Do not use title casing. For example, "Do a thing" and not
+  "Do a Thing".
