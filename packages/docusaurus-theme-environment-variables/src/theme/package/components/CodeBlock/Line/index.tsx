@@ -1,7 +1,7 @@
 // Warning: This module was ejected. Do not fix or format, and minimize changes
 // to facilitate diffing.
 
-import PartitionedLineTokens from '../../../package/components/PartitionedLineTokens';
+import PartitionedLineTokens from '../../PartitionedLineTokens';
 
 import React from 'react';
 import clsx from 'clsx';
