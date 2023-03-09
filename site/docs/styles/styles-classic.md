@@ -26,7 +26,7 @@ Use this when you want a neutral, minimalist stylesheet for your site.
 
 ### Infima Differences
 
-:::tip tl;dr
+:::info tl;dr
 `styles-classic` extends from and is fully backward-compatible with Infima. It
 also provides fluid typography and spacing.
 :::
