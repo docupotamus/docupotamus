@@ -27,13 +27,13 @@ lists.
 
 </details>
 
+<!-- _keywords:_ demo -->
+
 ### Common Use Cases
 
 Use this when you need developers to follow a **series of steps**, such as how
 to use your library or set up a development environment. Your developers can
 keep track of their progress even while jumping around the page.
-
-<!-- _keywords:_ demo -->
 
 ## Installation
 
