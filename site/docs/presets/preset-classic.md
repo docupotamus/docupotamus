@@ -58,15 +58,12 @@ Therefore, the Docupotamus preset includes all bundled plugins and themes you're
 
 ### Preset and Standalone Differences
 
-We recommended the preset because it is a drop-in replacement. On the other
-hand, the standalone dependencies:
+We recommended the preset because it is a backward-compatible, drop-in
+replacement. On the other hand, the standalone dependencies:
 
 - are more low-level
 - require more setup
 - do not include Workbench integrations
 
-<!-- - The preset wires together the theme such as that it never conflicts with other
-  swizzled components.
-- Just like with the `@docusaurus/docusaurus-preset-classic`, the preset
-  provides a single interface for configuring plugins and themes.
-- The preset provides a Workbench integration -->
+The preset registers plugins and themes such that they never conflict with one
+another due to swizzle clobbering.
