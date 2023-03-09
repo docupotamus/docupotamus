@@ -126,3 +126,7 @@ $ PACKAGE={{ PACKAGE }} \
   `--${project-abbreviation}` namespace prefix. For example,
   `--tl-color-primary` where "tl" is an abbreviation for
   "@docupotamus/docusaurus-theme-**t**ask-**l**ist".
+
+### Markdown / MDX
+
+- **markdown-admonition-tldr**: Prefer using the `note` admonition for TL:DR's.
