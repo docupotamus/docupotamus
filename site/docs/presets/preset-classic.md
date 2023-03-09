@@ -4,9 +4,6 @@ sidebar_position: 1
 
 # 📦 preset-classic
 
-<!-- import ApiTable from '@site/src/components/ApiTable'; -->
-<!-- import { TaskList } from '@theme/docupotamus-task-list'; -->
-
 A Docusaurus preset that bundles a minimalist design, unified add-on interface,
 and powerful built-ins.
 
