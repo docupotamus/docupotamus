@@ -21,6 +21,7 @@
         "typescript": "^4.7.4"
     },
     "peerDependencies": {
+        "@docupotamus/docusaurus-styles-classic": "^0.5.0",
         "@docusaurus/theme-common": "^2.2.x",
         "react": "^16.8.4 || ^17.0.0",
         "react-dom": "^16.8.4 || ^17.0.0"
