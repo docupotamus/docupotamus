@@ -1,3 +1,5 @@
+/// <reference types="@docusaurus/theme-classic" />
+
 declare module '@docupotamus/docusaurus-theme-environment-variables' {
     interface PluginOptions { }
     interface EnvironmentVariablesThemeConfig { }
