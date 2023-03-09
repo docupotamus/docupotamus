@@ -31,8 +31,9 @@ Use this when you want a neutral, minimalist stylesheet for your site.
 also provides fluid typography and spacing.
 :::
 
-Docusaurus uses [Infima](https://infima.dev/) as its styling framework. Most
-relevant to us are its CSS custom properties with the `--ifm` prefix.
+Docusaurus uses [Infima](https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima)
+as its styling framework. Most relevant to us are its CSS custom properties with
+the `--ifm` prefix.
 
 Docupotamus extends from and is fully backward-compatible with those CSS custom
 properties. For a trivial example, we overwrite `--ifm-color-gray-0` and add
