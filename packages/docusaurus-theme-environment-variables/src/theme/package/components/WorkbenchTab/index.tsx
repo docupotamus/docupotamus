@@ -42,11 +42,28 @@ const StyledTextField = styled(TextField)({
         // Do not use a value higher than ~2px because it breaks the InputLabel
         // animation.
         letterSpacing: '0.9px',
+        '&.Mui-focused': {
+            color: 'var(--ifm-color-danger)',
+        },
     },
     '& .MuiInputBase-root': {
         font: 'inherit',
         borderRadius: 'var(--doc8-space-xs)',
     },
+    // '& .MuiOutlinedInput-root': {
+    //     // good
+    //     '&:hover fieldset': {
+    //         borderColor: 'var(--ifm-color-primary)',
+    //     },
+    //     // good
+    //     '&.Mui-focused fieldset': {
+    //         borderColor: 'var(--ifm-color-primary-dark)',
+    //     },
+    //     '& fieldset': {
+    //         // dark mode
+    //         borderColor: 'red',
+    //     },
+    // },
 });
 
 export default function WorkbenchTab(): JSX.Element {
