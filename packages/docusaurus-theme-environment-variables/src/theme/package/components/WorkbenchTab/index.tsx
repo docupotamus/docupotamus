@@ -125,6 +125,7 @@ export default function WorkbenchTab(): JSX.Element {
             behavior: 'smooth',
             block: 'center',
         });
+        setCode(parseCodeBlock(entry.element));
     };
 
     const handleBlur = (entry: Entry) => {
