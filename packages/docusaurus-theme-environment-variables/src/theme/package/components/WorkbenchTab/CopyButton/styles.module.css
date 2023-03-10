@@ -15,11 +15,3 @@
 .CopyButton [class*='copyButtonSuccessIcon'] {
     color: var(--ifm-color-primary);
 }
-
-/*
-  .copyButtonIcon,
-  .copyButtonSuccessIcon {
-    fill: currentColor;
-    opacity: inherit;
-  }
-  } */
