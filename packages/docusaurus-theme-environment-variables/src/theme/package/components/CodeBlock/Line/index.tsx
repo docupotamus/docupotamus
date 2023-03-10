@@ -25,6 +25,7 @@ export default function CodeBlockLine({
     className: clsx(classNames, showLineNumbers && styles.codeLine),
   });
 
+  // This is the only difference after ejecting.
   const lineTokens = (
     <PartitionedLineTokens
         line={line}
