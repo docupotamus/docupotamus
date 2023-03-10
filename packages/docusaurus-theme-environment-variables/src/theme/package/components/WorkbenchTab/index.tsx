@@ -92,19 +92,6 @@ export default function WorkbenchTab(): JSX.Element {
 
     return (
         <Box>
-            {/* TODO(dnguyen0304): Fix text styles convention. */}
-            <h3
-                className='ifm_text__reset'
-                style={{
-                    color: 'var(--docupotamus-color-grey-800)',
-                    fontFamily: 'var(--docupotamus-font-family)',
-                    fontSize: 'var(--font-size-0)',
-                    fontWeight: 'var(--docupotamus-heading-font-weight)',
-                    textTransform: 'uppercase',
-                }}
-            >
-                environment variables
-            </h3>
             <ul className={styles['entries-container']}>
                 {entries.map((entry, index) => {
                     return (
