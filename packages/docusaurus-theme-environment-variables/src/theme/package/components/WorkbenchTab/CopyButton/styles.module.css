@@ -9,6 +9,7 @@
 }
 
 .CopyButton [class*='copyButtonIcon'] {
+    color: var(--markdown-color);
     transform: translate(-50%, -50%);
 }
 
