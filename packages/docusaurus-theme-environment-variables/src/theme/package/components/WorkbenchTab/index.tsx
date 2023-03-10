@@ -37,6 +37,10 @@ const StyledList = styled(List)({
 });
 
 const StyledTextField = styled(TextField)({
+    '& > .MuiFormLabel-root': {
+        font: 'inherit',
+        letterSpacing: '1.8px',
+    },
     '& .MuiInputBase-root': {
         font: 'inherit'
     },
