@@ -19,6 +19,10 @@ out!
 echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} doc8 team!"
 ```
 
+```js
+const whoEvenKnows = {{ LEFT }} + {{ RIGHT }};
+```
+
 <!-- _keywords:_ demo -->
 
 ### Common Use Cases
