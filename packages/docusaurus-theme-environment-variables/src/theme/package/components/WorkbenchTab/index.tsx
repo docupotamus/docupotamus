@@ -4,6 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
+import '../../styles.css';
 import {
     DATA_ATTRIBUTE_DEFAULT_VALUE,
     DATA_ATTRIBUTE_NAME,
@@ -49,16 +50,15 @@ const StyledTextField = styled(TextField)({
     '& .MuiOutlinedInput-root': {
         font: 'inherit',
         borderRadius: 'var(--doc8-space-xs)',
+        '& fieldset': {
+            borderColor: 'var(--ev-workbench-color-base)',
+        },
         '&:hover fieldset': {
             borderColor: 'var(--ifm-color-primary)',
         },
         '&.Mui-focused fieldset': {
             borderColor: 'var(--ifm-color-primary)',
         },
-        //     '& fieldset': {
-        //         // dark mode
-        //         borderColor: 'red',
-        //     },
     },
 });
 
