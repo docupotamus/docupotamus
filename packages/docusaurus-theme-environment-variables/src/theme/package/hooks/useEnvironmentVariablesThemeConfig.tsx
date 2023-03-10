@@ -1,4 +1,4 @@
-import type { EnvironmentVariablesThemeConfig } from '@docusaurus/theme-environment-variables';
+import type { EnvironmentVariablesThemeConfig } from '@docupotamus/theme-environment-variables';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function useEnvironmentVariablesThemeConfig(): EnvironmentVariablesThemeConfig {
