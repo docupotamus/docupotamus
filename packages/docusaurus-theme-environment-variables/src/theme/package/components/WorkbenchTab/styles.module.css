@@ -9,7 +9,7 @@
     margin-top: var(--doc8-space-s);
 }
 
-.target--highlight {
+.Target__highlight {
     background-color: var(--ifm-color-warning);
     border-radius: 6px;
     /* TODO(dnguyen0304): Investigate if this legacy code is still needed. */
