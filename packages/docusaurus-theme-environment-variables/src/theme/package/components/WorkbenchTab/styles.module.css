@@ -1,12 +1,12 @@
 .entries-container {
     list-style-type: none;
     margin: 0;
-    padding: var(--space-2xs) var(--space-s);
+    padding: var(--doc8-space-2xs) var(--doc8-space-s);
     padding-bottom: 0;
 }
 
 .entries-container > li + li {
-    margin-top: var(--space-s);
+    margin-top: var(--doc8-space-s);
 }
 
 /* TODO(dnguyen0304): Extract to a centralized location to facilitate
