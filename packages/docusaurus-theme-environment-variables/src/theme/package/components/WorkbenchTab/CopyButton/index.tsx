@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
+import Tooltip from '@mui/material/Tooltip';
 // import type { WrapperProps } from '@docusaurus/types';
 import CopyButtonInit from '@theme-original/CodeBlock/CopyButton';
 // import type CopyButtonType from '@theme/CodeBlock/CopyButton';
@@ -18,12 +19,17 @@ const StyledBox = styled(Box)({
 
 export default function CopyButton(): JSX.Element {
     return (
-        <StyledBox>
-            {/* <CopyButton {...props} /> */}
-            <CopyButtonInit
-                className={styles.CopyButton}
-                code={'temporary placeholder'}
-            />
-        </StyledBox>
+        <Tooltip
+            placement='top'
+            title='Copy last active'
+        >
+            <StyledBox>
+                {/* <CopyButton {...props} /> */}
+                <CopyButtonInit
+                    className={styles.CopyButton}
+                    code={'temporary placeholder'}
+                />
+            </StyledBox>
+        </Tooltip>
     );
 };
