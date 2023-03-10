@@ -9,6 +9,7 @@ import styles from './styles.module.css';
 const StyledBox = styled(Box)({
     width: 'var(--doc8-space-l)',
     aspectRatio: '1 / 1',
+    alignSelf: 'center',
 });
 
 // type Props = WrapperProps<typeof CopyButtonType>;
