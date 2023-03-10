@@ -21,8 +21,16 @@ interface Entry {
     readonly element: HTMLElement;
 };
 
+const Layout = styled(Box)({
+    height: '100%',
+
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+});
+
 const StyledList = styled(List)({
-    padding: 'var(--doc8-space-2xs) var(--doc8-space-s)',
+    padding: '0 var(--doc8-space-s)',
     '& > li + li': {
         marginTop: 'var(--doc8-space-s)',
     },
@@ -100,7 +108,7 @@ export default function WorkbenchTab(): JSX.Element {
     }, []);
 
     return (
-        <Box>
+        <Layout>
             <StyledList>
                 {entries.map((entry, index) => {
                     return (
@@ -128,6 +136,6 @@ export default function WorkbenchTab(): JSX.Element {
                     );
                 })}
             </StyledList>
-        </Box>
+        </Layout>
     );
 };
