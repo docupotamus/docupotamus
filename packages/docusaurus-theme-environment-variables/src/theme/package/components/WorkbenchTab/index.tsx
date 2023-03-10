@@ -54,7 +54,7 @@ const StyledTextField = styled(TextField)({
         font: 'inherit',
         borderRadius: 'var(--doc8-space-xs)',
         '& fieldset': {
-            borderColor: 'var(--ev-workbench-color-base)',
+            borderColor: 'currentColor',
         },
         '&:hover fieldset': {
             borderColor: 'var(--ifm-color-primary)',
