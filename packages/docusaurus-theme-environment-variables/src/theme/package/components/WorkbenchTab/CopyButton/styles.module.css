@@ -1,17 +1,24 @@
-.CopyButton {
-    width: inherit;
-    height: inherit;
+/* TODO(dnguyen0304): Investigate adding border styles similar to how
+   @theme/CodeBlock does. */
+.CopyButton_layout {
+    --copy-button-size: var(--doc8-space-l);
+
+    width: var(--copy-button-size);
+    height: var(--copy-button-size);
+    align-self: center;
 }
 
-.CopyButton [class*='copyButtonIcons'] {
-    width: inherit;
-    height: inherit;
+.CopyButton [class*='copyButtonIcon'],
+.CopyButton [class*='copyButtonSuccessIcon'] {
+    width: var(--copy-button-size);
+    height: var(--copy-button-size);
+
+    /* TODO(dnguyen0304): Fix how the icons are positioned. */
+    transform: translate(0, -50%);
 }
 
 .CopyButton [class*='copyButtonIcon'] {
     color: var(--ev-copy-button-icon-color);
-    /* TODO(dnguyen0304): Fix how the svg elements are positioned. */
-    transform: translate(-50%, -50%);
 }
 
 .CopyButton [class*='copyButtonSuccessIcon'] {
