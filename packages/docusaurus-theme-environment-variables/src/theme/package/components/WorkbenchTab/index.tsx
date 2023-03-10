@@ -1,7 +1,6 @@
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
-import '../../styles.css';
 import {
     DATA_ATTRIBUTE_DEFAULT_VALUE,
     DATA_ATTRIBUTE_NAME,
