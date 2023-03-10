@@ -30,7 +30,7 @@ const Layout = styled(Box)({
 });
 
 const StyledList = styled(List)({
-    padding: '0 var(--doc8-space-s)',
+    padding: '0 var(--doc8-space-m)',
     '& > li + li': {
         marginTop: 'var(--doc8-space-s)',
     },
