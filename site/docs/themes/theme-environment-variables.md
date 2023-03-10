@@ -4,8 +4,6 @@ sidebar_position: 15
 
 # 📦 theme-environment-variables
 
-<!-- import ApiTable from '@site/src/components/ApiTable'; -->
-
 import { TaskList } from '@theme/docupotamus-task-list';
 
 A Docusaurus theme that parameterizes code blocks.
@@ -66,6 +64,57 @@ ENVIRONMENT_VARIABLE_NAME[=optional_default]
 Copying through the code block copy button is not yet supported. Please use the
 Workbench integration copy button. This is a [known limitation](#future).
 :::
+
+## Customizing
+
+### Styling
+
+:::note
+Styling through theme class names is an **advanced** approach.
+
+It's appropriate when you need complete control over fine-grained details such
+as spacing.
+:::
+
+We provide some stable CSS class names for robust and maintainable global layout
+styling. These names are theme-agnostic and meant to be targeted by custom CSS.
+
+- `.DocupotamusEnvironmentVariable`
+
+### Example Styling
+
+Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
+out!
+
+```mdx-code-block
+<Tabs>
+<TabItem value="JavaScript">
+```
+
+```javascript title="JavaScript"
+// Scroll up to the "Try It Out" section to see the targeted task
+// list.
+document.querySelector('.DocupotamusEnvironmentVariable');
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="CSS">
+```
+
+```css title="CSS"
+.DocupotamusEnvironmentVariable {
+  /* The important flag is used here only for demonstration
+     purposes. For production code, we recommended using a different
+     approach to increase specificity. */
+  font-size: 2rem !important;
+}
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
 
 ## What's Next? {#future}
 
