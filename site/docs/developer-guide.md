@@ -134,6 +134,12 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### Markdown / MDX
 
+- **markdown-keywords-marketing**: Use title casing for marketing keywords. Here
+  is an exhaustive list:
+
+  - Toolbar
+  - Workbench
+
 - **markdown-admonition-tldr**: Prefer using the `info` admonition for TL:DR's.
 
 - **markdown-heading-imperative**: Headings that are imperative sentences use
