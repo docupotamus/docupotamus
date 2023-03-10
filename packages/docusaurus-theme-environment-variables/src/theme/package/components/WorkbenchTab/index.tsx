@@ -22,14 +22,14 @@ export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
 
     const enableHighlight = (entry: Entry) => {
-        const className = styles['target--highlight'];
+        const className = styles.Target__highlight;
         if (className) {
             entry.element.classList.add(className);
         }
     };
 
     const disableHighlight = (entry: Entry) => {
-        const className = styles['target--highlight'];
+        const className = styles.Target__highlight;
         if (className) {
             entry.element.classList.remove(className);
         }
