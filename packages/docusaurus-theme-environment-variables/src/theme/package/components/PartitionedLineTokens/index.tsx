@@ -42,6 +42,13 @@ const splitTokens = (line: PrismToken[]): PrismToken[] => {
         } else {
             tokens.push(token);
         }
+        // Below this line is for internal development.
+        if (token.types.length <= 1) {
+            return;
+        }
+        if (token.types.includes('plain') || token.types.includes('string')) {
+            console.warn(`[internal] Token not yet supported: ${token}`);
+        }
     });
     return tokens;
 };
