@@ -24,6 +24,8 @@ const Layout = styled(HotKeys)({
     justifyContent: 'center',
 
     color: 'var(--tl-workbench-color-base)',
+    // TODO(dnguyen0304): Extract to a centralized location to facilitate
+    //   maintenance.
     padding: `
         var(--doc8-space-m)
         var(--doc8-space-s)
