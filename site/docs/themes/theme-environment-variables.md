@@ -9,6 +9,17 @@ sidebar_position: 15
 
 A Docusaurus theme that parameterizes code blocks.
 
+## Try It Out
+
+In the right-docked toolbar, open the "Environment Variables" tab and try it
+out!
+
+```shell
+echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} Docupotamus team!"
+```
+
+<!-- _keywords:_ demo -->
+
 ## What's Next? {#future}
 
 The roadmap includes some important feature requests such as page-scoped (as
