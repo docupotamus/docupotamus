@@ -65,6 +65,10 @@ const StyledTextField = styled(TextField)({
     },
 });
 
+const formatDefault = (entry: Entry): string => {
+    return entry.defaultValue || `{{ ${entry.key} }}`;
+};
+
 export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
 
@@ -103,6 +107,9 @@ export default function WorkbenchTab(): JSX.Element {
     const handleBlur = (entry: Entry) => {
         focusIndexRef.current = undefined;
         disableHighlight(entry);
+        if (!entry.currValue) {
+            entry.element.innerText ||= formatDefault(entry);
+        }
     };
 
     const handleChange = (
@@ -145,7 +152,7 @@ export default function WorkbenchTab(): JSX.Element {
                 currValue: defaultValue,
                 element,
             };
-            element.replaceChildren(entry.defaultValue || `{{ ${entry.key} }}`);
+            element.replaceChildren(formatDefault(entry));
             newEntries.push(entry);
         });
         setEntries(newEntries);
