@@ -101,6 +101,15 @@ export default function PartitionedLineTokens(
             return;
         }
 
+        // Assume tokens are grouped such that they overlap exactly with the
+        // endpoints for environment variables. This invariant is handled by
+        // splitTokens. For example, in pseudo-code:
+        //
+        //   // YES
+        //   <token>hello </token><token>{{ NAME }}</token><token> world</token>
+        //
+        //   // No
+        //   <token>hello {{ NAME }} world</token>
         const isBeforeStart = currCharacterIndex < currPartition.start;
         const isAfterStart = currCharacterIndex >= currPartition.start;
         const isBeforeEnd = currCharacterIndex < currPartition.end;
