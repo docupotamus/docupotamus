@@ -88,15 +88,15 @@ export default function WorkbenchTab(): JSX.Element {
         }
     };
 
-    const handleMouseLeave = (entry: Entry, index: number) => {
-        if (focusIndexRef.current === index) {
+    const handleMouseLeave = (entry: Entry, currIndex: number) => {
+        if (focusIndexRef.current === currIndex) {
             return;
         }
         disableHighlight(entry);
     };
 
-    const handleFocus = (entry: Entry, index: number) => {
-        focusIndexRef.current = index;
+    const handleFocus = (entry: Entry, currIndex: number) => {
+        focusIndexRef.current = currIndex;
         enableHighlight(entry);
         entry.element.scrollIntoView({
             behavior: 'smooth',
@@ -114,10 +114,10 @@ export default function WorkbenchTab(): JSX.Element {
 
     const handleChange = (
         event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
-        changeIndex: number,
+        currIndex: number,
     ) => {
         setEntries(entries => entries.map((entry, index) => {
-            if (index !== changeIndex) {
+            if (index !== currIndex) {
                 return entry;
             }
             return {
@@ -125,7 +125,7 @@ export default function WorkbenchTab(): JSX.Element {
                 currValue: event.target.value,
             };
         }));
-        const entry = entries[changeIndex];
+        const entry = entries[currIndex];
         if (!entry) {
             return;
         }
