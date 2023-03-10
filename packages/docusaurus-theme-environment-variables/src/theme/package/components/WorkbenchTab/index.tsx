@@ -39,6 +39,7 @@ const StyledList = styled(List)({
 
 const StyledTextField = styled(TextField)({
     '& > .MuiFormLabel-root': {
+        color: 'var(--ev-workbench-color-base)',
         font: 'inherit',
         // Do not use a value higher than ~2px because it breaks the InputLabel
         // animation.
