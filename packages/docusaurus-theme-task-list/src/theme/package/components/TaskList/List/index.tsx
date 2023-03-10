@@ -48,6 +48,7 @@ export default function List(
     const [progress, setProgress] = React.useState<number>(0);
 
     const taskItemsData = tasks.get(path)?.get(taskListId)?.items ?? [];
+    const showProgress = progressBarIsEnabled && taskItemsData.length !== 0;
 
     React.useEffect(() => {
         const isCheckedCount = taskItemsData
@@ -63,7 +64,7 @@ export default function List(
 
     return (
         <StyledBox className={CLASS_NAME}>
-            {progressBarIsEnabled && <LinearProgress value={progress} />}
+            {showProgress && <LinearProgress value={progress} />}
             <FormGroup>
                 {taskItemsData.map(({ label, isChecked }, itemIndex) => {
                     return (
