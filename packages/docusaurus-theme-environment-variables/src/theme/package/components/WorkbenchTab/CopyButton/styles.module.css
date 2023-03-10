@@ -1,4 +1,6 @@
 .CopyButton {
+    width: inherit;
+    height: inherit;
 }
 
 .CopyButton [class*='copyButtonIcons'] {
