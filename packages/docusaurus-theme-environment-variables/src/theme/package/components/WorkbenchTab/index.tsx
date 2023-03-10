@@ -79,6 +79,7 @@ const formatDefault = (entry: Entry): string => {
 
 export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
+    const [code, setCode] = React.useState<string>('');
 
     const focusIndexRef = React.useRef<number>();
 
@@ -138,6 +139,10 @@ export default function WorkbenchTab(): JSX.Element {
             return;
         }
         entry.element.innerText = event.target.value;
+        if (currIndex !== focusIndexRef.current) {
+            return;
+        }
+        setCode(event.target.value);
     };
 
     React.useEffect(() => {
@@ -199,7 +204,7 @@ export default function WorkbenchTab(): JSX.Element {
                     );
                 })}
             </StyledList>
-            <CopyButton />
+            <CopyButton code={code} />
         </Layout>
     );
 };
