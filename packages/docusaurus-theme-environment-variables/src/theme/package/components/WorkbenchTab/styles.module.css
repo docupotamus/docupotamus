@@ -9,10 +9,8 @@
     margin-top: var(--doc8-space-s);
 }
 
-/* TODO(dnguyen0304): Extract to a centralized location to facilitate
-maintenance. */
 .target--highlight {
-    background-color: rgb(252, 201, 53);
+    background-color: var(--ifm-color-warning);
     border-radius: 6px;
     /* TODO(dnguyen0304): Investigate if this legacy code is still needed. */
     padding: 1% 0;
