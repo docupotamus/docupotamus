@@ -27,10 +27,10 @@ interface Partition {
 };
 
 // TODO(dnguyen0304): Investigate refactoring to a generator function.
-const splitPlainTokens = (line: PrismToken[]): PrismToken[] => {
+const splitTokens = (line: PrismToken[]): PrismToken[] => {
     const tokens: PrismToken[] = [];
     line.forEach(token => {
-        if (token.types[0] === 'plain') {
+        if (token.types[0] === 'plain' || token.types[0] === 'string') {
             const contentChunks = token.content.split(REGEX_SPLIT);
             contentChunks.forEach(contentChunk => {
                 tokens.push({
@@ -80,7 +80,7 @@ export default function PartitionedLineTokens(
     }: Props,
 ): JSX.Element {
     const lineTokens: JSX.Element[] = [];
-    const tokens = splitPlainTokens(line);
+    const tokens = splitTokens(line);
     const partitions = getPartitions(tokens);
 
     // TODO(dnguyen0304): Investigate if a collection is needed or if a scalar
