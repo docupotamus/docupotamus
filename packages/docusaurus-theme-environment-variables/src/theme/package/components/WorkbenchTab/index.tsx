@@ -38,8 +38,9 @@ const StyledList = styled(List)({
 });
 
 const StyledTextField = styled(TextField)({
+    color: 'var(--ev-workbench-color-base)',
     '& > .MuiFormLabel-root': {
-        color: 'var(--ev-workbench-color-base)',
+        color: 'inherit',
         font: 'inherit',
         // Do not use a value higher than ~2px because it breaks the InputLabel
         // animation.
@@ -49,6 +50,7 @@ const StyledTextField = styled(TextField)({
         },
     },
     '& .MuiOutlinedInput-root': {
+        color: 'inherit',
         font: 'inherit',
         borderRadius: 'var(--doc8-space-xs)',
         '& fieldset': {
