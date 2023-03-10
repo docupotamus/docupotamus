@@ -125,6 +125,7 @@ export default function WorkbenchTab(): JSX.Element {
             behavior: 'smooth',
             block: 'center',
         });
+        // Update the code initially.
         setCode(parseCodeBlock(entry.element));
     };
 
@@ -157,6 +158,7 @@ export default function WorkbenchTab(): JSX.Element {
         if (currIndex !== focusIndexRef.current) {
             return;
         }
+        // Update the code on change.
         setCode(parseCodeBlock(entry.element));
     };
 
