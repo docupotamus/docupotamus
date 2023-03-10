@@ -25,15 +25,21 @@ echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} doc8 team!"
 
 ### Common Use Cases
 
-Use this when you have helpful code block but want to allow developers to personalize those snippets. Common examples include domain-specific tasks such as restoring a database backup and repetitive tasks such as installing a package.
+Use this when you have helpful code block but want to allow developers to
+personalize those snippets. Common examples include domain-specific tasks such
+as restoring a database backup and repetitive tasks such as installing a
+package.
 
 ## Installation
 
 :::info
-This theme is only available through the preset `@docupotamus/docusaurus-preset-classic` because it requires a Workbench integration. Installing as a standalone dependency is not supported.
+This theme is only available through the preset
+`@docupotamus/docusaurus-preset-classic` because it requires a Workbench
+integration. Installing as a standalone dependency is not supported.
 :::
 
-See [here](../presets/preset-classic.md#installation) for instructions on installing the `preset-classic`.
+See [here](../presets/preset-classic.md#installation) for instructions on
+installing the `preset-classic`.
 
 ## Example Usage
 
@@ -57,8 +63,8 @@ ENVIRONMENT_VARIABLE_NAME[=optional_default]
 </TaskList>
 
 :::caution
-Copying through the code block copy button is not yet supported. Please use the Workbench integration copy button. This is a
-[known limitation](#future).
+Copying through the code block copy button is not yet supported. Please use the
+Workbench integration copy button. This is a [known limitation](#future).
 :::
 
 ## What's Next? {#future}
