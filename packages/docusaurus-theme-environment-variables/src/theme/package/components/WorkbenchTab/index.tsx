@@ -145,7 +145,8 @@ export default function WorkbenchTab(): JSX.Element {
                             disablePadding
                         >
                             <StyledTextField
-                                autoComplete='off'
+                                // See: https://stackoverflow.com/questions/12374442/chrome-ignores-autocomplete-off
+                                autoComplete='no-thank-you'
                                 label={entry.key}
                                 onBlur={() => handleBlur(entry)}
                                 onChange={(event) => handleChange(
