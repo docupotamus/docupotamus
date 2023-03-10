@@ -44,7 +44,8 @@ const StyledTextField = styled(TextField)({
         letterSpacing: '0.9px',
     },
     '& .MuiInputBase-root': {
-        font: 'inherit'
+        font: 'inherit',
+        borderRadius: 'var(--doc8-space-xs)',
     },
 });
 
