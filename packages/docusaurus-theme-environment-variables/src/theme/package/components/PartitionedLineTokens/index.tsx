@@ -91,6 +91,8 @@ export default function PartitionedLineTokens(
     let currPartitionIndex = 0;
 
     tokens.forEach((token, key) => {
+        // This line is copied from before ejecting. Minimize changes to
+        // facilitate diffing.
         const lineToken = <span key={key} {...getTokenProps({ token, key })} />;
         const currPartition = partitions[currPartitionIndex];
         if (!currPartition) {
