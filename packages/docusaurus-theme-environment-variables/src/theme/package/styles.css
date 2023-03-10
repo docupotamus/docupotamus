@@ -2,4 +2,5 @@ html[data-theme='light'],
 html[data-theme='dark'] {
     /* Components */
     --ev-workbench-color-base: var(--markdown-color);
+    --ev-copy-button-icon-color: var(--markdown-color);
 }
