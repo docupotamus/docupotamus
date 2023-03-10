@@ -77,6 +77,20 @@ const formatDefault = (entry: Entry): string => {
     return entry.defaultValue || `{{ ${entry.key} }}`;
 };
 
+const parseCodeBlock = (target: HTMLElement): string => {
+    const codeBlock = target.parentElement?.parentElement;
+    if (!codeBlock) {
+        return target.textContent ?? '';
+    }
+    const chunks: string[] = [];
+    Array.from(codeBlock.children).forEach(lineToken => {
+        Array.from(lineToken.children).forEach(token => {
+            chunks.push(token.textContent ?? '');
+        });
+    });
+    return chunks.join('');
+};
+
 export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
     const [code, setCode] = React.useState<string>('');
@@ -142,7 +156,7 @@ export default function WorkbenchTab(): JSX.Element {
         if (currIndex !== focusIndexRef.current) {
             return;
         }
-        setCode(event.target.value);
+        setCode(parseCodeBlock(entry.element));
     };
 
     React.useEffect(() => {
