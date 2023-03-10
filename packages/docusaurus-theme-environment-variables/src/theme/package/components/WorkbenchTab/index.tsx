@@ -28,6 +28,9 @@ const Layout = styled(Box)({
 
     display: 'flex',
     flexDirection: 'column',
+
+    padding: 'var(--doc8-space-m)',
+    paddingBottom: 'var(--doc8-space-xs)',
 });
 
 const StyledList = styled(List)({
@@ -37,7 +40,6 @@ const StyledList = styled(List)({
     flexDirection: 'column',
     justifyContent: 'center',
 
-    padding: '0 var(--doc8-space-m)',
     '& > li + li': {
         marginTop: 'var(--doc8-space-s)',
     },
@@ -166,7 +168,7 @@ export default function WorkbenchTab(): JSX.Element {
 
     return (
         <Layout>
-            <StyledList>
+            <StyledList disablePadding>
                 {entries.map((entry, index) => {
                     return (
                         <ListItem
