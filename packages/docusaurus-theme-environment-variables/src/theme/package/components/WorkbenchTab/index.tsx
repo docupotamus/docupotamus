@@ -94,7 +94,7 @@ export default function WorkbenchTab(): JSX.Element {
             <ul className={styles['entries-container']}>
                 {entries.map((entry, index) => {
                     return (
-                        <li key={`${KEY_PREFIX}-${entry.key}`}>
+                        <li key={`${KEY_PREFIX}-${index}-${entry.key}`}>
                             <TextField
                                 autoComplete='off'
                                 label={entry.key}
