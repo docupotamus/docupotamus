@@ -10,6 +10,7 @@
 
 .CopyButton [class*='copyButtonIcon'] {
     color: var(--ev-copy-button-icon-color);
+    /* TODO(dnguyen0304): Fix how the svg elements are positioned. */
     transform: translate(-50%, -50%);
 }
 
