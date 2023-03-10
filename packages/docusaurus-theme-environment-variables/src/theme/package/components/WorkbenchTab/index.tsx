@@ -39,6 +39,8 @@ const StyledList = styled(List)({
 export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
 
+    const focusIndexRef = React.useRef<number>();
+
     const enableHighlight = (entry: Entry) => {
         const className = styles.Target__highlight;
         if (className) {
@@ -53,12 +55,25 @@ export default function WorkbenchTab(): JSX.Element {
         }
     };
 
-    const handleFocus = (entry: Entry) => {
+    const handleMouseLeave = (entry: Entry, index: number) => {
+        if (focusIndexRef.current === index) {
+            return;
+        }
+        disableHighlight(entry);
+    };
+
+    const handleFocus = (entry: Entry, index: number) => {
+        focusIndexRef.current = index;
         enableHighlight(entry);
         entry.element.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
         });
+    };
+
+    const handleBlur = (entry: Entry) => {
+        focusIndexRef.current = undefined;
+        disableHighlight(entry);
     };
 
     const handleChange = (
@@ -119,14 +134,17 @@ export default function WorkbenchTab(): JSX.Element {
                             <TextField
                                 autoComplete='off'
                                 label={entry.key}
-                                onBlur={() => disableHighlight(entry)}
+                                onBlur={() => handleBlur(entry)}
                                 onChange={(event) => handleChange(
                                     event,
                                     index,
                                 )}
-                                onFocus={() => handleFocus(entry)}
+                                onFocus={() => handleFocus(entry, index)}
                                 onMouseEnter={() => enableHighlight(entry)}
-                                onMouseLeave={() => disableHighlight(entry)}
+                                onMouseLeave={() => handleMouseLeave(
+                                    entry,
+                                    index,
+                                )}
                                 value={entry.currValue}
                                 variant='outlined'
                                 fullWidth
