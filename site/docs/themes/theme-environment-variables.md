@@ -20,6 +20,10 @@ echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} Docupotamus team!"
 
 <!-- _keywords:_ demo -->
 
+### Common Use Cases
+
+Use this when you have helpful code block but want to allow developers to personalize those snippets. Common examples include domain-specific tasks such as restoring a database backup and repetitive tasks such as installing a package.
+
 ## What's Next? {#future}
 
 The roadmap includes some important feature requests such as page-scoped (as
