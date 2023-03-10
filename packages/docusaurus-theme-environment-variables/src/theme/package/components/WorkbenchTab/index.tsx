@@ -52,10 +52,9 @@ const StyledTextField = styled(TextField)({
         '&:hover fieldset': {
             borderColor: 'var(--ifm-color-primary)',
         },
-        //     // good
-        //     '&.Mui-focused fieldset': {
-        //         borderColor: 'var(--ifm-color-primary-dark)',
-        //     },
+        '&.Mui-focused fieldset': {
+            borderColor: 'var(--ifm-color-primary)',
+        },
         //     '& fieldset': {
         //         // dark mode
         //         borderColor: 'red',
