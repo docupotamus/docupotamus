@@ -6,6 +6,8 @@ import CopyButtonInit from '@theme-original/CodeBlock/CopyButton';
 import * as React from 'react';
 import styles from './styles.module.css';
 
+// TODO(dnguyen0304): Investigate adding border styles similar to how
+//   @theme/CodeBlock does.
 const StyledBox = styled(Box)({
     width: 'var(--doc8-space-l)',
     aspectRatio: '1 / 1',
