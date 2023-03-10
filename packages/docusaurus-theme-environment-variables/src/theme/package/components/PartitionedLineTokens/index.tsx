@@ -1,5 +1,6 @@
 import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable-container';
 export const DATA_ATTRIBUTE_NAME = 'environmentVariableName';
@@ -115,7 +116,7 @@ export default function PartitionedLineTokens(
             // Flush the temporary line tokens.
             lineTokens.push(
                 <span
-                    key={key}
+                    key={uuidv4()}
                     className={TARGET_CLASS_NAME}
                     data-environment-variable-name={currPartition.key}
                     data-environment-variable-default-value={
