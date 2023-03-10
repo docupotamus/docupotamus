@@ -73,6 +73,7 @@ interface Props extends Pick<LineProps, 'getTokenProps'> {
     line: PrismToken[];
 };
 
+// TODO(dnguyen0304): Fix inconsistent file naming convention.
 export default function PartitionedLines(
     {
         line,
@@ -83,6 +84,8 @@ export default function PartitionedLines(
     const tokens = splitPlainTokens(line);
     const partitions = getPartitions(tokens);
 
+    // TODO(dnguyen0304): Investigate if a collection is needed or if a scalar
+    //   would be sufficient.
     let temp: JSX.Element[] = [];
     let currCharacterIndex = 0;
     let currPartitionIndex = 0;
@@ -112,6 +115,7 @@ export default function PartitionedLines(
         } else if (isImmediatelyAfterEnd) {
             // Flush the temporary line tokens.
             lineTokens.push(
+                // TODO(dnguyen0304): Fix missing key.
                 <span
                     className={TARGET_CLASS_NAME}
                     data-environment-variable-name={currPartition.key}
