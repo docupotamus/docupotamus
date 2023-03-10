@@ -46,7 +46,7 @@ const StyledTextField = styled(TextField)({
             color: 'var(--ifm-color-danger)',
         },
     },
-    '& .MuiInputBase-root': {
+    '& .MuiOutlinedInput-root': {
         font: 'inherit',
         borderRadius: 'var(--doc8-space-xs)',
     },
