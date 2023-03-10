@@ -10,6 +10,7 @@ import {
     DATA_ATTRIBUTE_NAME,
     TARGET_CLASS_NAME
 } from '../PartitionedLineTokens';
+import CopyButton from './CopyButton';
 import styles from './styles.module.css';
 
 const KEY_PREFIX = 'environmentVariable';
@@ -191,6 +192,7 @@ export default function WorkbenchTab(): JSX.Element {
                     );
                 })}
             </StyledList>
+            <CopyButton />
         </Layout>
     );
 };
