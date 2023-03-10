@@ -24,6 +24,14 @@ echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} Docupotamus team!"
 
 Use this when you have helpful code block but want to allow developers to personalize those snippets. Common examples include domain-specific tasks such as restoring a database backup and repetitive tasks such as installing a package.
 
+## Installation
+
+:::info
+This theme is only available through the preset `@docupotamus/docusaurus-preset-classic` because it requires a Workbench integration. Installing as a standalone dependency is not supported.
+:::
+
+See [here](../presets/preset-classic.md#installation) for instructions on installing the `preset-classic`.
+
 ## What's Next? {#future}
 
 The roadmap includes some important feature requests such as page-scoped (as
