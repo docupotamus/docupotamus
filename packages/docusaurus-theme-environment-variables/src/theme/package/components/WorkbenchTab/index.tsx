@@ -28,6 +28,7 @@ const Layout = styled(Box)({
 
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
 });
 
 const StyledList = styled(List)({

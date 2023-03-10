@@ -1,2 +1,11 @@
 .CopyButton {
 }
+
+.CopyButton [class*='copyButtonIcons'] {
+    width: inherit;
+    height: inherit;
+}
+
+.CopyButton [class*='copyButtonIcon'] {
+    transform: translate(-50%, -50%);
+}
