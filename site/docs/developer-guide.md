@@ -114,6 +114,11 @@ $ PACKAGE={{ PACKAGE }} \
 
 #### Custom Properties
 
+- **css-class-bem**: Use a modified BEM naming convention for classes. Use
+  PascalCase for blocks, and camelCase for elements and modifiers. For
+  delimiters, use underscores to facilitate being used as object keys in
+  TypeScript.
+
 - **css-namespace-public**: Only custom properties that start with the common
   namespace or a project-specific namespace (see below) are considered public.
   Other symbols are considered private and _unsafe_ to be referenced. Their APIs
