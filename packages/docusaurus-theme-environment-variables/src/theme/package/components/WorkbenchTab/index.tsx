@@ -36,6 +36,12 @@ const StyledList = styled(List)({
     },
 });
 
+const StyledTextField = styled(TextField)({
+    '& .MuiInputBase-root': {
+        font: 'inherit'
+    },
+});
+
 export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
 
@@ -131,7 +137,7 @@ export default function WorkbenchTab(): JSX.Element {
                             key={`${KEY_PREFIX}-${index}-${entry.key}`}
                             disablePadding
                         >
-                            <TextField
+                            <StyledTextField
                                 autoComplete='off'
                                 label={entry.key}
                                 onBlur={() => handleBlur(entry)}
