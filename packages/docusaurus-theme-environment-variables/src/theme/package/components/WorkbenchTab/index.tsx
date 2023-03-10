@@ -1,4 +1,7 @@
 import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
 import {
@@ -17,6 +20,13 @@ interface Entry {
     readonly currValue: string;
     readonly element: HTMLElement;
 };
+
+const StyledList = styled(List)({
+    padding: 'var(--doc8-space-2xs) var(--doc8-space-s)',
+    '& > li + li': {
+        marginTop: 'var(--doc8-space-s)',
+    },
+});
 
 export default function WorkbenchTab(): JSX.Element {
     const [entries, setEntries] = React.useState<Entry[]>([]);
@@ -91,10 +101,13 @@ export default function WorkbenchTab(): JSX.Element {
 
     return (
         <Box>
-            <ul className={styles.Entries_container}>
+            <StyledList>
                 {entries.map((entry, index) => {
                     return (
-                        <li key={`${KEY_PREFIX}-${index}-${entry.key}`}>
+                        <ListItem
+                            key={`${KEY_PREFIX}-${index}-${entry.key}`}
+                            disablePadding
+                        >
                             <TextField
                                 autoComplete='off'
                                 label={entry.key}
@@ -111,10 +124,10 @@ export default function WorkbenchTab(): JSX.Element {
                                 fullWidth
                                 required
                             />
-                        </li>
+                        </ListItem>
                     );
                 })}
-            </ul>
+            </StyledList>
         </Box>
     );
 };

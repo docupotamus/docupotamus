@@ -1,14 +1,3 @@
-.Entries_container {
-    list-style-type: none;
-    margin: 0;
-    padding: var(--doc8-space-2xs) var(--doc8-space-s);
-    padding-bottom: 0;
-}
-
-.Entries_container > li + li {
-    margin-top: var(--doc8-space-s);
-}
-
 .Target__highlight {
     background-color: var(--ifm-color-warning);
     border-radius: 6px;
