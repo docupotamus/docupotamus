@@ -2,7 +2,7 @@ import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-export const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable-container';
+export const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable';
 export const DATA_ATTRIBUTE_NAME = 'environmentVariableName';
 export const DATA_ATTRIBUTE_DEFAULT_VALUE = 'environmentVariableDefaultValue';
 // TODO(dnguyen0304): Refactor to RegExp and String.raw to reduce duplicated
