@@ -52,6 +52,7 @@ export default function preset(
             '@docupotamus/docusaurus-theme-common',
             { swizzleIsEnabled: false },
         ),
+        makePluginConfig('@docupotamus/docusaurus-theme-environment-variables'),
         makePluginConfig(
             '@docupotamus/docusaurus-theme-task-list',
             { swizzleIsEnabled: false },
