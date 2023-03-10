@@ -91,7 +91,7 @@ export default function WorkbenchTab(): JSX.Element {
 
     return (
         <Box>
-            <ul className={styles['entries-container']}>
+            <ul className={styles.Entries_container}>
                 {entries.map((entry, index) => {
                     return (
                         <li key={`${KEY_PREFIX}-${index}-${entry.key}`}>

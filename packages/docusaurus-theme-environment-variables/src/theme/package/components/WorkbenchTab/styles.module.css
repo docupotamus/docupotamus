@@ -1,11 +1,11 @@
-.entries-container {
+.Entries_container {
     list-style-type: none;
     margin: 0;
     padding: var(--doc8-space-2xs) var(--doc8-space-s);
     padding-bottom: 0;
 }
 
-.entries-container > li + li {
+.Entries_container > li + li {
     margin-top: var(--doc8-space-s);
 }
 
