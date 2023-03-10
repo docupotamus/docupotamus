@@ -114,8 +114,8 @@ export default function PartitionedLineTokens(
         } else if (isImmediatelyAfterEnd) {
             // Flush the temporary line tokens.
             lineTokens.push(
-                // TODO(dnguyen0304): Fix missing key.
                 <span
+                    key={key}
                     className={TARGET_CLASS_NAME}
                     data-environment-variable-name={currPartition.key}
                     data-environment-variable-default-value={
