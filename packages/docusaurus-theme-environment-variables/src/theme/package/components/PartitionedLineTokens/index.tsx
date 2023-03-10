@@ -73,8 +73,7 @@ interface Props extends Pick<LineProps, 'getTokenProps'> {
     line: PrismToken[];
 };
 
-// TODO(dnguyen0304): Fix inconsistent file naming convention.
-export default function PartitionedLines(
+export default function PartitionedLineTokens(
     {
         line,
         getTokenProps,
