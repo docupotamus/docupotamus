@@ -18,7 +18,7 @@ out!
 :::
 
 ```shell
-echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} Docupotamus team!"
+echo "Hi, {{ NAME=friend }}, from your {{ KIND_ADJECTIVE }} doc8 team!"
 ```
 
 <!-- _keywords:_ demo -->
