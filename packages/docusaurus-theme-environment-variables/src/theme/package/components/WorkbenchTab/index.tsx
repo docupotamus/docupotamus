@@ -49,21 +49,18 @@ const StyledTextField = styled(TextField)({
     '& .MuiOutlinedInput-root': {
         font: 'inherit',
         borderRadius: 'var(--doc8-space-xs)',
+        '&:hover fieldset': {
+            borderColor: 'var(--ifm-color-primary)',
+        },
+        //     // good
+        //     '&.Mui-focused fieldset': {
+        //         borderColor: 'var(--ifm-color-primary-dark)',
+        //     },
+        //     '& fieldset': {
+        //         // dark mode
+        //         borderColor: 'red',
+        //     },
     },
-    // '& .MuiOutlinedInput-root': {
-    //     // good
-    //     '&:hover fieldset': {
-    //         borderColor: 'var(--ifm-color-primary)',
-    //     },
-    //     // good
-    //     '&.Mui-focused fieldset': {
-    //         borderColor: 'var(--ifm-color-primary-dark)',
-    //     },
-    //     '& fieldset': {
-    //         // dark mode
-    //         borderColor: 'red',
-    //     },
-    // },
 });
 
 export default function WorkbenchTab(): JSX.Element {
