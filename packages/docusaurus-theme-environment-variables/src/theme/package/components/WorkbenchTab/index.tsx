@@ -39,7 +39,9 @@ const StyledList = styled(List)({
 const StyledTextField = styled(TextField)({
     '& > .MuiFormLabel-root': {
         font: 'inherit',
-        letterSpacing: '1.8px',
+        // Do not use a value higher than ~2px because it breaks the InputLabel
+        // animation.
+        letterSpacing: '0.9px',
     },
     '& .MuiInputBase-root': {
         font: 'inherit'
