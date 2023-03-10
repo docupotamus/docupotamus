@@ -28,10 +28,15 @@ const Layout = styled(Box)({
 
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
 });
 
 const StyledList = styled(List)({
+    flexGrow: 1,
+
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+
     padding: '0 var(--doc8-space-m)',
     '& > li + li': {
         marginTop: 'var(--doc8-space-s)',
