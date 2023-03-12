@@ -3,10 +3,12 @@ import ToolbarEntryInit from '@theme-init/docupotamus-common/Toolbar/Entry';
 import { useToolbar } from '@theme/docupotamus-common';
 import type ToolbarEntryType from '@theme/docupotamus-common/Toolbar/Entry';
 import {
-    WorkbenchIcon as EnvironmentVariablesWorkbenchIcon
+    WorkbenchIcon as EnvironmentVariablesWorkbenchIcon,
+    WorkbenchTab as EnvironmentVariablesWorkbenchTab
 } from '@theme/docupotamus-environment-variables';
 import {
-    WorkbenchIcon as TaskListWorkbenchIcon
+    WorkbenchIcon as TaskListWorkbenchIcon,
+    WorkbenchTab as TaskListWorkbenchTab
 } from '@theme/docupotamus-task-list';
 import * as React from 'react';
 
@@ -21,9 +23,7 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
             tabId: 'task-list',
             newValue: {
                 displayName: 'Task List',
-                Component: React.lazy(() =>
-                    import('@theme/docupotamus-task-list')
-                        .then(module => ({ default: module.WorkbenchTab }))),
+                Component: <TaskListWorkbenchTab />,
                 IconComponent: <TaskListWorkbenchIcon />,
             },
         });
@@ -32,9 +32,7 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
             tabId: 'environment-variables',
             newValue: {
                 displayName: 'Environment Variables',
-                Component: React.lazy(() =>
-                    import('@theme/docupotamus-environment-variables')
-                        .then(module => ({ default: module.WorkbenchTab }))),
+                Component: <EnvironmentVariablesWorkbenchTab />,
                 IconComponent: <EnvironmentVariablesWorkbenchIcon />,
             },
         });

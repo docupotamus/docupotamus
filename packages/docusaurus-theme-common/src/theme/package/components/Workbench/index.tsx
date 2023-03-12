@@ -54,12 +54,9 @@ export default function Workbench(): JSX.Element {
             workbenchIsOpen={!!tabConfig}
         >
             {tabConfig &&
-                // TODO(dnguyen0304): Replace temporary placeholder stub.
-                <React.Suspense fallback={<p>Loading...</p>}>
-                    <Tab displayName={tabConfig.displayName}>
-                        <tabConfig.Component />
-                    </Tab>
-                </React.Suspense>
+                <Tab displayName={tabConfig.displayName}>
+                    {tabConfig.Component}
+                </Tab>
             }
         </StyledBox >
     );
