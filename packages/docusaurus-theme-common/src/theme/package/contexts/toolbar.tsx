@@ -1,9 +1,9 @@
-import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import {
     Action,
     ContextValue,
     TabIdToConfig
-} from '@docupotamus/theme-common';
+} from '@doc8/theme-common';
+import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
 
 const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {

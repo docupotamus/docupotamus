@@ -1,4 +1,4 @@
-import type { CommonThemeConfig } from '@docupotamus/theme-common';
+import type { CommonThemeConfig } from '@doc8/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function useCommonThemeConfig(): CommonThemeConfig {

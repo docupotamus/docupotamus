@@ -54,8 +54,12 @@ declare module '@docupotamus/theme-common' {
     export * from '@docupotamus/docusaurus-theme-common';
 }
 
+declare module '@doc8/theme-common' {
+    export * from '@docupotamus/docusaurus-theme-common';
+}
+
 declare module '@theme/docupotamus-common' {
-    import type { ContextValue } from '@docupotamus/theme-common';
+    import type { ContextValue } from '@doc8/theme-common';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
     import type RootType from '@theme/Root';

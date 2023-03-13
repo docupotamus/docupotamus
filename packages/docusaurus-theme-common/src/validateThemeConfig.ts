@@ -1,4 +1,4 @@
-import type { CommonThemeConfig } from '@docupotamus/theme-common';
+import type { CommonThemeConfig } from '@doc8/theme-common';
 import type {
     ThemeConfig,
     ThemeConfigValidationContext

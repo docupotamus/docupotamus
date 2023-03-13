@@ -1,4 +1,4 @@
-import type { PluginOptions } from '@docupotamus/theme-common';
+import type { PluginOptions } from '@doc8/theme-common';
 import type { LoadContext, Plugin } from '@docusaurus/types';
 
 export default function themeCommon(
