@@ -118,10 +118,13 @@ export default function WorkbenchTab(): JSX.Element {
     const handleBlur = (variable: Variable) => {
         focusIndexRef.current = undefined;
         disableHighlight(variable);
-        // TODO
-        if (!variable.currValue && variable.ref.current) {
-            variable.ref.current.innerText ||= formatDefault(variable);
+        if (variable.currValue) {
+            return;
         }
+        if (!variable.ref.current) {
+            return;
+        }
+        variable.ref.current.innerText ||= formatDefault(variable);
     };
 
     const handleChange = (
