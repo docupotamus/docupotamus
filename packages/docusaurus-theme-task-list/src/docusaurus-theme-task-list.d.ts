@@ -33,6 +33,10 @@ declare module '@docupotamus/theme-task-list' {
     export * from '@docupotamus/docusaurus-theme-task-list';
 }
 
+declare module '@doc8/theme-task-list' {
+    export * from '@docupotamus/docusaurus-theme-task-list';
+}
+
 declare module '@theme/docupotamus-task-list' {
     import { SvgIconComponent } from '@mui/icons-material';
     import type RootType from '@theme/Root';

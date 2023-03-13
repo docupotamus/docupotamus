@@ -1,4 +1,4 @@
-import type { TaskListThemeConfig } from '@docupotamus/theme-task-list';
+import type { TaskListThemeConfig } from '@doc8/theme-task-list';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function useTaskListThemeConfig(): TaskListThemeConfig {

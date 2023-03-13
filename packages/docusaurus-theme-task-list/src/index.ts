@@ -1,4 +1,4 @@
-import type { PluginOptions } from '@docupotamus/theme-task-list';
+import type { PluginOptions } from '@doc8/theme-task-list';
 import type { LoadContext, Plugin } from '@docusaurus/types';
 
 export default function themeTaskList(
