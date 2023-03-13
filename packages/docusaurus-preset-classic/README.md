@@ -6,7 +6,7 @@ and powerful built-ins.
 ## Installation
 
 > **Note**
-> See the [docs site](https://www.docupotamus.io/docs/presets/preset-classic/)
+> See the [docs site](https://www.docupotamus.io/docs/presets/preset-classic)
 > for more helpful notes!
 
 ```shell

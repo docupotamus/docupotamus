@@ -6,7 +6,7 @@ lists.
 ## Installation
 
 > **Note**
-> See the [docs site](https://www.docupotamus.io/docs/themes/theme-task-list/)
+> See the [docs site](https://www.docupotamus.io/docs/themes/theme-task-list)
 > for more helpful notes!
 
 ```shell

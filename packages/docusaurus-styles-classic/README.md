@@ -6,7 +6,7 @@ remaining superbly functional and readable.
 ## Installation
 
 > **Note**
-> See the [docs site](https://www.docupotamus.io/docs/styles/styles-classic/)
+> See the [docs site](https://www.docupotamus.io/docs/styles/styles-classic)
 > for more helpful notes!
 
 ```shell
