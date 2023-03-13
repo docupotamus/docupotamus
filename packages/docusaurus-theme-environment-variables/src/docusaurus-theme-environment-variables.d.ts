@@ -17,6 +17,10 @@ declare module '@docupotamus/theme-environment-variables' {
     export * from '@docupotamus/docusaurus-theme-environment-variables';
 }
 
+declare module '@doc8/theme-environment-variables' {
+    export * from '@docupotamus/docusaurus-theme-environment-variables';
+}
+
 declare module '@theme/docupotamus-environment-variables' {
     import { SvgIconComponent } from '@mui/icons-material';
     import type CodeBlockType from '@theme/CodeBlock/Line';

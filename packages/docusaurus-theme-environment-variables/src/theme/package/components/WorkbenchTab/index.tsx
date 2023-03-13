@@ -1,4 +1,4 @@
-import { Variable } from '@docupotamus/theme-environment-variables';
+import { Variable } from '@doc8/theme-environment-variables';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';

@@ -1,4 +1,4 @@
-import { Variable } from '@docupotamus/theme-environment-variables';
+import { Variable } from '@doc8/theme-environment-variables';
 
 export const formatDefault = (
     variable: Pick<Variable, 'name' | 'defaultValue'>,

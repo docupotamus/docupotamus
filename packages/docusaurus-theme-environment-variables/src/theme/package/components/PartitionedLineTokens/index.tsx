@@ -1,4 +1,4 @@
-import { Variable } from '@docupotamus/theme-environment-variables';
+import { Variable } from '@doc8/theme-environment-variables';
 import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';

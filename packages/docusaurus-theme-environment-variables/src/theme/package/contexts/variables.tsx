@@ -1,5 +1,5 @@
+import { Variable } from '@doc8/theme-environment-variables';
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
-import { Variable } from '@docupotamus/theme-environment-variables';
 import * as React from 'react';
 
 interface ContextValue {

@@ -1,4 +1,4 @@
-import type { EnvironmentVariablesThemeConfig } from '@docupotamus/theme-environment-variables';
+import type { EnvironmentVariablesThemeConfig } from '@doc8/theme-environment-variables';
 import type {
     ThemeConfig,
     ThemeConfigValidationContext
