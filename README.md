@@ -8,7 +8,7 @@ all developers even faster.
 ## Installation
 
 > **Note**
-> See the [docs site](https://www.docupotamus.io/docs/quickstart)
+> See the [docs site](https://www.docupotamus.io)
 > for more helpful notes!
 
 ```shell
