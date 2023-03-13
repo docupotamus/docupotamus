@@ -3,6 +3,14 @@
 declare module '@docupotamus/docusaurus-theme-environment-variables' {
     interface PluginOptions { }
     interface EnvironmentVariablesThemeConfig { }
+
+    // TODO(dnguyen0304): Investigate adding isRequired.
+    interface Variable {
+        readonly key: string;
+        readonly defaultValue: string;
+        readonly currValue: string;
+        readonly element: HTMLElement;
+    }
 }
 
 declare module '@docupotamus/theme-environment-variables' {

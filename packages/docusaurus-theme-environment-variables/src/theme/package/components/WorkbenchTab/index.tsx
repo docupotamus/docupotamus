@@ -1,3 +1,4 @@
+import { Variable } from '@docupotamus/theme-environment-variables';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -14,14 +15,6 @@ import CopyButton from './CopyButton';
 import styles from './styles.module.css';
 
 const KEY_PREFIX = 'environmentVariable';
-
-// TODO(dnguyen0304): Investigate adding isRequired.
-interface Entry {
-    readonly key: string;
-    readonly defaultValue: string;
-    readonly currValue: string;
-    readonly element: HTMLElement;
-};
 
 const Layout = styled(Box)({
     height: '100%',
@@ -73,7 +66,7 @@ const StyledTextField = styled(TextField)({
     },
 });
 
-const formatDefault = (entry: Entry): string => {
+const formatDefault = (entry: Variable): string => {
     return entry.defaultValue || `{{ ${entry.key} }}`;
 };
 
@@ -92,33 +85,33 @@ const parseCodeBlock = (target: HTMLElement): string => {
 };
 
 export default function WorkbenchTab(): JSX.Element {
-    const [entries, setEntries] = React.useState<Entry[]>([]);
+    const [entries, setEntries] = React.useState<Variable[]>([]);
     const [code, setCode] = React.useState<string>('');
 
     const focusIndexRef = React.useRef<number>();
 
-    const enableHighlight = (entry: Entry) => {
+    const enableHighlight = (entry: Variable) => {
         const className = styles.Target__highlight;
         if (className) {
             entry.element.classList.add(className);
         }
     };
 
-    const disableHighlight = (entry: Entry) => {
+    const disableHighlight = (entry: Variable) => {
         const className = styles.Target__highlight;
         if (className) {
             entry.element.classList.remove(className);
         }
     };
 
-    const handleMouseLeave = (entry: Entry, currIndex: number) => {
+    const handleMouseLeave = (entry: Variable, currIndex: number) => {
         if (focusIndexRef.current === currIndex) {
             return;
         }
         disableHighlight(entry);
     };
 
-    const handleFocus = (entry: Entry, currIndex: number) => {
+    const handleFocus = (entry: Variable, currIndex: number) => {
         focusIndexRef.current = currIndex;
         enableHighlight(entry);
         entry.element.scrollIntoView({
@@ -129,7 +122,7 @@ export default function WorkbenchTab(): JSX.Element {
         setCode(parseCodeBlock(entry.element));
     };
 
-    const handleBlur = (entry: Entry) => {
+    const handleBlur = (entry: Variable) => {
         focusIndexRef.current = undefined;
         disableHighlight(entry);
         if (!entry.currValue) {
@@ -163,7 +156,7 @@ export default function WorkbenchTab(): JSX.Element {
     };
 
     React.useEffect(() => {
-        const newEntries: Entry[] = [];
+        const newEntries: Variable[] = [];
         document.querySelectorAll(`.${TARGET_CLASS_NAME}`).forEach(element => {
             if (!(element instanceof HTMLElement)) {
                 return;
