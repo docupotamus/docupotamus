@@ -66,8 +66,8 @@ const StyledTextField = styled(TextField)({
     },
 });
 
-const formatDefault = (entry: Variable): string => {
-    return entry.defaultValue || `{{ ${entry.key} }}`;
+const formatDefault = (variable: Variable): string => {
+    return variable.defaultValue || `{{ ${variable.key} }}`;
 };
 
 const parseCodeBlock = (target: HTMLElement): string => {
@@ -85,48 +85,48 @@ const parseCodeBlock = (target: HTMLElement): string => {
 };
 
 export default function WorkbenchTab(): JSX.Element {
-    const [entries, setEntries] = React.useState<Variable[]>([]);
+    const [variables, setVariables] = React.useState<Variable[]>([]);
     const [code, setCode] = React.useState<string>('');
 
     const focusIndexRef = React.useRef<number>();
 
-    const enableHighlight = (entry: Variable) => {
+    const enableHighlight = (variable: Variable) => {
         const className = styles.Target__highlight;
         if (className) {
-            entry.element.classList.add(className);
+            variable.element.classList.add(className);
         }
     };
 
-    const disableHighlight = (entry: Variable) => {
+    const disableHighlight = (variable: Variable) => {
         const className = styles.Target__highlight;
         if (className) {
-            entry.element.classList.remove(className);
+            variable.element.classList.remove(className);
         }
     };
 
-    const handleMouseLeave = (entry: Variable, currIndex: number) => {
+    const handleMouseLeave = (variable: Variable, currIndex: number) => {
         if (focusIndexRef.current === currIndex) {
             return;
         }
-        disableHighlight(entry);
+        disableHighlight(variable);
     };
 
-    const handleFocus = (entry: Variable, currIndex: number) => {
+    const handleFocus = (variable: Variable, currIndex: number) => {
         focusIndexRef.current = currIndex;
-        enableHighlight(entry);
-        entry.element.scrollIntoView({
+        enableHighlight(variable);
+        variable.element.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
         });
         // Update the code initially.
-        setCode(parseCodeBlock(entry.element));
+        setCode(parseCodeBlock(variable.element));
     };
 
-    const handleBlur = (entry: Variable) => {
+    const handleBlur = (variable: Variable) => {
         focusIndexRef.current = undefined;
-        disableHighlight(entry);
-        if (!entry.currValue) {
-            entry.element.innerText ||= formatDefault(entry);
+        disableHighlight(variable);
+        if (!variable.currValue) {
+            variable.element.innerText ||= formatDefault(variable);
         }
     };
 
@@ -134,29 +134,29 @@ export default function WorkbenchTab(): JSX.Element {
         event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
         currIndex: number,
     ) => {
-        setEntries(entries => entries.map((entry, index) => {
+        setVariables(variables => variables.map((variable, index) => {
             if (index !== currIndex) {
-                return entry;
+                return variable;
             }
             return {
-                ...entry,
+                ...variable,
                 currValue: event.target.value,
             };
         }));
-        const entry = entries[currIndex];
-        if (!entry) {
+        const variable = variables[currIndex];
+        if (!variable) {
             return;
         }
-        entry.element.innerText = event.target.value;
+        variable.element.innerText = event.target.value;
         if (currIndex !== focusIndexRef.current) {
             return;
         }
         // Update the code on change.
-        setCode(parseCodeBlock(entry.element));
+        setCode(parseCodeBlock(variable.element));
     };
 
     React.useEffect(() => {
-        const newEntries: Variable[] = [];
+        const newVariables: Variable[] = [];
         document.querySelectorAll(`.${TARGET_CLASS_NAME}`).forEach(element => {
             if (!(element instanceof HTMLElement)) {
                 return;
@@ -169,43 +169,43 @@ export default function WorkbenchTab(): JSX.Element {
             if (defaultValue === undefined) {
                 return;
             }
-            const entry = {
+            const variable = {
                 key,
                 defaultValue,
                 currValue: defaultValue,
                 element,
             };
-            element.replaceChildren(formatDefault(entry));
-            newEntries.push(entry);
+            element.replaceChildren(formatDefault(variable));
+            newVariables.push(variable);
         });
-        setEntries(newEntries);
+        setVariables(newVariables);
     }, []);
 
     return (
         <Layout>
             <StyledList disablePadding>
-                {entries.map((entry, index) => {
+                {variables.map((variable, index) => {
                     return (
                         <ListItem
-                            key={`${KEY_PREFIX}-${index}-${entry.key}`}
+                            key={`${KEY_PREFIX}-${index}-${variable.key}`}
                             disablePadding
                         >
                             <StyledTextField
                                 // See: https://stackoverflow.com/questions/12374442/chrome-ignores-autocomplete-off
                                 autoComplete='no-thank-you'
-                                label={entry.key}
-                                onBlur={() => handleBlur(entry)}
+                                label={variable.key}
+                                onBlur={() => handleBlur(variable)}
                                 onChange={(event) => handleChange(
                                     event,
                                     index,
                                 )}
-                                onFocus={() => handleFocus(entry, index)}
-                                onMouseEnter={() => enableHighlight(entry)}
+                                onFocus={() => handleFocus(variable, index)}
+                                onMouseEnter={() => enableHighlight(variable)}
                                 onMouseLeave={() => handleMouseLeave(
-                                    entry,
+                                    variable,
                                     index,
                                 )}
-                                value={entry.currValue}
+                                value={variable.currValue}
                                 variant='outlined'
                                 fullWidth
                                 required
