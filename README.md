@@ -1,5 +1,7 @@
 # Docupotamus
 
+![Logo](./site/static/img/logo.svg)
+
 Docupotamus is a productivity suite of Docusaurus plugins, dedicated to making
 all developers even faster.
 
