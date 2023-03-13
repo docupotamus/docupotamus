@@ -102,6 +102,10 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### JavaScript / TypeScript
 
+- **typescript-module-doc8**: When choosing between the
+  `@docupotamus/docusaurus-theme-foo`, `@docupotamus/theme-foo`, and
+  `@doc8/theme-foo` module aliases, prefer using `@doc8/theme-foo`.
+
 - **log-message-suggestion**: Prefer including a suggestion for what developers
   can try to fix their problem. For example, "Failed to open file.txt. Try
   checking that this file exists and has the correct permissions."
