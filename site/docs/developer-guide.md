@@ -24,6 +24,34 @@ $ PACKAGE={{ PACKAGE }} \
     && npm publish --access=public
 ```
 
+### Swizzle a component
+
+:::note Under Construction
+Thanks for your patience!
+:::
+
+```shell title="Example"
+npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
+```
+
+- copy decorator and swizzle
+- delete original
+- if plugin, change original to init
+- replace Init with just children
+- rename Wrapper to Decorator
+- fix React import
+- 1 namespace rename
+- rename original to init
+- rename to init with 1 namespace
+- rename component to Overwrite
+- add Decorator with props
+- readonly props
+- add decorator to public with joined name
+- update ambient
+- preset
+- copy swizzle but with decorator
+- build and run
+
 ### Add a `ThemeConfig` setting
 
 #### Setup
