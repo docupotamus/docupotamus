@@ -6,7 +6,7 @@ declare module '@docupotamus/docusaurus-theme-environment-variables' {
 
     // TODO(dnguyen0304): Investigate adding isRequired.
     interface Variable {
-        readonly key: string;
+        readonly name: string;
         readonly defaultValue: string;
         readonly currValue: string;
         readonly element: HTMLElement;

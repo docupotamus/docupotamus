@@ -158,8 +158,8 @@ export default function WorkbenchTab(): JSX.Element {
             if (!(element instanceof HTMLElement)) {
                 return;
             }
-            const key = element.dataset[DATA_ATTRIBUTE_NAME];
-            if (key === undefined) {
+            const name = element.dataset[DATA_ATTRIBUTE_NAME];
+            if (name === undefined) {
                 return;
             }
             const defaultValue = element.dataset[DATA_ATTRIBUTE_DEFAULT_VALUE];
@@ -167,7 +167,7 @@ export default function WorkbenchTab(): JSX.Element {
                 return;
             }
             const variable = {
-                key,
+                name,
                 defaultValue,
                 currValue: defaultValue,
                 element,
@@ -183,13 +183,13 @@ export default function WorkbenchTab(): JSX.Element {
                 {variables.map((variable, index) => {
                     return (
                         <ListItem
-                            key={`${KEY_PREFIX}-${index}-${variable.key}`}
+                            key={`${KEY_PREFIX}-${index}-${variable.name}`}
                             disablePadding
                         >
                             <StyledTextField
                                 // See: https://stackoverflow.com/questions/12374442/chrome-ignores-autocomplete-off
                                 autoComplete='no-thank-you'
-                                label={variable.key}
+                                label={variable.name}
                                 onBlur={() => handleBlur(variable)}
                                 onChange={(event) => handleChange(
                                     event,

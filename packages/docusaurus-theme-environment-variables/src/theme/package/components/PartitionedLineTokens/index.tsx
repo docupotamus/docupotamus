@@ -142,7 +142,7 @@ export default function PartitionedLineTokens(
                     data-environment-variable-name={name}
                     data-environment-variable-default-value={defaultValue}
                 >
-                    {formatDefault({ key: name, defaultValue })}
+                    {formatDefault({ name, defaultValue })}
                 </span>
             );
             temp = [];
