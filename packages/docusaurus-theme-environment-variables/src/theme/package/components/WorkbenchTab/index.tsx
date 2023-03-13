@@ -144,7 +144,6 @@ export default function WorkbenchTab(): JSX.Element {
         if (!variable) {
             return;
         }
-        // TODO
         if (variable.ref.current) {
             variable.ref.current.innerText = event.target.value;
         }
