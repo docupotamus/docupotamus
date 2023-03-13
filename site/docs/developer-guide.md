@@ -24,7 +24,7 @@ $ PACKAGE={{ PACKAGE }} \
     && npm publish --access=public
 ```
 
-### Add a ThemeConfig Setting
+### Add a `ThemeConfig` setting
 
 #### Setup
 
