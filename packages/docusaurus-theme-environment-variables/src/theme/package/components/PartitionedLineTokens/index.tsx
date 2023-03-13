@@ -5,9 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useVariables } from '../../contexts/variables';
 import { formatDefault } from '../../services';
 
-export const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable';
-export const DATA_ATTRIBUTE_NAME = 'environmentVariableName';
-export const DATA_ATTRIBUTE_DEFAULT_VALUE = 'environmentVariableDefaultValue';
+const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable';
 // TODO(dnguyen0304): Refactor to RegExp and String.raw to reduce duplicated
 //   code.
 //   See: https://stackoverflow.com/a/43391072
