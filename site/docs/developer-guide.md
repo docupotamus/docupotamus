@@ -121,6 +121,9 @@ npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
   breaks backward-compatibility, increases maintenance, and is significantly
   more complicated.
 
+- **swizzle-scope**: Prefer swizzling the smallest scope. For example,
+  swizzle `DocItem/Content` instead of `DocItem`.
+
 - **swizzle-provider-global**: Prefer swizzling `Root` instead of `DocPage` when
   adding a new global provider.
 
