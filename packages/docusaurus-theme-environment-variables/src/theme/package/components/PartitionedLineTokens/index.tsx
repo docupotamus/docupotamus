@@ -1,6 +1,8 @@
+import { Variable } from '@docupotamus/theme-environment-variables';
 import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { useVariables } from '../../contexts/variables';
 import { formatDefault } from '../../services';
 
 export const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable';
@@ -88,6 +90,10 @@ export default function PartitionedLineTokens(
         getTokenProps,
     }: Props,
 ): JSX.Element {
+    const { setVariables } = useVariables();
+
+    const lineVariables = React.useRef<Variable[]>([]);
+
     const lineTokens: JSX.Element[] = [];
     const tokens = splitTokens(line);
     const partitions = getPartitions(tokens);
@@ -132,6 +138,7 @@ export default function PartitionedLineTokens(
         } else if (isBetween) {
             temp.push(lineToken);
         } else if (isImmediatelyAfterEnd) {
+            const ref = React.createRef<HTMLSpanElement>();
             const name = currPartition.key;
             const defaultValue = currPartition.defaultValue;
             // Flush the temporary line tokens.
@@ -139,12 +146,19 @@ export default function PartitionedLineTokens(
                 <span
                     key={uuidv4()}
                     className={TARGET_CLASS_NAME}
+                    ref={ref}
                     data-environment-variable-name={name}
                     data-environment-variable-default-value={defaultValue}
                 >
                     {formatDefault({ name, defaultValue })}
                 </span>
             );
+            lineVariables.current.push({
+                name,
+                defaultValue,
+                currValue: defaultValue,
+                element: ref.current,
+            });
             temp = [];
             currPartitionIndex += 1;
             // Process the current line token.
@@ -152,6 +166,10 @@ export default function PartitionedLineTokens(
         }
         currCharacterIndex += token.content.length;
     });
+
+    React.useEffect(() => {
+        setVariables(prev => [...prev, ...lineVariables.current]);
+    }, []);
 
     return (
         <>
