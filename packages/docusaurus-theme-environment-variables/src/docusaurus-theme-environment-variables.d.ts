@@ -9,7 +9,7 @@ declare module '@docupotamus/docusaurus-theme-environment-variables' {
         readonly name: string;
         readonly defaultValue: string;
         readonly currValue: string;
-        readonly element: HTMLElement;
+        readonly ref: React.RefObject<HTMLSpanElement>;
     }
 }
 

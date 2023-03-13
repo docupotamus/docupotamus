@@ -92,88 +92,87 @@ export default function PartitionedLineTokens(
 ): JSX.Element {
     const { setVariables } = useVariables();
 
+    const lineTokens = React.useRef<JSX.Element[]>([]);
     const lineVariables = React.useRef<Variable[]>([]);
 
-    const lineTokens: JSX.Element[] = [];
-    const tokens = splitTokens(line);
-    const partitions = getPartitions(tokens);
-
-    // TODO(dnguyen0304): Investigate if a collection is needed or if a scalar
-    //   would be sufficient.
-    let temp: JSX.Element[] = [];
-    let currCharacterIndex = 0;
-    let currPartitionIndex = 0;
-
-    tokens.forEach((token, key) => {
-        // This line is copied from before ejecting. Minimize changes to
-        // facilitate diffing.
-        const lineToken = <span key={key} {...getTokenProps({ token, key })} />;
-        const currPartition = partitions[currPartitionIndex];
-        if (!currPartition) {
-            // Add all remaining line tokens without changes.
-            lineTokens.push(lineToken);
-            return;
-        }
-
-        // Assume tokens are grouped such that they overlap exactly with the
-        // endpoints for environment variables. This invariant is handled by
-        // splitTokens. For example, in pseudo-code:
-        //
-        //   // YES
-        //   <token>hello </token><token>{{ NAME }}</token><token> world</token>
-        //
-        //   // No
-        //   <token>hello {{ NAME }} world</token>
-        const isBeforeStart = currCharacterIndex < currPartition.start;
-        const isAfterStart = currCharacterIndex >= currPartition.start;
-        const isBeforeEnd = currCharacterIndex < currPartition.end;
-        const isAfterEnd = currCharacterIndex > currPartition.end;
-
-        const isOutside = isBeforeStart || isAfterEnd;
-        const isBetween = isAfterStart && isBeforeEnd;
-        const isImmediatelyAfterEnd = currCharacterIndex === currPartition.end;
-
-        if (isOutside) {
-            lineTokens.push(lineToken);
-        } else if (isBetween) {
-            temp.push(lineToken);
-        } else if (isImmediatelyAfterEnd) {
-            const ref = React.createRef<HTMLSpanElement>();
-            const name = currPartition.key;
-            const defaultValue = currPartition.defaultValue;
-            // Flush the temporary line tokens.
-            lineTokens.push(
-                <span
-                    key={uuidv4()}
-                    className={TARGET_CLASS_NAME}
-                    ref={ref}
-                    data-environment-variable-name={name}
-                    data-environment-variable-default-value={defaultValue}
-                >
-                    {formatDefault({ name, defaultValue })}
-                </span>
-            );
-            lineVariables.current.push({
-                name,
-                defaultValue,
-                currValue: defaultValue,
-                element: ref.current,
-            });
-            temp = [];
-            currPartitionIndex += 1;
-            // Process the current line token.
-            lineTokens.push(lineToken);
-        }
-        currCharacterIndex += token.content.length;
-    });
-
     React.useEffect(() => {
+        const tokens = splitTokens(line);
+        const partitions = getPartitions(tokens);
+
+        // TODO(dnguyen0304): Investigate if a collection is needed or if a scalar
+        //   would be sufficient.
+        let temp: JSX.Element[] = [];
+        let currCharacterIndex = 0;
+        let currPartitionIndex = 0;
+
+        tokens.forEach((token, key) => {
+            // This line is copied from before ejecting. Minimize changes to
+            // facilitate diffing.
+            const lineToken = <span key={key} {...getTokenProps({ token, key })} />;
+            const currPartition = partitions[currPartitionIndex];
+            if (!currPartition) {
+                // Add all remaining line tokens without changes.
+                lineTokens.current.push(lineToken);
+                return;
+            }
+
+            // Assume tokens are grouped such that they overlap exactly with the
+            // endpoints for environment variables. This invariant is handled by
+            // splitTokens. For example, in pseudo-code:
+            //
+            //   // YES
+            //   <token>hello </token><token>{{ NAME }}</token><token> world</token>
+            //
+            //   // No
+            //   <token>hello {{ NAME }} world</token>
+            const isBeforeStart = currCharacterIndex < currPartition.start;
+            const isAfterStart = currCharacterIndex >= currPartition.start;
+            const isBeforeEnd = currCharacterIndex < currPartition.end;
+            const isAfterEnd = currCharacterIndex > currPartition.end;
+
+            const isOutside = isBeforeStart || isAfterEnd;
+            const isBetween = isAfterStart && isBeforeEnd;
+            const isImmediatelyAfterEnd = currCharacterIndex === currPartition.end;
+
+            if (isOutside) {
+                lineTokens.current.push(lineToken);
+            } else if (isBetween) {
+                temp.push(lineToken);
+            } else if (isImmediatelyAfterEnd) {
+                const ref = React.createRef<HTMLSpanElement>();
+                const name = currPartition.key;
+                const defaultValue = currPartition.defaultValue;
+                // Flush the temporary line tokens.
+                lineTokens.current.push(
+                    <span
+                        key={uuidv4()}
+                        className={TARGET_CLASS_NAME}
+                        ref={ref}
+                        data-environment-variable-name={name}
+                        data-environment-variable-default-value={defaultValue}
+                    >
+                        {formatDefault({ name, defaultValue })}
+                    </span>
+                );
+                lineVariables.current.push({
+                    name,
+                    defaultValue,
+                    currValue: defaultValue,
+                    ref,
+                });
+                temp = [];
+                currPartitionIndex += 1;
+                // Process the current line token.
+                lineTokens.current.push(lineToken);
+            }
+            currCharacterIndex += token.content.length;
+        });
         setVariables(prev => [...prev, ...lineVariables.current]);
     }, []);
 
     return (
         <>
-            {lineTokens}
+            {lineTokens.current}
         </>
     );
 };

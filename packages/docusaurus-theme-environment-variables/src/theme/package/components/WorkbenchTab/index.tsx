@@ -5,13 +5,9 @@ import ListItem from '@mui/material/ListItem';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
+import { useVariables } from '../../contexts/variables';
 import { formatDefault } from '../../services';
 import '../../styles.css';
-import {
-    DATA_ATTRIBUTE_DEFAULT_VALUE,
-    DATA_ATTRIBUTE_NAME,
-    TARGET_CLASS_NAME
-} from '../PartitionedLineTokens';
 import CopyButton from './CopyButton';
 import styles from './styles.module.css';
 
@@ -67,10 +63,10 @@ const StyledTextField = styled(TextField)({
     },
 });
 
-const parseCodeBlock = (target: HTMLElement): string => {
-    const codeBlock = target.parentElement?.parentElement;
+const parseCodeBlock = (target: HTMLElement | null): string => {
+    const codeBlock = target?.parentElement?.parentElement;
     if (!codeBlock) {
-        return target.textContent ?? '';
+        return target?.textContent ?? '';
     }
     const chunks: string[] = [];
     Array.from(codeBlock.children).forEach(lineToken => {
@@ -82,22 +78,22 @@ const parseCodeBlock = (target: HTMLElement): string => {
 };
 
 export default function WorkbenchTab(): JSX.Element {
-    const [variables, setVariables] = React.useState<Variable[]>([]);
-    const [code, setCode] = React.useState<string>('');
+    const { variables, setVariables } = useVariables();
 
+    const [code, setCode] = React.useState<string>('');
     const focusIndexRef = React.useRef<number>();
 
     const enableHighlight = (variable: Variable) => {
         const className = styles.Target__highlight;
         if (className) {
-            variable.element.classList.add(className);
+            variable.ref.current?.classList.add(className);
         }
     };
 
     const disableHighlight = (variable: Variable) => {
         const className = styles.Target__highlight;
         if (className) {
-            variable.element.classList.remove(className);
+            variable.ref.current?.classList.remove(className);
         }
     };
 
@@ -111,19 +107,20 @@ export default function WorkbenchTab(): JSX.Element {
     const handleFocus = (variable: Variable, currIndex: number) => {
         focusIndexRef.current = currIndex;
         enableHighlight(variable);
-        variable.element.scrollIntoView({
+        variable.ref.current?.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
         });
         // Update the code initially.
-        setCode(parseCodeBlock(variable.element));
+        setCode(parseCodeBlock(variable.ref.current));
     };
 
     const handleBlur = (variable: Variable) => {
         focusIndexRef.current = undefined;
         disableHighlight(variable);
-        if (!variable.currValue) {
-            variable.element.innerText ||= formatDefault(variable);
+        // TODO
+        if (!variable.currValue && variable.ref.current) {
+            variable.ref.current.innerText ||= formatDefault(variable);
         }
     };
 
@@ -144,38 +141,16 @@ export default function WorkbenchTab(): JSX.Element {
         if (!variable) {
             return;
         }
-        variable.element.innerText = event.target.value;
+        // TODO
+        if (variable.ref.current) {
+            variable.ref.current.innerText = event.target.value;
+        }
         if (currIndex !== focusIndexRef.current) {
             return;
         }
         // Update the code on change.
-        setCode(parseCodeBlock(variable.element));
+        setCode(parseCodeBlock(variable.ref.current));
     };
-
-    React.useEffect(() => {
-        const newVariables: Variable[] = [];
-        document.querySelectorAll(`.${TARGET_CLASS_NAME}`).forEach(element => {
-            if (!(element instanceof HTMLElement)) {
-                return;
-            }
-            const name = element.dataset[DATA_ATTRIBUTE_NAME];
-            if (name === undefined) {
-                return;
-            }
-            const defaultValue = element.dataset[DATA_ATTRIBUTE_DEFAULT_VALUE];
-            if (defaultValue === undefined) {
-                return;
-            }
-            const variable = {
-                name,
-                defaultValue,
-                currValue: defaultValue,
-                element,
-            };
-            newVariables.push(variable);
-        });
-        setVariables(newVariables);
-    }, []);
 
     return (
         <Layout>
