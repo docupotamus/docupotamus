@@ -5,6 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
+import { formatDefault } from '../../services';
 import '../../styles.css';
 import {
     DATA_ATTRIBUTE_DEFAULT_VALUE,
@@ -65,10 +66,6 @@ const StyledTextField = styled(TextField)({
         },
     },
 });
-
-const formatDefault = (variable: Variable): string => {
-    return variable.defaultValue || `{{ ${variable.key} }}`;
-};
 
 const parseCodeBlock = (target: HTMLElement): string => {
     const codeBlock = target.parentElement?.parentElement;
@@ -175,7 +172,6 @@ export default function WorkbenchTab(): JSX.Element {
                 currValue: defaultValue,
                 element,
             };
-            element.replaceChildren(formatDefault(variable));
             newVariables.push(variable);
         });
         setVariables(newVariables);
