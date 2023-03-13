@@ -1,4 +1,4 @@
-# Docupotamus
+# The _fastest_ docs platform
 
 ![Logo](./site/static/img/logo.svg)
 
