@@ -68,13 +68,15 @@ const parseCodeBlock = (target: HTMLElement | null): string => {
     if (!codeBlock) {
         return target?.textContent ?? '';
     }
-    const chunks: string[] = [];
-    Array.from(codeBlock.children).forEach(lineToken => {
-        Array.from(lineToken.children).forEach(token => {
-            chunks.push(token.textContent ?? '');
+    const lineChunks: string[] = [];
+    Array.from(codeBlock.children).forEach(lines => {
+        const tokenChunks: string[] = [];
+        Array.from(lines.children).forEach(token => {
+            tokenChunks.push(token.textContent ?? '');
         });
+        lineChunks.push(tokenChunks.join(''));
     });
-    return chunks.join('');
+    return lineChunks.join('\n');
 };
 
 export default function WorkbenchTab(): JSX.Element {
