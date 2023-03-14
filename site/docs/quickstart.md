@@ -53,7 +53,9 @@ these snippets!
 :::
 
 ```shell
-SITE_NAME="{{ SITE_NAME=my-site }}" && npx create-docusaurus@latest $SITE_NAME classic && cd $SITE_NAME
+SITE_NAME="{{ SITE_NAME=my-site }}" \
+    && npx create-docusaurus@latest $SITE_NAME classic \
+    && cd $SITE_NAME
 ```
 
 #### Install and register the Docupotamus preset
