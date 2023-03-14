@@ -12,6 +12,10 @@ lists.
 
 ## Try It Out
 
+:::tip
+In the right-docked Toolbar, open the "Task List" tab to track your progress!
+:::
+
 <TaskList>
 - Drink a glass of water.
 - Stretch your wrists for 30 seconds.
