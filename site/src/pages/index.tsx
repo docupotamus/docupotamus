@@ -4,8 +4,7 @@ import Layout from '@theme/Layout';
 import clsx from 'clsx';
 import * as React from 'react';
 import Logo from '../components/Logo';
-
-import styles from './index.module.css';
+import styles from './styles.module.css';
 
 const HomepageHeader = (): JSX.Element => {
     const { siteConfig } = useDocusaurusContext();
