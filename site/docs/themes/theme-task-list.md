@@ -32,8 +32,8 @@ lists.
 ### Common Use Cases
 
 Use this when you need developers to follow a series of steps, such as how to
-use your library or set up a development environment. Your developers can keep
-track of their progress even while jumping around the page.
+use your library or set up a development environment. Your developers can track
+their progress even while jumping around the page.
 
 ## Installation
 
@@ -176,8 +176,8 @@ document.querySelector('.DocupotamusTaskList');
 <!-- TODO(dnguyen0304): Add gifs. -->
 
 - **State Synchronization:** Task list state is synchronized between the page
-  and the workbench. You can keep track of your progress even while jumping
-  around the page.
+  and the workbench. You can track your progress even while jumping around the
+  page.
 
 - **Quick Navigation:** If a page contains multiple task lists, the buttons
   allow you to quickly navigate between the task lists.
