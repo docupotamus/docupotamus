@@ -16,6 +16,10 @@ $ git log -- .
 
 ### Publish to NPM
 
+:::danger
+Remember to clear all pending changes (`git status`) first.
+:::
+
 :::info
 Remember to execute this command from the directory containing `package.json`.
 :::
