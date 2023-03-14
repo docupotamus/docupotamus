@@ -39,6 +39,12 @@ const config = {
                         ],
                     ],
                 },
+                blog: {
+                    path: 'blogs',
+                    routeBasePath: '/blogs',
+                    editUrl: `${REPOSITORY_URL}/edit/main/site/`,
+                    showReadingTime: true,
+                },
             }),
         ],
     ],
@@ -58,6 +64,11 @@ const config = {
                         label: 'Docs',
                         position: 'left',
                         docId: 'quickstart',
+                    },
+                    {
+                        label: 'Blog',
+                        to: '/blogs',
+                        position: 'left',
                     },
                     {
                         label: 'GitHub',
