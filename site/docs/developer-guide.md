@@ -31,6 +31,7 @@ $ PACKAGE={{ PACKAGE }} \
     && git push \
     && git push --tags \
     && npm publish --access=public \
+    && cd ../.. \
     && grep -r ${PACKAGE} \
         --include package.json \
         --exclude-dir node_modules \
