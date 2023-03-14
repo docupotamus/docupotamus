@@ -5,7 +5,7 @@
     "main": "lib/index.js",
     "types": "src/docusaurus-theme-environment-variables.d.ts",
     "dependencies": {
-        "@docupotamus/docusaurus-lib-common": "0.1.2",
+        "@docupotamus/docusaurus-lib-common": "0.2.0",
         "@docusaurus/utils-validation": "^2.2.x",
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
