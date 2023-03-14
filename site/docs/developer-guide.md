@@ -31,6 +31,11 @@ $ PACKAGE={{ PACKAGE }} \
     && git push \
     && git push --tags \
     && npm publish --access=public
+    && grep -r ${PACKAGE} \
+        --include package.json \
+        --exclude-dir node_modules \
+        --exclude-dir ${PACKAGE} \
+        .
 ```
 
 ### Swizzle a component
