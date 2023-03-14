@@ -158,3 +158,5 @@ import CodeBlock from '@theme/CodeBlock';
 If you have comments, questions, or are looking to contribute, please start a
 conversation over a
 [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3ACommon)!
+
+Please remember to [⭐ give us a star on GitHub! ⭐](https://github.com/docupotamus/docupotamus)
