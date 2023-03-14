@@ -19,7 +19,7 @@ lists.
 </TaskList>
 
 <details>
-    <summary>See Plain List</summary>
+    <summary>See plain list</summary>
 
 - Drink a glass of water.
 - Stretch your wrists for 30 seconds.
