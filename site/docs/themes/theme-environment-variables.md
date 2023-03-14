@@ -11,8 +11,8 @@ A Docusaurus theme that parameterizes code blocks.
 ## Try It Out
 
 :::tip
-In the right-docked Toolbar, open the "Environment Variables" tab and try it
-out!
+In the right-docked Toolbar, open the "Environment Variables" tab to personalize
+these snippets!
 :::
 
 ```shell
@@ -46,8 +46,8 @@ installing the `preset-classic`.
 ## Example Usage
 
 :::tip
-In the right-docked Toolbar, open the "Environment Variables" tab and try it
-out!
+In the right-docked Toolbar, open the "Environment Variables" tab to personalize
+these snippets!
 :::
 
 ```text title="Syntax"
