@@ -57,6 +57,10 @@ module.exports = {
 This preset is a backward-compatible, drop-in replacement.
 :::
 
+![docusaurus-logo](../../static/img/docusaurus-logo.png)
+
+We ❤️ Docusaurus.
+
 The presets are fully backward-compatible because Docupotamus `preset-classic`
 is implemented as just a thin convenience wrapper. It strictly only extends
 Docusaurus `preset-classic`.
