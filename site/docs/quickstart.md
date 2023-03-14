@@ -17,6 +17,10 @@ built-ins - all fully interoperable with your existing site.
 
 ## From Zero to Fast Hippo
 
+:::tip
+In the right-docked Toolbar, open the "Task List" tab to track your progress.
+:::
+
 <TaskList>
 - Install Node.js.
 - Create a new site.
