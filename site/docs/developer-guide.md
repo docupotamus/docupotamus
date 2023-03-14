@@ -6,6 +6,8 @@ sidebar_position: 50
 
 import { TaskList } from '@theme/docupotamus-task-list';
 
+## How-To's
+
 ### Publish to NPM
 
 :::info
