@@ -21,6 +21,7 @@ Remember to execute this command from the directory containing `package.json`.
 :::
 
 ```shell
+# VERSION: Exclude the leading "v".
 $ PACKAGE={{ PACKAGE }} \
     && VERSION={{ VERSION }} \
     && npm version ${VERSION} \
