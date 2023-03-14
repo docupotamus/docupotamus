@@ -8,6 +8,12 @@ import { TaskList } from '@theme/docupotamus-task-list';
 
 ## How-To's
 
+### Compare changes since the latest version
+
+```shell
+$ git log -- .
+```
+
 ### Publish to NPM
 
 :::info
