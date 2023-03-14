@@ -30,7 +30,7 @@ $ PACKAGE={{ PACKAGE }} \
     && git tag --annotate ${PACKAGE}-v${VERSION} -m "${PACKAGE}-v${VERSION}" \
     && git push \
     && git push --tags \
-    && npm publish --access=public
+    && npm publish --access=public \
     && grep -r ${PACKAGE} \
         --include package.json \
         --exclude-dir node_modules \
