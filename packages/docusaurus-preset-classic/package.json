@@ -6,7 +6,7 @@
     "types": "src/docusaurus-preset-classic.d.ts",
     "dependencies": {
         "@docupotamus/docusaurus-styles-classic": "^0.6.0",
-        "@docupotamus/docusaurus-theme-common": "0.1.0",
+        "@docupotamus/docusaurus-theme-common": "0.2.0",
         "@docupotamus/docusaurus-theme-environment-variables": "0.0.0",
         "@docupotamus/docusaurus-theme-task-list": "0.1.4",
         "@docusaurus/core": "2.2.x",
