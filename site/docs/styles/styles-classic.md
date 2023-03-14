@@ -126,7 +126,7 @@ export default function MyHeading() {
 ```
 
 <details>
-    <summary>See All Properties</summary>
+    <summary>See all properties</summary>
 
 ```mdx-code-block
 import PropertiesSource from '!!raw-loader!@site/../packages/docusaurus-styles-classic/lib/properties.css';
