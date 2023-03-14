@@ -10,7 +10,7 @@ const REPOSITORY_URL = 'https://github.com/docupotamus/docupotamus';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Docupotamus',
-    tagline: 'The fastest docs platform',
+    tagline: 'A productivity suite of Docusaurus plugins',
     url: 'https://docupotamus.io',
     baseUrl: '/',
     onBrokenLinks: 'throw',

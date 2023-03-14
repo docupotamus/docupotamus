@@ -16,7 +16,7 @@ const HomepageHeader = (): JSX.Element => {
                 <h1 className='hero__title'>{siteConfig.title}</h1>
                 <p className='hero__subtitle'>
                     {/* TODO(dnguyen0304): Fix missing cohesion. */}
-                    The <em>fastest</em> docs platform
+                    A productivity suite of Docusaurus plugins
                 </p>
                 <div className={styles.buttons}>
                     <Link
