@@ -1,6 +1,6 @@
 {
     "name": "@docupotamus/docusaurus-theme-environment-variables",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "Docusaurus environment variables UI component.",
     "main": "lib/index.js",
     "types": "src/docusaurus-theme-environment-variables.d.ts",
