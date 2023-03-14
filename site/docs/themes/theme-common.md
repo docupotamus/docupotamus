@@ -142,7 +142,7 @@ document.querySelector('.DocupotamusToolbar');
 ### Integrate a new add-on
 
 <details>
-    <summary>See Canonical Reference</summary>
+    <summary>See canonical reference</summary>
 
 ```mdx-code-block
 import Source from '!!raw-loader!@site/../packages/docusaurus-preset-classic/src/plugin/theme/docupotamus-common/Toolbar/Entry/index.tsx';
