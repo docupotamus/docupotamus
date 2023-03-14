@@ -47,8 +47,13 @@ If you are having trouble setting up Docusaurus, see the
 [source documentation](https://docusaurus.io/docs#fast-track).
 :::
 
+:::tip
+In the right-docked Toolbar, open the "Environment Variables" tab to personalize
+these snippets!
+:::
+
 ```shell
-npx create-docusaurus@latest my-site classic && cd my-site
+SITE_NAME="{{ SITE_NAME=my-site }}" && npx create-docusaurus@latest $SITE_NAME classic && cd $SITE_NAME
 ```
 
 #### Install and register the Docupotamus preset
