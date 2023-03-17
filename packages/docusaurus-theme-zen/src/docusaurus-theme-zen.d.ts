@@ -15,4 +15,7 @@ declare module '@doc8/theme-zen' {
 }
 
 declare module '@theme/docupotamus-zen' {
+    import type DocPageLayoutType from '@theme/DocPage/Layout';
+
+    export const DocPageLayoutDecorator: typeof DocPageLayoutType;
 }
