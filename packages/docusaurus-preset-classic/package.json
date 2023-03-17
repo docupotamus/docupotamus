@@ -9,6 +9,7 @@
         "@docupotamus/docusaurus-theme-common": "0.2.0",
         "@docupotamus/docusaurus-theme-environment-variables": "0.1.0",
         "@docupotamus/docusaurus-theme-task-list": "0.2.0",
+        "@docupotamus/docusaurus-theme-zen": "0.0.0",
         "@docusaurus/core": "2.2.x",
         "@docusaurus/plugin-content-blog": "2.2.x",
         "@docusaurus/plugin-content-pages": "2.2.x",

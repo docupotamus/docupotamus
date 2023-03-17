@@ -57,6 +57,10 @@ export default function preset(
             '@docupotamus/docusaurus-theme-task-list',
             { swizzleIsEnabled: false },
         ),
+        makePluginConfig(
+            '@docupotamus/docusaurus-theme-zen',
+            { swizzleIsEnabled: false },
+        ),
         makePluginConfig('./plugin'),
     );
 
