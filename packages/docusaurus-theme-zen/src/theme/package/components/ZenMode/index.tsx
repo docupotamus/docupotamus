@@ -38,20 +38,6 @@ const StyledBox = styled(Box)({
     },
 });
 
-// const Intersector = styled(Box)({
-//     width: `calc(2 * ${MOUSE_RADIUS})`,
-//     height: `calc(2 * ${MOUSE_RADIUS})`,
-
-//     position: 'absolute',
-
-//     borderRadius: '50%',
-//     translate: `-${MOUSE_RADIUS} -${MOUSE_RADIUS}`,
-
-//     // TODO(dnguyen0304): Remove development code.
-//     backgroundColor: 'red',
-//     zIndex: 9999999,
-// });
-
 const hasAnyIntersection = (
     clientY: number,
     radiusPx: number,
