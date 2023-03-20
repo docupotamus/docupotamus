@@ -5,7 +5,9 @@ import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
 const CLASS_NAME: string = 'zen-mode';
-// const MOUSE_RADIUS: React.CSSProperties['width'] = '10vw';
+const CLASS_NAME_FOCUS: string = 'zen-focus';
+// TODO(dnguyen0304): Investigate changing to vw units.
+const MOUSE_RADIUS_PX: number = 200;
 
 const StyledBox = styled(Box)({
     position: 'relative',
@@ -41,24 +43,27 @@ interface Props {
 export default function ZenMode({ children }: Props): JSX.Element {
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
 
-    const intersectorPosition = React.useRef<{
-        topPx: number,
-        leftPx: number,
-    }>({
-        topPx: 0,
-        leftPx: 0,
-    });
+    const markdownElements = React.useRef<Array<HTMLElement>>([]);
 
     const toggleIsEnabled = () => setIsEnabled(prev => !prev);
 
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
-        intersectorPosition.current = {
-            topPx: event.pageY,
-            leftPx: event.pageX,
-        };
-        console.log(intersectorPosition.current);
+        const mouseClientY = event.clientY;
+        const top = Math.max(mouseClientY - MOUSE_RADIUS_PX, 0);
+        const bottom = mouseClientY + MOUSE_RADIUS_PX;
+
+        markdownElements.current.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const afterTop = rect.top >= top;
+            const beforeBottom = rect.bottom <= bottom;
+            if (afterTop && beforeBottom) {
+                element.classList.add(CLASS_NAME_FOCUS);
+            } else {
+                element.classList.remove(CLASS_NAME_FOCUS);
+            }
+        });
     };
 
     useHotkeys(
@@ -79,6 +84,14 @@ export default function ZenMode({ children }: Props): JSX.Element {
             keyup: true,
         },
     );
+
+    React.useEffect(() => {
+        // TODO(dnguyen0304): Fix not including code blocks with environment
+        //   variables.
+        // TODO(dnguyen0304): Investigate refactoring to use getElementAll.
+        markdownElements.current = Array.from(
+            document.querySelectorAll('.theme-doc-markdown > *'));
+    }, []);
 
     return (
         <StyledBox
