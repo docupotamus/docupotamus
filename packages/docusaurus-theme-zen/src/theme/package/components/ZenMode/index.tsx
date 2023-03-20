@@ -12,13 +12,24 @@ const MOUSE_RADIUS_PX: number = 200;
 const StyledBox = styled(Box)({
     position: 'relative',
 
-    [`&.${CLASS_NAME} *`]: {
-        // TODO(dnguyen0304): Fix overriding smaller opacity values.
-        opacity: 0.8,
-        transition: `
-            opacity
-            var(--ifm-transition-fast)
-            var(--ifm-transition-timing-default)`,
+    [`&.${CLASS_NAME}`]: {
+        [[
+            '& > .navbar',
+            '& > .footer',
+            '& .theme-doc-sidebar-container',
+            '& .theme-doc-toc-desktop',
+            '& article > *:not(.theme-doc-markdown)',
+            `& article > .theme-doc-markdown > *:not(.${CLASS_NAME_FOCUS})`,
+            '& .pagination-nav',
+        ].join(', ')]: {
+            // There is an unaccounted for edge case where styles with a smaller
+            // opacity value actually become more visible.
+            opacity: 0.05,
+            transition: `
+                opacity
+                var(--ifm-transition-fast)
+                var(--ifm-transition-timing-default)`,
+        },
     },
 });
 
