@@ -40,18 +40,23 @@ interface Props {
 
 export default function ZenMode({ children }: Props): JSX.Element {
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
-    const [intersectorTop, setIntersectorTop] =
-        React.useState<React.CSSProperties['top']>(0);
-    const [intersectorLeft, setIntersectorLeft] =
-        React.useState<React.CSSProperties['left']>(0);
+    const [intersectorPosition, setIntersectorPosition] = React.useState<{
+        top: React.CSSProperties['top'],
+        left: React.CSSProperties['left'],
+    }>({
+        top: 0,
+        left: 0,
+    });
 
     const toggleIsEnabled = () => setIsEnabled(prev => !prev);
 
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
-        setIntersectorTop(`${event.clientY}px`);
-        setIntersectorLeft(`${event.clientX}px`);
+        setIntersectorPosition({
+            top: `${event.clientY}px`,
+            left: `${event.clientX}px`,
+        });
     };
 
     useHotkeys(
@@ -80,8 +85,8 @@ export default function ZenMode({ children }: Props): JSX.Element {
         >
             {children}
             <Intersector style={{
-                top: intersectorTop,
-                left: intersectorLeft,
+                top: intersectorPosition.top,
+                left: intersectorPosition.left,
             }} />
         </StyledBox>
     );
