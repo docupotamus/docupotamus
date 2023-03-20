@@ -53,25 +53,26 @@ Thanks for your patience!
 npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
 ```
 
+- readonly props
+- rename to init with 1 namespace
+- if plugin, change original to init
+- fix React import
+
 - copy decorator and swizzle
 - delete original
-- if plugin, change original to init
 - replace Init with just children
 - rename Wrapper to Decorator
-- fix React import
-- 1 namespace rename
 
-- rename original to init
-- rename to init with 1 namespace
 - rename component to Overwrite
 - add Decorator with props
-- readonly props
 
 - add decorator to public with joined name
 - update ambient
 
 - preset
 - copy swizzle but with decorator
+- pass props
+- rename to wrapper
 - ambient
 - package.json
 - register index
