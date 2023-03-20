@@ -70,8 +70,8 @@ export default function ZenMode({ children }: Props): JSX.Element {
 
         markdownElements.current.forEach(element => {
             const rect = element.getBoundingClientRect();
-            const afterTop = rect.top >= top;
-            const beforeBottom = rect.bottom <= bottom;
+            const afterTop = rect.bottom >= top;
+            const beforeBottom = rect.top <= bottom;
             if (afterTop && beforeBottom) {
                 element.classList.add(CLASS_NAME_FOCUS);
             } else {
