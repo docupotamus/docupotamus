@@ -4,7 +4,17 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-const StyledBox = styled(Box)({});
+const CLASS_NAME: string = 'zen-mode';
+
+const StyledBox = styled(Box)({
+    [`&.${CLASS_NAME} *`]: {
+        opacity: 0.85,
+        transition: `
+            opacity
+            var(--ifm-transition-fast)
+            var(--ifm-transition-timing-default)`,
+    },
+});
 
 interface Props {
     children: React.ReactNode;
@@ -35,7 +45,7 @@ export default function ZenMode({ children }: Props): JSX.Element {
     );
 
     return (
-        <StyledBox className={clsx({ 'zen-mode': isEnabled })}>
+        <StyledBox className={clsx({ [`${CLASS_NAME}`]: isEnabled })}>
             {children}
         </StyledBox>
     );
