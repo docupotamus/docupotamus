@@ -174,14 +174,16 @@ npm run watch everything
   intended reader is a developer instead of a user. The most common examples are
   errors and logs. The justification is to facilitate searching.
 
-### CSS
+### Styling
 
-- **css-styled-components-performance**: Do not use styled-components
+### Styled-Components
+
+- **styled-components-performance**: Do not use styled-components
   (e.g., `styled(Box)`) with parameters that change very frequently.
   This is very slow because styled-components appends a new `<style>` tag to the
   `<head>` tag on each change. Instead use inline styles.
 
-#### Custom Properties
+#### CSS
 
 - **css-class-bem**: Use a modified BEM naming convention for classes. Use
   PascalCase for blocks, and camelCase for elements and modifiers. For
