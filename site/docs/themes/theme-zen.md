@@ -4,7 +4,39 @@ sidebar_position: 50
 
 # 📦 theme-zen
 
+import ApiTable from '@site/src/components/ApiTable';
+
 A Docusaurus theme to quiet the distractions and bring the zen.
+
+## Customizing
+
+### Configuration
+
+Accepted fields:
+
+```mdx-code-block
+<ApiTable>
+```
+
+| Name                 | Type     | Default | Description                              |
+| -------------------- | -------- | ------- | ---------------------------------------- |
+| `visibilityRadiusPx` | `number` | `100`   | Radius around the mouse that is visible. |
+
+```mdx-code-block
+</ApiTable>
+```
+
+### Example Configuration
+
+```js title="docusaurus.config.js"
+module.exports = {
+  themeConfig: {
+    docupotamusZen: {
+      visibilityRadiusPx: 200,
+    },
+  },
+};
+```
 
 ## What's Next? {#future}
 
