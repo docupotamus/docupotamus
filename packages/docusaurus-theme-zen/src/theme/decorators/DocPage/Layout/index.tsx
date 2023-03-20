@@ -5,6 +5,7 @@ import ZenMode from '../../../package/components/ZenMode';
 
 type Props = Readonly<WrapperProps<typeof DocPageLayoutType>>;
 
+// TODO(dnguyen0304): Investigate if the Workbench should be a child component.
 export default function DocPageLayoutDecorator(
     {
         children,
