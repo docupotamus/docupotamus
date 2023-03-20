@@ -9,3 +9,11 @@ title: Awesome
 
 - [doc8](https://github.com/docupotamus/docupotamus/)
 - [doc8 Issue Tracker](https://github.com/docupotamus/docupotamus/issues)
+
+## git
+
+- `git` Commit Message Scopes:
+
+| Package        | Scope  |
+| -------------- | ------ |
+| `theme-common` | common |

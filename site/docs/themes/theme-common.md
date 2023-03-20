@@ -269,6 +269,14 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
 }
 ```
 
+## Contributing
+
+- `git` Commit Message Scope:
+
+```text
+common
+```
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a
