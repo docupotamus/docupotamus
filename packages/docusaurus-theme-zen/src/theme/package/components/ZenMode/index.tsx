@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
 const CLASS_NAME: string = 'zen-mode';
-const MOUSE_RADIUS: React.CSSProperties['width'] = '10vw';
+// const MOUSE_RADIUS: React.CSSProperties['width'] = '10vw';
 
 const StyledBox = styled(Box)({
     position: 'relative',
@@ -20,19 +20,19 @@ const StyledBox = styled(Box)({
     },
 });
 
-const Intersector = styled(Box)({
-    width: `calc(2 * ${MOUSE_RADIUS})`,
-    height: `calc(2 * ${MOUSE_RADIUS})`,
+// const Intersector = styled(Box)({
+//     width: `calc(2 * ${MOUSE_RADIUS})`,
+//     height: `calc(2 * ${MOUSE_RADIUS})`,
 
-    position: 'absolute',
+//     position: 'absolute',
 
-    borderRadius: '50%',
-    translate: `-${MOUSE_RADIUS} -${MOUSE_RADIUS}`,
+//     borderRadius: '50%',
+//     translate: `-${MOUSE_RADIUS} -${MOUSE_RADIUS}`,
 
-    // TODO(dnguyen0304): Remove development code.
-    backgroundColor: 'red',
-    zIndex: 9999999,
-});
+//     // TODO(dnguyen0304): Remove development code.
+//     backgroundColor: 'red',
+//     zIndex: 9999999,
+// });
 
 interface Props {
     children: React.ReactNode;
@@ -40,12 +40,13 @@ interface Props {
 
 export default function ZenMode({ children }: Props): JSX.Element {
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
-    const [intersectorPosition, setIntersectorPosition] = React.useState<{
-        top: React.CSSProperties['top'],
-        left: React.CSSProperties['left'],
+
+    const intersectorPosition = React.useRef<{
+        topPx: number,
+        leftPx: number,
     }>({
-        top: 0,
-        left: 0,
+        topPx: 0,
+        leftPx: 0,
     });
 
     const toggleIsEnabled = () => setIsEnabled(prev => !prev);
@@ -53,10 +54,11 @@ export default function ZenMode({ children }: Props): JSX.Element {
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
-        setIntersectorPosition({
-            top: `${event.clientY}px`,
-            left: `${event.clientX}px`,
-        });
+        intersectorPosition.current = {
+            topPx: event.pageY,
+            leftPx: event.pageX,
+        };
+        console.log(intersectorPosition.current);
     };
 
     useHotkeys(
@@ -84,10 +86,6 @@ export default function ZenMode({ children }: Props): JSX.Element {
             onMouseMove={handleMouseMove}
         >
             {children}
-            <Intersector style={{
-                top: intersectorPosition.top,
-                left: intersectorPosition.left,
-            }} />
         </StyledBox>
     );
 };
