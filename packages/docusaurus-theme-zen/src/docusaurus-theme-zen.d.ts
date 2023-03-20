@@ -3,7 +3,9 @@ declare module '@docupotamus/docusaurus-theme-zen' {
         readonly swizzleIsEnabled: boolean;
     }
 
-    interface ZenThemeConfig { }
+    interface ZenThemeConfig {
+        readonly mouseRadiusPx: number;
+    }
 }
 
 declare module '@docupotamus/theme-zen' {

@@ -3,12 +3,10 @@ import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
+import useZenThemeConfig from '../../hooks/useZenThemeConfig';
 
 const CLASS_NAME_ROOT: string = 'zen_root';
 const CLASS_NAME_FOCUS: string = 'zen_focus';
-// TODO(dnguyen0304): Investigate changing to vw units.
-// TODO(dnguyen0304): Extract to configuration setting.
-const MOUSE_RADIUS_PX: number = 100;
 
 const StyledBox = styled(Box)({
     position: 'relative',
@@ -55,6 +53,7 @@ interface Props {
 };
 
 export default function ZenMode({ children }: Props): JSX.Element {
+    const { mouseRadiusPx } = useZenThemeConfig();
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
 
     const markdownElements = React.useRef<Array<HTMLElement>>([]);
@@ -66,7 +65,7 @@ export default function ZenMode({ children }: Props): JSX.Element {
     ) => {
         markdownElements.current.forEach(element => {
             const rect = element.getBoundingClientRect();
-            if (hasAnyIntersection(event.clientY, MOUSE_RADIUS_PX, rect)) {
+            if (hasAnyIntersection(event.clientY, mouseRadiusPx, rect)) {
                 element.classList.add(CLASS_NAME_FOCUS);
             } else {
                 element.classList.remove(CLASS_NAME_FOCUS);
