@@ -139,7 +139,7 @@ npm run watch everything
   [${scope}] ${Verb} ${change} for ${target} ${targetType}.
 
   // Example
-  [theme-foo] Add handleClick for Button component.
+  [foo] Add handleClick for Button component.
   ```
 
 ### Docusaurus
