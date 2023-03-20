@@ -176,11 +176,22 @@ npm run watch everything
 
 ### Styling
 
-### Styled-Components
+#### Styled-Components
+
+- **styled-components-group-selector**: Prefer `Array.join()` for group
+  selectors. This prevents bugs from including a trailing comma. For example:
+
+```js
+const StyledBox = styled(Box)({
+  [['& .one', '& .two'].join(', ')]: {
+    backgroundColor: 'red',
+  },
+});
+```
 
 - **styled-components-performance**: Do not use styled-components
-  (e.g., `styled(Box)`) with parameters that change very frequently.
-  This is very slow because styled-components appends a new `<style>` tag to the
+  (e.g., `styled(Box)`) with parameters that change very frequently. This is
+  very slow because styled-components appends a new `<style>` tag to the
   `<head>` tag on each change. Instead use inline styles.
 
 #### CSS
