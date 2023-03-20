@@ -14,6 +14,10 @@ const StyledBox = styled(Box)({
 
     [`&.${CLASS_NAME_ROOT}`]: {
         [[
+            // List selectors explicitly so we can add or remove class names
+            // more easily. We need this approach because switching between
+            // opacity: 0 and opacity: 1 is not sufficient. We need to "revert"
+            // adding the opacity: 0 property.
             '& > .navbar',
             '& > .footer',
             '& .theme-doc-sidebar-container',
