@@ -65,9 +65,8 @@ export default function ZenMode({ children }: Props): JSX.Element {
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
-        const mouseClientY = event.clientY;
-        const top = Math.max(mouseClientY - MOUSE_RADIUS_PX, 0);
-        const bottom = mouseClientY + MOUSE_RADIUS_PX;
+        const top = Math.max(event.clientY - MOUSE_RADIUS_PX, 0);
+        const bottom = event.clientY + MOUSE_RADIUS_PX;
 
         markdownElements.current.forEach(element => {
             const rect = element.getBoundingClientRect();
