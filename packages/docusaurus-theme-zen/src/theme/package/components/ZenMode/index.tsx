@@ -8,6 +8,7 @@ const CLASS_NAME: string = 'zen-mode';
 
 const StyledBox = styled(Box)({
     [`&.${CLASS_NAME} *`]: {
+        // TODO(dnguyen0304): Fix overriding smaller opacity values.
         opacity: 0.85,
         transition: `
             opacity
