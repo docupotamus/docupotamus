@@ -7,7 +7,8 @@ import { useHotkeys } from 'react-hotkeys-hook';
 const CLASS_NAME_ROOT: string = 'zen_root';
 const CLASS_NAME_FOCUS: string = 'zen_focus';
 // TODO(dnguyen0304): Investigate changing to vw units.
-const MOUSE_RADIUS_PX: number = 200;
+// TODO(dnguyen0304): Extract to configuration setting.
+const MOUSE_RADIUS_PX: number = 100;
 
 const StyledBox = styled(Box)({
     position: 'relative',
