@@ -176,6 +176,11 @@ npm run watch everything
 
 ### CSS
 
+- **css-styled-components-performance**: Do not use styled-components
+  (e.g., `styled(Box)`) with parameters that change very frequently.
+  This is very slow because styled-components appends a new `<style>` tag to the
+  `<head>` tag on each change. Instead use inline styles.
+
 #### Custom Properties
 
 - **css-class-bem**: Use a modified BEM naming convention for classes. Use
