@@ -4,7 +4,7 @@ declare module '@docupotamus/docusaurus-theme-zen' {
     }
 
     interface ZenThemeConfig {
-        readonly mouseRadiusPx: number;
+        readonly visibilityRadiusPx: number;
     }
 }
 

@@ -53,7 +53,7 @@ interface Props {
 };
 
 export default function ZenMode({ children }: Props): JSX.Element {
-    const { mouseRadiusPx } = useZenThemeConfig();
+    const { visibilityRadiusPx } = useZenThemeConfig();
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
 
     const markdownElements = React.useRef<Array<HTMLElement>>([]);
@@ -65,7 +65,7 @@ export default function ZenMode({ children }: Props): JSX.Element {
     ) => {
         markdownElements.current.forEach(element => {
             const rect = element.getBoundingClientRect();
-            if (hasAnyIntersection(event.clientY, mouseRadiusPx, rect)) {
+            if (hasAnyIntersection(event.clientY, visibilityRadiusPx, rect)) {
                 element.classList.add(CLASS_NAME_FOCUS);
             } else {
                 element.classList.remove(CLASS_NAME_FOCUS);

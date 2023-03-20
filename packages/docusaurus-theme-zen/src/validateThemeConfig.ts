@@ -12,15 +12,15 @@ declare module '@docusaurus/types' {
 };
 
 const DEFAULT_THEME_CONFIG: ZenThemeConfig = {
-    mouseRadiusPx: 100,
+    visibilityRadiusPx: 100,
 };
 
 // TODO(dnguyen0304): Investigate missing labels.
 export const ThemeConfigSchema = Joi.object<ThemeConfig>({
     docupotamusZen: Joi.object({
-        mouseRadiusPx: Joi
+        visibilityRadiusPx: Joi
             .number()
-            .default(DEFAULT_THEME_CONFIG.mouseRadiusPx),
+            .default(DEFAULT_THEME_CONFIG.visibilityRadiusPx),
     })
         .label('themeConfig.docupotamusZen')
         .default(DEFAULT_THEME_CONFIG),
