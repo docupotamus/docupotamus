@@ -4,15 +4,15 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 
-const CLASS_NAME: string = 'zen-mode';
-const CLASS_NAME_FOCUS: string = 'zen-focus';
+const CLASS_NAME_ROOT: string = 'zen_root';
+const CLASS_NAME_FOCUS: string = 'zen_focus';
 // TODO(dnguyen0304): Investigate changing to vw units.
 const MOUSE_RADIUS_PX: number = 200;
 
 const StyledBox = styled(Box)({
     position: 'relative',
 
-    [`&.${CLASS_NAME}`]: {
+    [`&.${CLASS_NAME_ROOT}`]: {
         [[
             '& > .navbar',
             '& > .footer',
@@ -106,7 +106,7 @@ export default function ZenMode({ children }: Props): JSX.Element {
 
     return (
         <StyledBox
-            className={clsx({ [`${CLASS_NAME}`]: isEnabled })}
+            className={clsx({ [`${CLASS_NAME_ROOT}`]: isEnabled })}
             onMouseMove={handleMouseMove}
         >
             {children}
