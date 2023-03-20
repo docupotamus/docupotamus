@@ -52,6 +52,18 @@ const StyledBox = styled(Box)({
 //     zIndex: 9999999,
 // });
 
+const hasAnyIntersection = (
+    clientY: number,
+    radiusPx: number,
+    targetRect: Pick<DOMRect, 'top' | 'bottom'>,
+): boolean => {
+    const top = Math.max(clientY - radiusPx, 0);
+    const bottom = clientY + radiusPx;
+    const afterTop = targetRect.bottom >= top;
+    const beforeBottom = targetRect.top <= bottom;
+    return afterTop && beforeBottom;
+};
+
 interface Props {
     children: React.ReactNode;
 };
@@ -66,14 +78,9 @@ export default function ZenMode({ children }: Props): JSX.Element {
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
-        const top = Math.max(event.clientY - MOUSE_RADIUS_PX, 0);
-        const bottom = event.clientY + MOUSE_RADIUS_PX;
-
         markdownElements.current.forEach(element => {
             const rect = element.getBoundingClientRect();
-            const afterTop = rect.bottom >= top;
-            const beforeBottom = rect.top <= bottom;
-            if (afterTop && beforeBottom) {
+            if (hasAnyIntersection(event.clientY, MOUSE_RADIUS_PX, rect)) {
                 element.classList.add(CLASS_NAME_FOCUS);
             } else {
                 element.classList.remove(CLASS_NAME_FOCUS);
