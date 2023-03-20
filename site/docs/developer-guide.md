@@ -45,7 +45,7 @@ $ PACKAGE={{ PACKAGE }} \
 
 ### Swizzle a component
 
-:::note Under Construction
+:::note Under Construction 🚧
 Thanks for your patience!
 :::
 
@@ -60,16 +60,26 @@ npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
 - rename Wrapper to Decorator
 - fix React import
 - 1 namespace rename
+
 - rename original to init
 - rename to init with 1 namespace
 - rename component to Overwrite
 - add Decorator with props
 - readonly props
+
 - add decorator to public with joined name
 - update ambient
+
 - preset
 - copy swizzle but with decorator
+- ambient
+- package.json
+- register index
 - build and run
+
+- site package.json
+
+npm run watch everything
 
 ### Add a `ThemeConfig` setting
 
