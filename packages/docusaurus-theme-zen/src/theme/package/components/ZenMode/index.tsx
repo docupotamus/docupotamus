@@ -100,6 +100,7 @@ export default function ZenMode({ children }: Props): JSX.Element {
     );
 
     React.useEffect(() => {
+        // TODO(dnguyen0304): Fix not updating on location change.
         // TODO(dnguyen0304): Fix not including code blocks with environment
         //   variables.
         // TODO(dnguyen0304): Investigate refactoring to use getElementAll.
