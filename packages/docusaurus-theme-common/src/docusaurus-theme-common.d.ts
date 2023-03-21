@@ -60,10 +60,12 @@ declare module '@doc8/theme-common' {
 
 declare module '@theme/docupotamus-common' {
     import type { ContextValue } from '@doc8/theme-common';
+    import type DocItemContentType from '@theme/DocItem/Content';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
     import type RootType from '@theme/Root';
 
+    export const DocItemContentDecorator: typeof DocItemContentType;
     export const DocPageLayoutDecorator: typeof DocPageLayoutType;
     export const DocPageLayoutMainDecorator: typeof DocPageLayoutMainType;
     export const RootDecorator: typeof RootType;
