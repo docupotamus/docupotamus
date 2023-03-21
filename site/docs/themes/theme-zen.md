@@ -8,6 +8,13 @@ import ApiTable from '@site/src/components/ApiTable';
 
 A Docusaurus theme to quiet the distractions and bring the zen.
 
+## Try It Out
+
+While holding down the <kbd>shift</kbd> key, slowly move your mouse around the
+main content.
+
+<!-- _keywords:_ demo -->
+
 ## Customizing
 
 ### Configuration
