@@ -7,16 +7,23 @@ interface Props {
 };
 
 export default function MarkdownObserver({ children }: Props): JSX.Element {
-    const { setDirectChildren } = useMarkdown();
+    const { setDirectChildren, setCodeBlockIndexes } = useMarkdown();
 
     React.useEffect(() => {
         if (!ExecutionEnvironment.canUseDOM) {
             return;
         }
-        // TODO(dnguyen0304): Fix not including code blocks.
         // TODO(dnguyen0304): Investigate refactoring to use getElementAll.
-        const elements = document.querySelectorAll('.theme-doc-markdown > *');
-        setDirectChildren(Array.from(elements));
+        const elements =
+            Array.from(document.querySelectorAll('.theme-doc-markdown > *'));
+        setDirectChildren(elements);
+        setCodeBlockIndexes(
+            elements
+                .map(x => x.classList.contains('theme-code-block'))
+                .map((y, index) => y ? index : null)
+                // See: https://stackoverflow.com/a/59726888
+                .flatMap(z => z ? [z] : [])
+        );
     }, []);
 
     return (
