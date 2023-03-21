@@ -1,3 +1,4 @@
+import ExecutionEnvironment from '@docusaurus/ExecutionEnvironment';
 import * as React from 'react';
 import { useMarkdown } from '../../contexts/markdown';
 
@@ -8,24 +9,19 @@ interface Props {
 export default function MarkdownObserver({ children }: Props): JSX.Element {
     const { setDirectChildren } = useMarkdown();
 
-    const ref = React.useRef<HTMLDivElement>(null);
-
     React.useEffect(() => {
-        if (ref.current === null) {
-            // This should not be possible.
+        if (!ExecutionEnvironment.canUseDOM) {
             return;
         }
         // TODO(dnguyen0304): Fix not including code blocks.
         // TODO(dnguyen0304): Investigate refactoring to use getElementAll.
-        const elements = ref
-            .current
-            .querySelectorAll('.theme-doc-markdown > *');
+        const elements = document.querySelectorAll('.theme-doc-markdown > *');
         setDirectChildren(Array.from(elements));
     }, []);
 
     return (
-        <div ref={ref}>
+        <>
             {children}
-        </div>
+        </>
     );
 };
