@@ -97,8 +97,8 @@ export default function PartitionedLineTokens(
         const tokens = splitTokens(line);
         const partitions = getPartitions(tokens);
 
-        // TODO(dnguyen0304): Investigate if a collection is needed or if a scalar
-        //   would be sufficient.
+        // TODO(dnguyen0304): Investigate if a collection is needed or if a
+        //   scalar would be sufficient.
         let temp: JSX.Element[] = [];
         let currCharacterIndex = 0;
         let currPartitionIndex = 0;
