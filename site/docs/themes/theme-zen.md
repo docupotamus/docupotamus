@@ -76,6 +76,54 @@ module.exports = {
 };
 ```
 
+### Styling
+
+:::note
+Styling through theme class names is an **advanced** approach.
+
+It's appropriate when you need complete control over fine-grained details such
+as spacing. Otherwise, we recommended preferring to style through custom
+properties and configuration.
+:::
+
+We provide some stable CSS class names for robust and maintainable global layout
+styling. These names are theme-agnostic and meant to be targeted by custom CSS.
+
+- `.DocupotamusZen_focus`
+
+### Example Styling
+
+Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
+out!
+
+```mdx-code-block
+<Tabs>
+<TabItem value="JavaScript">
+```
+
+```javascript title="JavaScript"
+document.querySelector('.DocupotamusZen_focus');
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="CSS">
+```
+
+```css title="CSS"
+.DocupotamusZen_focus {
+  /* The important flag is used here only for demonstration
+     purposes. For production code, we recommended using a different
+     approach to increase specificity. */
+  background-color: red !important;
+}
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a
