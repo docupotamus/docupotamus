@@ -7,7 +7,7 @@ interface Props {
 };
 
 export default function MarkdownObserver({ children }: Props): JSX.Element {
-    const { setDirectChildren } = useMarkdown();
+    const { _internalSetDirectChildren } = useMarkdown();
 
     // TODO(dnguyen0304): Investigate fixing performance from O(codeBlockCount)
     //   to O(1).
@@ -16,7 +16,7 @@ export default function MarkdownObserver({ children }: Props): JSX.Element {
             return;
         }
         // TODO(dnguyen0304): Investigate refactoring to use getElementAll.
-        setDirectChildren(
+        _internalSetDirectChildren(
             Array.from(document.querySelectorAll('.theme-doc-markdown > *')));
     }, []);
 

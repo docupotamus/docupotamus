@@ -45,9 +45,8 @@ declare module '@docupotamus/docusaurus-theme-common' {
     interface MarkdownContextValue {
         readonly directChildren: Element[];
         // TODO(dnguyen0304): Investigate changing to private.
-        readonly setDirectChildren: React.Dispatch<React.SetStateAction<
-            Element[]
-        >>;
+        readonly _internalSetDirectChildren:
+        React.Dispatch<React.SetStateAction<Element[]>>;
     }
 
     interface ToolbarContextValue {

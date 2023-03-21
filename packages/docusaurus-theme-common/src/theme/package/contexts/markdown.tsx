@@ -6,16 +6,17 @@ const Context =
     React.createContext<MarkdownContextValue | undefined>(undefined);
 
 const useContextValue = (): MarkdownContextValue => {
-    const [directChildren, setDirectChildren] = React.useState<Element[]>([]);
+    const [directChildren, _internalSetDirectChildren] =
+        React.useState<Element[]>([]);
 
     return React.useMemo(
         () => ({
             directChildren,
-            setDirectChildren,
+            _internalSetDirectChildren,
         }),
         [
             directChildren,
-            setDirectChildren,
+            _internalSetDirectChildren,
         ],
     );
 };
