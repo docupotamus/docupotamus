@@ -269,6 +269,30 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
 }
 ```
 
+### Listen to Markdown content
+
+:::info Glossary
+_Direct_ refers to the child nodes immediately below the `.theme-doc-markdown`
+class. Listening to all child nodes in subtrees is not yet supported.
+:::
+
+```jsx title="Example.jsx"
+import { useMarkdown } from '@theme/docupotamus-common';
+
+export default function Example() {
+  const { directChildren } = useMarkdown();
+
+  React.useEffect(() => {
+    if (directChildren.length === 0) {
+      return;
+    }
+    directChildren.forEach((element) => console.log(element));
+  }, [directChildren]);
+
+  return <div>Example</div>;
+}
+```
+
 ## Contributing
 
 - `git` Commit Message Scope:
