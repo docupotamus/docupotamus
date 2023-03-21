@@ -124,6 +124,14 @@ document.querySelector('.DocupotamusZen_focus');
 </Tabs>
 ```
 
+## Contributing
+
+- `git` Commit Message Scope:
+
+```text
+zen
+```
+
 ## What's Next? {#future}
 
 If you have comments, questions, or are looking to contribute, please start a

@@ -17,3 +17,4 @@ title: Awesome
 | Package        | Scope  |
 | -------------- | ------ |
 | `theme-common` | common |
+| `theme-zen`    | zen    |
