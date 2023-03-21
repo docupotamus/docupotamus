@@ -9,6 +9,8 @@ interface Props {
 export default function CodeBlockObserver({ children }: Props): JSX.Element {
     const { directCodeBlockIndexes, setDirectChildren } = useMarkdown();
 
+    // TODO(dnguyen0304): Fix performance by running only after all
+    //   '[class*="codeBlockLines"] > *' have been rendered.
     React.useEffect(() => {
         if (!ExecutionEnvironment.canUseDOM) {
             return;
