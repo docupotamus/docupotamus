@@ -44,15 +44,9 @@ declare module '@docupotamus/docusaurus-theme-common' {
 
     interface MarkdownContextValue {
         readonly directChildren: Element[];
-
-        // TODO(dnguyen0304): Investigate changing the properties below to
-        //   private.
-        readonly directCodeBlockIndexes: number[];
+        // TODO(dnguyen0304): Investigate changing to private.
         readonly setDirectChildren: React.Dispatch<React.SetStateAction<
             Element[]
-        >>;
-        readonly setDirectCodeBlockIndexes: React.Dispatch<React.SetStateAction<
-            number[]
         >>;
     }
 
@@ -77,14 +71,12 @@ declare module '@theme/docupotamus-common' {
         MarkdownContextValue,
         ToolbarContextValue
     } from '@doc8/theme-common';
-    import type CodeBlockLineType from '@theme/CodeBlock/Line';
-    import type DocItemContentType from '@theme/DocItem/Content';
+    import type CodeBlockType from '@theme/CodeBlock';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
     import type RootType from '@theme/Root';
 
-    export const CodeBlockLineDecorator: typeof CodeBlockLineType;
-    export const DocItemContentDecorator: typeof DocItemContentType;
+    export const CodeBlockDecorator: typeof CodeBlockType;
     export const DocPageLayoutDecorator: typeof DocPageLayoutType;
     export const DocPageLayoutMainDecorator: typeof DocPageLayoutMainType;
     export const RootDecorator: typeof RootType;
