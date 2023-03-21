@@ -7,7 +7,7 @@ import { useHotkeys } from 'react-hotkeys-hook';
 import useZenThemeConfig from '../../hooks/useZenThemeConfig';
 
 const CLASS_NAME_ROOT: string = 'zen_root';
-const CLASS_NAME_FOCUS: string = 'zen_focus';
+const CLASS_NAME_FOCUS: string = 'DocupotamusZen_focus';
 
 const StyledBox = styled(Box)({
     position: 'relative',
