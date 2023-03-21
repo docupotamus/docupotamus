@@ -7,14 +7,20 @@ const Context =
 
 const useContextValue = (): MarkdownContextValue => {
     const [directChildren, setDirectChildren] = React.useState<Element[]>([]);
+    const [codeBlockIndexes, setCodeBlockIndexes] =
+        React.useState<number[]>([]);
 
     return React.useMemo(
         () => ({
+            codeBlockIndexes,
             directChildren,
+            setCodeBlockIndexes,
             setDirectChildren,
         }),
         [
+            codeBlockIndexes,
             directChildren,
+            setCodeBlockIndexes,
             setDirectChildren,
         ],
     );

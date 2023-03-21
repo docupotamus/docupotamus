@@ -47,6 +47,10 @@ declare module '@docupotamus/docusaurus-theme-common' {
 
         // TODO(dnguyen0304): Investigate changing the properties below to
         //   private.
+        readonly codeBlockIndexes: number[];
+        readonly setCodeBlockIndexes: React.Dispatch<React.SetStateAction<
+            number[]
+        >>;
         readonly setDirectChildren: React.Dispatch<React.SetStateAction<
             Element[]
         >>;
