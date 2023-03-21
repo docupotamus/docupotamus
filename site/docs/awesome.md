@@ -14,8 +14,8 @@ title: Awesome
 
 - `git` Commit Message Scopes:
 
-| Package                       | Scope   |
-| ----------------------------- | ------- |
-| `theme-common`                | common  |
-| `theme-environment-variables` | env-var |
-| `theme-zen`                   | zen     |
+| Package                       | Scope   | css-namespace-project |
+| ----------------------------- | ------- | --------------------- |
+| `theme-common`                | common  |                       |
+| `theme-environment-variables` | env-var | ev                    |
+| `theme-zen`                   | zen     |                       |

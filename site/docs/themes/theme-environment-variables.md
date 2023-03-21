@@ -85,6 +85,12 @@ styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
 - `.DocupotamusEnvironmentVariable`
 
+Use the css-namespace-project convention for custom properties.
+
+```text
+ev
+```
+
 ### Example Styling
 
 Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
