@@ -120,6 +120,14 @@ document.querySelector('.DocupotamusEnvironmentVariable');
 </Tabs>
 ```
 
+## Contributing
+
+- `git` Commit Message Scope:
+
+```text
+env-var
+```
+
 ## What's Next? {#future}
 
 The roadmap includes some important feature requests such as integrating with
