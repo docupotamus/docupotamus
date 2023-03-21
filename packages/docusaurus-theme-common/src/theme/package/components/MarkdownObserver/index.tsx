@@ -7,7 +7,7 @@ interface Props {
 };
 
 export default function MarkdownObserver({ children }: Props): JSX.Element {
-    const { setDirectChildren, setCodeBlockIndexes } = useMarkdown();
+    const { setDirectChildren, setDirectCodeBlockIndexes } = useMarkdown();
 
     React.useEffect(() => {
         if (!ExecutionEnvironment.canUseDOM) {
@@ -17,7 +17,7 @@ export default function MarkdownObserver({ children }: Props): JSX.Element {
         const elements =
             Array.from(document.querySelectorAll('.theme-doc-markdown > *'));
         setDirectChildren(elements);
-        setCodeBlockIndexes(
+        setDirectCodeBlockIndexes(
             elements
                 .map(x => x.classList.contains('theme-code-block'))
                 .map((y, index) => y ? index : null)
