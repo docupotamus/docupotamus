@@ -1,7 +1,7 @@
 import {
     Action,
-    ContextValue,
-    TabIdToConfig
+    TabIdToConfig,
+    ToolbarContextValue
 } from '@doc8/theme-common';
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
@@ -19,9 +19,9 @@ const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
     return newMapping;
 };
 
-const Context = React.createContext<ContextValue | undefined>(undefined);
+const Context = React.createContext<ToolbarContextValue | undefined>(undefined);
 
-const useContextValue = (): ContextValue => {
+const useContextValue = (): ToolbarContextValue => {
     const [tabIdToConfig, dispatchTabIdToConfig] = React.useReducer(
         reducer,
         new Map(),
@@ -58,7 +58,7 @@ export const ToolbarProvider = ({ children }: Props): JSX.Element => {
     );
 };
 
-export const useToolbar = (): ContextValue => {
+export const useToolbar = (): ToolbarContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
         throw new ReactContextError('ToolbarProvider');

@@ -42,7 +42,14 @@ declare module '@docupotamus/docusaurus-theme-common' {
             newValue: Omit<TabConfig, 'tabId'>;
         }
 
-    interface ContextValue {
+    interface MarkdownContextValue {
+        readonly directChildren: Element[];
+        readonly setDirectChildren: React.Dispatch<React.SetStateAction<
+            Element[]
+        >>;
+    }
+
+    interface ToolbarContextValue {
         readonly tabIdToConfig: TabIdToConfig;
         readonly activeTabId: string;
         readonly dispatchTabIdToConfig: React.Dispatch<Action>;
@@ -59,7 +66,10 @@ declare module '@doc8/theme-common' {
 }
 
 declare module '@theme/docupotamus-common' {
-    import type { ContextValue } from '@doc8/theme-common';
+    import type {
+        MarkdownContextValue,
+        ToolbarContextValue
+    } from '@doc8/theme-common';
     import type DocItemContentType from '@theme/DocItem/Content';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
@@ -69,7 +79,8 @@ declare module '@theme/docupotamus-common' {
     export const DocPageLayoutDecorator: typeof DocPageLayoutType;
     export const DocPageLayoutMainDecorator: typeof DocPageLayoutMainType;
     export const RootDecorator: typeof RootType;
-    export const useToolbar: () => ContextValue;
+    export const useMarkdown: () => MarkdownContextValue;
+    export const useToolbar: () => ToolbarContextValue;
 }
 
 declare module '@theme/docupotamus-common/Toolbar/Entry' {

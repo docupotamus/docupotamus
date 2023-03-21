@@ -1,18 +1,12 @@
+import { MarkdownContextValue } from '@doc8/theme-common';
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
 
-interface ContextValue {
-    readonly directChildren: HTMLElement[];
-    readonly setDirectChildren: React.Dispatch<React.SetStateAction<
-        HTMLElement[]
-    >>;
-};
+const Context =
+    React.createContext<MarkdownContextValue | undefined>(undefined);
 
-const Context = React.createContext<ContextValue | undefined>(undefined);
-
-const useContextValue = (): ContextValue => {
-    const [directChildren, setDirectChildren] =
-        React.useState<HTMLElement[]>([]);
+const useContextValue = (): MarkdownContextValue => {
+    const [directChildren, setDirectChildren] = React.useState<Element[]>([]);
 
     return React.useMemo(
         () => ({
@@ -40,7 +34,7 @@ export const MarkdownProvider = ({ children }: Props): JSX.Element => {
     );
 };
 
-export const useMarkdown = (): ContextValue => {
+export const useMarkdown = (): MarkdownContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
         throw new ReactContextError('MarkdownProvider');
