@@ -15,7 +15,7 @@ all developers even _faster_.
 It bundles a minimalist design, unified add-on interface, and powerful
 built-ins - all fully interoperable with your existing site.
 
-## From Zero to Fast Hippo
+## From Zero to Hippo Hero
 
 :::tip
 In the right-docked Toolbar, open the "Task List" tab to track your progress.
