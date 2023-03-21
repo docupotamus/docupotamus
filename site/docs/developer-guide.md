@@ -54,8 +54,8 @@ npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
 ```
 
 - readonly props
-- rename to init with 1 namespace
 - if plugin, change original to init
+- rename to init with 1 namespace
 - fix React import
 
 - copy decorator and swizzle
