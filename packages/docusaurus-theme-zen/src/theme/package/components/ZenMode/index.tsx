@@ -63,6 +63,9 @@ export default function ZenMode({ children }: Props): JSX.Element {
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
+        if (!isEnabled) {
+            return;
+        }
         directChildren.forEach(element => {
             const rect = element.getBoundingClientRect();
             if (hasAnyIntersection(event.clientY, visibilityRadiusPx, rect)) {
