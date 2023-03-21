@@ -50,7 +50,7 @@ export default function Workbench(): JSX.Element {
 
     return (
         <StyledBox
-            className='DocupotamusWorkbench'
+            className='DocupotamusCommon_workbench'
             workbenchIsOpen={!!tabConfig}
         >
             {tabConfig &&

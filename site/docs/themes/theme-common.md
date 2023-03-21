@@ -100,7 +100,7 @@ We provide some stable CSS class names for robust and maintainable global layout
 styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
 - `.DocupotamusCommon_toolbar`
-- `.DocupotamusWorkbench`
+- `.DocupotamusCommon_workbench`
 
 ### Example Styling
 
@@ -122,7 +122,7 @@ document.querySelector('.DocupotamusCommon_toolbar');
 ```
 
 ```css title="CSS"
-.DocupotamusWorkbench {
+.DocupotamusCommon_workbench {
   /* The important flag is used here only for demonstration
      purposes. For production code, we recommended using a different
      approach to increase specificity. */
