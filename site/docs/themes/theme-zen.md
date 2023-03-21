@@ -15,6 +15,13 @@ main content.
 
 <!-- _keywords:_ demo -->
 
+### Common Use Cases
+
+Use this when you have particularly text-dense content.
+
+Common examples include explanations of complex, technical concepts. The focus
+helps make content more approachable and easier to follow.
+
 ## Customizing
 
 ### Configuration
