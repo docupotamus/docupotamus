@@ -22,6 +22,30 @@ Use this when you have particularly text-dense content.
 Common examples include explanations of complex, technical concepts. The focus
 helps make content more approachable and easier to follow.
 
+## Installation
+
+:::tip
+If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
+this step. You don't need to install as a standalone dependency because the
+theme is already included in the preset.
+:::
+
+:::tip
+The preset is recommended over installing the standalone dependency.
+:::
+
+```shell npm2yarn
+$ npm install --save @docupotamus/docusaurus-theme-zen
+```
+
+Then register it in your site's `docusaurus.config.js`:
+
+```js title="docusaurus.config.js"
+module.exports = {
+  themes: ['@docupotamus/docusaurus-theme-zen'],
+};
+```
+
 ## Customizing
 
 ### Configuration
