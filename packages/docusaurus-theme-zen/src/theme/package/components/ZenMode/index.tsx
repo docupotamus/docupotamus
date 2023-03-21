@@ -56,6 +56,7 @@ interface Props {
 export default function ZenMode({ children }: Props): JSX.Element {
     const { visibilityRadiusPx } = useZenThemeConfig();
     const { directChildren } = useMarkdown();
+
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
 
     const toggleIsEnabled = () => setIsEnabled(prev => !prev);
