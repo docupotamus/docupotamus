@@ -126,7 +126,7 @@ document.querySelector('.DocupotamusZen_focus');
 
 ## Contributing
 
-- `git` Commit Message Scope:
+Use the git-commit-message convention for the scope.
 
 ```text
 zen
