@@ -99,7 +99,7 @@ properties and configuration.
 We provide some stable CSS class names for robust and maintainable global layout
 styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
-- `.DocupotamusToolbar`
+- `.DocupotamusCommon_toolbar`
 - `.DocupotamusWorkbench`
 
 ### Example Styling
@@ -113,7 +113,7 @@ out!
 ```
 
 ```javascript title="JavaScript"
-document.querySelector('.DocupotamusToolbar');
+document.querySelector('.DocupotamusCommon_toolbar');
 ```
 
 ```mdx-code-block
