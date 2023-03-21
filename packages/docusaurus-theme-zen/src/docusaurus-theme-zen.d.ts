@@ -1,3 +1,5 @@
+/// <reference types="@docupotamus/docusaurus-theme-common" />
+
 declare module '@docupotamus/docusaurus-theme-zen' {
     interface PluginOptions {
         readonly swizzleIsEnabled: boolean;

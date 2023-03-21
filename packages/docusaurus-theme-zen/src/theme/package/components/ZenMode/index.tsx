@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
+import { useMarkdown } from '@theme/docupotamus-common';
 import clsx from 'clsx';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
@@ -54,16 +55,15 @@ interface Props {
 
 export default function ZenMode({ children }: Props): JSX.Element {
     const { visibilityRadiusPx } = useZenThemeConfig();
+    const { directChildren } = useMarkdown();
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
-
-    const markdownElements = React.useRef<Array<HTMLElement>>([]);
 
     const toggleIsEnabled = () => setIsEnabled(prev => !prev);
 
     const handleMouseMove = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>,
     ) => {
-        markdownElements.current.forEach(element => {
+        directChildren.forEach(element => {
             const rect = element.getBoundingClientRect();
             if (hasAnyIntersection(event.clientY, visibilityRadiusPx, rect)) {
                 element.classList.add(CLASS_NAME_FOCUS);
@@ -91,15 +91,6 @@ export default function ZenMode({ children }: Props): JSX.Element {
             keyup: true,
         },
     );
-
-    React.useEffect(() => {
-        // TODO(dnguyen0304): Fix not updating on location change.
-        // TODO(dnguyen0304): Fix not including code blocks with environment
-        //   variables.
-        // TODO(dnguyen0304): Investigate refactoring to use getElementAll.
-        markdownElements.current = Array.from(
-            document.querySelectorAll('.theme-doc-markdown > *'));
-    }, []);
 
     return (
         <StyledBox
