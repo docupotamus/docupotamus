@@ -85,6 +85,7 @@ export default function ZenMode({ children }: Props): JSX.Element {
             keyup: false,
         },
     );
+
     useHotkeys(
         "shift",
         toggleIsEnabled,
