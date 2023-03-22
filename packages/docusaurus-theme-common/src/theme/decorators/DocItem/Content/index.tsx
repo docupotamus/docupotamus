@@ -11,6 +11,10 @@ export default function DocItemContentDecorator(
     }: Props
 ): JSX.Element {
     return (
+        // Calling MarkdownObserver again here is a fallback for DocItem's
+        // that do not contain any code blocks. CodeBlock is always rendered
+        // after DocItem so a correct overwrite of the context is guaranteed.
+        //
         // TODO(dnguyen0304): Investigate including only if there are no code
         //   blocks.
         <MarkdownObserver>
