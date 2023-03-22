@@ -26,6 +26,9 @@ declare module '@doc8/plugin-content-docs-src-hook' {
 }
 
 declare module '@theme/docupotamus-plugin-content-docs-src-hook' {
+    import type { ContextValue } from '@doc8/plugin-content-docs-src-hook';
+
+    export const useRawMarkdown: () => ContextValue;
 }
 
 declare module '@docusaurus/plugin-content-docs' {
