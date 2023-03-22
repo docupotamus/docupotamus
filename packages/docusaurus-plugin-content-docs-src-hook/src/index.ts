@@ -24,13 +24,21 @@ export default async function pluginContentDocsSrcHook(
                 );
             }
 
+            const newestVersion = content.loadedVersions[0];
+            if (newestVersion === undefined) {
+                throw new Error('No versions found.');
+            }
             const { siteDir } = context;
             const { docLayoutComponent } = options;
 
             const pathToContent: { [path: string]: string } = {};
 
-            for (let i = 0; i < content.loadedVersions[0].docs.length; i++) {
-                const doc = content.loadedVersions[0].docs[i];
+            for (let i = 0; i < newestVersion.docs.length; ++i) {
+                const doc = newestVersion.docs[i];
+                // This should never happen.
+                if (doc === undefined) {
+                    throw new Error('Unexpected bad state.');
+                }
                 const resolvedPath = doc.source.replace(
                     ALIASED_SITE_PATH_PREFIX,
                     siteDir,
