@@ -1,4 +1,4 @@
-import { type AllPluginOptions } from '@doc8/plugin-content-docs-src-hook';
+import type { AllPluginOptions } from '@doc8/plugin-content-docs-src-hook';
 import pluginContentDocs, {
     type LoadedContent
 } from '@docusaurus/plugin-content-docs';
