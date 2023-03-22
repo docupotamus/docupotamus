@@ -78,7 +78,12 @@ export default function preset(
     const plugins: PluginConfig[] = [];
     if (docs !== false) {
         plugins.push(makePluginConfig(
-            '@docupotamus/docusaurus-plugin-content-docs-src-hook', docs));
+            '@docupotamus/docusaurus-plugin-content-docs-src-hook',
+            {
+                ...docs,
+                swizzleIsEnabled: false
+            },
+        ));
     }
     if (blog !== false) {
         plugins.push(makePluginConfig('@docusaurus/plugin-content-blog', blog));
