@@ -9,8 +9,8 @@ interface Props {
 export default function MarkdownObserver({ children }: Props): JSX.Element {
     const { _internalSetDirectChildren } = useMarkdown();
 
-    // TODO(dnguyen0304): Investigate fixing performance from O(codeBlockCount)
-    //   to O(1).
+    // TODO(dnguyen0304): Investigate fixing performance from
+    //   O(codeBlockCount * lineCount) to O(1).
     React.useEffect(() => {
         if (!ExecutionEnvironment.canUseDOM) {
             return;
