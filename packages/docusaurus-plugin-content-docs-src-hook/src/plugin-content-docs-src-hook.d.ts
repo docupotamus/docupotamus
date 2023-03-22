@@ -2,16 +2,16 @@
 
 declare module '@docupotamus/docusaurus-plugin-content-docs-src-hook' {
     import type {
-        Options as OptionsBase,
-        PluginOptions as PluginOptionsBase
+        Options as BaseOptions,
+        PluginOptions as BasePluginOptions
     } from '@docusaurus/plugin-content-docs';
 
-    interface PluginOptions extends PluginOptionsBase {
+    interface PluginOptions extends BasePluginOptions {
         readonly swizzleIsEnabled: boolean;
     }
 
     // This is a plugin-content-docs convention.
-    interface Options extends OptionsBase {
+    interface Options extends BaseOptions {
         readonly swizzleIsEnabled: boolean;
     }
 
