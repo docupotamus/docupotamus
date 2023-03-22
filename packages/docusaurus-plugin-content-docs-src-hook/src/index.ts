@@ -1,7 +1,6 @@
 import { type PluginOptions } from '@doc8/plugin-content-docs-src-hook';
 import pluginContentDocs, {
-    type LoadedContent,
-    type PluginOptions as BasePluginOptions
+    type LoadedContent
 } from '@docusaurus/plugin-content-docs';
 import type { LoadContext, Plugin, RouteConfig } from '@docusaurus/types';
 import { docuHash } from '@docusaurus/utils';
@@ -12,9 +11,9 @@ const ALIASED_SITE_PATH_PREFIX: string = '@site';
 
 export default async function pluginContentDocsSrcHook(
     context: LoadContext,
-    options: BasePluginOptions & PluginOptions,
+    options: PluginOptions,
 ): Promise<Plugin<LoadedContent>> {
-    const { swizzleIsEnabled = true, ...restOptions } = options;
+    const { swizzleIsEnabled, ...restOptions } = options;
 
     const wrappedPlugin = await pluginContentDocs(context, restOptions);
 
@@ -145,6 +144,6 @@ export default async function pluginContentDocsSrcHook(
     };
 };
 
-export { validateOptions } from '@docusaurus/plugin-content-docs';
+export { validateOptions } from './options';
 
 export const getSwizzleComponentList = (): string[] => [];
