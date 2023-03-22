@@ -1,8 +1,7 @@
-import type {
-    LoadedContent,
-    PluginOptions
+import pluginContentDocs, {
+    type LoadedContent,
+    type PluginOptions
 } from '@docusaurus/plugin-content-docs';
-import pluginContentDocs from '@docusaurus/plugin-content-docs';
 import type { LoadContext, Plugin, RouteConfig } from '@docusaurus/types';
 import { docuHash } from '@docusaurus/utils';
 import fs from 'fs/promises';
