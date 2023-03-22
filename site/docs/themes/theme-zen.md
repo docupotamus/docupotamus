@@ -8,6 +8,8 @@ import DemoGif from '@site/static/gifs/demo-zen.gif';
 import ApiTable from '@site/src/components/ApiTable';
 import FlexImage from '@site/src/components/FlexImage';
 
+<!-- If this changes, then change: README.md -->
+
 A Docusaurus theme to quiet the distractions and bring the zen.
 
 <FlexImage alt="Demo GIF" src={DemoGif} />

@@ -6,6 +6,8 @@ sidebar_position: 15
 
 import { TaskList } from '@theme/docupotamus-task-list';
 
+<!-- If this changes, then change: README.md -->
+
 A Docusaurus theme that parameterizes code blocks.
 
 ## Try It Out

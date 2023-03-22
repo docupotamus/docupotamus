@@ -7,6 +7,8 @@ sidebar_position: 20
 import ApiTable from '@site/src/components/ApiTable';
 import { TaskList } from '@theme/docupotamus-task-list';
 
+<!-- If this changes, then change: README.md -->
+
 A Docusaurus theme that converts plain lists into beautiful, interactive task
 lists.
 

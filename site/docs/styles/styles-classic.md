@@ -7,6 +7,8 @@ sidebar_position: 1
 import ApiTable from '@site/src/components/ApiTable';
 import Demo from '@site/src/components/StylesClassicDemo';
 
+<!-- If this changes, then change: README.md -->
+
 A minimalist Docusaurus design that embraces soft, subtle details while
 remaining superbly functional and readable.
 

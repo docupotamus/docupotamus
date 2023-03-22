@@ -7,6 +7,8 @@ sidebar_position: 10
 import ApiTable from '@site/src/components/ApiTable';
 import { TaskList } from '@theme/docupotamus-task-list';
 
+<!-- If this changes, then change: README.md -->
+
 A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
 ### Common Use Cases
