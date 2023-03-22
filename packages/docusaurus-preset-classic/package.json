@@ -5,6 +5,7 @@
     "main": "lib/index.js",
     "types": "src/docusaurus-preset-classic.d.ts",
     "dependencies": {
+        "@docupotamus/docusaurus-plugin-content-docs-src-hook": "0.5.0",
         "@docupotamus/docusaurus-styles-classic": "^0.6.0",
         "@docupotamus/docusaurus-theme-common": "0.2.0",
         "@docupotamus/docusaurus-theme-environment-variables": "0.1.0",
