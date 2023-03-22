@@ -1,6 +1,7 @@
+import { type PluginOptions } from '@doc8/plugin-content-docs-src-hook';
 import pluginContentDocs, {
     type LoadedContent,
-    type PluginOptions
+    type PluginOptions as BasePluginOptions
 } from '@docusaurus/plugin-content-docs';
 import type { LoadContext, Plugin, RouteConfig } from '@docusaurus/types';
 import { docuHash } from '@docusaurus/utils';
@@ -11,9 +12,11 @@ const ALIASED_SITE_PATH_PREFIX: string = '@site';
 
 export default async function pluginContentDocsSrcHook(
     context: LoadContext,
-    options: PluginOptions,
+    options: BasePluginOptions & PluginOptions,
 ): Promise<Plugin<LoadedContent>> {
-    const wrappedPlugin = await pluginContentDocs(context, options);
+    const { swizzleIsEnabled = true, ...restOptions } = options;
+
+    const wrappedPlugin = await pluginContentDocs(context, restOptions);
 
     return {
         async contentLoaded({ content, allContent, actions }) {
