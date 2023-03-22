@@ -102,5 +102,5 @@ d o c u p o t a m u s
 ## What's Next?
 
 Good first places to start are learning more about the [differences between Docupotamus and Docusaurus](./presets/preset-classic.md#docusaurus-differences)
-or [creating a task list](./themes/theme-task-list#example-usage) just like the
-one on this page. Try it out!
+or [creating an environment variable](./themes/theme-environment-variables#example-usage)
+just like the one on this page. Try it out!
