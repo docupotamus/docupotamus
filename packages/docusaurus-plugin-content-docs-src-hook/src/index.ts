@@ -122,3 +122,5 @@ export default async function pluginContentDocsSrcHook(
 };
 
 export { validateOptions } from '@docusaurus/plugin-content-docs';
+
+export const getSwizzleComponentList = (): string[] => [];
