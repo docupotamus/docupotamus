@@ -47,3 +47,13 @@ declare module '@docusaurus/plugin-content-docs' {
         }: OptionValidationContext<Options, PluginOptions>
     ): PluginOptions;
 }
+
+declare module '@theme/DocPage/Layout' {
+    import type { RawContent } from '@doc8/plugin-content-docs-src-hook';
+
+    export interface Props {
+        readonly rawContent: RawContent;
+    }
+
+    export default function DocPageLayout(props: Props): JSX.Element;
+}
