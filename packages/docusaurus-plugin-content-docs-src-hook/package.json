@@ -3,7 +3,7 @@
     "version": "0.5.0",
     "description": "Docusaurus content docs src hook plugin.",
     "main": "lib/index.js",
-    "types": "src/docusaurus-plugin-content-docs-src-hook.d.ts",
+    "types": "src/plugin-content-docs-src-hook.d.ts",
     "dependencies": {
         "@docusaurus/plugin-content-docs": "^2.2.x",
         "@docusaurus/utils": "^2.2.x"
