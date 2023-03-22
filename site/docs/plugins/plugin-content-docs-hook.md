@@ -2,7 +2,7 @@
 sidebar_position: 10
 ---
 
-# 📦 plugin-content-docs-hook
+# 📦 plugin-content-docs-src-hook
 
 <!-- If this changes, then change: README.md -->
 
