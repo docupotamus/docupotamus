@@ -4,8 +4,6 @@ declare module '@docupotamus/docusaurus-plugin-content-docs-src-hook' {
     interface PluginOptions {
         readonly swizzleIsEnabled: boolean;
     }
-
-    interface PluginContentDocsSrcHookThemeConfig { }
 }
 
 declare module '@docupotamus/plugin-content-docs-src-hook' {
