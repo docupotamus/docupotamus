@@ -7,6 +7,8 @@ type Props = Readonly<WrapperProps<typeof DocPageType> & {
     children: React.ReactNode;
 }>;
 
+// Do not move to DocPage/Layout. While many existing doc8 plugins and themes
+// swizzle DocPage/Layout, the rawContent prop is only available to DocPage.
 export default function DocPageDecorator(
     {
         rawContent,
