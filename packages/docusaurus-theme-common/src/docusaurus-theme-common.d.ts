@@ -70,13 +70,13 @@ declare module '@theme/docupotamus-common' {
         MarkdownContextValue,
         ToolbarContextValue
     } from '@doc8/theme-common';
-    import type CodeBlockType from '@theme/CodeBlock';
+    import type CodeBlockLineType from '@theme/CodeBlock/Line';
     import type DocItemContentType from '@theme/DocItem/Content';
     import type DocPageLayoutType from '@theme/DocPage/Layout';
     import type DocPageLayoutMainType from '@theme/DocPage/Layout/Main';
     import type RootType from '@theme/Root';
 
-    export const CodeBlockDecorator: typeof CodeBlockType;
+    export const CodeBlockLineDecorator: typeof CodeBlockLineType;
     export const DocItemContentDecorator: typeof DocItemContentType;
     export const DocPageLayoutDecorator: typeof DocPageLayoutType;
     export const DocPageLayoutMainDecorator: typeof DocPageLayoutMainType;
