@@ -5,6 +5,7 @@
     "main": "lib/index.js",
     "types": "src/plugin-content-docs-src-hook.d.ts",
     "dependencies": {
+        "@docupotamus/docusaurus-lib-common": "0.2.0",
         "@docusaurus/plugin-content-docs": "^2.2.x",
         "@docusaurus/utils": "^2.2.x"
     },

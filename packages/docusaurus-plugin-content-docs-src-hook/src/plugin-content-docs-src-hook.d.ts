@@ -4,6 +4,17 @@ declare module '@docupotamus/docusaurus-plugin-content-docs-src-hook' {
     interface PluginOptions {
         readonly swizzleIsEnabled: boolean;
     }
+
+    interface RawContent {
+        readonly [key: string]: string;
+    }
+
+    interface ContextValue {
+        readonly rawContent: RawContent;
+        readonly setRawContent: React.Dispatch<React.SetStateAction<
+            RawContent
+        >>;
+    }
 }
 
 declare module '@docupotamus/plugin-content-docs-src-hook' {
