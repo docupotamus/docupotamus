@@ -1,11 +1,11 @@
 import type { WrapperProps } from '@docusaurus/types';
-import type DocPageLayoutType from '@theme/DocPage/Layout';
+import type DocPageType from '@theme/DocPage';
 import * as React from 'react';
-import { RawContentProvider } from '../../../package/contexts/rawContent';
+import { RawContentProvider } from '../../package/contexts/rawContent';
 
-type Props = Readonly<WrapperProps<typeof DocPageLayoutType>>;
+type Props = Readonly<WrapperProps<typeof DocPageType>>;
 
-export default function DocPageLayoutDecorator(
+export default function DocPageDecorator(
     {
         rawContent,
         children,

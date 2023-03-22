@@ -33,9 +33,9 @@ declare module '@doc8/plugin-content-docs-src-hook' {
 
 declare module '@theme/docupotamus-plugin-content-docs-src-hook' {
     import type { ContextValue } from '@doc8/plugin-content-docs-src-hook';
-    import type DocPageLayoutType from '@theme/DocPage/Layout';
+    import type DocPageType from '@theme/DocPage';
 
-    export const DocPageLayoutDecorator: typeof DocPageLayoutType;
+    export const DocPageDecorator: typeof DocPageType;
     export const useRawMarkdown: () => ContextValue;
 }
 
@@ -54,12 +54,12 @@ declare module '@docusaurus/plugin-content-docs' {
     ): PluginOptions;
 }
 
-declare module '@theme/DocPage/Layout' {
+declare module '@theme/DocPage' {
     import type { RawContent } from '@doc8/plugin-content-docs-src-hook';
 
     export interface Props {
         readonly rawContent: RawContent;
     }
 
-    export default function DocPageLayout(props: Props): JSX.Element;
+    export default function DocPage(props: Props): JSX.Element;
 }
