@@ -9,6 +9,50 @@ sidebar_position: 10
 A Docusaurus plugin that makes the raw Markdown content available through a
 React hook.
 
+## Installation
+
+:::tip
+If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
+this step. You don't need to install as a standalone dependency because the
+plugin is already included in the preset.
+:::
+
+:::tip
+The preset is recommended over installing the standalone dependency.
+:::
+
+```shell npm2yarn
+$ npm install --save @docupotamus/docusaurus-plugin-content-docs-src-hook
+```
+
+Then register it in your site's `docusaurus.config.js`:
+
+```js title="docusaurus.config.js"
+module.exports = {
+    plugins: [
+        [
+            // highlight-next-line
+            '@docupotamus/docusaurus-plugin-content-docs-src-hook',
+            {
+                // Add your other @docusaurus/plugin-content-docs
+                // settings here.
+                ...
+            },
+        ],
+    ],
+    presets: [
+        [
+            'classic',
+            ({
+                // highlight-next-line
+                docs: false,
+                ...
+            }),
+        ],
+    ],
+};
+```
+
 ## Contributing
 
 Use the git-commit-message convention for the scope.
@@ -29,34 +73,7 @@ npm install --save \
 collision from multiple instances, remove `plugin-content-docs` from the preset
 and add `docusaurus-plugin-editor` as a plugin.
 
-Get the editUrl. This /blob/main path is required.
-
-```js title="docusaurus.config.js"
-const config = {
-    plugins: [
-        [
-            '@docupotamus/docusaurus-plugin-editor',
-            {
-                // highlight-next-line
-                editUrl: 'https://github.com/dnguyen0304/fake-docusaurus-site/blob/main/',
-                // Include your remaining @docusaurus/plugin-content-docs
-                // settings here.
-                sidebarPath: require.resolve('./sidebars.js'),
-            },
-        ],
-    ],
-    presets: [
-        [
-            'classic',
-            ({
-                // highlight-next-line
-                docs: false,
-                ...
-            }),
-        ],
-    ],
-}
-```
+Get the editUrl. This /blob/main path is required? Not sure what this is for.
 
 ## Lambda
 
