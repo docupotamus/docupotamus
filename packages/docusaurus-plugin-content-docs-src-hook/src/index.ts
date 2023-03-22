@@ -13,9 +13,9 @@ export default async function pluginContentDocsSrcHook(
     context: LoadContext,
     options: PluginOptions,
 ): Promise<Plugin<LoadedContent>> {
-    const { swizzleIsEnabled, ...restOptions } = options;
+    const { swizzleIsEnabled, ...optionsBase } = options;
 
-    const wrappedPlugin = await pluginContentDocs(context, restOptions);
+    const wrappedPlugin = await pluginContentDocs(context, optionsBase);
 
     return {
         getThemePath() {
