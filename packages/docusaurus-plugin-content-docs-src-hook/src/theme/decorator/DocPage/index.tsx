@@ -3,7 +3,9 @@ import type DocPageType from '@theme/DocPage';
 import * as React from 'react';
 import { RawContentProvider } from '../../package/contexts/rawContent';
 
-type Props = Readonly<WrapperProps<typeof DocPageType>>;
+type Props = Readonly<WrapperProps<typeof DocPageType> & {
+    children: React.ReactNode;
+}>;
 
 export default function DocPageDecorator(
     {
