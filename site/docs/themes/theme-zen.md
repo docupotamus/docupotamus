@@ -4,9 +4,13 @@ sidebar_position: 50
 
 # 📦 theme-zen
 
+import DemoGif from '@site/static/gifs/demo-zen.gif';
 import ApiTable from '@site/src/components/ApiTable';
+import FlexImage from '@site/src/components/FlexImage';
 
 A Docusaurus theme to quiet the distractions and bring the zen.
+
+<FlexImage alt="Demo GIF" src={DemoGif} />
 
 ## Try It Out
 
