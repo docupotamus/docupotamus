@@ -2,7 +2,12 @@
 sidebar_position: 10
 ---
 
-# 📦 plugin-editor
+# 📦 plugin-content-docs-hook
+
+<!-- If this changes, then change: README.md -->
+
+A Docusaurus plugin that makes the raw Markdown content available through a
+React hook.
 
 <!-- ```bash
 npm install --save \
