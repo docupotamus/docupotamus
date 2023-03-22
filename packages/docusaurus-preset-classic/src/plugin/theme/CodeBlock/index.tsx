@@ -1,5 +1,5 @@
 import type { WrapperProps } from '@docusaurus/types';
-import CodeBlock from '@theme-init/CodeBlock';
+import CodeBlockInit from '@theme-init/CodeBlock';
 import type CodeBlockType from '@theme/CodeBlock';
 import {
     CodeBlockDecorator as CommonDecorator
@@ -10,8 +10,8 @@ type Props = Readonly<WrapperProps<typeof CodeBlockType>>;
 
 export default function CodeBlockWrapper(props: Props): JSX.Element {
     return (
-        <CommonDecorator{...props}>
-            <CodeBlock {...props} />
-        </CommonDecorator >
+        <CommonDecorator {...props}>
+            <CodeBlockInit {...props} />
+        </CommonDecorator>
     );
 };
