@@ -9,6 +9,14 @@ sidebar_position: 10
 A Docusaurus plugin that makes the raw Markdown content available through a
 React hook.
 
+## Contributing
+
+Use the git-commit-message convention for the scope.
+
+```text
+src-hook
+```
+
 <!-- ```bash
 npm install --save \
     @docupotamus/docusaurus-plugin-editor \
