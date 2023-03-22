@@ -5,11 +5,11 @@ declare module '@docupotamus/docusaurus-plugin-content-docs-src-hook' {
         PluginOptions as BasePluginOptions
     } from '@docusaurus/plugin-content-docs';
 
-    interface HookPluginOptions {
+    interface SrcHookPluginOptions {
         readonly swizzleIsEnabled: boolean;
     }
 
-    type AllPluginOptions = BasePluginOptions & HookPluginOptions;
+    type AllPluginOptions = BasePluginOptions & SrcHookPluginOptions;
 
     interface RawContent {
         readonly [key: string]: string;

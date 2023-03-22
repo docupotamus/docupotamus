@@ -1,6 +1,6 @@
 import type {
     AllPluginOptions,
-    HookPluginOptions
+    SrcHookPluginOptions
 } from '@doc8/plugin-content-docs-src-hook';
 import {
     validateOptions as baseValidateOptions,
@@ -10,12 +10,12 @@ import {
 import type { OptionValidationContext, Validate } from '@docusaurus/types';
 import { Joi } from '@docusaurus/utils-validation';
 
-const DEFAULT_OPTIONS: HookPluginOptions = {
+const DEFAULT_OPTIONS: SrcHookPluginOptions = {
     swizzleIsEnabled: true,
 };
 
 // TODO(dnguyen0304): Investigate missing labels.
-const OptionsSchema = Joi.object<HookPluginOptions>({
+const OptionsSchema = Joi.object<SrcHookPluginOptions>({
     swizzleIsEnabled: Joi
         .boolean()
         .default(DEFAULT_OPTIONS.swizzleIsEnabled),
@@ -33,7 +33,7 @@ export const validateOptions = (
     const validateBase = validateUntyped as
         Validate<BaseOptions, BasePluginOptions>;
     const validateSubset = validateUntyped as
-        Validate<HookPluginOptions, HookPluginOptions>;
+        Validate<SrcHookPluginOptions, SrcHookPluginOptions>;
 
     const normalizedOptionsBase = baseValidateOptions({
         validate: validateBase,
