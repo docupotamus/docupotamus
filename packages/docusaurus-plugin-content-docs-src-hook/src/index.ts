@@ -19,6 +19,20 @@ export default async function pluginContentDocsSrcHook(
     const wrappedPlugin = await pluginContentDocs(context, restOptions);
 
     return {
+        getThemePath() {
+            if (swizzleIsEnabled) {
+                return '../lib/theme/swizzle';
+            }
+            return '../lib/theme/public';
+        },
+
+        getTypeScriptThemePath() {
+            if (swizzleIsEnabled) {
+                return '../src/theme/swizzle';
+            }
+            return '../src/theme/public';
+        },
+
         async contentLoaded({ content, allContent, actions }) {
             if (content.loadedVersions.length > 1) {
                 throw new Error(
