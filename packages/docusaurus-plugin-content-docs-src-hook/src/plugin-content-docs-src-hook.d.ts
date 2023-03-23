@@ -36,7 +36,7 @@ declare module '@theme/docupotamus-plugin-content-docs-src-hook' {
     import type DocPageType from '@theme/DocPage';
 
     export const DocPageDecorator: typeof DocPageType;
-    export const useRawMarkdown: () => ContextValue;
+    export const useRawContent: () => ContextValue;
 }
 
 declare module '@docusaurus/plugin-content-docs' {
