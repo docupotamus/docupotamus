@@ -123,9 +123,9 @@ Chair -> FourLeggedChair -> WoodChair
 ```js title="docusaurus.config.js"
 module.exports = {
   themes: [
-    '@docupotamus/docusaurus-theme-chair',
-    '@docupotamus/docusaurus-theme-chair-four-legged',
-    '@docupotamus/docusaurus-theme-chair-wood',
+    '@docusaurus/theme-chair',
+    '@docusaurus/theme-chair-four-legged',
+    '@docusaurus/theme-chair-wood',
   ],
 };
 ```
