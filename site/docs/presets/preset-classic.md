@@ -14,8 +14,11 @@ It provides lightweight, centralized configuration for the following plugins and
 themes:
 
 - [`@docupotamus/docusaurus-styles-classic`](../styles/styles-classic.md)
+- [`@docupotamus/docusaurus-plugin-content-docs-src-hook`](../plugins/plugin-content-docs-src-hook.md)
 - [`@docupotamus/docusaurus-theme-common`](../themes/theme-common.md)
+- [`@docupotamus/docusaurus-environment-variables`](../themes/theme-environment-variables.md)
 - [`@docupotamus/docusaurus-theme-task-list`](../themes/theme-task-list.md)
+- [`@docupotamus/docusaurus-theme-zen`](../themes/theme-zen.md)
 - [`@docusaurus/preset-classic`](#docusaurus-differences)
 
 ## Getting Started
