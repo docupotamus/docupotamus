@@ -151,19 +151,26 @@ features from all implementations.
 
 ### Configuration
 
-Accepted fields:
+Accepted plugin option fields:
+
+<!-- Use HTML because ApiTable does not yet support links with anchors using the
+Markdown syntax. -->
 
 ```mdx-code-block
 <ApiTable>
 ```
 
-| Name   | Type     | Default | Description                              |
-| ------ | -------- | ------- | ---------------------------------------- |
-| `TODO` | `number` | `100`   | Radius around the mouse that is visible. |
+| Name  | Type                       | Default     | Description                                                                                                                                                                   |
+| ----- | -------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `zen` | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-zen#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-zen`. Use `false` to disable the plugin. |
 
 ```mdx-code-block
 </ApiTable>
 ```
+
+:::note
+No theme config settings are yet supported.
+:::
 
 ### Example Configuration
 
@@ -179,10 +186,12 @@ module.exports = {
     [
       '@docupotamus/docusaurus-preset-classic',
       {
-        // Pass to @docusaurus/theme-classic.
+        // Pass plugin options to @docusaurus/theme-classic.
         theme: {
           customCss: [require.resolve('./src/css/custom.css')],
         },
+        // Pass plugin options to @docupotamus/theme-zen.
+        zen: false,
       },
     ],
   ],
