@@ -88,16 +88,12 @@ your consumer component is a descendant.
 
 #### Call the `useRawContent` hook
 
-```tsx title="Example/DocItem/index.tsx"
+```jsx title="Example/DocItem/index.jsx"
 import * as React from 'react';
 import DocItem from '@theme-original/DocItem';
-import type DocItemType from '@theme/DocItem';
-import type { WrapperProps } from '@docusaurus/types';
 import { useRawContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
 
-type Props = WrapperProps<typeof DocItemType>;
-
-export default function DocItemWrapper(props: Props): JSX.Element {
+export default function DocItemWrapper(props) {
   // highlight-next-line
   const { rawContent } = useRawContent();
 
@@ -107,11 +103,11 @@ export default function DocItemWrapper(props: Props): JSX.Element {
 
 #### Lookup the content by location
 
-```tsx title="Example/DocItem/index.tsx"
+```jsx title="Example/DocItem/index.jsx"
 import { useLocation } from '@docusaurus/router';
 // ...
 
-export default function DocItemWrapper(props: Props): JSX.Element {
+export default function DocItemWrapper(props) {
   const { pathname } = useLocation();
   // highlight-next-line
   const { rawContent } = useRawContent();
