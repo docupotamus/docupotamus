@@ -115,10 +115,11 @@ export default function DocItemWrapper(props) {
   React.useEffect(() => {
     // highlight-next-line
     const currentContent = rawContent[pathname];
-    if (currentContent === undefined) {
-      console.log(`Content not found for path "${pathname}".`);
-    }
-    console.log(currentContent);
+    const message =
+      currentContent !== undefined
+        ? currentContent
+        : `Content not found for path "${pathname}".`;
+    console.log(message);
   }, [rawContent]);
 
   // ...
