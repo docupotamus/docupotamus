@@ -105,7 +105,21 @@ Looking for types? doc8 is written (basically) 100% in TypeScript!
 
 ### `usePathToContent`
 
-### `useLocation`
+### `useLocation` {#uselocation}
+
+- Provider Scope: `Root`
+
+Gets the current location object.
+
+:::tip
+Always use the Docupotamus `useLocation` hook instead of the Docusaurus
+`useLocation` hook.
+:::
+
+It is a backward-compatible, drop-in replacement for Docusaurus
+`@docusaurus/router`. This hook is implemented as just a thin wrapper to handle
+trailing slash logic. See ["Configuration"](#configuration) for why this is
+important.
 
 ## Customizing
 
@@ -191,11 +205,8 @@ export default function DocItemWrapper(props) {
 #### Lookup the content by location
 
 :::tip
-Always use the Docupotamus `useLocation` hook.
-
-It is a backward-compatible, drop-in replacement for Docusaurus
-`@docusaurus/router`. This hook is implemented as just a thin wrapper to handle
-trailing slash logic.
+Always use the Docupotamus `useLocation` hook. See the
+[API reference](#uselocation) for why this is important.
 :::
 
 ```jsx title="Example/DocItem/index.jsx"
