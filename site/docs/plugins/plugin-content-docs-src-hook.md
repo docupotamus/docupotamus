@@ -86,14 +86,13 @@ raw Markdown content from the `Root` theme component.
 The `RawContentProvider` is defined in the `DocPage` theme component. Make sure
 your consumer component is a descendant.
 
-#### Call the `useRawContent` hook.
+#### Call the `useRawContent` hook
 
 ```tsx title="Example/DocItem/index.tsx"
 import * as React from 'react';
 import DocItem from '@theme-original/DocItem';
 import type DocItemType from '@theme/DocItem';
 import type { WrapperProps } from '@docusaurus/types';
-// highlight-next-line
 import { useRawContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
 
 type Props = WrapperProps<typeof DocItemType>;
@@ -103,6 +102,30 @@ export default function DocItemWrapper(props: Props): JSX.Element {
   const { rawContent } = useRawContent();
 
   return <DocItem {...props} />;
+}
+```
+
+#### Lookup the content by location
+
+```tsx title="Example/DocItem/index.tsx"
+import { useLocation } from '@docusaurus/router';
+// ...
+
+export default function DocItemWrapper(props: Props): JSX.Element {
+  const { pathname } = useLocation();
+  // highlight-next-line
+  const { rawContent } = useRawContent();
+
+  React.useEffect(() => {
+    // highlight-next-line
+    const currentContent = rawContent[pathname];
+    if (currentContent === undefined) {
+      console.log(`Content not found for path "${pathname}".`);
+    }
+    console.log(currentContent);
+  }, [rawContent]);
+
+  // ...
 }
 ```
 
