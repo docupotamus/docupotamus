@@ -4,6 +4,8 @@ sidebar_position: 10
 
 # 📦 plugin-content-docs-src-hook
 
+import { TaskList } from '@theme/docupotamus-task-list';
+
 <!-- If this changes, then change: README.md -->
 
 A Docusaurus plugin that makes the raw Markdown content available through a
@@ -69,6 +71,26 @@ strictly only extends Docusaurus `plugin-content-docs`.
 When installing as a standalone dependency (i.e. using Docusaurus
 `preset-classic`), this is why we disable `plugin-content-docs` in the preset
 options.
+
+## How-To's
+
+<!-- _keywords:_ user guides -->
+
+### Get raw Markdown content
+
+<TaskList>
+- [Prerequisite] Check your component hierarchy.
+</TaskList>
+
+#### Check your component hierarchy
+
+:::tip
+If you aren't sure, you are _probably_ okay, unless you are trying to get the
+raw Markdown content from the `Root` theme component.
+:::
+
+The `RawContentProvider` is defined in the `DocPage` theme component. Make sure
+your consumer component is a descendant.
 
 ## Contributing
 
