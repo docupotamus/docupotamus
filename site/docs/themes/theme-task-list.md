@@ -12,7 +12,12 @@ import { TaskList } from '@theme/docupotamus-task-list';
 A Docusaurus theme that converts plain lists into beautiful, interactive task
 lists.
 
-## Try It Out
+Use this when you need developers to follow a series of steps, for example with
+how to use a library or set up a development environment.
+
+## Getting Started
+
+### Try It Out
 
 :::tip
 In the right-docked Toolbar, open the "Task List" tab to track your progress!
@@ -35,13 +40,7 @@ In the right-docked Toolbar, open the "Task List" tab to track your progress!
 
 <!-- _keywords:_ demo -->
 
-### Common Use Cases
-
-Use this when you need developers to follow a series of steps, such as how to
-use your library or set up a development environment. Your developers can track
-their progress even while jumping around the page.
-
-## Installation
+### Installation
 
 :::tip
 If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
@@ -65,7 +64,7 @@ module.exports = {
 };
 ```
 
-## Example Usage
+### Example Usage
 
 ```md title="healthy-and-productive.md"
 import { TaskList } from '@theme/docupotamus-task-list';
