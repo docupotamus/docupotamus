@@ -61,9 +61,9 @@ This preset is a backward-compatible, drop-in replacement.
 
 We ❤️ Docusaurus.
 
-The presets are fully backward-compatible because Docupotamus `preset-classic`
-is implemented as just a thin convenience wrapper. It strictly only extends
-Docusaurus `preset-classic`.
+The two presets are fully backward-compatible because Docupotamus
+`preset-classic` is implemented as just a thin convenience wrapper. It strictly
+only extends Docusaurus `preset-classic`.
 
 Therefore, the Docupotamus preset includes all bundled plugins and themes you're
 used to. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic)
