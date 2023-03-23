@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box';
 import * as React from 'react';
-import useCommonThemeConfig from '../../../hooks/useCommonThemeConfig';
+import useThemeConfig from '../../../hooks/useThemeConfig';
 import Logo from './Logo';
 import styles from './styles.module.css';
 
@@ -19,7 +19,7 @@ export default function Loading(
                 durationMilli,
             },
         },
-    } = useCommonThemeConfig();
+    } = useThemeConfig();
 
     const timerId = React.useRef<number>();
 
