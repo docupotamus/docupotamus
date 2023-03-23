@@ -12,7 +12,12 @@ import Demo from '@site/src/components/SrcHookDemo';
 A Docusaurus plugin that makes the raw Markdown content available through a
 React hook.
 
-## Try It Out
+Use this when you need dynamic access to the raw Markdown content, for example
+when building an integrated editor.
+
+## Getting Started
+
+### Try It Out
 
 Here is an excerpt of this page's raw Markdown content. Note the file path is
 also available.
@@ -21,19 +26,7 @@ also available.
 
 <!-- _keywords:_ demo -->
 
-### Common Use Cases
-
-Use this when you need dynamic access to the raw Markdown content.
-
-:::info Glossary
-We refer to the access as _dynamic_. This contrasts with simply statically
-importing using the [`raw-loader`](https://docusaurus.io/docs/markdown-features/react#importing-code-snippets),
-which is insufficient for some use cases.
-:::
-
-Common examples include rich interactions such as with an integrated editor.
-
-## Installation
+### Installation
 
 :::tip
 If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
@@ -142,6 +135,12 @@ module.exports = {
 <!-- _keywords:_ user guides -->
 
 ### Get raw Markdown content
+
+:::info Glossary
+We refer to the access as _dynamic_. This contrasts with simply statically
+importing using the [`raw-loader`](https://docusaurus.io/docs/markdown-features/react#importing-code-snippets),
+which is insufficient for some use cases.
+:::
 
 #### Check your component hierarchy
 
