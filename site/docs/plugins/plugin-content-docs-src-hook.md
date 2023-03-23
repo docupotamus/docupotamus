@@ -6,6 +6,7 @@ sidebar_position: 10
 
 import ApiTable from '@site/src/components/ApiTable';
 import Demo from '@site/src/components/SrcHookDemo';
+import { TaskList } from '@theme/docupotamus-task-list';
 
 <!-- If this changes, then change: README.md -->
 
@@ -135,6 +136,12 @@ module.exports = {
 <!-- _keywords:_ user guides -->
 
 ### Get raw Markdown content
+
+<TaskList>
+- [Prerequisite] Check your component hierarchy.
+- Call the `usePathToContent` hook.
+- Lookup the content by location.
+</TaskList>
 
 :::info Glossary
 We refer to the access as _dynamic_. This contrasts with simply statically
