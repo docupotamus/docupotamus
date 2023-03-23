@@ -2,3 +2,4 @@
 // must also be exported from '../../swizzle/docupotamus-*'.
 export { default as DocPageDecorator } from '../../decorator/DocPage';
 export { usePathToContent } from '../../package/contexts/pathToContent';
+export { useLocation } from '../../package/contexts/router';
