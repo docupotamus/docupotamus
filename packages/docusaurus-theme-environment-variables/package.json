@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "description": "Docusaurus environment variables UI component.",
     "main": "lib/index.js",
-    "types": "src/docusaurus-theme-environment-variables.d.ts",
+    "types": "src/theme-environment-variables.d.ts",
     "dependencies": {
         "@docupotamus/docusaurus-lib-common": "0.2.0",
         "@docusaurus/utils-validation": "^2.2.x",
