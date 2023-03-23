@@ -3,7 +3,7 @@ declare module '@docupotamus/docusaurus-theme-common' {
         readonly swizzleIsEnabled: boolean;
     }
 
-    interface CommonThemeConfig {
+    interface ThemeConfig {
         readonly debug: {
             readonly loading: {
                 readonly isEnabled: boolean;

@@ -1,4 +1,4 @@
-import type { CommonThemeConfig } from '@doc8/theme-common';
+import type { ThemeConfig as ThemeConfigExtension } from '@doc8/theme-common';
 import type {
     ThemeConfig,
     ThemeConfigValidationContext
@@ -7,11 +7,11 @@ import { Joi } from '@docusaurus/utils-validation';
 
 declare module '@docusaurus/types' {
     interface ThemeConfig {
-        docupotamusCommon: CommonThemeConfig;
+        docupotamusCommon: ThemeConfigExtension;
     }
 };
 
-const DEFAULT_THEME_CONFIG: CommonThemeConfig = {
+const DEFAULT_THEME_CONFIG: ThemeConfigExtension = {
     debug: {
         loading: {
             isEnabled: true,
