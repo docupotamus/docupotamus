@@ -225,6 +225,10 @@ const StyledBox = styled(Box)({
 
 - **markdown-admonition-tldr**: Prefer using the `info` admonition for TL:DR's.
 
+- **markdown-code-block-line-length**: Use a maximum line length of 69
+  characters, inclusive, for code blocks. Code blocks do not have word wrap on
+  overflow.
+
 - **markdown-heading-imperative**: Headings that are imperative sentences use
   sentence casing. Do not use title casing. For example, "Do a thing" and not
   "Do a Thing".
