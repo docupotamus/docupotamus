@@ -1,0 +1,1 @@
+/// <reference types="@docupotamus/docusaurus-plugin-content-docs-src-hook" />

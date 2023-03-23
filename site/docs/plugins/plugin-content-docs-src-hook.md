@@ -5,11 +5,21 @@ sidebar_position: 10
 # 📦 plugin-content-docs-src-hook
 
 import ApiTable from '@site/src/components/ApiTable';
+import Demo from '@site/src/components/SrcHookDemo';
 
 <!-- If this changes, then change: README.md -->
 
 A Docusaurus plugin that makes the raw Markdown content available through a
 React hook.
+
+## Try It Out
+
+Here is an excerpt of this page's raw Markdown content. Note the file path is
+also available.
+
+<Demo/>
+
+<!-- _keywords:_ demo -->
 
 ### Common Use Cases
 
