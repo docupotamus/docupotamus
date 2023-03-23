@@ -1,8 +1,6 @@
 /// <reference types="@docusaurus/theme-classic" />
 
 declare module '@docupotamus/docusaurus-theme-environment-variables' {
-    interface PluginOptions { }
-
     // TODO(dnguyen0304): Investigate adding isRequired.
     interface Variable {
         readonly name: string;
