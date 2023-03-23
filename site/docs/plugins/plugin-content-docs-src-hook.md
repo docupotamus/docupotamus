@@ -34,8 +34,8 @@ module.exports = {
             // highlight-next-line
             '@docupotamus/docusaurus-plugin-content-docs-src-hook',
             {
-                // Add your other @docusaurus/plugin-content-docs
-                // settings here.
+                // Add your @docusaurus/plugin-content-docs settings
+                // originally in the preset here.
                 ...
             },
         ],
@@ -44,6 +44,7 @@ module.exports = {
         [
             'classic',
             ({
+                // See "Docusaurus Differences" for why this is disabled.
                 // highlight-next-line
                 docs: false,
                 ...
@@ -52,6 +53,22 @@ module.exports = {
     ],
 };
 ```
+
+## Concepts
+
+### Docusaurus Differences
+
+:::info tl;dr
+This plugin is a backward-compatible, drop-in replacement.
+:::
+
+The two plugins are fully backward-compatible because Docupotamus
+`plugin-content-docs-src-hook` is implemented as just a thin wrapper. It
+strictly only extends Docusaurus `plugin-content-docs`.
+
+When installing as a standalone dependency (i.e. using Docusaurus
+`preset-classic`), this is why we disable `plugin-content-docs` in the preset
+options.
 
 ## Contributing
 
@@ -75,10 +92,6 @@ npm install --save \
 ```
 
 ### Quickstart
-
-`docusaurus-plugin-editor` extends `plugin-content-docs`. Therefore, to avoid a
-collision from multiple instances, remove `plugin-content-docs` from the preset
-and add `docusaurus-plugin-editor` as a plugin.
 
 Get the editUrl. This /blob/main path is required? Not sure what this is for.
 
