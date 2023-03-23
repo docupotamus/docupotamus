@@ -1,7 +1,7 @@
 import type { TaskListThemeConfig } from '@doc8/theme-task-list';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
-export default function useTaskListThemeConfig(): TaskListThemeConfig {
+export default function useThemeConfig(): TaskListThemeConfig {
     return (
         useDocusaurusContext()
             .siteConfig

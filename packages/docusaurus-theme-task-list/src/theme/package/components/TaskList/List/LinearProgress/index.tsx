@@ -2,7 +2,7 @@ import Box from '@mui/material/Box';
 import MuiLinearProgress, { LinearProgressProps } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
-import useTaskListThemeConfig from '../../../../hooks/useTaskListThemeConfig';
+import useThemeConfig from '../../../../hooks/useThemeConfig';
 
 interface StyledBoxProps {
     readonly barColor: React.CSSProperties['color'];
@@ -36,7 +36,7 @@ export default function LinearProgress(props: Props): JSX.Element {
         progressBar: {
             color: barColor,
         },
-    } = useTaskListThemeConfig();
+    } = useThemeConfig();
 
     return (
         <Box sx={{

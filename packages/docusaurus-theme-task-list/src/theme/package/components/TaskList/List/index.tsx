@@ -3,7 +3,7 @@ import FormGroup from '@mui/material/FormGroup';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import { useTasks } from '../../../contexts/tasks';
-import useTaskListThemeConfig from '../../../hooks/useTaskListThemeConfig';
+import useThemeConfig from '../../../hooks/useThemeConfig';
 import Item from './Item';
 import LinearProgress from './LinearProgress';
 
@@ -42,7 +42,7 @@ export default function List(
         progressBar: {
             isEnabled: progressBarIsEnabled,
         },
-    } = useTaskListThemeConfig();
+    } = useThemeConfig();
     const { tasks, dispatchTasks } = useTasks();
 
     const [progress, setProgress] = React.useState<number>(0);

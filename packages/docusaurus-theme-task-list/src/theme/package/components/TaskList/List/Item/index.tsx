@@ -6,7 +6,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormControlLabel, { FormControlLabelProps } from '@mui/material/FormControlLabel';
 import { styled } from '@mui/material/styles';
 import * as React from 'react';
-import useTaskListThemeConfig from '../../../../hooks/useTaskListThemeConfig';
+import useThemeConfig from '../../../../hooks/useThemeConfig';
 
 interface StyledFormControlLabelProps {
     readonly hoverColor: React.CSSProperties['color'];
@@ -57,7 +57,7 @@ export default function Item(
             hoverColor,
             hoverColorBackground,
         },
-    } = useTaskListThemeConfig();
+    } = useThemeConfig();
 
     const [iconChecked, setIconChecked] =
         React.useState<JSX.Element>(<CheckBoxIcon />);
