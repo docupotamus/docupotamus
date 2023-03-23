@@ -11,14 +11,14 @@ declare module '@docupotamus/docusaurus-plugin-content-docs-src-hook' {
 
     type AllPluginOptions = BasePluginOptions & SrcHookPluginOptions;
 
-    interface RawContent {
+    interface PathToContent {
         readonly [key: string]: string;
     }
 
     interface ContextValue {
-        readonly rawContent: RawContent;
-        readonly setRawContent: React.Dispatch<React.SetStateAction<
-            RawContent
+        readonly pathToContent: PathToContent;
+        readonly setPathToContent: React.Dispatch<React.SetStateAction<
+            PathToContent
         >>;
     }
 }
@@ -36,7 +36,7 @@ declare module '@theme/docupotamus-plugin-content-docs-src-hook' {
     import type DocPageType from '@theme/DocPage';
 
     export const DocPageDecorator: typeof DocPageType;
-    export const useRawContent: () => ContextValue;
+    export const usePathToContent: () => ContextValue;
 }
 
 declare module '@docusaurus/plugin-content-docs' {
@@ -55,10 +55,10 @@ declare module '@docusaurus/plugin-content-docs' {
 }
 
 declare module '@theme/DocPage' {
-    import type { RawContent } from '@doc8/plugin-content-docs-src-hook';
+    import type { PathToContent } from '@doc8/plugin-content-docs-src-hook';
 
     export interface Props {
-        readonly rawContent: RawContent;
+        readonly pathToContent: PathToContent;
     }
 
     export default function DocPage(props: Props): JSX.Element;

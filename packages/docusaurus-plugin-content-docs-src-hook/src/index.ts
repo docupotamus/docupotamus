@@ -83,7 +83,7 @@ export default async function pluginContentDocsSrcHook(
                         ...config,
                         modules: {
                             ...config.modules,
-                            rawContent: pathToContentPath,
+                            pathToContent: pathToContentPath,
                         },
                     });
                 } else {

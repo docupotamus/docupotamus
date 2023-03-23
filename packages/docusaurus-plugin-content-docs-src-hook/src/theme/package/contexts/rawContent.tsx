@@ -1,39 +1,40 @@
 import type {
     ContextValue,
-    RawContent
+    PathToContent
 } from '@doc8/plugin-content-docs-src-hook';
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
-const useContextValue = (value: RawContent): ContextValue => {
-    const [rawContent, setRawContent] = React.useState<RawContent>(value);
+const useContextValue = (value: PathToContent): ContextValue => {
+    const [pathToContent, setPathToContent] =
+        React.useState<PathToContent>(value);
 
     return React.useMemo(
         () => ({
-            rawContent,
-            setRawContent,
+            pathToContent,
+            setPathToContent,
         }),
         [
-            rawContent,
-            setRawContent,
+            pathToContent,
+            setPathToContent,
         ],
     );
 };
 
 interface Props {
-    readonly rawContent: RawContent;
+    readonly pathToContent: PathToContent;
     readonly children: React.ReactNode;
 };
 
-export const RawContentProvider = (
+export const PathToContentProvider = (
     {
-        rawContent,
+        pathToContent,
         children,
     }: Props
 ): JSX.Element => {
-    const value = useContextValue(rawContent);
+    const value = useContextValue(pathToContent);
 
     return (
         <Context.Provider value={value}>
@@ -42,10 +43,10 @@ export const RawContentProvider = (
     );
 };
 
-export const useRawContent = (): ContextValue => {
+export const usePathToContent = (): ContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
-        throw new ReactContextError('RawContentProvider');
+        throw new ReactContextError('PathToContentProvider');
     }
     return context;
 };
