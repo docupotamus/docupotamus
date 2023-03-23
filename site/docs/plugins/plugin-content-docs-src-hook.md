@@ -105,7 +105,11 @@ Looking for types? doc8 is written (basically) 100% in TypeScript!
 
 ### `usePathToContent`
 
-### `useLocation` {#uselocation}
+- Provider Scope: `DocPage`
+
+Mapping from URL path to raw Markdown content.
+
+### `useLocation`
 
 - Provider Scope: `Root`
 
@@ -184,8 +188,8 @@ If you aren't sure, you are _probably_ okay, unless you are trying to get the
 raw Markdown content from the `Root` theme component.
 :::
 
-The `PathToContentProvider` is defined in the `DocPage` theme component. Make
-sure your consumer component is a descendant.
+Make sure your consumer component is a descendant of the
+[provider's scope](#usepathtocontent).
 
 #### Call the `usePathToContent` hook
 
