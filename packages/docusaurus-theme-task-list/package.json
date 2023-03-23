@@ -3,7 +3,7 @@
     "version": "0.2.0",
     "description": "Docusaurus task list UI component.",
     "main": "lib/index.js",
-    "types": "src/docusaurus-theme-task-list.d.ts",
+    "types": "src/theme-task-list.d.ts",
     "dependencies": {
         "@docupotamus/docusaurus-lib-common": "0.2.0",
         "@docusaurus/utils-validation": "^2.2.x",
