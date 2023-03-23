@@ -11,16 +11,9 @@ import { TaskList } from '@theme/docupotamus-task-list';
 
 A Docusaurus theme with a lightweight, unified interface for developing add-ons.
 
-### Common Use Cases
-
-Use this when you want to enhance your site with powerful add-ons.
-
-You can integrate custom React components through a lightweight, unified
-interface. They are then always readily accessible to developers through our
-workbench.
-
-For example, integrating with the workbench is how
-[theme-task-list](./theme-task-list.md) works.
+Use this when you want to enhance your site with powerful add-ons, for example
+when making a custom [task list](./theme-task-list.md) React component
+accessible through the workbench.
 
 ## Getting Started
 
