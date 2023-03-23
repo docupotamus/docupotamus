@@ -171,11 +171,11 @@ export default function DocItemWrapper(props) {
 
   React.useEffect(() => {
     // highlight-next-line
-    const currentContent = pathToContent[pathname];
+    const rawContent = pathToContent[pathname];
     const message =
-      currentContent !== undefined
-        ? currentContent
-        : `Content not found for path "${pathname}".`;
+      rawContent !== undefined
+        ? rawContent
+        : `Raw content not found for path "${pathname}".`;
     console.log(message);
   }, [pathToContent]);
 
