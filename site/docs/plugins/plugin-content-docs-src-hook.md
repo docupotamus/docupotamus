@@ -78,6 +78,11 @@ module.exports = {
 };
 ```
 
+:::caution
+Depending on your deployment, you might need to configure the `trailingSlash`
+setting. See ["Configuration"](#configuration) for more details.
+:::
+
 ## Concepts
 
 ### Docusaurus Differences
@@ -100,6 +105,12 @@ options.
 
 Accepted fields:
 
+:::note
+Different static website hosting providers have inconsistent and often
+undocumented behaviors for how they handle trailing slashes. You might need to
+configure the [`trailingSlash` setting](https://docusaurus.io/docs/api/docusaurus-config#trailingSlash).
+:::
+
 ```mdx-code-block
 <ApiTable>
 ```
@@ -116,6 +127,7 @@ Accepted fields:
 
 ```js title="docusaurus.config.js"
 module.exports = {
+  trailingSlash: true,
   plugins: [
     [
       '@docupotamus/docusaurus-plugin-content-docs-src-hook',
@@ -157,6 +169,14 @@ export default function DocItemWrapper(props) {
 ```
 
 #### Lookup the content by location
+
+:::tip
+Always use the Docupotamus `useLocation` hook.
+
+It is a backward-compatible, drop-in replacement for Docusaurus
+`@docusaurus/router`. This hook is implemented as just a thin wrapper to handle
+trailing slash logic.
+:::
 
 ```jsx title="Example/DocItem/index.jsx"
 import * as React from 'react';
