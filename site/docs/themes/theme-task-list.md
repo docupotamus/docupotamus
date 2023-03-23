@@ -86,7 +86,7 @@ Code, try using "File: Save without Formatting." This is a
 
 ### Configuration
 
-Accepted fields:
+Accepted theme config fields:
 
 ```mdx-code-block
 <ApiTable>
@@ -105,6 +105,10 @@ Accepted fields:
 ```mdx-code-block
 </ApiTable>
 ```
+
+:::note
+No plugin option settings are yet supported.
+:::
 
 ### Example Configuration
 

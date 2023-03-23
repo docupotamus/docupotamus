@@ -72,6 +72,12 @@ Workbench integration copy button. This is a [known limitation](#future).
 
 ## Customizing
 
+### Configuration
+
+:::note
+No plugin option nor theme config settings are yet supported.
+:::
+
 ### Styling
 
 :::note

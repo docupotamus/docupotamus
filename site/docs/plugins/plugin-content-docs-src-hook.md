@@ -129,13 +129,7 @@ important.
 
 ### Configuration
 
-Accepted fields:
-
-:::note
-Different static website hosting providers have inconsistent and often
-undocumented behaviors for how they handle trailing slashes. You might need to
-configure the [`trailingSlash` setting](https://docusaurus.io/docs/api/docusaurus-config#trailingSlash).
-:::
+Accepted plugin option fields:
 
 ```mdx-code-block
 <ApiTable>
@@ -148,6 +142,16 @@ configure the [`trailingSlash` setting](https://docusaurus.io/docs/api/docusauru
 ```mdx-code-block
 </ApiTable>
 ```
+
+:::note
+Different static website hosting providers have inconsistent and often
+undocumented behaviors for how they handle trailing slashes. You might need to
+configure the [`trailingSlash` setting](https://docusaurus.io/docs/api/docusaurus-config#trailingSlash).
+:::
+
+:::note
+No theme config settings are yet supported.
+:::
 
 ### Example Configuration
 

@@ -61,7 +61,7 @@ even calculator add-on.
 
 ### Configuration
 
-Accepted fields:
+Accepted plugin option fields:
 
 ```mdx-code-block
 <ApiTable>
@@ -74,6 +74,10 @@ Accepted fields:
 ```mdx-code-block
 </ApiTable>
 ```
+
+:::note
+No theme config settings are yet supported.
+:::
 
 ### Example Configuration
 
