@@ -160,9 +160,11 @@ export default function DocItemWrapper(props) {
 
 ```jsx title="Example/DocItem/index.jsx"
 import * as React from 'react';
-import { useLocation } from '@docusaurus/router';
 import DocItem from '@theme-original/DocItem';
-import { usePathToContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
+import {
+  useLocation,
+  usePathToContent,
+} from '@theme/docupotamus-plugin-content-docs-src-hook';
 
 export default function DocItemWrapper(props) {
   // highlight-next-line
