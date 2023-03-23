@@ -5,7 +5,7 @@ declare module '@docupotamus/docusaurus-theme-zen' {
         readonly swizzleIsEnabled: boolean;
     }
 
-    interface ZenThemeConfig {
+    interface ThemeConfig {
         readonly visibilityRadiusPx: number;
     }
 }
