@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # 📦 preset-classic
 
+import ApiTable from '@site/src/components/ApiTable';
+
 A Docusaurus preset that bundles a minimalist design, unified add-on interface,
 and powerful built-ins.
 
@@ -67,8 +69,8 @@ The two presets are fully backward-compatible because Docupotamus
 `preset-classic` is implemented as just a thin convenience wrapper. It strictly
 only extends Docusaurus `preset-classic`.
 
-Therefore, the Docupotamus preset includes all bundled plugins and themes you're
-used to. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic)
+Therefore, the Docupotamus preset includes all the bundled plugin and theme
+settings you're used to such as `theme` and `docs`. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic)
 for the full list.
 
 ### Preset and Standalone Differences
@@ -144,6 +146,48 @@ Docupotamus plugins, themes, and presets use a special _composition_
 architecture pattern. If the same theme component (e.g. `@theme/TOC/index.tsx`)
 is swizzled by more than 1 plugins, themes, and/or presets, we maintain the
 features from all implementations.
+
+## Customizing
+
+### Configuration
+
+Accepted fields:
+
+```mdx-code-block
+<ApiTable>
+```
+
+| Name   | Type     | Default | Description                              |
+| ------ | -------- | ------- | ---------------------------------------- |
+| `TODO` | `number` | `100`   | Radius around the mouse that is visible. |
+
+```mdx-code-block
+</ApiTable>
+```
+
+### Example Configuration
+
+:::tip
+The Docupotamus preset includes all the bundled plugin and theme settings you're
+used to such as `theme` and `docs`. See [here](https://docusaurus.io/docs/using-plugins#docusauruspreset-classic)
+for the full list.
+:::
+
+```js title="docusaurus.config.js"
+module.exports = {
+  presets: [
+    [
+      '@docupotamus/docusaurus-preset-classic',
+      {
+        // Pass to @docusaurus/theme-classic.
+        theme: {
+          customCss: [require.resolve('./src/css/custom.css')],
+        },
+      },
+    ],
+  ],
+};
+```
 
 ## We're done here! {#future}
 
