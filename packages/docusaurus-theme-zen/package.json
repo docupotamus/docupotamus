@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "description": "Docusaurus zen mode UI component.",
     "main": "lib/index.js",
-    "types": "src/docusaurus-theme-zen.d.ts",
+    "types": "src/theme-zen.d.ts",
     "dependencies": {
         "@docusaurus/utils-validation": "^2.2.x",
         "@emotion/react": "^11.9.3",
