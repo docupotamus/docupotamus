@@ -4,7 +4,7 @@ import { useMarkdown } from '@theme/docupotamus-common';
 import clsx from 'clsx';
 import * as React from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
-import useZenThemeConfig from '../../hooks/useZenThemeConfig';
+import useThemeConfig from '../../hooks/useThemeConfig';
 
 const CLASS_NAME_ROOT: string = 'zen_root';
 const CLASS_NAME_FOCUS: string = 'DocupotamusZen_focus';
@@ -54,7 +54,7 @@ interface Props {
 };
 
 export default function ZenMode({ children }: Props): JSX.Element {
-    const { visibilityRadiusPx } = useZenThemeConfig();
+    const { visibilityRadiusPx } = useThemeConfig();
     const { directChildren } = useMarkdown();
 
     const [isEnabled, setIsEnabled] = React.useState<boolean>(false);
