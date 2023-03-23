@@ -148,7 +148,7 @@ document.querySelector('.DocupotamusCommon_toolbar');
     <summary>See canonical reference</summary>
 
 ```mdx-code-block
-import Source from '!!raw-loader!@site/../packages/docusaurus-preset-classic/src/plugin/theme/docupotamus-common/Toolbar/Entry/index.tsx';
+import Source from '!!raw-loader!@site/../packages/docusaurus-preset-classic/src/plugin/theme/swizzle/docupotamus-common/Toolbar/Entry/index.tsx';
 import CodeBlock from '@theme/CodeBlock';
 
 <CodeBlock

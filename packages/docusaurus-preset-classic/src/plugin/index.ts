@@ -5,11 +5,11 @@ export default function theme(): Plugin<undefined> {
         name: 'docupotamus-theme-preset-classic',
 
         getThemePath() {
-            return '../../lib/plugin/theme';
+            return '../../lib/plugin/theme/swizzle';
         },
 
         getTypeScriptThemePath() {
-            return '../../src/plugin/theme';
+            return '../../src/plugin/theme/swizzle';
         },
     };
 };
