@@ -1,7 +1,7 @@
 import type { WrapperProps } from '@docusaurus/types';
 import type DocPageType from '@theme/DocPage';
 import * as React from 'react';
-import { PathToContentProvider } from '../../package/contexts/rawContent';
+import { PathToContentProvider } from '../../package/contexts/pathToContent';
 
 type Props = Readonly<WrapperProps<typeof DocPageType> & {
     children: React.ReactNode;
