@@ -4,8 +4,6 @@ sidebar_position: 10
 
 # 📦 plugin-content-docs-src-hook
 
-import { TaskList } from '@theme/docupotamus-task-list';
-
 <!-- If this changes, then change: README.md -->
 
 A Docusaurus plugin that makes the raw Markdown content available through a
@@ -77,10 +75,6 @@ options.
 <!-- _keywords:_ user guides -->
 
 ### Get raw Markdown content
-
-<TaskList>
-- [Prerequisite] Check your component hierarchy.
-</TaskList>
 
 #### Check your component hierarchy
 
