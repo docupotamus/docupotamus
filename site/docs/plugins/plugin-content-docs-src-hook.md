@@ -93,6 +93,20 @@ When installing as a standalone dependency (i.e. using Docusaurus
 `preset-classic`), this is why we disable `plugin-content-docs` in the preset
 options.
 
+## API Reference
+
+```jsx
+import {} from '@theme/docupotamus-plugin-content-docs-src-hook';
+```
+
+:::tip
+Looking for types? doc8 is written (basically) 100% in TypeScript!
+:::
+
+### `usePathToContent`
+
+### `useLocation`
+
 ## Customizing
 
 ### Configuration
