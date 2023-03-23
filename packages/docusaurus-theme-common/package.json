@@ -3,7 +3,7 @@
     "version": "0.2.0",
     "description": "Docusaurus common UI component.",
     "main": "lib/index.js",
-    "types": "src/docusaurus-theme-common.d.ts",
+    "types": "src/theme-common.d.ts",
     "dependencies": {
         "@docupotamus/docusaurus-lib-common": "0.2.0",
         "@docusaurus/utils-validation": "^2.2.x",
