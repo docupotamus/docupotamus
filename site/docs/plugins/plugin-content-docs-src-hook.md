@@ -4,6 +4,8 @@ sidebar_position: 10
 
 # 📦 plugin-content-docs-src-hook
 
+import ApiTable from '@site/src/components/ApiTable';
+
 <!-- If this changes, then change: README.md -->
 
 A Docusaurus plugin that makes the raw Markdown content available through a
@@ -69,6 +71,37 @@ strictly only extends Docusaurus `plugin-content-docs`.
 When installing as a standalone dependency (i.e. using Docusaurus
 `preset-classic`), this is why we disable `plugin-content-docs` in the preset
 options.
+
+## Customizing
+
+### Configuration
+
+Accepted fields:
+
+```mdx-code-block
+<ApiTable>
+```
+
+| Name               | Type      | Default | Description                                                                                                                                                                                                                                                      |
+| ------------------ | --------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `swizzleIsEnabled` | `boolean` | `true`  | Whether to swizzle through overwriting. Otherwise, symbols are made public for importing. If you use the preset `@docupotamus/docusaurus-preset-classic`, this field is ignored. See also [Swizzle Clobbering](../presets/preset-classic.md#swizzle-clobbering). |
+
+```mdx-code-block
+</ApiTable>
+```
+
+### Example Configuration
+
+```js title="docusaurus.config.js"
+module.exports = {
+  plugins: [
+    [
+      '@docupotamus/docusaurus-plugin-content-docs-src-hook',
+      { swizzleIsEnabled: false },
+    ],
+  ],
+};
+```
 
 ## How-To's
 
