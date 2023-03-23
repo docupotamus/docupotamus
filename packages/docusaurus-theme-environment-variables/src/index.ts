@@ -17,6 +17,4 @@ export default function themeEnvironmentVariables(): Plugin<undefined> {
     };
 };
 
-export { validateThemeConfig } from './validateThemeConfig';
-
 export const getSwizzleComponentList = (): string[] => [];
