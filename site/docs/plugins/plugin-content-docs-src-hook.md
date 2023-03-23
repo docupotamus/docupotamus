@@ -11,6 +11,18 @@ import ApiTable from '@site/src/components/ApiTable';
 A Docusaurus plugin that makes the raw Markdown content available through a
 React hook.
 
+### Common Use Cases
+
+Use this when you need dynamic access to the raw Markdown content.
+
+:::info Glossary
+We refer to the access as _dynamic_. This contrasts with simply statically
+importing using the [`raw-loader`](https://docusaurus.io/docs/markdown-features/react#importing-code-snippets),
+which is insufficient for some use cases.
+:::
+
+Common examples include rich interactions such as with an integrated editor.
+
 ## Installation
 
 :::tip
