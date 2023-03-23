@@ -6,7 +6,7 @@ declare module '@docupotamus/docusaurus-theme-task-list' {
     }
 
     // See: https://www.docupotamus.io/docs/themes/theme-task-list#configuration
-    interface TaskListThemeConfig {
+    interface ThemeConfig {
         readonly checkbox: {
             readonly color: React.CSSProperties['color'];
             readonly shape: CheckboxShape;

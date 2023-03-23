@@ -1,4 +1,6 @@
-import type { TaskListThemeConfig } from '@doc8/theme-task-list';
+import type {
+    ThemeConfig as ThemeConfigExtension
+} from '@doc8/theme-task-list';
 import type {
     ThemeConfig,
     ThemeConfigValidationContext
@@ -7,7 +9,7 @@ import { Joi } from '@docusaurus/utils-validation';
 
 declare module '@docusaurus/types' {
     interface ThemeConfig {
-        docupotamusTaskList: TaskListThemeConfig;
+        docupotamusTaskList: ThemeConfigExtension;
     }
 };
 
@@ -15,7 +17,7 @@ const COLOR_PRIMARY: React.CSSProperties['color'] = 'var(--ifm-color-primary)';
 
 // If change, then change:
 //   https://www.docupotamus.io/docs/themes/theme-task-list#configuration
-const DEFAULT_THEME_CONFIG: TaskListThemeConfig = {
+const DEFAULT_THEME_CONFIG: ThemeConfigExtension = {
     checkbox: {
         color: COLOR_PRIMARY,
         shape: 'square',
