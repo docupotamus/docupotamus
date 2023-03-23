@@ -12,7 +12,11 @@ import Demo from '@site/src/components/StylesClassicDemo';
 A minimalist Docusaurus design that embraces soft, subtle details while
 remaining superbly functional and readable.
 
-## Try It Out
+Use this when you want a neutral, minimalist stylesheet for your site.
+
+## Getting Started
+
+### Try It Out
 
 :::tip
 You can also open the DevTools Console panel in
@@ -22,31 +26,7 @@ with these fluid custom properties.
 
 <Demo/>
 
-### Common Use Cases
-
-Use this when you want a neutral, minimalist stylesheet for your site.
-
-### Infima Differences
-
-:::info tl;dr
-`styles-classic` extends from and is fully backward-compatible with Infima. It
-also provides fluid typography and spacing.
-:::
-
-Docusaurus uses [Infima](https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima)
-as its styling framework. Most relevant to us are its CSS custom properties with
-the `--ifm` prefix.
-
-Docupotamus extends from and is fully backward-compatible with those CSS custom
-properties. For a trivial example, we overwrite `--ifm-color-gray-0` and add
-the new `--ifm-color-gray-0-hsl`.
-
-Most importantly, we provide fluid typography and spacing with the `--doc8`
-prefix. This modern design approach enables elements to scale proportionally
-with screen size without having to rely on brittle breakpoints. See
-[here](#popular-properties) for popular properties.
-
-## Installation
+### Installation
 
 :::tip
 If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
@@ -80,7 +60,7 @@ module.exports = {
 };
 ```
 
-## Example Usage
+### Example Usage
 
 :::note
 Inline styles are used here only for demonstration purposes. For production
@@ -105,6 +85,28 @@ export default function MyHeading() {
   );
 }
 ```
+
+## Concepts
+
+### Infima Differences
+
+:::info tl;dr
+`styles-classic` extends from and is fully backward-compatible with Infima. It
+also provides fluid typography and spacing.
+:::
+
+Docusaurus uses [Infima](https://docusaurus.io/docs/styling-layout#styling-your-site-with-infima)
+as its styling framework. Most relevant to us are its CSS custom properties with
+the `--ifm` prefix.
+
+Docupotamus extends from and is fully backward-compatible with those CSS custom
+properties. For a trivial example, we overwrite `--ifm-color-gray-0` and add
+the new `--ifm-color-gray-0-hsl`.
+
+Most importantly, we provide fluid typography and spacing with the `--doc8`
+prefix. This modern design approach enables elements to scale proportionally
+with screen size without having to rely on brittle breakpoints. See
+[here](#popular-properties) for popular properties.
 
 ## Customizing
 
