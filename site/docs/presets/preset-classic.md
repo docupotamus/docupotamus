@@ -7,6 +7,9 @@ sidebar_position: 1
 A Docusaurus preset that bundles a minimalist design, unified add-on interface,
 and powerful built-ins.
 
+Use this when you want to use Docupotamus features, but don't want to maintain
+the code integrating plugins with your Docusaurus site.
+
 It provides lightweight, centralized configuration for the following plugins and
 themes:
 
@@ -15,13 +18,9 @@ themes:
 - [`@docupotamus/docusaurus-theme-task-list`](../themes/theme-task-list.md)
 - [`@docusaurus/preset-classic`](#docusaurus-differences)
 
-### Common Use Cases
+## Getting Started
 
-Use this when you want to use Docupotamus features, but don't want to maintain
-the code for integrating them with your existing Docusaurus site. See
-[here](#swizzle-clobbering) for more details on the challenges.
-
-## Installation
+### Installation
 
 <!-- If change, then change: ../quickstart.md -->
 
