@@ -10,7 +10,13 @@ import { TaskList } from '@theme/docupotamus-task-list';
 
 A Docusaurus theme that parameterizes code blocks.
 
-## Try It Out
+Use this when you have helpful code blocks but want to allow developers to
+personalize those snippets, for example with repetitive tasks (e.g. installing a
+package).
+
+## Getting Started
+
+### Try It Out
 
 :::tip
 In the right-docked Toolbar, open the "Environment Variables" tab to personalize
@@ -27,14 +33,7 @@ const whoEvenKnows = {{ LEFT }} + {{ RIGHT }};
 
 <!-- _keywords:_ demo -->
 
-### Common Use Cases
-
-Use this when you have helpful code block but want to allow developers to
-personalize those snippets. Common examples include domain-specific tasks such
-as restoring a database backup and repetitive tasks such as installing a
-package.
-
-## Installation
+### Installation
 
 :::info
 This theme is only available through the preset
@@ -45,7 +44,7 @@ integration. Installing as a standalone dependency is not supported.
 See [here](../presets/preset-classic.md#installation) for instructions on
 installing the `preset-classic`.
 
-## Example Usage
+### Example Usage
 
 :::tip
 In the right-docked Toolbar, open the "Environment Variables" tab to personalize
