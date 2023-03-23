@@ -99,8 +99,8 @@ d o c u p o t a m u s
       1 2 3 4 5 6 7 8
 ```
 
-## What's Next?
+## We're done here!
 
-Good first places to start are learning more about the [differences between Docupotamus and Docusaurus](./presets/preset-classic.md#docusaurus-differences)
+What's next? Good first places to start are learning more about the [differences between Docupotamus and Docusaurus](./presets/preset-classic.md#docusaurus-differences)
 or [creating an environment variable](./themes/theme-environment-variables#example-usage)
 just like the one on this page. Try it out!

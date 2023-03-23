@@ -219,10 +219,10 @@ Use the git-commit-message convention for the scope.
 src-hook
 ```
 
-## What's Next? {#future}
+## We're done here! {#future}
 
-If you have comments, questions, or are looking to contribute, please start a
-conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Src+Hook%22)!
+What's next? If you have comments, questions, or are looking to contribute,
+please start a conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Src+Hook%22)!
 
 Please remember to [⭐ give us a star on GitHub! ⭐](https://github.com/docupotamus/docupotamus)
 

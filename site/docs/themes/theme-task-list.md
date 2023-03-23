@@ -187,12 +187,12 @@ document.querySelector('.DocupotamusTaskList');
 - **Quick Navigation:** If a page contains multiple task lists, the buttons
   allow you to quickly navigate between the task lists.
 
-## What's Next? {#future}
+## We're done here! {#future}
 
 The roadmap includes some important feature requests such as fixing the
 bothersome [`"rendering non-text nodes in a task list is not yet supported"` error](https://github.com/docupotamus/docupotamus/issues/9).
 
-If you have comments, questions, or are looking to contribute, please start a
-conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Task+List%22)!
+What's next? If you have comments, questions, or are looking to contribute,
+please start a conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Task+List%22)!
 
 Please remember to [⭐ give us a star on GitHub! ⭐](https://github.com/docupotamus/docupotamus)

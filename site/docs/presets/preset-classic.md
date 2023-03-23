@@ -145,10 +145,9 @@ architecture pattern. If the same theme component (e.g. `@theme/TOC/index.tsx`)
 is swizzled by more than 1 plugins, themes, and/or presets, we maintain the
 features from all implementations.
 
-## What's Next? {#future}
+## We're done here! {#future}
 
-If you have comments, questions, or are looking to contribute, please start a
-conversation over a
-[GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3ACommon)!
+What's next? If you have comments, questions, or are looking to contribute,
+please start a conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3ACommon)!
 
 Please remember to [⭐ give us a star on GitHub! ⭐](https://github.com/docupotamus/docupotamus)
