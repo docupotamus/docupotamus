@@ -12,23 +12,21 @@ import FlexImage from '@site/src/components/FlexImage';
 
 A Docusaurus theme to quiet the distractions and bring the zen.
 
+Use this when you have particularly text-dense content, for example with
+explanations of complex, technical concepts.
+
 <FlexImage alt="Demo GIF" src={DemoGif} />
 
-## Try It Out
+## Getting Started
+
+### Try It Out
 
 While holding down the <kbd>shift</kbd> key, slowly move your mouse around the
 main content.
 
 <!-- _keywords:_ demo -->
 
-### Common Use Cases
-
-Use this when you have particularly text-dense content.
-
-Common examples include explanations of complex, technical concepts. The focus
-helps make content more approachable and easier to follow.
-
-## Installation
+### Installation
 
 :::tip
 If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
