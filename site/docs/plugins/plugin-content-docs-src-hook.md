@@ -138,19 +138,19 @@ If you aren't sure, you are _probably_ okay, unless you are trying to get the
 raw Markdown content from the `Root` theme component.
 :::
 
-The `RawContentProvider` is defined in the `DocPage` theme component. Make sure
-your consumer component is a descendant.
+The `PathToContentProvider` is defined in the `DocPage` theme component. Make
+sure your consumer component is a descendant.
 
-#### Call the `useRawContent` hook
+#### Call the `usePathToContent` hook
 
 ```jsx title="Example/DocItem/index.jsx"
 import * as React from 'react';
 import DocItem from '@theme-original/DocItem';
-import { useRawContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
+import { usePathToContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
 
 export default function DocItemWrapper(props) {
   // highlight-next-line
-  const { rawContent } = useRawContent();
+  const { pathToContent } = usePathToContent();
 
   return <DocItem {...props} />;
 }
@@ -162,22 +162,22 @@ export default function DocItemWrapper(props) {
 import * as React from 'react';
 import { useLocation } from '@docusaurus/router';
 import DocItem from '@theme-original/DocItem';
-import { useRawContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
+import { usePathToContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
 
 export default function DocItemWrapper(props) {
   // highlight-next-line
   const { pathname } = useLocation();
-  const { rawContent } = useRawContent();
+  const { pathToContent } = usePathToContent();
 
   React.useEffect(() => {
     // highlight-next-line
-    const currentContent = rawContent[pathname];
+    const currentContent = pathToContent[pathname];
     const message =
       currentContent !== undefined
         ? currentContent
         : `Content not found for path "${pathname}".`;
     console.log(message);
-  }, [rawContent]);
+  }, [pathToContent]);
 
   return <DocItem {...props} />;
 }
