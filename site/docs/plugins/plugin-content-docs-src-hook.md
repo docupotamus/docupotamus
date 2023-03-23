@@ -104,12 +104,14 @@ export default function DocItemWrapper(props) {
 #### Lookup the content by location
 
 ```jsx title="Example/DocItem/index.jsx"
+import * as React from 'react';
 import { useLocation } from '@docusaurus/router';
-// ...
+import DocItem from '@theme-original/DocItem';
+import { useRawContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
 
 export default function DocItemWrapper(props) {
-  const { pathname } = useLocation();
   // highlight-next-line
+  const { pathname } = useLocation();
   const { rawContent } = useRawContent();
 
   React.useEffect(() => {
@@ -122,7 +124,7 @@ export default function DocItemWrapper(props) {
     console.log(message);
   }, [rawContent]);
 
-  // ...
+  return <DocItem {...props} />;
 }
 ```
 
