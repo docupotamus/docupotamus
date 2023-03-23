@@ -36,7 +36,9 @@ be (but of course are not limited to being) more standalone.
 For a trivial example, imagine integrating a glossary, `git blame` history, or
 even calculator add-on.
 
-## Installation
+## Getting Started
+
+### Installation
 
 :::tip
 If you use the preset `@docupotamus/docusaurus-preset-classic`, you can skip
