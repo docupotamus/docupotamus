@@ -9,17 +9,30 @@ import {
 } from '@theme/docupotamus-task-list';
 import type RootType from '@theme/Root';
 import * as React from 'react';
+import ConditionalWrap from '../../package/components/ConditionalWrap';
+import useIsEnabled from '../../package/hooks/useIsEnabled';
 
 type Props = Readonly<WrapperProps<typeof RootType>>;
 
 export default function RootWrapper(props: Props): JSX.Element {
+    const envVarsIsEnabled = useIsEnabled('envVars');
+
     return (
-        <CommonDecorator>
-            <EnvironmentVariablesDecorator>
-                <TaskListDecorator>
-                    <RootInit {...props} />
-                </TaskListDecorator>
-            </EnvironmentVariablesDecorator>
-        </CommonDecorator>
+        <ConditionalWrap wrappers={[
+            {
+                Component: CommonDecorator,
+                isIncluded: true,
+            },
+            {
+                Component: EnvironmentVariablesDecorator,
+                isIncluded: envVarsIsEnabled,
+            },
+            {
+                Component: TaskListDecorator,
+                isIncluded: true,
+            },
+        ]}>
+            <RootInit {...props} />
+        </ConditionalWrap>
     );
 };

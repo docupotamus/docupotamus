@@ -11,10 +11,12 @@ import {
     WorkbenchTab as TaskListWorkbenchTab
 } from '@theme/docupotamus-task-list';
 import * as React from 'react';
+import useIsEnabled from '../../../../package/hooks/useIsEnabled';
 
 type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
 
 export default function ToolbarEntryWrapper(props: Props): JSX.Element {
+    const envVarsIsEnabled = useIsEnabled('envVars');
     const { dispatchTabIdToConfig } = useToolbar();
 
     React.useEffect(() => {
@@ -27,15 +29,17 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
                 IconComponent: <TaskListWorkbenchIcon />,
             },
         });
-        dispatchTabIdToConfig({
-            type: 'setTab',
-            tabId: 'environment-variables',
-            newValue: {
-                displayName: 'Environment Variables',
-                Component: <EnvironmentVariablesWorkbenchTab />,
-                IconComponent: <EnvironmentVariablesWorkbenchIcon />,
-            },
-        });
+        if (envVarsIsEnabled) {
+            dispatchTabIdToConfig({
+                type: 'setTab',
+                tabId: 'environment-variables',
+                newValue: {
+                    displayName: 'Environment Variables',
+                    Component: <EnvironmentVariablesWorkbenchTab />,
+                    IconComponent: <EnvironmentVariablesWorkbenchIcon />,
+                },
+            });
+        }
     }, []);
 
     return (
