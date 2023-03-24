@@ -145,6 +145,9 @@ npm run watch everything
 
 ### Docusaurus
 
+- **preset-key**: Use the git-commit-message scope convention formatted in
+  camelCase.
+
 #### Swizzling
 
 - **swizzle-no-eject**: Strongly prefer wrapping instead of ejecting. Ejecting
