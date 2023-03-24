@@ -69,6 +69,22 @@ npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
 
 npm run watch everything
 
+### Search everywhere
+
+```shell
+grep -ril "{{ SEARCH_STRING }}" \
+    --exclude-dir .docusaurus \
+    --exclude-dir .git \
+    --exclude-dir build \
+    --exclude-dir lib \
+    --exclude-dir node_modules \
+    --exclude-dir static \
+    --exclude .gitignore \
+    --exclude .prettierignore \
+    --exclude package-lock.json \
+    .
+```
+
 ## `preset-classic`
 
 ### Add a feature gate
