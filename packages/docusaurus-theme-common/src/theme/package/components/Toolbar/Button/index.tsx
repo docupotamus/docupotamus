@@ -16,10 +16,10 @@ export default function Button(
         displayName,
     }: Props
 ): JSX.Element {
-    const { setActiveTabId } = useToolbar();
+    const { _internalSetActiveTabId } = useToolbar();
 
     const handleClick = () => {
-        setActiveTabId(prev => (prev === tabId) ? '' : tabId);
+        _internalSetActiveTabId(prev => (prev === tabId) ? '' : tabId);
     };
 
     return (

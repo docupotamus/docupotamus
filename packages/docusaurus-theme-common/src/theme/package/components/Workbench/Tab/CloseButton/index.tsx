@@ -5,7 +5,7 @@ import * as React from 'react';
 import { useToolbar } from '../../../../contexts/toolbar';
 
 export default function CloseButton(): JSX.Element {
-    const { setActiveTabId } = useToolbar();
+    const { _internalSetActiveTabId } = useToolbar();
 
     return (
         <Tooltip
@@ -15,7 +15,7 @@ export default function CloseButton(): JSX.Element {
             <IconButton
                 aria-label='close workbench'
                 color='inherit'
-                onClick={() => setActiveTabId('')}
+                onClick={() => _internalSetActiveTabId('')}
             >
                 <CloseIcon />
             </IconButton>

@@ -54,7 +54,8 @@ declare module '@docupotamus/docusaurus-theme-common' {
         // TODO(dnguyen0304): Investigate changing to private.
         readonly _internalActiveTabId: string;
         readonly dispatchTabIdToConfig: React.Dispatch<Action>;
-        readonly setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
+        readonly _internalSetActiveTabId:
+        React.Dispatch<React.SetStateAction<string>>;
     }
 }
 
