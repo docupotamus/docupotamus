@@ -8,7 +8,7 @@ interface ComponentWithChildren {
 interface Props {
     readonly wrappers: {
         readonly Component: ComponentWithChildren;
-        readonly props: any;
+        readonly props?: any;
         readonly isIncluded: boolean;
     }[];
     readonly children: React.ReactNode;
