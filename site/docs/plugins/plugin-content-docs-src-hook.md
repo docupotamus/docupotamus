@@ -179,12 +179,6 @@ module.exports = {
 - Lookup the content by location.
 </TaskList>
 
-:::info Glossary
-We refer to the access as _dynamic_. This contrasts with simply statically
-importing using the [`raw-loader`](https://docusaurus.io/docs/markdown-features/react#importing-code-snippets),
-which is insufficient for some use cases.
-:::
-
 #### Check your component hierarchy
 
 :::tip
