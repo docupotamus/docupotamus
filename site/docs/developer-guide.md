@@ -108,6 +108,21 @@ npm run watch everything
 - In the client `docusaurus.config.js`, update `themeConfig`, which is for
   customizing default values.
 
+### Add a preset feature gate
+
+<TaskList>
+- [Prerequisite] Get the preset key using the preset-key convention.
+- Check if there are plugin options.
+- In `preset-classic.md`, document the preset key.
+- In `awesome.md`, document the preset key.
+- In `options.ts`, add the property.
+- In `index.ts`, destructure the property even if it is unused.
+- In the `useIsEnabled.tsx` hook, update the PluginKey.
+- Search for all import references `grep -rl "@theme/docupotamus-template" src/`.
+- call hook or use ConditionalWrap
+- test with docusaurus.config.js
+</TaskList>
+
 ## Conventions
 
 ### Project Structure
