@@ -1,11 +1,11 @@
-import { Variable } from '@doc8/theme-codeblock-param';
+import { Param } from '@doc8/theme-codeblock-param';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
-import { useVariables } from '../../contexts/variables';
+import { useParams } from '../../contexts/variables';
 import { formatDefault } from '../../services';
 import '../../styles.css';
 import CopyButton from './CopyButton';
@@ -80,107 +80,107 @@ const parseCodeBlock = (target: HTMLElement | null): string => {
 };
 
 export default function WorkbenchTab(): JSX.Element {
-    const { variables, setVariables } = useVariables();
+    const { params, setParams } = useParams();
 
     const [code, setCode] = React.useState<string>('');
     const focusIndexRef = React.useRef<number>();
 
-    const enableHighlight = (variable: Variable) => {
+    const enableHighlight = (param: Param) => {
         const className = styles.Target__highlight;
         if (className) {
-            variable.ref.current?.classList.add(className);
+            param.ref.current?.classList.add(className);
         }
     };
 
-    const disableHighlight = (variable: Variable) => {
+    const disableHighlight = (param: Param) => {
         const className = styles.Target__highlight;
         if (className) {
-            variable.ref.current?.classList.remove(className);
+            param.ref.current?.classList.remove(className);
         }
     };
 
-    const handleMouseLeave = (variable: Variable, currIndex: number) => {
+    const handleMouseLeave = (param: Param, currIndex: number) => {
         if (focusIndexRef.current === currIndex) {
             return;
         }
-        disableHighlight(variable);
+        disableHighlight(param);
     };
 
-    const handleFocus = (variable: Variable, currIndex: number) => {
+    const handleFocus = (param: Param, currIndex: number) => {
         focusIndexRef.current = currIndex;
-        enableHighlight(variable);
-        variable.ref.current?.scrollIntoView({
+        enableHighlight(param);
+        param.ref.current?.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
         });
         // Update the code initially.
-        setCode(parseCodeBlock(variable.ref.current));
+        setCode(parseCodeBlock(param.ref.current));
     };
 
-    const handleBlur = (variable: Variable) => {
+    const handleBlur = (param: Param) => {
         focusIndexRef.current = undefined;
-        disableHighlight(variable);
-        if (variable.currValue) {
+        disableHighlight(param);
+        if (param.currValue) {
             return;
         }
-        if (!variable.ref.current) {
+        if (!param.ref.current) {
             return;
         }
-        variable.ref.current.innerText ||= formatDefault(variable);
+        param.ref.current.innerText ||= formatDefault(param);
     };
 
     const handleChange = (
         event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
         currIndex: number,
     ) => {
-        setVariables(variables => variables.map((variable, index) => {
+        setParams(params => params.map((param, index) => {
             if (index !== currIndex) {
-                return variable;
+                return param;
             }
             return {
-                ...variable,
+                ...param,
                 currValue: event.target.value,
             };
         }));
-        const variable = variables[currIndex];
-        if (!variable) {
+        const param = params[currIndex];
+        if (!param) {
             return;
         }
-        if (variable.ref.current) {
-            variable.ref.current.innerText = event.target.value;
+        if (param.ref.current) {
+            param.ref.current.innerText = event.target.value;
         }
         if (currIndex !== focusIndexRef.current) {
             return;
         }
         // Update the code on change.
-        setCode(parseCodeBlock(variable.ref.current));
+        setCode(parseCodeBlock(param.ref.current));
     };
 
     return (
         <Layout>
             <StyledList disablePadding>
-                {variables.map((variable, index) => {
+                {params.map((param, index) => {
                     return (
                         <ListItem
-                            key={`${KEY_PREFIX}-${index}-${variable.name}`}
+                            key={`${KEY_PREFIX}-${index}-${param.name}`}
                             disablePadding
                         >
                             <StyledTextField
                                 // See: https://stackoverflow.com/questions/12374442/chrome-ignores-autocomplete-off
                                 autoComplete='no-thank-you'
-                                label={variable.name}
-                                onBlur={() => handleBlur(variable)}
+                                label={param.name}
+                                onBlur={() => handleBlur(param)}
                                 onChange={(event) => handleChange(
                                     event,
                                     index,
                                 )}
-                                onFocus={() => handleFocus(variable, index)}
-                                onMouseEnter={() => enableHighlight(variable)}
+                                onFocus={() => handleFocus(param, index)}
+                                onMouseEnter={() => enableHighlight(param)}
                                 onMouseLeave={() => handleMouseLeave(
-                                    variable,
+                                    param,
                                     index,
                                 )}
-                                value={variable.currValue}
+                                value={param.currValue}
                                 variant='outlined'
                                 fullWidth
                                 required

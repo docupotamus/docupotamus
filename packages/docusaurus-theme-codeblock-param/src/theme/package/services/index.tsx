@@ -1,7 +1,7 @@
-import { Variable } from '@doc8/theme-codeblock-param';
+import { Param } from '@doc8/theme-codeblock-param';
 
 export const formatDefault = (
-    variable: Pick<Variable, 'name' | 'defaultValue'>,
+    param: Pick<Param, 'name' | 'defaultValue'>,
 ): string => {
-    return variable.defaultValue || `{{ ${variable.name} }}`;
+    return param.defaultValue || `{{ ${param.name} }}`;
 };

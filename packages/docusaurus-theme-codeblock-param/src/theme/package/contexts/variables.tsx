@@ -1,25 +1,25 @@
-import { Variable } from '@doc8/theme-codeblock-param';
+import { Param } from '@doc8/theme-codeblock-param';
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
 
 interface ContextValue {
-    readonly variables: readonly Variable[];
-    readonly setVariables: React.Dispatch<React.SetStateAction<Variable[]>>;
+    readonly params: readonly Param[];
+    readonly setParams: React.Dispatch<React.SetStateAction<Param[]>>;
 };
 
 const Context = React.createContext<ContextValue | undefined>(undefined);
 
 const useContextValue = (): ContextValue => {
-    const [variables, setVariables] = React.useState<Variable[]>([]);
+    const [params, setParams] = React.useState<Param[]>([]);
 
     return React.useMemo(
         () => ({
-            variables,
-            setVariables,
+            params,
+            setParams,
         }),
         [
-            variables,
-            setVariables,
+            params,
+            setParams,
         ],
     );
 };
@@ -28,7 +28,7 @@ interface Props {
     readonly children: React.ReactNode;
 };
 
-export const VariablesProvider = ({ children }: Props): JSX.Element => {
+export const ParamsProvider = ({ children }: Props): JSX.Element => {
     const value = useContextValue();
 
     return (
@@ -38,10 +38,10 @@ export const VariablesProvider = ({ children }: Props): JSX.Element => {
     );
 };
 
-export const useVariables = (): ContextValue => {
+export const useParams = (): ContextValue => {
     const context = React.useContext(Context);
     if (context === undefined) {
-        throw new ReactContextError('VariablesProvider');
+        throw new ReactContextError('ParamsProvider');
     }
     return context;
 };

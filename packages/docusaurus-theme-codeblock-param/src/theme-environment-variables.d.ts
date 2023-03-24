@@ -2,7 +2,7 @@
 
 declare module '@docupotamus/docusaurus-theme-codeblock-param' {
     // TODO(dnguyen0304): Investigate adding isRequired.
-    interface Variable {
+    interface Param {
         readonly name: string;
         readonly defaultValue: string;
         readonly currValue: string;

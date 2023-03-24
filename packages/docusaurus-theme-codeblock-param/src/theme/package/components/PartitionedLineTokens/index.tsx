@@ -1,8 +1,8 @@
-import { Variable } from '@doc8/theme-codeblock-param';
+import { Param } from '@doc8/theme-codeblock-param';
 import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useVariables } from '../../contexts/variables';
+import { useParams } from '../../contexts/variables';
 import { formatDefault } from '../../services';
 
 const TARGET_CLASS_NAME = 'DocupotamusCodeblockParam';
@@ -88,10 +88,10 @@ export default function PartitionedLineTokens(
         getTokenProps,
     }: Props,
 ): JSX.Element {
-    const { setVariables } = useVariables();
+    const { setParams } = useParams();
 
     const lineTokens = React.useRef<JSX.Element[]>([]);
-    const lineVariables = React.useRef<Variable[]>([]);
+    const lineParams = React.useRef<Param[]>([]);
 
     React.useEffect(() => {
         const tokens = splitTokens(line);
@@ -152,7 +152,7 @@ export default function PartitionedLineTokens(
                         {formatDefault({ name, defaultValue })}
                     </span>
                 );
-                lineVariables.current.push({
+                lineParams.current.push({
                     name,
                     defaultValue,
                     currValue: defaultValue,
@@ -165,7 +165,7 @@ export default function PartitionedLineTokens(
             }
             currCharacterIndex += token.content.length;
         });
-        setVariables(prev => [...prev, ...lineVariables.current]);
+        setParams(prev => [...prev, ...lineParams.current]);
     }, []);
 
     return (
