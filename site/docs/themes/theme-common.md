@@ -57,6 +57,41 @@ be (but of course are not limited to being) more standalone.
 For a trivial example, imagine integrating a glossary, `git blame` history, or
 even calculator add-on.
 
+## API Reference
+
+:::tip
+Looking for types? doc8 is written (basically) 100% in TypeScript!
+:::
+
+### `useMarkdown`
+
+```jsx
+import { useMarkdown } from '@theme/docupotamus-common';
+```
+
+- Provider Scope: `Root`
+
+Mapping from URL path to raw Markdown content.
+
+See ["How-To's"](#usemarkdown-example) for an example usage.
+
+### `useToolbar`
+
+```jsx
+import { useToolbar } from '@theme/docupotamus-common';
+```
+
+- Provider Scope: `Root`
+
+Gets the current location object.
+
+It is a backward-compatible, drop-in replacement for Docusaurus
+`@docusaurus/router`. This hook is implemented as just a thin wrapper to handle
+trailing slash logic. See ["Configuration"](#configuration) for why this is
+important.
+
+See ["How-To's"](#usetoolbar-example) for an example usage.
+
 ## Customizing
 
 ### Configuration
@@ -142,7 +177,7 @@ document.querySelector('.DocupotamusCommon_toolbar');
 
 <!-- _keywords:_ user guides -->
 
-### Integrate a new add-on
+### Integrate a new add-on {#usetoolbar-example}
 
 <details>
     <summary>See canonical reference</summary>
@@ -272,7 +307,7 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
 }
 ```
 
-### Listen to Markdown content
+### Listen to Markdown content {#usemarkdown-example}
 
 :::info Glossary
 _Direct_ refers to the child nodes immediately below the `.theme-doc-markdown`
