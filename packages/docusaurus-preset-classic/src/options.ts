@@ -35,6 +35,9 @@ export type Options = {
      * is present.
      */
     gtag?: GtagPluginOptions;
+} & {
+    /** Options for `@docupotamus/theme-zen`. Use `false` to disable. */
+    zen?: false;
 };
 
 export type ThemeConfig = BaseThemeConfig &

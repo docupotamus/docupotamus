@@ -34,6 +34,7 @@ export default function preset(
         theme,
         googleAnalytics,
         gtag,
+        zen,
         ...rest
     } = opts;
 
@@ -106,6 +107,7 @@ export default function preset(
         plugins.push(makePluginConfig('@docusaurus/plugin-sitemap', sitemap));
     }
     if (Object.keys(rest).length > 0) {
+        // TODO(dnguyen0304): Update message for Docupotamus keys.
         throw new Error(
             `Unrecognized keys ${Object.keys(rest).join(
                 ', ',
