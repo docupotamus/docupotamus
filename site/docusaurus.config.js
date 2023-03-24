@@ -22,6 +22,22 @@ const config = {
         locales: ['en'],
     },
 
+    plugins: [
+        [
+            'client-redirects',
+            /** @type {import('@docusaurus/plugin-client-redirects').Options} */
+            ({
+                fromExtensions: ['html'],
+                redirects: [
+                    {
+                        from: ['/docs/themes/theme-environment-variables'],
+                        to: '/docs/themes/theme-codeblock-param',
+                    },
+                ],
+            }),
+        ],
+    ],
+
     presets: [
         [
             '@docupotamus/docusaurus-preset-classic',

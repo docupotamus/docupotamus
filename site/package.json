@@ -4,6 +4,7 @@
     "private": true,
     "dependencies": {
         "@docupotamus/docusaurus-preset-classic": "^0.3.0",
+        "@docusaurus/plugin-client-redirects": "^2.4.0",
         "@docusaurus/remark-plugin-npm2yarn": "^2.3.1",
         "@emotion/react": "^11.10.6",
         "@emotion/styled": "^11.10.6",
