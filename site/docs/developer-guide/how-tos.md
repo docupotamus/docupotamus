@@ -73,7 +73,9 @@ npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
 
 npm run watch everything
 
-### Add a preset feature gate
+## `preset-classic`
+
+### Add a feature gate
 
 <TaskList>
 - [Prerequisite] Get the preset key using the preset-key convention.
