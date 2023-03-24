@@ -142,7 +142,7 @@ param
 Use the css-namespace-project convention for custom properties.
 
 ```text
-cbp
+par
 ```
 
 ## We're done here! {#future}

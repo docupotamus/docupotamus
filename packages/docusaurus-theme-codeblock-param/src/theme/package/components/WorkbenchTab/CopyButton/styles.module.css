@@ -18,7 +18,7 @@
 }
 
 .CopyButton [class*='copyButtonIcon'] {
-    color: var(--cbp-copy-button-icon-color);
+    color: var(--par-copy-button-icon-color);
 }
 
 .CopyButton [class*='copyButtonSuccessIcon'] {

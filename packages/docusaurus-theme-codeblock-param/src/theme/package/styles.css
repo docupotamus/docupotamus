@@ -1,6 +1,6 @@
 html[data-theme='light'],
 html[data-theme='dark'] {
     /* Components */
-    --cbp-workbench-color-base: var(--markdown-color);
-    --cbp-copy-button-icon-color: var(--markdown-color);
+    --par-workbench-color-base: var(--markdown-color);
+    --par-copy-button-icon-color: var(--markdown-color);
 }
