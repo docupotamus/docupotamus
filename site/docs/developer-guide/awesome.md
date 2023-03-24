@@ -1,8 +1,3 @@
----
-sidebar_position: 45
-title: Awesome
----
-
 # Awesome Stuff
 
 ## GitHub

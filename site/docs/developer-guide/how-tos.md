@@ -1,7 +1,3 @@
----
-sidebar_position: 50
----
-
 # How-To's
 
 import { TaskList } from '@theme/docupotamus-task-list';

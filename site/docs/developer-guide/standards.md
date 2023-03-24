@@ -1,7 +1,3 @@
----
-sidebar_position: 50
----
-
 # Standards and Best Practices
 
 import { TaskList } from '@theme/docupotamus-task-list';

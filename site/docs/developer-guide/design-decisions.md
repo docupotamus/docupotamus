@@ -1,7 +1,3 @@
----
-sidebar_position: 50
----
-
 # Design Decisions
 
 - 2023-03-17: Use react-hotkeys-hook instead of react-hotkeys for **keyboard
