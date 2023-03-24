@@ -88,12 +88,7 @@ import { useToolbar } from '@theme/docupotamus-common';
 
 - Provider Scope: `Root`
 
-Gets the current location object.
-
-It is a backward-compatible, drop-in replacement for Docusaurus
-`@docusaurus/router`. This hook is implemented as just a thin wrapper to handle
-trailing slash logic. See ["Configuration"](#configuration) for why this is
-important.
+Dispatches a `TabConfig` to be registered with the Workbench.
 
 See ["How-To's"](#usetoolbar-example) for an example usage.
 
