@@ -71,7 +71,12 @@ import { useMarkdown } from '@theme/docupotamus-common';
 
 - Provider Scope: `Root`
 
-Mapping from URL path to raw Markdown content.
+Gets the direct children of the Markdown content.
+
+:::info Glossary
+_Direct_ refers to the child nodes immediately below the `.theme-doc-markdown`
+class. Listening to all child nodes in subtrees is not yet supported.
+:::
 
 See ["How-To's"](#usemarkdown-example) for an example usage.
 
@@ -325,12 +330,6 @@ export default function Example() {
   return <div>Example</div>;
 }
 ```
-
-:::info Glossary
-_Direct_ in `directChildren` refers to the child nodes immediately below the
-`.theme-doc-markdown` class. Listening to all child nodes in subtrees is not yet
-supported.
-:::
 
 ## Contributing
 
