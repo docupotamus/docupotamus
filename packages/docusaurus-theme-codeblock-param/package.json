@@ -1,9 +1,9 @@
 {
-    "name": "@docupotamus/docusaurus-theme-environment-variables",
+    "name": "@docupotamus/docusaurus-theme-codeblock-param",
     "version": "0.1.0",
-    "description": "Docusaurus environment variables UI component.",
+    "description": "Docusaurus code block parameterization UI component.",
     "main": "lib/index.js",
-    "types": "src/theme-environment-variables.d.ts",
+    "types": "src/theme-codeblock-param.d.ts",
     "dependencies": {
         "@docupotamus/docusaurus-lib-common": "0.2.0",
         "@docusaurus/utils-validation": "^2.2.x",
@@ -44,7 +44,7 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/docupotamus/docupotamus.git",
-        "directory": "packages/docusaurus-theme-environment-variables"
+        "directory": "packages/docusaurus-theme-codeblock-param"
     },
     "keywords": [
         "react",

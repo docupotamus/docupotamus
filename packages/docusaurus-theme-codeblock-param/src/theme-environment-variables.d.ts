@@ -1,6 +1,6 @@
 /// <reference types="@docusaurus/theme-classic" />
 
-declare module '@docupotamus/docusaurus-theme-environment-variables' {
+declare module '@docupotamus/docusaurus-theme-codeblock-param' {
     // TODO(dnguyen0304): Investigate adding isRequired.
     interface Variable {
         readonly name: string;
@@ -10,15 +10,15 @@ declare module '@docupotamus/docusaurus-theme-environment-variables' {
     }
 }
 
-declare module '@docupotamus/theme-environment-variables' {
-    export * from '@docupotamus/docusaurus-theme-environment-variables';
+declare module '@docupotamus/theme-codeblock-param' {
+    export * from '@docupotamus/docusaurus-theme-codeblock-param';
 }
 
-declare module '@doc8/theme-environment-variables' {
-    export * from '@docupotamus/docusaurus-theme-environment-variables';
+declare module '@doc8/theme-codeblock-param' {
+    export * from '@docupotamus/docusaurus-theme-codeblock-param';
 }
 
-declare module '@theme/docupotamus-environment-variables' {
+declare module '@theme/docupotamus-codeblock-param' {
     import { SvgIconComponent } from '@mui/icons-material';
     import type CodeBlockType from '@theme/CodeBlock/Line';
     import type RootType from '@theme/Root';

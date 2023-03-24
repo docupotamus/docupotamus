@@ -1,4 +1,4 @@
-import { Variable } from '@doc8/theme-environment-variables';
+import { Variable } from '@doc8/theme-codeblock-param';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -11,7 +11,7 @@ import '../../styles.css';
 import CopyButton from './CopyButton';
 import styles from './styles.module.css';
 
-const KEY_PREFIX = 'environmentVariable';
+const KEY_PREFIX = 'codeblockParam';
 
 const Layout = styled(Box)({
     height: '100%',

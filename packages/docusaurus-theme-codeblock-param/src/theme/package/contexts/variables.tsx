@@ -1,4 +1,4 @@
-import { Variable } from '@doc8/theme-environment-variables';
+import { Variable } from '@doc8/theme-codeblock-param';
 import { ReactContextError } from '@docupotamus/docusaurus-lib-common/contexts';
 import * as React from 'react';
 

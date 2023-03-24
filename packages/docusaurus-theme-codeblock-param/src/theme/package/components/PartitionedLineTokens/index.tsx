@@ -1,11 +1,11 @@
-import { Variable } from '@doc8/theme-environment-variables';
+import { Variable } from '@doc8/theme-codeblock-param';
 import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useVariables } from '../../contexts/variables';
 import { formatDefault } from '../../services';
 
-const TARGET_CLASS_NAME = 'DocupotamusEnvironmentVariable';
+const TARGET_CLASS_NAME = 'DocupotamusCodeblockParam';
 // TODO(dnguyen0304): Refactor to RegExp and String.raw to reduce duplicated
 //   code.
 //   See: https://stackoverflow.com/a/43391072
@@ -115,7 +115,7 @@ export default function PartitionedLineTokens(
             }
 
             // Assume tokens are grouped such that they overlap exactly with the
-            // endpoints for environment variables. This invariant is handled by
+            // endpoints for code block parameters. This invariant is handled by
             // splitTokens. For example, in pseudo-code:
             //
             //   // YES
@@ -146,8 +146,8 @@ export default function PartitionedLineTokens(
                         key={uuidv4()}
                         className={TARGET_CLASS_NAME}
                         ref={ref}
-                        data-environment-variable-name={name}
-                        data-environment-variable-default-value={defaultValue}
+                        data-codeblock-param-name={name}
+                        data-codeblock-param-default-value={defaultValue}
                     >
                         {formatDefault({ name, defaultValue })}
                     </span>
