@@ -4,6 +4,8 @@ sidebar_position: 15
 
 # 📦 theme-environment-variables
 
+import FlexImage from '@site/src/components/FlexImage';
+import DemoGif from '@site/static/gifs/demo-code-param.gif';
 import { TaskList } from '@theme/docupotamus-task-list';
 
 <!-- If this changes, then change: README.md -->
@@ -13,6 +15,8 @@ A Docusaurus theme that parameterizes code blocks.
 Use this when you have helpful code blocks but want to allow developers to
 personalize those snippets, for example with repetitive tasks (e.g. installing a
 package).
+
+<FlexImage alt="Demo GIF" src={DemoGif} />
 
 ## Getting Started
 
