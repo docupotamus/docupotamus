@@ -90,6 +90,14 @@ import { useToolbar } from '@theme/docupotamus-common';
 
 Dispatches a `TabConfig` to be registered with the Workbench.
 
+:::tip
+Always use this hook from `Toolbar/Entry`.
+:::
+
+`Toolbar/Entry` is a sentinel to be swizzled through wrapping. It is guaranteed
+to be a descendant component of the `ToolbarProvider` and therefore has always
+access to the context.
+
 See ["How-To's"](#usetoolbar-example) for an example usage.
 
 ## Customizing
