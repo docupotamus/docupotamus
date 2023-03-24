@@ -36,6 +36,7 @@ export default function preset(
         gtag,
         // doc8
         envVars,
+        taskList,
         zen,
         ...rest
     } = opts;

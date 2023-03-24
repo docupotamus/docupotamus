@@ -17,18 +17,21 @@ type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
 
 export default function ToolbarEntryWrapper(props: Props): JSX.Element {
     const envVarsIsEnabled = useIsEnabled('envVars');
+    const taskListIsEnabled = useIsEnabled('taskList');
     const { dispatchTabIdToConfig } = useToolbar();
 
     React.useEffect(() => {
-        dispatchTabIdToConfig({
-            type: 'setTab',
-            tabId: 'task-list',
-            newValue: {
-                displayName: 'Task List',
-                Component: <TaskListWorkbenchTab />,
-                IconComponent: <TaskListWorkbenchIcon />,
-            },
-        });
+        if (taskListIsEnabled) {
+            dispatchTabIdToConfig({
+                type: 'setTab',
+                tabId: 'task-list',
+                newValue: {
+                    displayName: 'Task List',
+                    Component: <TaskListWorkbenchTab />,
+                    IconComponent: <TaskListWorkbenchIcon />,
+                },
+            });
+        }
         if (envVarsIsEnabled) {
             dispatchTabIdToConfig({
                 type: 'setTab',

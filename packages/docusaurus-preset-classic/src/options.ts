@@ -39,6 +39,8 @@ export type Options = {
     /** Options for `@docupotamus/theme-environment-variables`. Use `false` to
      *  disable. */
     envVars?: false;
+    /** Options for `@docupotamus/theme-task-list`. Use `false` to disable. */
+    taskList?: false;
     /** Options for `@docupotamus/theme-zen`. Use `false` to disable. */
     zen?: false;
 };

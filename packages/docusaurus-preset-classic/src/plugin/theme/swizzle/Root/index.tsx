@@ -16,6 +16,7 @@ type Props = Readonly<WrapperProps<typeof RootType>>;
 
 export default function RootWrapper(props: Props): JSX.Element {
     const envVarsIsEnabled = useIsEnabled('envVars');
+    const taskListIsEnabled = useIsEnabled('taskList');
 
     return (
         <ConditionalWrap wrappers={[
@@ -29,7 +30,7 @@ export default function RootWrapper(props: Props): JSX.Element {
             },
             {
                 Component: TaskListDecorator,
-                isIncluded: true,
+                isIncluded: taskListIsEnabled,
             },
         ]}>
             <RootInit {...props} />
