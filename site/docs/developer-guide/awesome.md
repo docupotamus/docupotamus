@@ -12,7 +12,7 @@
 | Package                        | Scope     | Preset Key | css-namespace-project |
 | ------------------------------ | --------- | ---------- | --------------------- |
 | `plugin-content-docs-src-hook` | src-hook  | N/A        | N/A                   |
+| `theme-codeblock-param`        | param     | envVars    | cbp                   |
 | `theme-common`                 | common    | N/A        |                       |
-| `theme-environment-variables`  | env-vars  | envVars    | cbp                   |
 | `theme-task-list`              | task-list | taskList   |                       |
 | `theme-zen`                    | zen       | zen        |                       |

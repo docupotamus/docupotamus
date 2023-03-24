@@ -136,7 +136,7 @@ document.querySelector('.DocupotamusEnvironmentVariable');
 Use the git-commit-message convention for the scope.
 
 ```text
-env-vars
+param
 ```
 
 Use the css-namespace-project convention for custom properties.
