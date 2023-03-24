@@ -44,9 +44,9 @@ const StyledBox = styled(Box, {
 }));
 
 export default function Workbench(): JSX.Element {
-    const { tabIdToConfig, _internalActiveTabId } = useToolbar();
+    const { _internalTabIdToConfig, _internalActiveTabId } = useToolbar();
 
-    const tabConfig = tabIdToConfig.get(_internalActiveTabId);
+    const tabConfig = _internalTabIdToConfig.get(_internalActiveTabId);
 
     return (
         <StyledBox

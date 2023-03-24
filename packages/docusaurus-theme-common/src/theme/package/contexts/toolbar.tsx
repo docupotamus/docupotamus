@@ -22,7 +22,7 @@ const reducer = (prev: TabIdToConfig, action: Action): TabIdToConfig => {
 const Context = React.createContext<ToolbarContextValue | undefined>(undefined);
 
 const useContextValue = (): ToolbarContextValue => {
-    const [tabIdToConfig, dispatchTabIdToConfig] = React.useReducer(
+    const [_internalTabIdToConfig, dispatchTabIdToConfig] = React.useReducer(
         reducer,
         new Map(),
     );
@@ -31,13 +31,13 @@ const useContextValue = (): ToolbarContextValue => {
 
     return React.useMemo(
         () => ({
-            tabIdToConfig,
+            _internalTabIdToConfig,
             _internalActiveTabId,
             dispatchTabIdToConfig,
             _internalSetActiveTabId,
         }),
         [
-            tabIdToConfig,
+            _internalTabIdToConfig,
             _internalActiveTabId,
             dispatchTabIdToConfig,
             _internalSetActiveTabId,

@@ -23,11 +23,11 @@ const StyledBox = styled(Box)({
 });
 
 export default function Toolbar(): JSX.Element {
-    const { tabIdToConfig } = useToolbar();
+    const { _internalTabIdToConfig } = useToolbar();
 
     return (
         <StyledBox className='DocupotamusCommon_toolbar'>
-            {[...tabIdToConfig.entries()].map(([tabId, config]) => {
+            {[..._internalTabIdToConfig.entries()].map(([tabId, config]) => {
                 return (
                     <Button
                         key={tabId}
