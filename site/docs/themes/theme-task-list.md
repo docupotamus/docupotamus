@@ -188,17 +188,6 @@ Use the git-commit-message convention for the scope.
 task-list
 ```
 
-## Workbench Integration
-
-<!-- TODO(dnguyen0304): Add gifs. -->
-
-- **State Synchronization:** Task list state is synchronized between the page
-  and the workbench. You can track your progress even while jumping around the
-  page.
-
-- **Quick Navigation:** If a page contains multiple task lists, the buttons
-  allow you to quickly navigate between the task lists.
-
 ## We're done here! {#future}
 
 The roadmap includes some important feature requests such as fixing the
