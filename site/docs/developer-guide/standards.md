@@ -2,7 +2,7 @@
 sidebar_position: 50
 ---
 
-# Developer Guide
+# Standards and Best Practices
 
 import { TaskList } from '@theme/docupotamus-task-list';
 
