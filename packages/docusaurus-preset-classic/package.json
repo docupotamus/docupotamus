@@ -8,7 +8,7 @@
         "@docupotamus/docusaurus-plugin-content-docs-src-hook": "0.5.0",
         "@docupotamus/docusaurus-styles-classic": "^0.6.0",
         "@docupotamus/docusaurus-theme-common": "0.2.0",
-        "@docupotamus/docusaurus-theme-environment-variables": "0.1.0",
+        "@docupotamus/docusaurus-theme-codeblock-param": "0.1.0",
         "@docupotamus/docusaurus-theme-task-list": "0.2.0",
         "@docupotamus/docusaurus-theme-zen": "0.0.0",
         "@docusaurus/core": "2.2.x",

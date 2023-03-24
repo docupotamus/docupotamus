@@ -1,9 +1,9 @@
 import type { WrapperProps } from '@docusaurus/types';
 import RootInit from '@theme-init/Root';
-import { RootDecorator as CommonDecorator } from '@theme/docupotamus-common';
 import {
-    RootDecorator as EnvironmentVariablesDecorator
-} from '@theme/docupotamus-environment-variables';
+    RootDecorator as ParamDecorator
+} from '@theme/docupotamus-codeblock-param';
+import { RootDecorator as CommonDecorator } from '@theme/docupotamus-common';
 import {
     RootDecorator as TaskListDecorator
 } from '@theme/docupotamus-task-list';
@@ -15,7 +15,7 @@ import useIsEnabled from '../../package/hooks/useIsEnabled';
 type Props = Readonly<WrapperProps<typeof RootType>>;
 
 export default function RootWrapper(props: Props): JSX.Element {
-    const envVarsIsEnabled = useIsEnabled('envVars');
+    const paramIsEnabled = useIsEnabled('param');
     const taskListIsEnabled = useIsEnabled('taskList');
 
     return (
@@ -25,8 +25,8 @@ export default function RootWrapper(props: Props): JSX.Element {
                 isIncluded: true,
             },
             {
-                Component: EnvironmentVariablesDecorator,
-                isIncluded: envVarsIsEnabled,
+                Component: ParamDecorator,
+                isIncluded: paramIsEnabled,
             },
             {
                 Component: TaskListDecorator,

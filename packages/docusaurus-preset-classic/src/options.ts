@@ -36,9 +36,9 @@ export type Options = {
      */
     gtag?: GtagPluginOptions;
 } & {
-    /** Options for `@docupotamus/theme-environment-variables`. Use `false` to
+    /** Options for `@docupotamus/theme-codeblock-param`. Use `false` to
      *  disable. */
-    envVars?: false;
+    param?: false;
     /** Options for `@docupotamus/theme-task-list`. Use `false` to disable. */
     taskList?: false;
     /** Options for `@docupotamus/theme-zen`. Use `false` to disable. */

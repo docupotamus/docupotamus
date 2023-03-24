@@ -1,11 +1,11 @@
 import type { WrapperProps } from '@docusaurus/types';
 import ToolbarEntryInit from '@theme-init/docupotamus-common/Toolbar/Entry';
+import {
+    WorkbenchIcon as ParamWorkbenchIcon,
+    WorkbenchTab as ParamWorkbenchTab
+} from '@theme/docupotamus-codeblock-param';
 import { useToolbar } from '@theme/docupotamus-common';
 import type ToolbarEntryType from '@theme/docupotamus-common/Toolbar/Entry';
-import {
-    WorkbenchIcon as EnvironmentVariablesWorkbenchIcon,
-    WorkbenchTab as EnvironmentVariablesWorkbenchTab
-} from '@theme/docupotamus-environment-variables';
 import {
     WorkbenchIcon as TaskListWorkbenchIcon,
     WorkbenchTab as TaskListWorkbenchTab
@@ -16,7 +16,7 @@ import useIsEnabled from '../../../../package/hooks/useIsEnabled';
 type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
 
 export default function ToolbarEntryWrapper(props: Props): JSX.Element {
-    const envVarsIsEnabled = useIsEnabled('envVars');
+    const paramIsEnabled = useIsEnabled('param');
     const taskListIsEnabled = useIsEnabled('taskList');
     const { dispatchTabIdToConfig } = useToolbar();
 
@@ -32,14 +32,14 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
                 },
             });
         }
-        if (envVarsIsEnabled) {
+        if (paramIsEnabled) {
             dispatchTabIdToConfig({
                 type: 'setTab',
-                tabId: 'environment-variables',
+                tabId: 'param',
                 newValue: {
-                    displayName: 'Environment Variables',
-                    Component: <EnvironmentVariablesWorkbenchTab />,
-                    IconComponent: <EnvironmentVariablesWorkbenchIcon />,
+                    displayName: 'Parameters',
+                    Component: <ParamWorkbenchTab />,
+                    IconComponent: <ParamWorkbenchIcon />,
                 },
             });
         }

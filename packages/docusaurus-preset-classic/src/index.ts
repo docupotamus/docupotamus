@@ -35,7 +35,7 @@ export default function preset(
         googleAnalytics,
         gtag,
         // doc8
-        envVars,
+        param,
         taskList,
         zen,
         ...rest
@@ -56,7 +56,7 @@ export default function preset(
             '@docupotamus/docusaurus-theme-common',
             { swizzleIsEnabled: false },
         ),
-        makePluginConfig('@docupotamus/docusaurus-theme-environment-variables'),
+        makePluginConfig('@docupotamus/docusaurus-theme-codeblock-param'),
         makePluginConfig(
             '@docupotamus/docusaurus-theme-task-list',
             { swizzleIsEnabled: false },

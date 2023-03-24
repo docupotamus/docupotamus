@@ -1,7 +1,7 @@
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 // TODO(dnguyen0304): Fix missing cohesion.
-type PluginKey = 'envVars' | 'taskList' | 'zen';
+type PluginKey = 'param' | 'taskList' | 'zen';
 
 export default function useIsEnabled(pluginKey: PluginKey): boolean {
     const { siteConfig } = useDocusaurusContext();
