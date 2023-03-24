@@ -160,10 +160,11 @@ Markdown syntax. -->
 <ApiTable>
 ```
 
-| Name      | Type                       | Default     | Description                                                                                                                                                                                                       |
-| --------- | -------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `envVars` | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-environment-variables#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-environment-variables`. Use `false` to disable the plugin. |
-| `zen`     | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-zen#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-zen`. Use `false` to disable the plugin.                                     |
+| Name       | Type                       | Default     | Description                                                                                                                                                                                                       |
+| ---------- | -------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `envVars`  | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-environment-variables#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-environment-variables`. Use `false` to disable the plugin. |
+| `taskList` | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-task-list#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-task-list`. Use `false` to disable the plugin.                         |
+| `zen`      | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-zen#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-zen`. Use `false` to disable the plugin.                                     |
 
 ```mdx-code-block
 </ApiTable>
