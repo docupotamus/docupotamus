@@ -10,9 +10,7 @@ import { TaskList } from '@theme/docupotamus-task-list';
 We refer to _standards_ and _conventions_ interchangeably.
 :::
 
-## Conventions
-
-### Project Structure
+## Project Structure
 
 - `src/theme/`
 
@@ -32,7 +30,7 @@ We refer to _standards_ and _conventions_ interchangeably.
     directory trees between `decorators` and `swizzle` are always equal to one
     another.
 
-### git and GitHub
+## git and GitHub
 
 - **git-commit-message**: Use the template below. Note the verb is formatted as
   uppercase and the message always ends with punctuation.
@@ -45,12 +43,12 @@ We refer to _standards_ and _conventions_ interchangeably.
   [foo] Add handleClick for Button component.
   ```
 
-### Docusaurus
+## Docusaurus
 
 - **preset-key**: Use the git-commit-message scope convention formatted in
   camelCase.
 
-#### Swizzling
+### Swizzling
 
 - **swizzle-no-eject**: Strongly prefer wrapping instead of ejecting. Ejecting
   breaks backward-compatibility, increases maintenance, and is significantly
@@ -66,7 +64,7 @@ We refer to _standards_ and _conventions_ interchangeably.
   the changes are specific to layout. Instead use a non-`Layout` component
   higher up in the tree. This applies even when only adding a new provider.
 
-### JavaScript / TypeScript
+## JavaScript / TypeScript
 
 - **typescript-module-doc8**: When choosing between the
   `@docupotamus/docusaurus-theme-foo`, `@docupotamus/theme-foo`, and
@@ -80,9 +78,9 @@ We refer to _standards_ and _conventions_ interchangeably.
   intended reader is a developer instead of a user. The most common examples are
   errors and logs. The justification is to facilitate searching.
 
-### Styling
+## Styling
 
-#### Styled-Components
+### Styled-Components
 
 - **styled-components-group-selector**: Prefer `Array.join()` for group
   selectors. This prevents bugs from including a trailing comma. For example:
@@ -100,7 +98,7 @@ const StyledBox = styled(Box)({
   very slow because styled-components appends a new `<style>` tag to the
   `<head>` tag on each change. Instead use inline styles.
 
-#### CSS
+### CSS
 
 - **css-class-bem**: Use a modified BEM naming convention for classes. Use
   PascalCase for blocks, and camelCase for elements and modifiers. For
@@ -120,7 +118,7 @@ const StyledBox = styled(Box)({
   `--tl-color-primary` where "tl" is an abbreviation for
   "@docupotamus/docusaurus-theme-**t**ask-**l**ist".
 
-### Markdown / MDX
+## Markdown / MDX
 
 - **markdown-keywords-marketing**: Use title casing for marketing keywords. Here
   is an exhaustive list:
