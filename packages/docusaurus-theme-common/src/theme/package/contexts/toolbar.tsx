@@ -26,18 +26,18 @@ const useContextValue = (): ToolbarContextValue => {
         reducer,
         new Map(),
     );
-    const [activeTabId, setActiveTabId] = React.useState<string>('');
+    const [_internalActiveTabId, setActiveTabId] = React.useState<string>('');
 
     return React.useMemo(
         () => ({
             tabIdToConfig,
-            activeTabId,
+            _internalActiveTabId,
             dispatchTabIdToConfig,
             setActiveTabId,
         }),
         [
             tabIdToConfig,
-            activeTabId,
+            _internalActiveTabId,
             dispatchTabIdToConfig,
             setActiveTabId,
         ],

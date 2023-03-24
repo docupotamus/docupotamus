@@ -51,7 +51,8 @@ declare module '@docupotamus/docusaurus-theme-common' {
 
     interface ToolbarContextValue {
         readonly tabIdToConfig: TabIdToConfig;
-        readonly activeTabId: string;
+        // TODO(dnguyen0304): Investigate changing to private.
+        readonly _internalActiveTabId: string;
         readonly dispatchTabIdToConfig: React.Dispatch<Action>;
         readonly setActiveTabId: React.Dispatch<React.SetStateAction<string>>;
     }
