@@ -284,8 +284,10 @@ import type { WrapperProps } from '@docusaurus/types';
 import ToolbarEntryInit from '@theme-init/docupotamus-common/Toolbar/Entry';
 import { useToolbar } from '@theme/docupotamus-common';
 import type ToolbarEntryType from '@theme/docupotamus-common/Toolbar/Entry';
-// highlight-next-line
+// highlight-start
 import { WorkbenchIcon } from '@theme/my-workbench-icon';
+import { WorkbenchTab } from '@theme/my-workbench-tab';
+// highlight-end
 import * as React from 'react';
 
 type Props = Readonly<WrapperProps<typeof ToolbarEntryType>>;
@@ -300,11 +302,7 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
       tabId: 'my-first-add-on',
       newValue: {
         displayName: 'My First Add-On',
-        Component: React.lazy(() =>
-          import('@theme/my-workbench-tab').then((module) => ({
-            default: module.WorkbenchTab,
-          })),
-        ),
+        Component: <WorkbenchTab />,
         IconComponent: <WorkbenchIcon />,
       },
     });
