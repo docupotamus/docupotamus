@@ -9,6 +9,11 @@ import ApiTable from '@site/src/components/ApiTable';
 A Docusaurus preset that bundles a minimalist design, unified add-on interface,
 and powerful built-ins.
 
+:::tip
+This page is probably what you're looking for. The preset is recommended for
+getting started with doc8.
+:::
+
 Use this when you want to use Docupotamus features, but don't want to maintain
 the code integrating plugins with your Docusaurus site.
 
