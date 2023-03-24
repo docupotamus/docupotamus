@@ -95,21 +95,25 @@ options.
 
 ## API Reference
 
-```jsx
-import {} from '@theme/docupotamus-plugin-content-docs-src-hook';
-```
-
 :::tip
 Looking for types? doc8 is written (basically) 100% in TypeScript!
 :::
 
 ### `usePathToContent`
 
+```jsx
+import { usePathToContent } from '@theme/docupotamus-plugin-content-docs-src-hook';
+```
+
 - Provider Scope: `DocPage`
 
 Mapping from URL path to raw Markdown content.
 
 ### `useLocation`
+
+```jsx
+import { useLocation } from '@theme/docupotamus-plugin-content-docs-src-hook';
+```
 
 - Provider Scope: `Root`
 
