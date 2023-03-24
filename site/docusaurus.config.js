@@ -37,6 +37,7 @@ const config = {
                             },
                         ],
                     ],
+                    sidebarPath: require.resolve('./sidebars.js'),
                 },
                 blog: {
                     path: 'blogs',
@@ -58,6 +59,12 @@ const config = {
                     src: 'img/logo.svg',
                 },
                 items: [
+                    {
+                        type: 'docSidebar',
+                        label: 'Docs',
+                        position: 'left',
+                        sidebarId: 'userGuide',
+                    },
                     {
                         type: 'doc',
                         label: 'Docs',
