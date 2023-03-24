@@ -131,3 +131,17 @@ const StyledBox = styled(Box)({
 - **markdown-heading-imperative**: Headings that are imperative sentences use
   sentence casing. Do not use title casing. For example, "Do a thing" and not
   "Do a Thing".
+
+## Stylization
+
+- `@docupotamus/docusaurus-theme-codeblock-param`
+  - Package, Shortened: `theme-codeblock-param`
+  - Plain Text:
+    - Code Block Parameterization
+    - code block parameters
+    - parameters
+  - Code:
+    - `CodeblockParam`
+    - `codeblockParam`
+  - Code, Internal:
+    - `param`
