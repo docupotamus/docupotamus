@@ -21,17 +21,6 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
     const { dispatchTabIdToConfig } = useToolbar();
 
     React.useEffect(() => {
-        if (taskListIsEnabled) {
-            dispatchTabIdToConfig({
-                type: 'setTab',
-                tabId: 'task-list',
-                newValue: {
-                    displayName: 'Task List',
-                    Component: <TaskListWorkbenchTab />,
-                    IconComponent: <TaskListWorkbenchIcon />,
-                },
-            });
-        }
         if (paramIsEnabled) {
             dispatchTabIdToConfig({
                 type: 'setTab',
@@ -40,6 +29,17 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
                     displayName: 'Parameters',
                     Component: <ParamWorkbenchTab />,
                     IconComponent: <ParamWorkbenchIcon />,
+                },
+            });
+        }
+        if (taskListIsEnabled) {
+            dispatchTabIdToConfig({
+                type: 'setTab',
+                tabId: 'task-list',
+                newValue: {
+                    displayName: 'Task List',
+                    Component: <TaskListWorkbenchTab />,
+                    IconComponent: <TaskListWorkbenchIcon />,
                 },
             });
         }
