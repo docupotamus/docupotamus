@@ -1,7 +1,3 @@
----
-sidebar_position: 15
----
-
 # 📦 theme-codeblock-param
 
 import FlexImage from '@site/src/components/FlexImage';

@@ -1,7 +1,3 @@
----
-sidebar_position: 20
----
-
 # 📦 theme-task-list
 
 import ApiTable from '@site/src/components/ApiTable';

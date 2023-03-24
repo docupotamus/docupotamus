@@ -1,7 +1,3 @@
----
-sidebar_position: 50
----
-
 # 📦 theme-zen
 
 import ApiTable from '@site/src/components/ApiTable';

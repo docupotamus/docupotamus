@@ -1,7 +1,3 @@
----
-sidebar_position: 13
----
-
 # 📦 theme-editor
 
 :::note Under Construction 🚧
