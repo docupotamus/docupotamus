@@ -18,5 +18,5 @@ title: Awesome
 | ------------------------------ | -------- | --------------------- |
 | `plugin-content-docs-src-hook` | src-hook | N/A                   |
 | `theme-common`                 | common   |                       |
-| `theme-environment-variables`  | env-var  | ev                    |
+| `theme-environment-variables`  | env-vars | ev                    |
 | `theme-zen`                    | zen      |                       |

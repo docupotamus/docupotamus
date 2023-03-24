@@ -138,7 +138,7 @@ document.querySelector('.DocupotamusEnvironmentVariable');
 Use the git-commit-message convention for the scope.
 
 ```text
-env-var
+env-vars
 ```
 
 ## We're done here! {#future}
