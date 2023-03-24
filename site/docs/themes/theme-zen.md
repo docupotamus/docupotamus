@@ -4,9 +4,9 @@ sidebar_position: 50
 
 # 📦 theme-zen
 
-import DemoGif from '@site/static/gifs/demo-zen.gif';
 import ApiTable from '@site/src/components/ApiTable';
 import FlexImage from '@site/src/components/FlexImage';
+import DemoGif from '@site/static/gifs/demo-zen.gif';
 
 <!-- If this changes, then change: README.md -->
 
