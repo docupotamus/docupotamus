@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # 📦 preset-classic
 
 import ApiTable from '@site/src/components/ApiTable';

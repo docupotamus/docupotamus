@@ -1,7 +1,3 @@
----
-sidebar_position: 43
----
-
 # Stability Promise
 
 - We use [semantic versioning](https://semver.org/) for our packages.

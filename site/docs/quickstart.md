@@ -1,7 +1,3 @@
----
-sidebar_position: 0
----
-
 # Quickstart
 
 import { TaskList } from '@theme/docupotamus-task-list';

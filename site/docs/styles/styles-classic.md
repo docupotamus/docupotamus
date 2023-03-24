@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # 📦 styles-classic
 
 import ApiTable from '@site/src/components/ApiTable';

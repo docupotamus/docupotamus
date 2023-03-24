@@ -1,7 +1,3 @@
----
-sidebar_position: 10
----
-
 # 📦 plugin-content-docs-src-hook
 
 import ApiTable from '@site/src/components/ApiTable';
