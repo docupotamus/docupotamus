@@ -11,5 +11,5 @@ export default function useIsEnabled(pluginKey: PluginKey): boolean {
         return false;
     }
     const [, options] = preset;
-    return !!options[pluginKey];
+    return !!(options[pluginKey] ?? true);
 };
