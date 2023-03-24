@@ -6,43 +6,6 @@ sidebar_position: 50
 
 import { TaskList } from '@theme/docupotamus-task-list';
 
-## Release
-
-### Compare changes since the latest version
-
-```shell
-$ git log -- .
-```
-
-### Publish to NPM
-
-:::danger
-Remember to clear all pending changes (`git status`) first.
-:::
-
-:::info
-Remember to execute this command from the directory containing `package.json`.
-:::
-
-```shell
-# VERSION: Exclude the leading "v".
-$ PACKAGE={{ PACKAGE }} \
-    && VERSION={{ VERSION }} \
-    && npm version ${VERSION} \
-    && git add ../.. \
-    && git commit -m "Update version for ${PACKAGE}." \
-    && git tag --annotate ${PACKAGE}-v${VERSION} -m "${PACKAGE}-v${VERSION}" \
-    && git push \
-    && git push --tags \
-    && npm publish --access=public \
-    && cd ../.. \
-    && grep -r ${PACKAGE} \
-        --include package.json \
-        --exclude-dir node_modules \
-        --exclude-dir ${PACKAGE} \
-        .
-```
-
 ## Docusaurus
 
 ### Swizzle a component
@@ -124,3 +87,40 @@ npm run watch everything
 - call hook or use ConditionalWrap
 - test with docusaurus.config.js
 </TaskList>
+
+## Release
+
+### Compare changes since the latest version
+
+```shell
+$ git log -- .
+```
+
+### Publish to NPM
+
+:::danger
+Remember to clear all pending changes (`git status`) first.
+:::
+
+:::info
+Remember to execute this command from the directory containing `package.json`.
+:::
+
+```shell
+# VERSION: Exclude the leading "v".
+$ PACKAGE={{ PACKAGE }} \
+    && VERSION={{ VERSION }} \
+    && npm version ${VERSION} \
+    && git add ../.. \
+    && git commit -m "Update version for ${PACKAGE}." \
+    && git tag --annotate ${PACKAGE}-v${VERSION} -m "${PACKAGE}-v${VERSION}" \
+    && git push \
+    && git push --tags \
+    && npm publish --access=public \
+    && cd ../.. \
+    && grep -r ${PACKAGE} \
+        --include package.json \
+        --exclude-dir node_modules \
+        --exclude-dir ${PACKAGE} \
+        .
+```
