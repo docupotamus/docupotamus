@@ -48,8 +48,8 @@ If you are having trouble setting up Docusaurus, see the
 :::
 
 :::tip
-In the right-docked Toolbar, open the "Environment Variables" tab to personalize
-these snippets!
+In the right-docked Toolbar, open the "Parameters" tab to personalize these
+snippets!
 :::
 
 ```shell
@@ -102,5 +102,5 @@ d o c u p o t a m u s
 ## We're done here!
 
 What's next? Good first places to start are learning more about the [differences between Docupotamus and Docusaurus](./presets/preset-classic.md#docusaurus-differences)
-or [creating an environment variable](./themes/theme-environment-variables#example-usage)
+or [creating a code block parameter](./themes/theme-codeblock-param#example-usage)
 just like the one on this page. Try it out!

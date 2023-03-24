@@ -23,7 +23,7 @@ themes:
 - [`@docupotamus/styles-classic`](../styles/styles-classic.md)
 - [`@docupotamus/plugin-content-docs-src-hook`](../plugins/plugin-content-docs-src-hook.md)
 - [`@docupotamus/theme-common`](../themes/theme-common.md)
-- [`@docupotamus/environment-variables`](../themes/theme-environment-variables.md)
+- [`@docupotamus/theme-codeblock-param`](../themes/theme-codeblock-param.md)
 - [`@docupotamus/theme-task-list`](../themes/theme-task-list.md)
 - [`@docupotamus/theme-zen`](../themes/theme-zen.md)
 - [`@docusaurus/preset-classic`](#docusaurus-differences)
@@ -165,11 +165,11 @@ Markdown syntax. -->
 <ApiTable>
 ```
 
-| Name       | Type                       | Default     | Description                                                                                                                                                                                                       |
-| ---------- | -------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `envVars`  | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-environment-variables#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-environment-variables`. Use `false` to disable the plugin. |
-| `taskList` | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-task-list#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-task-list`. Use `false` to disable the plugin.                         |
-| `zen`      | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-zen#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-zen`. Use `false` to disable the plugin.                                     |
+| Name       | Type                       | Default     | Description                                                                                                                                                                                           |
+| ---------- | -------------------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `param`    | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-codeblock-param#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-codeblock-param`. Use `false` to disable the plugin. |
+| `taskList` | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-task-list#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-task-list`. Use `false` to disable the plugin.             |
+| `zen`      | `false` &#124; `undefined` | `undefined` | Pass plugin options (<a href="../themes/theme-zen#configuration" target="_blank">full configuration list</a>) to `@docupotamus/theme-zen`. Use `false` to disable the plugin.                         |
 
 ```mdx-code-block
 </ApiTable>

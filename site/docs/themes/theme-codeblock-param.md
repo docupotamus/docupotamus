@@ -2,7 +2,7 @@
 sidebar_position: 15
 ---
 
-# 📦 theme-environment-variables
+# 📦 theme-codeblock-param
 
 import FlexImage from '@site/src/components/FlexImage';
 import DemoGif from '@site/static/gifs/demo-code-param.gif';
@@ -23,7 +23,7 @@ package).
 ### Try It Out
 
 :::tip
-In the right-docked Toolbar, open the "Environment Variables" tab to personalize
+In the right-docked Toolbar, open the "Parameters" tab to personalize
 these snippets!
 :::
 
@@ -51,19 +51,19 @@ installing the `preset-classic`.
 ### Example Usage
 
 :::tip
-In the right-docked Toolbar, open the "Environment Variables" tab to personalize
+In the right-docked Toolbar, open the "Parameters" tab to personalize
 these snippets!
 :::
 
 ```text title="Syntax"
-ENVIRONMENT_VARIABLE_NAME[=optional_default]
+PARAMETER_NAME[=optional_default]
 
 {{ FOO_bar_123 }}
 ```
 
 <TaskList>
 - Create a code block (```).
-- Add an environment variable name without whitespaces "FOO_bar_123".
+- Add a parameter name without whitespaces "FOO_bar_123".
 - [Optional] Add a default value "FOO_bar_123=456".
 - Surround with 1 whitespace " FOO_bar_123 ".
 - Surround with 2 curly braces "&#123;&#123; FOO_bar_123 &#125;&#125;".
@@ -94,7 +94,7 @@ as spacing.
 We provide some stable CSS class names for robust and maintainable global layout
 styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
-- `.DocupotamusEnvironmentVariable`
+- `.DocupotamusCodeblockParameter`
 
 ### Example Styling
 
@@ -109,7 +109,7 @@ out!
 ```javascript title="JavaScript"
 // Scroll up to the "Try It Out" section to see the targeted task
 // list.
-document.querySelector('.DocupotamusEnvironmentVariable');
+document.querySelector('.DocupotamusCodeblockParameter');
 ```
 
 ```mdx-code-block
@@ -118,7 +118,7 @@ document.querySelector('.DocupotamusEnvironmentVariable');
 ```
 
 ```css title="CSS"
-.DocupotamusEnvironmentVariable {
+.DocupotamusCodeblockParameter {
   /* The important flag is used here only for demonstration
      purposes. For production code, we recommended using a different
      approach to increase specificity. */
@@ -149,9 +149,9 @@ cbp
 
 The roadmap includes some important feature requests such as integrating with
 the code block copy button and page-scoped (as opposed to block-scoped)
-environment variables.
+parameters.
 
 What's next? If you have comments, questions, or are looking to contribute,
-please start a conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A%22Environment+Variables%22)!
+please start a conversation over a [GitHub issue](https://github.com/docupotamus/docupotamus/issues?q=is%3Aopen+is%3Aissue+label%3A"Code+Block+Parameterization")!
 
 Please remember to [⭐ give us a star on GitHub! ⭐](https://github.com/docupotamus/docupotamus)
