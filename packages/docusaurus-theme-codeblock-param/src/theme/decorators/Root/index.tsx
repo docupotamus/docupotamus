@@ -3,7 +3,7 @@ import * as React from 'react';
 import {
     ParamsProvider,
     useParams
-} from '../../package/contexts/variables';
+} from '../../package/contexts/params';
 import '../../package/styles.css';
 
 interface Props {

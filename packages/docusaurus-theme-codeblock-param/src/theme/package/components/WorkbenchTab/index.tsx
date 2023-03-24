@@ -5,7 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import { styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import * as React from 'react';
-import { useParams } from '../../contexts/variables';
+import { useParams } from '../../contexts/params';
 import { formatDefault } from '../../services';
 import '../../styles.css';
 import CopyButton from './CopyButton';

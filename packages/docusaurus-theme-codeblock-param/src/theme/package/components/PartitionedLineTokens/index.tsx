@@ -2,7 +2,7 @@ import { Param } from '@doc8/theme-codeblock-param';
 import type { Props as LineProps } from '@theme/CodeBlock/Line';
 import * as React from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useParams } from '../../contexts/variables';
+import { useParams } from '../../contexts/params';
 import { formatDefault } from '../../services';
 
 const TARGET_CLASS_NAME = 'DocupotamusCodeblockParam';
