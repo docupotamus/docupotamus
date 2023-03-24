@@ -6,6 +6,8 @@ sidebar_position: 50
 
 import { TaskList } from '@theme/docupotamus-task-list';
 
+## Release
+
 ### Compare changes since the latest version
 
 ```shell
@@ -40,6 +42,8 @@ $ PACKAGE={{ PACKAGE }} \
         --exclude-dir ${PACKAGE} \
         .
 ```
+
+## Docusaurus
 
 ### Swizzle a component
 
