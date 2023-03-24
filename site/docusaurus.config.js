@@ -28,7 +28,6 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    sidebarPath: require.resolve('./sidebars.js'),
                     editUrl: `${REPOSITORY_URL}/edit/main/site/`,
                     remarkPlugins: [
                         [
