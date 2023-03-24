@@ -134,7 +134,7 @@ npm run watch everything
     components are considered public and safe to be referenced. The most common
     use case is accounting for the same component (e.g. `DocItem`) being
     swizzled by more than 1 plugins, themes, and/or presets, resulting in
-    [swizzle clobbering](./presets/preset-classic.md#swizzle-clobbering). The
+    [swizzle clobbering](../presets/preset-classic.md#swizzle-clobbering). The
     directory trees between `decorators` and `swizzle` are always equal to one
     another.
 

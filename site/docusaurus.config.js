@@ -66,15 +66,15 @@ const config = {
                         sidebarId: 'userGuide',
                     },
                     {
-                        type: 'doc',
-                        label: 'Docs',
-                        position: 'left',
-                        docId: 'quickstart',
-                    },
-                    {
                         label: 'Blog',
                         to: '/blogs',
                         position: 'left',
+                    },
+                    {
+                        type: 'docSidebar',
+                        label: 'Developer Guide',
+                        position: 'right',
+                        sidebarId: 'developerGuide',
                     },
                     {
                         label: 'GitHub',
