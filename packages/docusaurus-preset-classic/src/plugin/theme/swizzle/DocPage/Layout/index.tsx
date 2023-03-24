@@ -8,15 +8,28 @@ import {
     DocPageLayoutDecorator as ZenDecorator
 } from '@theme/docupotamus-zen';
 import * as React from 'react';
+import ConditionalWrap from '../../../package/components/ConditionalWrap';
+import useIsEnabled from '../../../package/hooks/useIsEnabled';
 
 type Props = Readonly<WrapperProps<typeof DocPageLayoutType>>;
 
 export default function DocPageLayoutWrapper(props: Props): JSX.Element {
+    const isEnabledZen = useIsEnabled('zen');
+
     return (
-        <CommonDecorator {...props}>
-            <ZenDecorator {...props}>
-                <DocPageLayoutInit {...props} />
-            </ZenDecorator>
-        </CommonDecorator>
+        <ConditionalWrap wrappers={[
+            {
+                Component: CommonDecorator,
+                props,
+                isIncluded: true,
+            },
+            {
+                Component: ZenDecorator,
+                props,
+                isIncluded: isEnabledZen,
+            },
+        ]}>
+            <DocPageLayoutInit {...props} />
+        </ConditionalWrap>
     );
 };
