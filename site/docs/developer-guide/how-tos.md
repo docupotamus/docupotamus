@@ -8,6 +8,32 @@ import { TaskList } from '@theme/docupotamus-task-list';
 
 ## Docusaurus
 
+### Add a `ThemeConfig` setting
+
+#### Setup
+
+<TaskList>
+- In `docusaurus-theme-foo.d.ts`, update `FooThemeConfig`, which is the source
+  of truth.
+- In `validateThemeConfig.ts`, update `DEFAULT_THEME_CONFIG`, which is for
+  default values.
+- Update `ThemeConfigSchema`, which is for validation.
+- In `docupotamus.io`, update the `Configuration` section.
+- If applicable, update the `Example Configuration` section.
+</TaskList>
+
+#### Usage
+
+- In code that depends on the setting, import the `useFooThemeConfig` hook.
+
+  ```typescript
+  import useFooThemeConfig from '../../hooks/useFooThemeConfig';
+  const { mySetting } = useFooThemeConfig();
+  ```
+
+- In the client `docusaurus.config.js`, update `themeConfig`, which is for
+  customizing default values.
+
 ### Swizzle a component
 
 :::note Under Construction 🚧
@@ -46,32 +72,6 @@ npm run swizzle @docusaurus/theme-classic {{ COMPONENT }} -- --typescript --wrap
 - site package.json
 
 npm run watch everything
-
-### Add a `ThemeConfig` setting
-
-#### Setup
-
-<TaskList>
-- In `docusaurus-theme-foo.d.ts`, update `FooThemeConfig`, which is the source
-  of truth.
-- In `validateThemeConfig.ts`, update `DEFAULT_THEME_CONFIG`, which is for
-  default values.
-- Update `ThemeConfigSchema`, which is for validation.
-- In `docupotamus.io`, update the `Configuration` section.
-- If applicable, update the `Example Configuration` section.
-</TaskList>
-
-#### Usage
-
-- In code that depends on the setting, import the `useFooThemeConfig` hook.
-
-  ```typescript
-  import useFooThemeConfig from '../../hooks/useFooThemeConfig';
-  const { mySetting } = useFooThemeConfig();
-  ```
-
-- In the client `docusaurus.config.js`, update `themeConfig`, which is for
-  customizing default values.
 
 ### Add a preset feature gate
 
