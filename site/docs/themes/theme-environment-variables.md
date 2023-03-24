@@ -96,12 +96,6 @@ styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 
 - `.DocupotamusEnvironmentVariable`
 
-Use the css-namespace-project convention for custom properties.
-
-```text
-cbp
-```
-
 ### Example Styling
 
 Open your DevTools Console panel with <kbd>Command+Option+J</kbd> and try it
@@ -143,6 +137,12 @@ Use the git-commit-message convention for the scope.
 
 ```text
 env-vars
+```
+
+Use the css-namespace-project convention for custom properties.
+
+```text
+cbp
 ```
 
 ## We're done here! {#future}
