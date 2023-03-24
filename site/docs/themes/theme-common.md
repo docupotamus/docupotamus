@@ -211,17 +211,17 @@ import CodeBlock from '@theme/CodeBlock';
 - Register your `TabConfig`.
 </TaskList>
 
+:::info Glossary
+We refer to the controller as the _Toolbar_, the content for each integrated
+add-on as a _Tab_, and the tabs container as the _Workbench_.
+:::
+
 :::caution
 Integrating a new add-on as a standalone dependency is supported but not yet
 documented.
 :::
 
 #### Prepare a `TabConfig`
-
-:::info Glossary
-We refer to the controller as the _Toolbar_, the content for each integrated
-add-on as a _Tab_, and the tabs container as the _Workbench_.
-:::
 
 Think about how you'll define your `TabConfig`. This is to prepare for the
 following steps.
