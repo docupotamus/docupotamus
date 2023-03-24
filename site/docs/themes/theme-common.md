@@ -309,11 +309,6 @@ export default function ToolbarEntryWrapper(props: Props): JSX.Element {
 
 ### Listen to Markdown content {#usemarkdown-example}
 
-:::info Glossary
-_Direct_ refers to the child nodes immediately below the `.theme-doc-markdown`
-class. Listening to all child nodes in subtrees is not yet supported.
-:::
-
 ```jsx title="Example.jsx"
 import { useMarkdown } from '@theme/docupotamus-common';
 
@@ -330,6 +325,12 @@ export default function Example() {
   return <div>Example</div>;
 }
 ```
+
+:::info Glossary
+_Direct_ in `directChildren` refers to the child nodes immediately below the
+`.theme-doc-markdown` class. Listening to all child nodes in subtrees is not yet
+supported.
+:::
 
 ## Contributing
 
