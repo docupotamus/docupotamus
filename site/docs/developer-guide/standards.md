@@ -6,6 +6,10 @@ sidebar_position: 50
 
 import { TaskList } from '@theme/docupotamus-task-list';
 
+:::note
+We refer to _standards_ and _conventions_ interchangeably.
+:::
+
 ## Conventions
 
 ### Project Structure
