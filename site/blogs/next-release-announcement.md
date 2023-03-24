@@ -22,6 +22,8 @@ introduction as well as a demo.
 
 - `theme-zen` to quiet the distractions and bring the zen.
 
+- `theme-codeblock-param`
+
 - `plugin-content-docs-src-hook` `usePathToContent` and `useLocation` hook
 
 - `preset-classic` disable
