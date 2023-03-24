@@ -16,7 +16,7 @@ Use this when you have helpful code blocks but want to allow developers to
 personalize those snippets, for example with repetitive tasks (e.g. installing a
 package).
 
-<FlexImage alt="Demo GIF" src={DemoGif} />
+<FlexImage alt="Demo GIF" src={DemoGif} width="l" />
 
 ## Getting Started
 
