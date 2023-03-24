@@ -38,7 +38,7 @@ const whoEvenKnows = {{ LEFT }} + {{ RIGHT }};
 :::info
 This theme is only available through the preset
 `@docupotamus/docusaurus-preset-classic` because it requires a Workbench
-integration. Installing as a standalone dependency is not supported.
+integration. Installing as a standalone dependency is not yet supported.
 :::
 
 See [here](../presets/preset-classic.md#installation) for instructions on
