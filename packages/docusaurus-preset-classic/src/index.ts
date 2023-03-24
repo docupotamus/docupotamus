@@ -34,6 +34,8 @@ export default function preset(
         theme,
         googleAnalytics,
         gtag,
+        // doc8
+        envVars,
         zen,
         ...rest
     } = opts;

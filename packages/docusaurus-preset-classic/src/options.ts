@@ -36,6 +36,9 @@ export type Options = {
      */
     gtag?: GtagPluginOptions;
 } & {
+    /** Options for `@docupotamus/theme-environment-variables`. Use `false` to
+     *  disable. */
+    envVars?: false;
     /** Options for `@docupotamus/theme-zen`. Use `false` to disable. */
     zen?: false;
 };
