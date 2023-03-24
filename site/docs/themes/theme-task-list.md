@@ -180,6 +180,14 @@ document.querySelector('.DocupotamusTaskList');
 </Tabs>
 ```
 
+## Contributing
+
+Use the git-commit-message convention for the scope.
+
+```text
+task-list
+```
+
 ## Workbench Integration
 
 <!-- TODO(dnguyen0304): Add gifs. -->
