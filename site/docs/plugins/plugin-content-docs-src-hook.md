@@ -181,13 +181,12 @@ module.exports = {
 
 #### Check your component hierarchy
 
-:::tip
-If you aren't sure, you are _probably_ okay, unless you are trying to get the
-raw Markdown content from the `Root` theme component.
-:::
-
 Make sure your consumer component is a descendant of the
 [provider's scope](#usepathtocontent).
+
+:::tip
+If you aren't sure, you are _probably_ okay 😊
+:::
 
 #### Call the `usePathToContent` hook
 
