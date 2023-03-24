@@ -99,7 +99,7 @@ styling. These names are theme-agnostic and meant to be targeted by custom CSS.
 Use the css-namespace-project convention for custom properties.
 
 ```text
-ev
+cbp
 ```
 
 ### Example Styling

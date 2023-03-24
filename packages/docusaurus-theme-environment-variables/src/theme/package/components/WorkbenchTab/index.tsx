@@ -36,7 +36,7 @@ const StyledList = styled(List)({
 });
 
 const StyledTextField = styled(TextField)({
-    color: 'var(--ev-workbench-color-base)',
+    color: 'var(--cbp-workbench-color-base)',
     '& > .MuiFormLabel-root': {
         color: 'inherit',
         font: 'inherit',
